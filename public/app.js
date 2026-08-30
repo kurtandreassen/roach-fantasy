@@ -604,24 +604,30 @@ async function loadScouting() {
     setRows('scouting-gaps-table', gapRows, 3);
 
     // Trade ideas
+    const tradeAssetDetail = (a) => {
+      const bits = [`Proj ${a.proj != null ? a.proj : '—'}`];
+      if (a.gamesPlayed > 0) bits.push(`${a.seasonAvg} pts/gm (${a.gamesPlayed} gm)`);
+      return bits.join(' · ');
+    };
     el('scouting-trades-list').innerHTML = data.tradeIdeas.length
       ? data.tradeIdeas.map((t) => `
         <div class="trade-card">
           <div class="trade-head">
             <span class="trade-team">Trade with ${esc(t.team)}</span>
             <span class="trade-likelihood ${esc(t.likelihood)}">${t.likelihood} likelihood</span>
+            ${t.projSwing != null ? `<span class="trade-swing ${t.projSwing >= 0 ? 'pos' : 'neg'}">${t.projSwing >= 0 ? '+' : ''}${t.projSwing} proj pts</span>` : ''}
           </div>
           <div class="trade-swap">
             <span class="trade-dir give">You give</span>
             <span class="pos-tag pos-${esc(t.give[0].pos)}">${esc(t.give[0].pos)}</span>
             <span class="trade-name">${esc(t.give[0].name)}</span>
-            <span class="trade-rank">#${t.give[0].roachRank}</span>
+            <span class="trade-rank">#${t.give[0].roachRank} · ${esc(tradeAssetDetail(t.give[0]))}</span>
           </div>
           <div class="trade-swap">
             <span class="trade-dir get">You get</span>
             <span class="pos-tag pos-${esc(t.get[0].pos)}">${esc(t.get[0].pos)}</span>
             <span class="trade-name">${esc(t.get[0].name)}</span>
-            <span class="trade-rank">#${t.get[0].roachRank}</span>
+            <span class="trade-rank">#${t.get[0].roachRank} · ${esc(tradeAssetDetail(t.get[0]))}</span>
           </div>
           <ul class="trade-reasoning">
             ${t.reasoning.map((line) => `<li>${esc(line)}</li>`).join('')}

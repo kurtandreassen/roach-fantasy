@@ -7,7 +7,7 @@
 // spreadsheet — so every idea here is built need-first, value-checked
 // second.
 
-const { readTrends } = require('../state/trendStore');
+const { readTrends, buildPlayerMatrix } = require('../state/trendStore');
 const { readState } = require('../state/store');
 const { positionalGaps } = require('./scoutingReport');
 
@@ -24,12 +24,21 @@ function latestRosters() {
   return data.weeks[weekNums[weekNums.length - 1]].teams || {};
 }
 
-function enrich(players, rankByName) {
+function enrich(players, rankByName, seasonByName) {
   return players
     .map((p) => {
       const boardEntry = rankByName.get(p.name);
       if (!boardEntry) return null;
-      return { name: p.name, pos: p.pos, roachRank: boardEntry.roachRank, proj: boardEntry.proj };
+      const season = seasonByName.get(p.name);
+      return {
+        name: p.name,
+        pos: p.pos,
+        roachRank: boardEntry.roachRank,
+        proj: boardEntry.proj,
+        seasonAvg: season ? season.avg : null,
+        seasonTotal: season ? season.total : null,
+        gamesPlayed: season ? season.pointsByWeek.filter((v) => v != null).length : 0,
+      };
     })
     .filter(Boolean);
 }
@@ -61,7 +70,7 @@ function winPct(record) {
   return (w + l) > 0 ? w / (w + l) : null;
 }
 
-function buildReasoning({ giveAsset, getAsset, theirGap, myGap, doubleNeed, record }) {
+function buildReasoning({ giveAsset, getAsset, theirGap, myGap, doubleNeed, record, projSwing }) {
   const lines = [];
   lines.push(`Fills their clearest hole at ${theirGap.weakestPos} — nobody on their roster currently outranks board #${theirGap.weakestRank} there.`);
   lines.push(`${giveAsset.name} is surplus for you: bench depth at ${giveAsset.pos} you're not starting over your current group.`);
@@ -69,6 +78,23 @@ function buildReasoning({ giveAsset, getAsset, theirGap, myGap, doubleNeed, reco
     lines.push(`In return, ${getAsset.name} directly upgrades your own weak spot at ${myGap.weakestPos} — and it's a position they're deep at too, so it costs them little to include.`);
   } else {
     lines.push(`${getAsset.name} comes back as the closest value-for-value piece at a position they're not thin at, so the offer should read as fair rather than lopsided.`);
+  }
+  if (projSwing != null) {
+    if (Math.abs(projSwing) < 15) {
+      lines.push(`Rest-of-season projections are close (${projSwing >= 0 ? '+' : ''}${projSwing.toFixed(1)} pts for you) — a fair-value trade like this is an easier yes than one that looks lopsided on paper.`);
+    } else if (projSwing < 0) {
+      lines.push(`You're giving up ${Math.abs(projSwing).toFixed(1)} more projected season points than you get back — that gap is what makes this an easy accept for them, and it's worth it if it plugs your ${doubleNeed ? myGap.weakestPos : 'roster'} hole for the stretch run.`);
+    } else {
+      lines.push(`You're actually netting +${projSwing.toFixed(1)} projected season points on top of fixing your need — worth offering before they notice.`);
+    }
+  }
+  const givenGames = giveAsset.gamesPlayed, gotGames = getAsset.gamesPlayed;
+  if (givenGames > 0 && gotGames > 0) {
+    if (getAsset.seasonAvg > giveAsset.seasonAvg) {
+      lines.push(`Actual production so far backs it up: ${getAsset.name} is averaging ${getAsset.seasonAvg} pts/game (${gotGames} games) vs. ${giveAsset.name}'s ${giveAsset.seasonAvg} (${givenGames} games).`);
+    } else {
+      lines.push(`Fair warning: ${giveAsset.name} has actually outscored ${getAsset.name} so far this season (${giveAsset.seasonAvg} vs. ${getAsset.seasonAvg} pts/game) — the case here is need and rest-of-season outlook, not recent form.`);
+    }
   }
   const pct = winPct(record);
   if (pct != null) {
@@ -94,11 +120,12 @@ function generateTradeIdeas(myTeam, board, opts) {
   if (!rosters[myTeam]) return [];
 
   const rankByName = new Map(board.map((p) => [p.name, p]));
+  const seasonByName = new Map(buildPlayerMatrix().players.map((p) => [p.name, p]));
   const gaps = positionalGaps(board);
   const myGap = gaps.find((g) => g.team === myTeam);
   if (!myGap) return [];
 
-  const myRoster = enrich(rosters[myTeam], rankByName);
+  const myRoster = enrich(rosters[myTeam], rankByName, seasonByName);
   const mySurplus = computeSurplus(myRoster);
 
   const standings = readState().standings.teams || [];
@@ -112,7 +139,7 @@ function generateTradeIdeas(myTeam, board, opts) {
     const giveCandidates = mySurplus[theirGap.weakestPos];
     if (!giveCandidates || giveCandidates.length === 0) continue;
 
-    const theirRoster = enrich(players, rankByName);
+    const theirRoster = enrich(players, rankByName, seasonByName);
     const theirSurplus = computeSurplus(theirRoster);
 
     let getAsset = null;
@@ -134,13 +161,27 @@ function generateTradeIdeas(myTeam, board, opts) {
     if (!getAsset) continue;
 
     const giveAsset = giveCandidates[0];
+    const projSwing = (getAsset.proj != null && giveAsset.proj != null)
+      ? Math.round((getAsset.proj - giveAsset.proj) * 10) / 10
+      : null;
+    const assetView = (a) => ({
+      name: a.name,
+      pos: a.pos,
+      roachRank: a.roachRank,
+      proj: a.proj,
+      seasonAvg: a.seasonAvg,
+      seasonTotal: a.seasonTotal,
+      gamesPlayed: a.gamesPlayed,
+    });
+
     const idea = {
       team,
-      give: [{ name: giveAsset.name, pos: giveAsset.pos, roachRank: giveAsset.roachRank }],
-      get: [{ name: getAsset.name, pos: getAsset.pos, roachRank: getAsset.roachRank }],
+      give: [assetView(giveAsset)],
+      get: [assetView(getAsset)],
       likelihood: doubleNeed ? 'high' : 'medium',
+      projSwing,
       reasoning: buildReasoning({
-        giveAsset, getAsset, theirGap, myGap, doubleNeed, record: recordByTeam.get(team),
+        giveAsset, getAsset, theirGap, myGap, doubleNeed, record: recordByTeam.get(team), projSwing,
       }),
     };
     ideas.push(idea);

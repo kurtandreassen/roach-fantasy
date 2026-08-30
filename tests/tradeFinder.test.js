@@ -84,6 +84,22 @@ describe('tradeFinder', () => {
     expect(idea.get[0].pos).toBe('TE'); // my weakest position, their surplus
     expect(idea.likelihood).toBe('high');
     expect(idea.reasoning.length).toBeGreaterThan(0);
+    // My RB5 (proj 80) for Rival TE3 (proj 95): a net gain for me.
+    expect(idea.projSwing).toBeCloseTo(15, 5);
+    expect(idea.give[0].proj).toBe(80);
+    expect(idea.get[0].proj).toBe(95);
+  });
+
+  it('carries season-to-date actual production (avg/total/games) on each asset', () => {
+    const trendStore = require('../src/state/trendStore');
+    seedTrends(trendStore);
+    const { generateTradeIdeas } = require('../src/analysis/tradeFinder');
+
+    const idea = generateTradeIdeas('BuzzKill', board)[0];
+    expect(idea.give[0].seasonAvg).toBe(3); // My RB5 scored 3 pts in the one synced week
+    expect(idea.give[0].gamesPlayed).toBe(1);
+    expect(idea.get[0].seasonAvg).toBe(5); // Rival TE3 scored 5 pts
+    expect(idea.get[0].gamesPlayed).toBe(1);
   });
 
   it('gives the best (lowest roachRank) surplus player, not just any surplus player', () => {
