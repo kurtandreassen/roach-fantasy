@@ -2,60 +2,127 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Roach Fantasy Tools</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Libre+Franklin:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<title>Brighton Roach — Dashboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-
 <header>
-  <div class="titlebar">
-    <h1>Roach Fantasy Tools <span class="sub">BuzzKill &middot; Sept 7 draft</span></h1>
-    <span class="count" id="count"></span>
-  </div>
-  <div class="controls">
-    <input type="text" id="search" placeholder="Search player or team&hellip;" autocomplete="off">
-    <div class="chips" id="pos-chips">
-      <span class="chip active" data-pos="ALL">ALL</span>
-      <span class="chip" data-pos="QB">QB</span>
-      <span class="chip" data-pos="RB">RB</span>
-      <span class="chip" data-pos="WR">WR</span>
-      <span class="chip" data-pos="TE">TE</span>
-      <span class="chip" data-pos="K">K</span>
-      <span class="chip" data-pos="DST">DST</span>
-    </div>
-    <label class="showtaken"><input type="checkbox" id="show-taken"> Show taken</label>
-    <a class="hist-link" href="/coach.html">Coach &rarr;</a>
-    <a class="hist-link" href="/history.html">Draft History &rarr;</a>
-  </div>
+  <span class="badge">ROACH</span>
+  <h1>Brighton Roach — BuzzKill</h1>
+  <span class="meta">CBS Sportsline · Draft Sept 7, 6:00 PM ET</span>
 </header>
 
-<main>
-  <div class="tbl-scroll">
-    <table>
-      <thead>
-        <tr>
-          <th data-key="roachRank" class="num">Rank<span class="arrow"></span></th>
-          <th data-key="name">Player<span class="arrow"></span></th>
-          <th data-key="pos">Pos<span class="arrow"></span></th>
-          <th data-key="team">Team<span class="arrow"></span></th>
-          <th data-key="tier" class="num">Tier<span class="arrow"></span></th>
-          <th data-key="adp" class="num">ADP<span class="arrow"></span></th>
-          <th data-key="valueGap" class="num">Value<span class="arrow"></span></th>
-          <th data-key="bye" class="num">Bye<span class="arrow"></span></th>
-        </tr>
-      </thead>
-      <tbody id="rows"></tbody>
-    </table>
-  </div>
-  <div class="empty" id="empty" style="display:none;">No players match.</div>
-</main>
+<nav class="tabs" id="tabs">
+  <button data-view="draft" class="active">Draft Board</button>
+  <button data-view="coach">Coach</button>
+  <button data-view="history">Draft History</button>
+</nav>
 
-<footer>
-  <span id="taken-count">0 marked taken</span>
-  <button id="reset-btn">Reset all taken</button>
-</footer>
+<main>
+  <!-- Draft Board -->
+  <section class="view active" id="view-draft">
+    <section class="panel">
+      <h2>Player Board <span class="meta" id="draft-count" style="margin-left:8px;"></span></h2>
+      <div class="picker">
+        <input type="text" id="draft-search" placeholder="Search player or team…">
+        <label class="picker" style="gap:6px;"><input type="checkbox" id="draft-show-taken"> Show taken</label>
+      </div>
+      <div class="pos-filter" id="draft-pos-filter">
+        <button class="chip active" data-pos="ALL">All</button>
+        <button class="chip" data-pos="QB">QB</button>
+        <button class="chip" data-pos="RB">RB</button>
+        <button class="chip" data-pos="WR">WR</button>
+        <button class="chip" data-pos="TE">TE</button>
+        <button class="chip" data-pos="K">K</button>
+        <button class="chip" data-pos="DST">DST</button>
+      </div>
+      <table id="draft-table">
+        <thead>
+          <tr>
+            <th class="num" data-key="roachRank">Rank</th>
+            <th data-key="name">Player</th>
+            <th data-key="pos">Pos</th>
+            <th class="hide-sm" data-key="team">Team</th>
+            <th class="num hide-sm" data-key="tier">Tier</th>
+            <th class="num" data-key="adp">ADP</th>
+            <th class="num" data-key="valueGap" title="Roach rank vs. market ADP. Positive = falls below where our board says he should go.">Value</th>
+            <th class="num hide-sm" data-key="bye">Bye</th>
+            <th>Taken</th>
+          </tr>
+        </thead>
+        <tbody><tr><td colspan="9" class="loading">Loading…</td></tr></tbody>
+      </table>
+    </section>
+  </section>
+
+  <!-- Coach -->
+  <section class="view" id="view-coach">
+    <section class="panel">
+      <h2>Roster &amp; Lineup <span class="updated-tag" id="roster-updated"></span></h2>
+      <p class="empty" style="padding-top:0">No live CBS API exists. Ask Claude to read your open Roster tab and sync it — this table shows the current synced state until the next sync.</p>
+      <table id="lineup-table">
+        <thead><tr><th>Slot</th><th>Player</th><th>Pos</th><th class="num">Score</th></tr></thead>
+        <tbody><tr><td colspan="4" class="empty">No roster synced yet.</td></tr></tbody>
+      </table>
+      <button class="action" id="roster-toggle" style="margin-top:12px;">Manual Update</button>
+      <div class="sync-panel" id="roster-panel">
+        <p class="empty" style="padding-top:0">One player per line: <code>Name, POS, score</code></p>
+        <textarea id="roster-input" placeholder="Josh Allen, QB, 24.1"></textarea>
+        <br><button class="action" id="roster-save" style="margin-top:10px;">Save Roster</button>
+        <div id="roster-err"></div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Waiver Targets <span class="updated-tag" id="waiver-updated"></span></h2>
+      <table id="waiver-table">
+        <thead><tr><th>Add</th><th>Drop Candidate</th><th>Verdict</th></tr></thead>
+        <tbody><tr><td colspan="3" class="empty">No waiver suggestions yet — sync a roster and free-agent list.</td></tr></tbody>
+      </table>
+      <button class="action" id="waiver-toggle" style="margin-top:12px;">Manual Update</button>
+      <div class="sync-panel" id="waiver-panel">
+        <p class="empty" style="padding-top:0">One free agent name per line (must match the board):</p>
+        <textarea id="fa-input" placeholder="Some Free Agent"></textarea>
+        <br><button class="action" id="waiver-save" style="margin-top:10px;">Save Free Agents</button>
+        <div id="waiver-err"></div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Standings <span class="updated-tag" id="standings-updated"></span></h2>
+      <table id="standings-table">
+        <thead><tr><th>Team</th><th>Record</th><th class="num">Points For</th></tr></thead>
+        <tbody><tr><td colspan="3" class="empty">No standings synced yet.</td></tr></tbody>
+      </table>
+      <button class="action" id="standings-toggle" style="margin-top:12px;">Manual Update</button>
+      <div class="sync-panel" id="standings-panel">
+        <p class="empty" style="padding-top:0">One team per line: <code>Team, W-L-T, Points For</code></p>
+        <textarea id="standings-input" placeholder="BuzzKill, 0-0-0, 0"></textarea>
+        <br><button class="action" id="standings-save" style="margin-top:10px;">Save Standings</button>
+        <div id="standings-err"></div>
+      </div>
+    </section>
+  </section>
+
+  <!-- Draft History -->
+  <section class="view" id="view-history">
+    <section class="panel">
+      <h2>Draft Order vs. Season Outcome</h2>
+      <p class="empty" style="padding-top:0">Spearman correlation between overall pick number and that player's season points — a real, moderate predictor across all three seasons with data.</p>
+      <div class="stat-grid" id="history-corr"><div class="loading">Loading…</div></div>
+    </section>
+
+    <section class="panel">
+      <h2>Kurt's Round-by-Round Performance vs. Field</h2>
+      <p class="empty" style="padding-top:0">2021-2023 (as Malachi Crunch, then BuzzKill). Rounds 1-3 and 10 have historically underperformed; 14-15 have historically beaten the field.</p>
+      <table id="history-rounds-table">
+        <thead><tr><th>Round</th><th class="num">Kurt Avg</th><th class="num">Field Avg</th><th>vs. Field</th></tr></thead>
+        <tbody><tr><td colspan="4" class="loading">Loading…</td></tr></tbody>
+      </table>
+    </section>
+  </section>
+</main>
 
 <script src="/app.js"></script>
 </body>
