@@ -17,6 +17,7 @@ const { suggestWaivers } = require('./src/coach/waiverSuggest');
 const stateStore = require('./src/state/store');
 const trendStore = require('./src/state/trendStore');
 const scheduleStore = require('./src/state/scheduleStore');
+const bidStore = require('./src/state/bidStore');
 const scoutingReport = require('./src/analysis/scoutingReport');
 const tradeFinder = require('./src/analysis/tradeFinder');
 
@@ -193,6 +194,41 @@ app.post('/api/state/standings', (req, res) => {
   }
   const state = stateStore.updateStandings(teams);
   res.json(state);
+});
+
+// --- FAAB waiver bid history + budgets ------------------------------------
+// No CBS API for transaction history either — ask Claude to read the
+// league's Transactions/Waiver Results page and push completed bids here.
+// This is what calibrates the Coach tab's bid recommendations against what
+// the league actually pays, instead of a blind guess.
+
+app.get('/api/bids', (req, res) => {
+  res.json(bidStore.readBids());
+});
+
+app.post('/api/bids/week', (req, res) => {
+  const { week, bids } = req.body || {};
+  if (typeof week !== 'number' || week < 1) {
+    return res.status(400).json({ error: 'Body must include a numeric `week` (1+).' });
+  }
+  if (!Array.isArray(bids)) {
+    return res.status(400).json({ error: '`bids` must be an array of {player, pos, team, amount, won}.' });
+  }
+  try {
+    const recorded = bidStore.recordWeek(week, bids);
+    res.json({ week, recorded });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.post('/api/bids/budgets', (req, res) => {
+  const { teams } = req.body || {};
+  if (!teams || typeof teams !== 'object' || Array.isArray(teams)) {
+    return res.status(400).json({ error: 'Body must include a `teams` object of { teamName: remainingBudget }.' });
+  }
+  const budgets = bidStore.recordBudgets(teams);
+  res.json(budgets);
 });
 
 // --- Weekly scoring trends -----------------------------------------------

@@ -164,6 +164,27 @@ function parseStandings(text) {
     return { team: parts[0], record: parts[1] || '', pointsFor: parts[2] || '' };
   });
 }
+function parseBudgets(text) {
+  const teams = {};
+  text.split('\n').map((l) => l.trim()).filter(Boolean).forEach((line) => {
+    const parts = line.split(',').map((s) => s.trim());
+    const amount = parseFloat(parts[1]);
+    if (parts[0] && !isNaN(amount)) teams[parts[0]] = amount;
+  });
+  return teams;
+}
+function parseBids(text) {
+  return text.split('\n').map((l) => l.trim()).filter(Boolean).map((line) => {
+    const parts = line.split(',').map((s) => s.trim());
+    return {
+      player: parts[0],
+      pos: parts[1],
+      team: parts[2],
+      amount: parseFloat(parts[3]),
+      won: /won/i.test(parts[4] || ''),
+    };
+  });
+}
 
 function renderLineup(derived) {
   if (!derived || !derived.lineup) { setRows('lineup-table', '', 4); return; }
@@ -175,15 +196,23 @@ function renderLineup(derived) {
   setRows('lineup-table', rows + benchRows, 4);
 }
 
+const IMPORTANCE_LABEL = { 'must-bid': 'Must Bid', 'worth-a-bid': 'Worth a Bid', speculative: 'Speculative' };
+
 function renderWaivers(derived) {
-  if (!derived || !derived.waiverSuggestions || derived.waiverSuggestions.length === 0) { setRows('waiver-table', '', 3); return; }
-  const rows = derived.waiverSuggestions.map((s) => `
+  if (!derived || !derived.waiverSuggestions || derived.waiverSuggestions.length === 0) { setRows('waiver-table', '', 5); return; }
+  const rows = derived.waiverSuggestions.map((s) => {
+    const bid = s.bidAdvice;
+    return `
     <tr>
       <td>${esc(s.add.name)} <span class="pos-tag pos-${s.add.pos}">${posName[s.add.pos] || s.add.pos}</span> — rank ${s.add.roachRank}</td>
       <td>${s.dropCandidate ? esc(s.dropCandidate.name) + ' — rank ' + s.dropCandidate.roachRank : '—'}</td>
       <td>${s.isUpgrade ? '<strong class="pos">Upgrade</strong>' : 'Not an upgrade'}</td>
-    </tr>`).join('');
-  setRows('waiver-table', rows, 3);
+      <td class="num">${bid ? `$${bid.suggestedBid}` : '—'}</td>
+      <td>${bid ? `<span class="trade-likelihood ${bid.importance === 'must-bid' ? 'high' : bid.importance === 'worth-a-bid' ? 'medium' : ''}">${IMPORTANCE_LABEL[bid.importance]}</span>` : '—'}</td>
+    </tr>
+    ${bid ? `<tr class="waiver-bid-reasons"><td colspan="5"><ul class="trade-reasoning">${bid.reasons.map((r) => `<li>${esc(r)}</li>`).join('')}</ul></td></tr>` : ''}`;
+  }).join('');
+  setRows('waiver-table', rows, 5);
 }
 
 function renderStandings(teams) {
@@ -193,17 +222,20 @@ function renderStandings(teams) {
 }
 
 async function loadCoach() {
-  const res = await fetch('/api/state');
+  const [res, bidsRes] = await Promise.all([fetch('/api/state'), fetch('/api/bids')]);
   const state = await res.json();
+  const bidsState = await bidsRes.json();
   setUpdatedTag('roster-updated', state.roster.updatedAt);
   setUpdatedTag('waiver-updated', state.waivers.updatedAt);
   setUpdatedTag('standings-updated', state.standings.updatedAt);
+  setUpdatedTag('bids-updated', bidsState.budgets.updatedAt);
   renderLineup(state.derived);
   renderWaivers(state.derived);
   renderStandings(state.standings.teams);
   el('roster-input').value = state.roster.players.map((p) => `${p.name}, ${p.pos}, ${p.score}`).join('\n');
   el('fa-input').value = (state.waivers.freeAgents || []).map((f) => (typeof f === 'string' ? f : f.name)).join('\n');
   el('standings-input').value = (state.standings.teams || []).map((t) => `${t.team}, ${t.record}, ${t.pointsFor}`).join('\n');
+  el('budgets-input').value = Object.entries(bidsState.budgets.teams || {}).map(([team, amt]) => `${team}, ${amt}`).join('\n');
 }
 
 el('roster-toggle').addEventListener('click', () => toggle('roster-panel'));
@@ -241,6 +273,29 @@ el('standings-save').addEventListener('click', async () => {
   if (!res.ok) { el('standings-err').innerHTML = `<div class="error">${esc(body.error)}</div>`; return; }
   await loadCoach();
   toggle('standings-panel');
+});
+
+el('bids-toggle').addEventListener('click', () => toggle('bids-panel'));
+
+el('budgets-save').addEventListener('click', async () => {
+  const teams = parseBudgets(el('budgets-input').value);
+  const res = await fetch('/api/bids/budgets', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ teams }) });
+  const body = await res.json();
+  if (!res.ok) { el('budgets-err').innerHTML = `<div class="error">${esc(body.error)}</div>`; return; }
+  await loadCoach();
+});
+
+el('bids-save').addEventListener('click', async () => {
+  const errEl = el('bids-err');
+  errEl.innerHTML = '';
+  const week = parseInt(el('bids-week-input').value, 10);
+  if (!week || week < 1) { errEl.innerHTML = `<div class="error">Enter a valid week number.</div>`; return; }
+  const bids = parseBids(el('bids-input').value);
+  const res = await fetch('/api/bids/week', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ week, bids }) });
+  const body = await res.json();
+  if (!res.ok) { errEl.innerHTML = `<div class="error">${esc(body.error)}</div>`; return; }
+  await loadCoach();
+  toggle('bids-panel');
 });
 
 /* -------------------------------------------------------------- trends --- */

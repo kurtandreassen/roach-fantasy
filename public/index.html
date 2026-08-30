@@ -82,9 +82,10 @@
 
     <section class="panel">
       <h2>Waiver Targets <span class="updated-tag" id="waiver-updated"></span></h2>
+      <p class="empty" style="padding-top:0">Suggested FAAB bid is calibrated against your league's own synced bid history when available, falling back to a position-tier estimate otherwise.</p>
       <table id="waiver-table">
-        <thead><tr><th>Add</th><th>Drop Candidate</th><th>Verdict</th></tr></thead>
-        <tbody><tr><td colspan="3" class="empty">No waiver suggestions yet — sync a roster and free-agent list.</td></tr></tbody>
+        <thead><tr><th>Add</th><th>Drop Candidate</th><th>Verdict</th><th class="num">Suggested Bid</th><th>Importance</th></tr></thead>
+        <tbody><tr><td colspan="5" class="empty">No waiver suggestions yet — sync a roster and free-agent list.</td></tr></tbody>
       </table>
       <button class="action" id="waiver-toggle" style="margin-top:12px;">Manual Update</button>
       <div class="sync-panel" id="waiver-panel">
@@ -92,6 +93,24 @@
         <textarea id="fa-input" placeholder="Some Free Agent"></textarea>
         <br><button class="action" id="waiver-save" style="margin-top:10px;">Save Free Agents</button>
         <div id="waiver-err"></div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>FAAB Budget &amp; Bid History <span class="updated-tag" id="bids-updated"></span></h2>
+      <p class="empty" style="padding-top:0">Powers the Suggested Bid column above — your remaining budget caps the ask, and league bid history calibrates it to what actually wins.</p>
+      <button class="action" id="bids-toggle">Manual Update</button>
+      <div class="sync-panel" id="bids-panel">
+        <p class="empty" style="padding-top:0">Remaining budget, one team per line: <code>Team, remaining$</code></p>
+        <textarea id="budgets-input" placeholder="BuzzKill, 62"></textarea>
+        <br><button class="action" id="budgets-save" style="margin-top:10px;">Save Budgets</button>
+        <div id="budgets-err"></div>
+
+        <p class="empty" style="padding-top:14px;">Completed waiver bids for one week: <code>Player, Pos, Team, Amount, Won/Lost</code></p>
+        <input type="text" id="bids-week-input" placeholder="Week number, e.g. 3" style="width:140px; margin-bottom:8px;">
+        <textarea id="bids-input" placeholder="Some Player, RB, Rival, 14, Won"></textarea>
+        <br><button class="action" id="bids-save" style="margin-top:10px;">Save Bid Results</button>
+        <div id="bids-err"></div>
       </div>
     </section>
 
