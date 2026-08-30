@@ -40,18 +40,20 @@
       <table id="draft-table">
         <thead>
           <tr>
-            <th class="num" data-key="roachRank">Rank</th>
+            <th class="num" data-key="roachRank">#</th>
             <th data-key="name">Player</th>
             <th data-key="pos">Pos</th>
             <th class="hide-sm" data-key="team">Team</th>
-            <th class="num hide-sm" data-key="tier">Tier</th>
+            <th class="num" data-key="ecr" title="FantasyPros full-PPR expert consensus rank — the base. Our own valuation only adjusts it where the experts disagree.">ECR</th>
+            <th class="num hide-sm" data-key="shift" title="How far our valuation moved him from ECR. Zero means the experts agree and we defer.">Shift</th>
+            <th class="num hide-sm" data-key="cbsRank" title="CBS/SportsLine's own positional expert rank, for a second opinion. Blank where CBS hasn't ranked him.">CBS</th>
             <th class="num" data-key="adp">ADP</th>
-            <th class="num" data-key="valueGap" title="Roach rank vs. market ADP. Positive = falls below where our board says he should go.">Value</th>
+            <th class="num" data-key="valueGap" title="Our rank vs. market ADP. Positive = the room is likely to let him fall below where our board says he should go.">Falls</th>
             <th class="num hide-sm" data-key="bye">Bye</th>
             <th>Taken</th>
           </tr>
         </thead>
-        <tbody><tr><td colspan="9" class="loading">Loading…</td></tr></tbody>
+        <tbody><tr><td colspan="11" class="loading">Loading…</td></tr></tbody>
       </table>
     </section>
   </section>

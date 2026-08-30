@@ -12,8 +12,10 @@
     "replacement": 67,
     "roachScore": 1,
     "startable": true,
+    "cbsRank": null,
     "roachRank": 1,
-    "valueGap": 2
+    "valueGap": 2,
+    "shift": 0
   },
   {
     "name": "Jahmyr Gibbs",
@@ -28,8 +30,10 @@
     "replacement": 55,
     "roachScore": 2,
     "startable": true,
+    "cbsRank": 1,
     "roachRank": 2,
-    "valueGap": -1
+    "valueGap": -1,
+    "shift": 0
   },
   {
     "name": "Puka Nacua",
@@ -44,8 +48,10 @@
     "replacement": 67,
     "roachScore": 3,
     "startable": true,
+    "cbsRank": 2,
     "roachRank": 3,
-    "valueGap": 1
+    "valueGap": 1,
+    "shift": 0
   },
   {
     "name": "Bijan Robinson",
@@ -60,8 +66,10 @@
     "replacement": 55,
     "roachScore": 4,
     "startable": true,
+    "cbsRank": 2,
     "roachRank": 4,
-    "valueGap": -2
+    "valueGap": -2,
+    "shift": 0
   },
   {
     "name": "Jaxon Smith-Njigba",
@@ -76,8 +84,10 @@
     "replacement": 67,
     "roachScore": 5,
     "startable": true,
+    "cbsRank": 3,
     "roachRank": 5,
-    "valueGap": 2
+    "valueGap": 2,
+    "shift": 0
   },
   {
     "name": "Christian McCaffrey",
@@ -92,8 +102,10 @@
     "replacement": 55,
     "roachScore": 5.03,
     "startable": true,
+    "cbsRank": 4,
     "roachRank": 6,
-    "valueGap": -1
+    "valueGap": -1,
+    "shift": 3
   },
   {
     "name": "Jonathan Taylor",
@@ -108,8 +120,10 @@
     "replacement": 55,
     "roachScore": 5.19,
     "startable": true,
+    "cbsRank": 3,
     "roachRank": 7,
-    "valueGap": -1
+    "valueGap": -1,
+    "shift": 3
   },
   {
     "name": "Amon-Ra St. Brown",
@@ -124,8 +138,10 @@
     "replacement": 67,
     "roachScore": 6,
     "startable": true,
+    "cbsRank": 4,
     "roachRank": 8,
-    "valueGap": 0
+    "valueGap": 0,
+    "shift": -2
   },
   {
     "name": "CeeDee Lamb",
@@ -140,8 +156,10 @@
     "replacement": 67,
     "roachScore": 7,
     "startable": true,
+    "cbsRank": null,
     "roachRank": 9,
-    "valueGap": 1
+    "valueGap": 1,
+    "shift": -2
   },
   {
     "name": "James Cook III",
@@ -156,8 +174,10 @@
     "replacement": 55,
     "roachScore": 7.25,
     "startable": true,
+    "cbsRank": 5,
     "roachRank": 10,
-    "valueGap": -1
+    "valueGap": -1,
+    "shift": 3
   },
   {
     "name": "Justin Jefferson",
@@ -172,8 +192,10 @@
     "replacement": 67,
     "roachScore": 8,
     "startable": true,
+    "cbsRank": 6,
     "roachRank": 11,
-    "valueGap": 1
+    "valueGap": 1,
+    "shift": -3
   },
   {
     "name": "A.J. Brown",
@@ -188,8 +210,10 @@
     "replacement": 67,
     "roachScore": 8.95,
     "startable": true,
+    "cbsRank": 10,
     "roachRank": 12,
-    "valueGap": 8
+    "valueGap": 8,
+    "shift": 0
   },
   {
     "name": "Chase Brown",
@@ -204,8 +228,10 @@
     "replacement": 55,
     "roachScore": 9.36,
     "startable": true,
+    "cbsRank": 6,
     "roachRank": 13,
-    "valueGap": 0
+    "valueGap": 0,
+    "shift": 2
   },
   {
     "name": "Drake London",
@@ -220,8 +246,10 @@
     "replacement": 67,
     "roachScore": 11,
     "startable": true,
+    "cbsRank": 7,
     "roachRank": 14,
-    "valueGap": 5
+    "valueGap": 5,
+    "shift": -3
   },
   {
     "name": "Chris Olave",
@@ -236,8 +264,10 @@
     "replacement": 67,
     "roachScore": 12.42,
     "startable": true,
+    "cbsRank": 11,
     "roachRank": 15,
-    "valueGap": 11
+    "valueGap": 11,
+    "shift": 1
   },
   {
     "name": "Nico Collins",
@@ -252,8 +282,10 @@
     "replacement": 67,
     "roachScore": 14,
     "startable": true,
+    "cbsRank": null,
     "roachRank": 16,
-    "valueGap": 9
+    "valueGap": 9,
+    "shift": -2
   },
   {
     "name": "De'Von Achane",
@@ -268,8 +300,10 @@
     "replacement": 55,
     "roachScore": 14,
     "startable": true,
+    "cbsRank": 7,
     "roachRank": 17,
-    "valueGap": -6
+    "valueGap": -6,
+    "shift": 3
   },
   {
     "name": "Saquon Barkley",
@@ -284,8 +318,10 @@
     "replacement": 55,
     "roachScore": 15,
     "startable": true,
+    "cbsRank": 10,
     "roachRank": 18,
-    "valueGap": -4
+    "valueGap": -4,
+    "shift": 3
   },
   {
     "name": "George Pickens",
@@ -300,8 +336,10 @@
     "replacement": 67,
     "roachScore": 15.23,
     "startable": true,
+    "cbsRank": null,
     "roachRank": 19,
-    "valueGap": 5
+    "valueGap": 5,
+    "shift": 0
   },
   {
     "name": "DeVonta Smith",
@@ -316,8 +354,10 @@
     "replacement": 67,
     "roachScore": 18,
     "startable": true,
+    "cbsRank": 14,
     "roachRank": 20,
-    "valueGap": 13
+    "valueGap": 13,
+    "shift": 2
   },
   {
     "name": "Kenneth Walker III",
@@ -332,8 +372,10 @@
     "replacement": 55,
     "roachScore": 18,
     "startable": true,
+    "cbsRank": 8,
     "roachRank": 21,
-    "valueGap": -3
+    "valueGap": -3,
+    "shift": 3
   },
   {
     "name": "Malik Nabers",
@@ -348,8 +390,10 @@
     "replacement": 67,
     "roachScore": 19,
     "startable": true,
+    "cbsRank": null,
     "roachRank": 22,
-    "valueGap": 6
+    "valueGap": 6,
+    "shift": 1
   },
   {
     "name": "Omarion Hampton",
@@ -364,8 +408,10 @@
     "replacement": 55,
     "roachScore": 19,
     "startable": true,
+    "cbsRank": 9,
     "roachRank": 23,
-    "valueGap": -6
+    "valueGap": -6,
+    "shift": 2
   },
   {
     "name": "Brock Bowers",
@@ -380,8 +426,10 @@
     "replacement": 24,
     "roachScore": 20.83,
     "startable": true,
+    "cbsRank": 1,
     "roachRank": 24,
-    "valueGap": -3
+    "valueGap": -3,
+    "shift": -7
   },
   {
     "name": "Rashee Rice",
@@ -396,8 +444,10 @@
     "replacement": 67,
     "roachScore": 22,
     "startable": true,
+    "cbsRank": null,
     "roachRank": 25,
-    "valueGap": 2
+    "valueGap": 2,
+    "shift": 1
   },
   {
     "name": "Ashton Jeanty",
@@ -412,8 +462,10 @@
     "replacement": 55,
     "roachScore": 22,
     "startable": true,
+    "cbsRank": 12,
     "roachRank": 26,
-    "valueGap": -11
+    "valueGap": -11,
+    "shift": 2
   },
   {
     "name": "Trey McBride",
@@ -428,8 +480,10 @@
     "replacement": 24,
     "roachScore": 22.82,
     "startable": true,
+    "cbsRank": 2,
     "roachRank": 27,
-    "valueGap": -4
+    "valueGap": -4,
+    "shift": -9
   },
   {
     "name": "Garrett Wilson",
@@ -444,8 +498,10 @@
     "replacement": 67,
     "roachScore": 25,
     "startable": true,
+    "cbsRank": null,
     "roachRank": 28,
-    "valueGap": 10
+    "valueGap": 10,
+    "shift": 1
   },
   {
     "name": "Zay Flowers",
@@ -460,8 +516,10 @@
     "replacement": 67,
     "roachScore": 26,
     "startable": true,
+    "cbsRank": 16,
     "roachRank": 29,
-    "valueGap": 6
+    "valueGap": 6,
+    "shift": 1
   },
   {
     "name": "Josh Allen",
@@ -476,8 +534,10 @@
     "replacement": 19,
     "roachScore": 27,
     "startable": true,
+    "cbsRank": 1,
     "roachRank": 30,
-    "valueGap": -8
+    "valueGap": -8,
+    "shift": -3
   },
   {
     "name": "Ladd McConkey",
@@ -492,8 +552,10 @@
     "replacement": 67,
     "roachScore": 28,
     "startable": true,
+    "cbsRank": null,
     "roachRank": 31,
-    "valueGap": 13
+    "valueGap": 13,
+    "shift": 1
   },
   {
     "name": "Jaylen Waddle",
@@ -508,8 +570,10 @@
     "replacement": 67,
     "roachScore": 29,
     "startable": true,
+    "cbsRank": 19,
     "roachRank": 32,
-    "valueGap": 16
+    "valueGap": 16,
+    "shift": 1
   },
   {
     "name": "Lamar Jackson",
@@ -524,8 +588,10 @@
     "replacement": 19,
     "roachScore": 31,
     "startable": true,
+    "cbsRank": 2,
     "roachRank": 33,
-    "valueGap": 7
+    "valueGap": 7,
+    "shift": -2
   },
   {
     "name": "Derrick Henry",
@@ -540,8 +606,10 @@
     "replacement": 55,
     "roachScore": 31,
     "startable": true,
+    "cbsRank": 11,
     "roachRank": 34,
-    "valueGap": -18
+    "valueGap": -18,
+    "shift": 3
   },
   {
     "name": "Tetairoa McMillan",
@@ -556,8 +624,10 @@
     "replacement": 67,
     "roachScore": 31.2,
     "startable": true,
+    "cbsRank": 18,
     "roachRank": 35,
-    "valueGap": 4
+    "valueGap": 4,
+    "shift": 0
   },
   {
     "name": "Tee Higgins",
@@ -572,8 +642,10 @@
     "replacement": 67,
     "roachScore": 32,
     "startable": true,
+    "cbsRank": 15,
     "roachRank": 36,
-    "valueGap": 6
+    "valueGap": 6,
+    "shift": 0
   },
   {
     "name": "Breece Hall",
@@ -588,8 +660,10 @@
     "replacement": 55,
     "roachScore": 33.64,
     "startable": true,
+    "cbsRank": 16,
     "roachRank": 37,
-    "valueGap": -5
+    "valueGap": -5,
+    "shift": 2
   },
   {
     "name": "Kyren Williams",
@@ -604,8 +678,10 @@
     "replacement": 55,
     "roachScore": 35.07,
     "startable": true,
+    "cbsRank": 13,
     "roachRank": 38,
-    "valueGap": -8
+    "valueGap": -8,
+    "shift": 3
   },
   {
     "name": "Emeka Egbuka",
@@ -620,8 +696,10 @@
     "replacement": 67,
     "roachScore": 36,
     "startable": true,
+    "cbsRank": 22,
     "roachRank": 39,
-    "valueGap": 2
+    "valueGap": 2,
+    "shift": 1
   },
   {
     "name": "Jeremiyah Love",
@@ -636,8 +714,10 @@
     "replacement": 55,
     "roachScore": 36,
     "startable": true,
+    "cbsRank": 18,
     "roachRank": 40,
-    "valueGap": -11
+    "valueGap": -11,
+    "shift": 2
   },
   {
     "name": "Javonte Williams",
@@ -652,8 +732,10 @@
     "replacement": 55,
     "roachScore": 37.46,
     "startable": true,
+    "cbsRank": 15,
     "roachRank": 41,
-    "valueGap": -10
+    "valueGap": -10,
+    "shift": 2
   },
   {
     "name": "Drake Maye",
@@ -668,8 +750,10 @@
     "replacement": 19,
     "roachScore": 38,
     "startable": true,
+    "cbsRank": 3,
     "roachRank": 42,
-    "valueGap": 11
+    "valueGap": 11,
+    "shift": -4
   },
   {
     "name": "Colston Loveland",
@@ -684,8 +768,10 @@
     "replacement": 24,
     "roachScore": 39,
     "startable": true,
+    "cbsRank": 3,
     "roachRank": 43,
-    "valueGap": 0
+    "valueGap": 0,
+    "shift": -9
   },
   {
     "name": "Travis Etienne Jr.",
@@ -700,8 +786,10 @@
     "replacement": 55,
     "roachScore": 40,
     "startable": true,
+    "cbsRank": 14,
     "roachRank": 44,
-    "valueGap": -8
+    "valueGap": -8,
+    "shift": 2
   },
   {
     "name": "Luther Burden III",
@@ -716,8 +804,10 @@
     "replacement": 67,
     "roachScore": 41,
     "startable": true,
+    "cbsRank": 23,
     "roachRank": 45,
-    "valueGap": 11
+    "valueGap": 11,
+    "shift": 0
   },
   {
     "name": "Josh Jacobs",
@@ -732,8 +822,10 @@
     "replacement": 55,
     "roachScore": 42,
     "startable": true,
+    "cbsRank": 26,
     "roachRank": 46,
-    "valueGap": -12
+    "valueGap": -12,
+    "shift": 2
   },
   {
     "name": "Terry McLaurin",
@@ -748,8 +840,10 @@
     "replacement": 67,
     "roachScore": 43.26,
     "startable": true,
+    "cbsRank": 24,
     "roachRank": 47,
-    "valueGap": 8
+    "valueGap": 8,
+    "shift": 0
   },
   {
     "name": "Joe Burrow",
@@ -764,8 +858,10 @@
     "replacement": 19,
     "roachScore": 44,
     "startable": true,
+    "cbsRank": 4,
     "roachRank": 48,
-    "valueGap": 6
+    "valueGap": 6,
+    "shift": -4
   },
   {
     "name": "Davante Adams",
@@ -780,8 +876,10 @@
     "replacement": 67,
     "roachScore": 45,
     "startable": true,
+    "cbsRank": 25,
     "roachRank": 49,
-    "valueGap": 0
+    "valueGap": 0,
+    "shift": 0
   },
   {
     "name": "DJ Moore",
@@ -796,8 +894,10 @@
     "replacement": 67,
     "roachScore": 46,
     "startable": true,
+    "cbsRank": 21,
     "roachRank": 50,
-    "valueGap": 1
+    "valueGap": 1,
+    "shift": 0
   },
   {
     "name": "D'Andre Swift",
@@ -812,8 +912,10 @@
     "replacement": 55,
     "roachScore": 48,
     "startable": true,
+    "cbsRank": 17,
     "roachRank": 51,
-    "valueGap": -5
+    "valueGap": -5,
+    "shift": 3
   },
   {
     "name": "Jameson Williams",
@@ -828,8 +930,10 @@
     "replacement": 67,
     "roachScore": 49,
     "startable": true,
+    "cbsRank": 26,
     "roachRank": 52,
-    "valueGap": 6
+    "valueGap": 6,
+    "shift": 1
   },
   {
     "name": "Jayden Daniels",
@@ -844,8 +948,10 @@
     "replacement": 19,
     "roachScore": 51,
     "startable": true,
+    "cbsRank": 5,
     "roachRank": 53,
-    "valueGap": 9
+    "valueGap": 9,
+    "shift": -2
   },
   {
     "name": "Christian Watson",
@@ -860,8 +966,10 @@
     "replacement": 67,
     "roachScore": 51,
     "startable": true,
+    "cbsRank": 29,
     "roachRank": 54,
-    "valueGap": 12
+    "valueGap": 12,
+    "shift": 1
   },
   {
     "name": "Mike Evans",
@@ -876,8 +984,10 @@
     "replacement": 67,
     "roachScore": 52,
     "startable": true,
+    "cbsRank": 32,
     "roachRank": 55,
-    "valueGap": 9
+    "valueGap": 9,
+    "shift": 1
   },
   {
     "name": "Rome Odunze",
@@ -892,8 +1002,10 @@
     "replacement": 67,
     "roachScore": 53,
     "startable": true,
+    "cbsRank": 28,
     "roachRank": 56,
-    "valueGap": 5
+    "valueGap": 5,
+    "shift": 1
   },
   {
     "name": "Cam Skattebo",
@@ -908,8 +1020,10 @@
     "replacement": 55,
     "roachScore": 53,
     "startable": true,
+    "cbsRank": 21,
     "roachRank": 57,
-    "valueGap": -20
+    "valueGap": -20,
+    "shift": 2
   },
   {
     "name": "Bucky Irving",
@@ -924,8 +1038,10 @@
     "replacement": 55,
     "roachScore": 54,
     "startable": true,
+    "cbsRank": 20,
     "roachRank": 58,
-    "valueGap": -13
+    "valueGap": -13,
+    "shift": 2
   },
   {
     "name": "Quinshon Judkins",
@@ -940,8 +1056,10 @@
     "replacement": 55,
     "roachScore": 55,
     "startable": true,
+    "cbsRank": 19,
     "roachRank": 59,
-    "valueGap": -12
+    "valueGap": -12,
+    "shift": 2
   },
   {
     "name": "David Montgomery",
@@ -956,8 +1074,10 @@
     "replacement": 55,
     "roachScore": 56,
     "startable": true,
+    "cbsRank": 22,
     "roachRank": 60,
-    "valueGap": -10
+    "valueGap": -10,
+    "shift": 2
   },
   {
     "name": "Tyler Warren",
@@ -972,8 +1092,10 @@
     "replacement": 24,
     "roachScore": 57,
     "startable": true,
+    "cbsRank": 4,
     "roachRank": 61,
-    "valueGap": -9
+    "valueGap": -9,
+    "shift": -9
   },
   {
     "name": "Jalen Hurts",
@@ -988,8 +1110,10 @@
     "replacement": 19,
     "roachScore": 58,
     "startable": true,
+    "cbsRank": 6,
     "roachRank": 62,
-    "valueGap": 1
+    "valueGap": 1,
+    "shift": -4
   },
   {
     "name": "Parker Washington",
@@ -1004,8 +1128,10 @@
     "replacement": 67,
     "roachScore": 59,
     "startable": true,
+    "cbsRank": 27,
     "roachRank": 63,
-    "valueGap": 5
+    "valueGap": 5,
+    "shift": 0
   },
   {
     "name": "Bhayshul Tuten",
@@ -1020,8 +1146,10 @@
     "replacement": 55,
     "roachScore": 59,
     "startable": true,
+    "cbsRank": 23,
     "roachRank": 64,
-    "valueGap": -7
+    "valueGap": -7,
+    "shift": 1
   },
   {
     "name": "Carnell Tate",
@@ -1036,8 +1164,10 @@
     "replacement": 67,
     "roachScore": 62,
     "startable": true,
+    "cbsRank": 35,
     "roachRank": 65,
-    "valueGap": 9
+    "valueGap": 9,
+    "shift": 1
   },
   {
     "name": "TreVeyon Henderson",
@@ -1052,8 +1182,10 @@
     "replacement": 55,
     "roachScore": 62,
     "startable": true,
+    "cbsRank": 30,
     "roachRank": 66,
-    "valueGap": -6
+    "valueGap": -6,
+    "shift": 2
   },
   {
     "name": "Marvin Harrison Jr.",
@@ -1068,8 +1200,10 @@
     "replacement": 67,
     "roachScore": 63,
     "startable": true,
+    "cbsRank": 31,
     "roachRank": 67,
-    "valueGap": 6
+    "valueGap": 6,
+    "shift": 0
   },
   {
     "name": "Caleb Williams",
@@ -1084,8 +1218,10 @@
     "replacement": 19,
     "roachScore": 64,
     "startable": true,
+    "cbsRank": 10,
     "roachRank": 68,
-    "valueGap": 9
+    "valueGap": 9,
+    "shift": -4
   },
   {
     "name": "Jadarian Price",
@@ -1100,8 +1236,10 @@
     "replacement": 55,
     "roachScore": 64,
     "startable": true,
+    "cbsRank": 24,
     "roachRank": 69,
-    "valueGap": -10
+    "valueGap": -10,
+    "shift": 1
   },
   {
     "name": "Rhamondre Stevenson",
@@ -1116,8 +1254,10 @@
     "replacement": 55,
     "roachScore": 67,
     "startable": true,
+    "cbsRank": 25,
     "roachRank": 70,
-    "valueGap": -5
+    "valueGap": -5,
+    "shift": 3
   },
   {
     "name": "Chris Godwin Jr.",
@@ -1132,8 +1272,10 @@
     "replacement": 67,
     "roachScore": 68,
     "startable": true,
+    "cbsRank": 33,
     "roachRank": 71,
-    "valueGap": 19
+    "valueGap": 19,
+    "shift": 1
   },
   {
     "name": "Jaylen Warren",
@@ -1148,8 +1290,10 @@
     "replacement": 55,
     "roachScore": 68,
     "startable": true,
+    "cbsRank": 31,
     "roachRank": 72,
-    "valueGap": -1
+    "valueGap": -1,
+    "shift": 2
   },
   {
     "name": "Justin Herbert",
@@ -1164,8 +1308,10 @@
     "replacement": 19,
     "roachScore": 69,
     "startable": true,
+    "cbsRank": 8,
     "roachRank": 73,
-    "valueGap": 11
+    "valueGap": 11,
+    "shift": -4
   },
   {
     "name": "DK Metcalf",
@@ -1180,8 +1326,10 @@
     "replacement": 67,
     "roachScore": 74,
     "startable": true,
+    "cbsRank": 39,
     "roachRank": 74,
-    "valueGap": 6
+    "valueGap": 6,
+    "shift": 4
   },
   {
     "name": "Dak Prescott",
@@ -1196,8 +1344,10 @@
     "replacement": 19,
     "roachScore": 75,
     "startable": true,
+    "cbsRank": 7,
     "roachRank": 75,
-    "valueGap": 0
+    "valueGap": 0,
+    "shift": 0
   },
   {
     "name": "Brian Thomas Jr.",
@@ -1212,8 +1362,10 @@
     "replacement": 67,
     "roachScore": 75,
     "startable": true,
+    "cbsRank": 30,
     "roachRank": 76,
-    "valueGap": 5
+    "valueGap": 5,
+    "shift": 3
   },
   {
     "name": "Harold Fannin Jr.",
@@ -1228,8 +1380,10 @@
     "replacement": 24,
     "roachScore": 76,
     "startable": true,
+    "cbsRank": 8,
     "roachRank": 77,
-    "valueGap": -10
+    "valueGap": -10,
+    "shift": -6
   },
   {
     "name": "Michael Pittman Jr.",
@@ -1244,8 +1398,10 @@
     "replacement": 67,
     "roachScore": 76,
     "startable": true,
+    "cbsRank": 44,
     "roachRank": 78,
-    "valueGap": 16
+    "valueGap": 16,
+    "shift": 2
   },
   {
     "name": "Trevor Lawrence",
@@ -1260,8 +1416,10 @@
     "replacement": 19,
     "roachScore": 77,
     "startable": true,
+    "cbsRank": 9,
     "roachRank": 79,
-    "valueGap": 7
+    "valueGap": 7,
+    "shift": -2
   },
   {
     "name": "Tony Pollard",
@@ -1276,8 +1434,10 @@
     "replacement": 55,
     "roachScore": 77,
     "startable": true,
+    "cbsRank": 27,
     "roachRank": 80,
-    "valueGap": -1
+    "valueGap": -1,
+    "shift": 3
   },
   {
     "name": "Courtland Sutton",
@@ -1292,8 +1452,10 @@
     "replacement": 67,
     "roachScore": 78,
     "startable": true,
+    "cbsRank": 34,
     "roachRank": 81,
-    "valueGap": -5
+    "valueGap": -5,
+    "shift": 1
   },
   {
     "name": "Wan'Dale Robinson",
@@ -1308,8 +1470,10 @@
     "replacement": 67,
     "roachScore": 80,
     "startable": true,
+    "cbsRank": 47,
     "roachRank": 82,
-    "valueGap": 15
+    "valueGap": 15,
+    "shift": 2
   },
   {
     "name": "Kyle Pitts Sr.",
@@ -1324,8 +1488,10 @@
     "replacement": 24,
     "roachScore": 81,
     "startable": true,
+    "cbsRank": 7,
     "roachRank": 83,
-    "valueGap": -13
+    "valueGap": -13,
+    "shift": -7
   },
   {
     "name": "Rico Dowdle",
@@ -1340,8 +1506,10 @@
     "replacement": 55,
     "roachScore": 81,
     "startable": true,
+    "cbsRank": 29,
     "roachRank": 84,
-    "valueGap": -6
+    "valueGap": -6,
+    "shift": 3
   },
   {
     "name": "Josh Downs",
@@ -1356,8 +1524,10 @@
     "replacement": 67,
     "roachScore": 82,
     "startable": true,
+    "cbsRank": 42,
     "roachRank": 85,
-    "valueGap": 30
+    "valueGap": 30,
+    "shift": 1
   },
   {
     "name": "Jonathon Brooks",
@@ -1372,8 +1542,10 @@
     "replacement": 55,
     "roachScore": 83,
     "startable": true,
+    "cbsRank": 28,
     "roachRank": 86,
-    "valueGap": -4
+    "valueGap": -4,
+    "shift": 3
   },
   {
     "name": "Michael Wilson",
@@ -1388,8 +1560,10 @@
     "replacement": 67,
     "roachScore": 84,
     "startable": true,
+    "cbsRank": 37,
     "roachRank": 87,
-    "valueGap": -2
+    "valueGap": -2,
+    "shift": 1
   },
   {
     "name": "RJ Harvey",
@@ -1404,8 +1578,10 @@
     "replacement": 55,
     "roachScore": 85,
     "startable": true,
+    "cbsRank": 38,
     "roachRank": 88,
-    "valueGap": -5
+    "valueGap": -5,
+    "shift": 3
   },
   {
     "name": "Tucker Kraft",
@@ -1420,8 +1596,10 @@
     "replacement": 24,
     "roachScore": 86,
     "startable": true,
+    "cbsRank": 6,
     "roachRank": 89,
-    "valueGap": -20
+    "valueGap": -20,
+    "shift": -8
   },
   {
     "name": "Quentin Johnston",
@@ -1436,8 +1614,10 @@
     "replacement": 67,
     "roachScore": 86,
     "startable": true,
+    "cbsRank": null,
     "roachRank": 90,
-    "valueGap": 16
+    "valueGap": 16,
+    "shift": 0
   },
   {
     "name": "Sam LaPorta",
@@ -1452,8 +1632,10 @@
     "replacement": 24,
     "roachScore": 90,
     "startable": true,
+    "cbsRank": 5,
     "roachRank": 91,
-    "valueGap": -19
+    "valueGap": -19,
+    "shift": -6
   },
   {
     "name": "Chuba Hubbard",
@@ -1468,8 +1650,10 @@
     "replacement": 55,
     "roachScore": 91,
     "startable": true,
+    "cbsRank": 42,
     "roachRank": 92,
-    "valueGap": -3
+    "valueGap": -3,
+    "shift": 5
   },
   {
     "name": "Brock Purdy",
@@ -1484,8 +1668,10 @@
     "replacement": 19,
     "roachScore": 92,
     "startable": true,
+    "cbsRank": 11,
     "roachRank": 93,
-    "valueGap": 16
+    "valueGap": 16,
+    "shift": -1
   },
   {
     "name": "Kenny Gainwell",
@@ -1500,8 +1686,10 @@
     "replacement": 55,
     "roachScore": 92,
     "startable": true,
+    "cbsRank": null,
     "roachRank": 94,
-    "valueGap": 2
+    "valueGap": 2,
+    "shift": 4
   },
   {
     "name": "Jaxson Dart",
@@ -1516,8 +1704,10 @@
     "replacement": 19,
     "roachScore": 93,
     "startable": true,
+    "cbsRank": 14,
     "roachRank": 95,
-    "valueGap": -4
+    "valueGap": -4,
+    "shift": -2
   },
   {
     "name": "J.K. Dobbins",
@@ -1532,8 +1722,10 @@
     "replacement": 55,
     "roachScore": 94,
     "startable": true,
+    "cbsRank": 33,
     "roachRank": 96,
-    "valueGap": -8
+    "valueGap": -8,
+    "shift": 4
   },
   {
     "name": "Bo Nix",
@@ -1548,8 +1740,10 @@
     "replacement": 19,
     "roachScore": 95,
     "startable": true,
+    "cbsRank": 16,
     "roachRank": 97,
-    "valueGap": 13
+    "valueGap": 13,
+    "shift": -2
   },
   {
     "name": "Alec Pierce",
@@ -1564,8 +1758,10 @@
     "replacement": 67,
     "roachScore": 95,
     "startable": true,
+    "cbsRank": 41,
     "roachRank": 98,
-    "valueGap": -5
+    "valueGap": -5,
+    "shift": 1
   },
   {
     "name": "Stefon Diggs",
@@ -1580,8 +1776,10 @@
     "replacement": 67,
     "roachScore": 98,
     "startable": true,
+    "cbsRank": 40,
     "roachRank": 99,
-    "valueGap": 5
+    "valueGap": 5,
+    "shift": 3
   },
   {
     "name": "Travis Kelce",
@@ -1596,8 +1794,10 @@
     "replacement": 24,
     "roachScore": 99,
     "startable": true,
+    "cbsRank": 10,
     "roachRank": 100,
-    "valueGap": -5
+    "valueGap": -5,
+    "shift": -6
   },
   {
     "name": "Jayden Reed",
@@ -1612,8 +1812,10 @@
     "replacement": 67,
     "roachScore": 100,
     "startable": true,
+    "cbsRank": 46,
     "roachRank": 101,
-    "valueGap": 18
+    "valueGap": 18,
+    "shift": 3
   },
   {
     "name": "George Kittle",
@@ -1628,8 +1830,10 @@
     "replacement": 24,
     "roachScore": 101,
     "startable": true,
+    "cbsRank": 11,
     "roachRank": 102,
-    "valueGap": -15
+    "valueGap": -15,
+    "shift": -6
   },
   {
     "name": "Patrick Mahomes II",
@@ -1644,8 +1848,10 @@
     "replacement": 19,
     "roachScore": 101,
     "startable": true,
+    "cbsRank": 15,
     "roachRank": 103,
-    "valueGap": 0
+    "valueGap": 0,
+    "shift": -2
   },
   {
     "name": "Jakobi Meyers",
@@ -1660,8 +1866,10 @@
     "replacement": 67,
     "roachScore": 101,
     "startable": true,
+    "cbsRank": 50,
     "roachRank": 104,
-    "valueGap": 16
+    "valueGap": 16,
+    "shift": 1
   },
   {
     "name": "Jordan Addison",
@@ -1676,8 +1884,10 @@
     "replacement": 67,
     "roachScore": 102,
     "startable": true,
+    "cbsRank": null,
     "roachRank": 105,
-    "valueGap": 2
+    "valueGap": 2,
+    "shift": 1
   },
   {
     "name": "Matthew Stafford",
@@ -1692,8 +1902,10 @@
     "replacement": 19,
     "roachScore": 103,
     "startable": true,
+    "cbsRank": 13,
     "roachRank": 106,
-    "valueGap": -14
+    "valueGap": -14,
+    "shift": -3
   },
   {
     "name": "Blake Corum",
@@ -1708,8 +1920,10 @@
     "replacement": 55,
     "roachScore": 103,
     "startable": true,
+    "cbsRank": 35,
     "roachRank": 107,
-    "valueGap": -7
+    "valueGap": -7,
+    "shift": 2
   },
   {
     "name": "Makai Lemon",
@@ -1724,8 +1938,10 @@
     "replacement": 67,
     "roachScore": 104,
     "startable": true,
+    "cbsRank": 52,
     "roachRank": 108,
-    "valueGap": 5
+    "valueGap": 5,
+    "shift": 0
   },
   {
     "name": "Rachaad White",
@@ -1740,8 +1956,10 @@
     "replacement": 55,
     "roachScore": 105,
     "startable": true,
+    "cbsRank": 41,
     "roachRank": 109,
-    "valueGap": 7
+    "valueGap": 7,
+    "shift": 2
   },
   {
     "name": "Jared Goff",
@@ -1756,8 +1974,10 @@
     "replacement": 19,
     "roachScore": 107,
     "startable": true,
+    "cbsRank": 12,
     "roachRank": 110,
-    "valueGap": 15
+    "valueGap": 15,
+    "shift": -3
   },
   {
     "name": "Jacory Croskey-Merritt",
@@ -1772,8 +1992,10 @@
     "replacement": 55,
     "roachScore": 107,
     "startable": true,
+    "cbsRank": 32,
     "roachRank": 111,
-    "valueGap": -3
+    "valueGap": -3,
+    "shift": 2
   },
   {
     "name": "Jordan Mason",
@@ -1788,8 +2010,10 @@
     "replacement": 55,
     "roachScore": 108,
     "startable": true,
+    "cbsRank": 34,
     "roachRank": 112,
-    "valueGap": -10
+    "valueGap": -10,
+    "shift": 2
   },
   {
     "name": "Aaron Jones Sr.",
@@ -1804,8 +2028,10 @@
     "replacement": 55,
     "roachScore": 110,
     "startable": true,
+    "cbsRank": 43,
     "roachRank": 113,
-    "valueGap": 5
+    "valueGap": 5,
+    "shift": 3
   },
   {
     "name": "KC Concepcion",
@@ -1820,8 +2046,10 @@
     "replacement": 67,
     "roachScore": 111,
     "startable": true,
+    "cbsRank": 43,
     "roachRank": 114,
-    "valueGap": 12
+    "valueGap": 12,
+    "shift": 1
   },
   {
     "name": "Kyle Monangai",
@@ -1836,8 +2064,10 @@
     "replacement": 55,
     "roachScore": 111,
     "startable": true,
+    "cbsRank": 39,
     "roachRank": 115,
-    "valueGap": -14
+    "valueGap": -14,
+    "shift": 2
   },
   {
     "name": "Kyler Murray",
@@ -1852,8 +2082,10 @@
     "replacement": 19,
     "roachScore": 112,
     "startable": true,
+    "cbsRank": 17,
     "roachRank": 116,
-    "valueGap": 21
+    "valueGap": 21,
+    "shift": -4
   },
   {
     "name": "Dalton Kincaid",
@@ -1868,8 +2100,10 @@
     "replacement": 24,
     "roachScore": 115,
     "startable": true,
+    "cbsRank": 13,
     "roachRank": 117,
-    "valueGap": 5
+    "valueGap": 5,
+    "shift": -7
   },
   {
     "name": "Khalil Shakir",
@@ -1884,8 +2118,10 @@
     "replacement": 67,
     "roachScore": 119,
     "startable": true,
+    "cbsRank": 58,
     "roachRank": 118,
-    "valueGap": 23
+    "valueGap": 23,
+    "shift": 5
   },
   {
     "name": "Baker Mayfield",
@@ -1900,8 +2136,10 @@
     "replacement": 19,
     "roachScore": 120,
     "startable": true,
+    "cbsRank": 21,
     "roachRank": 119,
-    "valueGap": 17
+    "valueGap": 17,
+    "shift": 1
   },
   {
     "name": "Jalen Coker",
@@ -1916,8 +2154,10 @@
     "replacement": 67,
     "roachScore": 120,
     "startable": true,
+    "cbsRank": 45,
     "roachRank": 120,
-    "valueGap": 27
+    "valueGap": 27,
+    "shift": 4
   },
   {
     "name": "Jordan Love",
@@ -1932,8 +2172,10 @@
     "replacement": 19,
     "roachScore": 121,
     "startable": true,
+    "cbsRank": 20,
     "roachRank": 121,
-    "valueGap": 27
+    "valueGap": 27,
+    "shift": 0
   },
   {
     "name": "Romeo Doubs",
@@ -1948,8 +2190,10 @@
     "replacement": 67,
     "roachScore": 122,
     "startable": true,
+    "cbsRank": null,
     "roachRank": 122,
-    "valueGap": 7
+    "valueGap": 7,
+    "shift": 4
   },
   {
     "name": "Jake Ferguson",
@@ -1964,8 +2208,10 @@
     "replacement": 24,
     "roachScore": 123,
     "startable": true,
+    "cbsRank": 17,
     "roachRank": 123,
-    "valueGap": -11
+    "valueGap": -11,
+    "shift": -5
   },
   {
     "name": "Matthew Golden",
@@ -1980,8 +2226,10 @@
     "replacement": 67,
     "roachScore": 123,
     "startable": true,
+    "cbsRank": 48,
     "roachRank": 124,
-    "valueGap": 0
+    "valueGap": 0,
+    "shift": 3
   },
   {
     "name": "Dallas Goedert",
@@ -1996,8 +2244,10 @@
     "replacement": 24,
     "roachScore": 124,
     "startable": true,
+    "cbsRank": 12,
     "roachRank": 125,
-    "valueGap": -14
+    "valueGap": -14,
+    "shift": -6
   },
   {
     "name": "Tyler Shough",
@@ -2012,8 +2262,10 @@
     "replacement": 19,
     "roachScore": 125,
     "startable": false,
+    "cbsRank": 18,
     "roachRank": 126,
-    "valueGap": 24
+    "valueGap": 24,
+    "shift": -1
   },
   {
     "name": "Xavier Worthy",
@@ -2028,8 +2280,10 @@
     "replacement": 67,
     "roachScore": 125,
     "startable": true,
+    "cbsRank": 53,
     "roachRank": 127,
-    "valueGap": 1
+    "valueGap": 1,
+    "shift": 2
   },
   {
     "name": "Isaiah Likely",
@@ -2044,8 +2298,10 @@
     "replacement": 24,
     "roachScore": 127,
     "startable": true,
+    "cbsRank": 9,
     "roachRank": 128,
-    "valueGap": -23
+    "valueGap": -23,
+    "shift": -6
   },
   {
     "name": "Woody Marks",
@@ -2060,8 +2316,10 @@
     "replacement": 55,
     "roachScore": 127,
     "startable": true,
+    "cbsRank": 44,
     "roachRank": 129,
-    "valueGap": 3
+    "valueGap": 3,
+    "shift": 4
   },
   {
     "name": "Malik Willis",
@@ -2076,8 +2334,10 @@
     "replacement": 19,
     "roachScore": 128,
     "startable": false,
+    "cbsRank": 19,
     "roachRank": 130,
-    "valueGap": 35
+    "valueGap": 35,
+    "shift": -2
   },
   {
     "name": "Jordyn Tyson",
@@ -2092,8 +2352,10 @@
     "replacement": 67,
     "roachScore": 128,
     "startable": true,
+    "cbsRank": 55,
     "roachRank": 131,
-    "valueGap": 8
+    "valueGap": 8,
+    "shift": 1
   },
   {
     "name": "Tyler Allgeier",
@@ -2108,8 +2370,10 @@
     "replacement": 55,
     "roachScore": 129,
     "startable": true,
+    "cbsRank": 49,
     "roachRank": 132,
-    "valueGap": 12
+    "valueGap": 12,
+    "shift": 3
   },
   {
     "name": "De'Zhaun Stribling",
@@ -2124,8 +2388,10 @@
     "replacement": 67,
     "roachScore": 130,
     "startable": true,
+    "cbsRank": 49,
     "roachRank": 133,
-    "valueGap": -12
+    "valueGap": -12,
+    "shift": 1
   },
   {
     "name": "Tyjae Spears",
@@ -2140,8 +2406,10 @@
     "replacement": 55,
     "roachScore": 130,
     "startable": true,
+    "cbsRank": 47,
     "roachRank": 134,
-    "valueGap": 12
+    "valueGap": 12,
+    "shift": 2
   },
   {
     "name": "Chris Rodriguez Jr.",
@@ -2156,8 +2424,10 @@
     "replacement": 55,
     "roachScore": 131,
     "startable": true,
+    "cbsRank": 45,
     "roachRank": 135,
-    "valueGap": 0
+    "valueGap": 0,
+    "shift": 2
   },
   {
     "name": "Juwan Johnson",
@@ -2172,8 +2442,10 @@
     "replacement": 24,
     "roachScore": 135,
     "startable": true,
+    "cbsRank": 15,
     "roachRank": 136,
-    "valueGap": 15
+    "valueGap": 15,
+    "shift": -6
   },
   {
     "name": "Mark Andrews",
@@ -2188,8 +2460,10 @@
     "replacement": 24,
     "roachScore": 136,
     "startable": true,
+    "cbsRank": 14,
     "roachRank": 137,
-    "valueGap": -10
+    "valueGap": -10,
+    "shift": -6
   },
   {
     "name": "Dylan Sampson",
@@ -2204,8 +2478,10 @@
     "replacement": 55,
     "roachScore": 136,
     "startable": true,
+    "cbsRank": 52,
     "roachRank": 138,
-    "valueGap": 56
+    "valueGap": 56,
+    "shift": 4
   },
   {
     "name": "Deebo Samuel Sr.",
@@ -2220,8 +2496,10 @@
     "replacement": 67,
     "roachScore": 137,
     "startable": true,
+    "cbsRank": 51,
     "roachRank": 139,
-    "valueGap": -9
+    "valueGap": -9,
+    "shift": 2
   },
   {
     "name": "Sam Darnold",
@@ -2236,8 +2514,10 @@
     "replacement": 19,
     "roachScore": 138,
     "startable": false,
+    "cbsRank": 25,
     "roachRank": 140,
-    "valueGap": 43
+    "valueGap": 43,
+    "shift": -2
   },
   {
     "name": "Keaton Mitchell",
@@ -2252,8 +2532,10 @@
     "replacement": 55,
     "roachScore": 138,
     "startable": true,
+    "cbsRank": 54,
     "roachRank": 141,
-    "valueGap": 17
+    "valueGap": 17,
+    "shift": 3
   },
   {
     "name": "C.J. Stroud",
@@ -2268,8 +2550,10 @@
     "replacement": 19,
     "roachScore": 139,
     "startable": false,
+    "cbsRank": 23,
     "roachRank": 142,
-    "valueGap": 36
+    "valueGap": 36,
+    "shift": -3
   },
   {
     "name": "Rashid Shaheed",
@@ -2284,8 +2568,10 @@
     "replacement": 67,
     "roachScore": 139,
     "startable": true,
+    "cbsRank": null,
     "roachRank": 143,
-    "valueGap": 2
+    "valueGap": 2,
+    "shift": 0
   },
   {
     "name": "Daniel Jones",
@@ -2300,8 +2586,10 @@
     "replacement": 19,
     "roachScore": 140,
     "startable": false,
+    "cbsRank": 22,
     "roachRank": 144,
-    "valueGap": 31
+    "valueGap": 31,
+    "shift": -4
   },
   {
     "name": "Zach Charbonnet",
@@ -2316,8 +2604,10 @@
     "replacement": 55,
     "roachScore": 140,
     "startable": true,
+    "cbsRank": 46,
     "roachRank": 145,
-    "valueGap": -3
+    "valueGap": -3,
+    "shift": 1
   },
   {
     "name": "Denzel Boston",
@@ -2332,8 +2622,10 @@
     "replacement": 67,
     "roachScore": 141,
     "startable": true,
+    "cbsRank": 57,
     "roachRank": 146,
-    "valueGap": 20
+    "valueGap": 20,
+    "shift": -1
   },
   {
     "name": "Jonah Coleman",
@@ -2348,8 +2640,10 @@
     "replacement": 55,
     "roachScore": 142,
     "startable": true,
+    "cbsRank": 48,
     "roachRank": 147,
-    "valueGap": 14
+    "valueGap": 14,
+    "shift": 1
   },
   {
     "name": "Cam Ward",
@@ -2364,8 +2658,10 @@
     "replacement": 19,
     "roachScore": 147,
     "startable": false,
+    "cbsRank": 26,
     "roachRank": 148,
-    "valueGap": 64
+    "valueGap": 64,
+    "shift": -1
   },
   {
     "name": "Tre Tucker",
@@ -2380,8 +2676,10 @@
     "replacement": 67,
     "roachScore": 148,
     "startable": true,
+    "cbsRank": 56,
     "roachRank": 149,
-    "valueGap": 23
+    "valueGap": 23,
+    "shift": 3
   },
   {
     "name": "Isiah Pacheco",
@@ -2396,8 +2694,10 @@
     "replacement": 55,
     "roachScore": 148,
     "startable": true,
+    "cbsRank": 56,
     "roachRank": 150,
-    "valueGap": 5
+    "valueGap": 5,
+    "shift": 4
   },
   {
     "name": "Tyrone Tracy Jr.",
@@ -2412,8 +2712,10 @@
     "replacement": 55,
     "roachScore": 150,
     "startable": true,
+    "cbsRank": 58,
     "roachRank": 151,
-    "valueGap": 37
+    "valueGap": 37,
+    "shift": 5
   },
   {
     "name": "Alvin Kamara",
@@ -2428,8 +2730,10 @@
     "replacement": 55,
     "roachScore": 151,
     "startable": true,
+    "cbsRank": 59,
     "roachRank": 152,
-    "valueGap": 2
+    "valueGap": 2,
+    "shift": 5
   },
   {
     "name": "Houston Texans",
@@ -2444,8 +2748,10 @@
     "replacement": 13,
     "roachScore": 153,
     "startable": true,
+    "cbsRank": null,
     "roachRank": 153,
-    "valueGap": -54
+    "valueGap": -54,
+    "shift": 0
   },
   {
     "name": "Tank Bigsby",
@@ -2460,8 +2766,10 @@
     "replacement": 55,
     "roachScore": 153,
     "startable": true,
+    "cbsRank": 50,
     "roachRank": 154,
-    "valueGap": 16
+    "valueGap": 16,
+    "shift": 5
   },
   {
     "name": "Brenton Strange",
@@ -2476,8 +2784,10 @@
     "replacement": 24,
     "roachScore": 154,
     "startable": true,
+    "cbsRank": 20,
     "roachRank": 155,
-    "valueGap": 2
+    "valueGap": 2,
+    "shift": -6
   },
   {
     "name": "Adonai Mitchell",
@@ -2492,8 +2802,10 @@
     "replacement": 67,
     "roachScore": 154,
     "startable": true,
+    "cbsRank": null,
     "roachRank": 156,
-    "valueGap": 74
+    "valueGap": 74,
+    "shift": 2
   },
   {
     "name": "Chig Okonkwo",
@@ -2508,8 +2820,10 @@
     "replacement": 24,
     "roachScore": 155,
     "startable": true,
+    "cbsRank": null,
     "roachRank": 157,
-    "valueGap": 28
+    "valueGap": 28,
+    "shift": -7
   },
   {
     "name": "Dalton Schultz",
@@ -2524,8 +2838,10 @@
     "replacement": 24,
     "roachScore": 156,
     "startable": true,
+    "cbsRank": 16,
     "roachRank": 158,
-    "valueGap": 23
+    "valueGap": 23,
+    "shift": -7
   },
   {
     "name": "Mike Washington Jr.",
@@ -2540,8 +2856,10 @@
     "replacement": 55,
     "roachScore": 156,
     "startable": true,
+    "cbsRank": 40,
     "roachRank": 159,
-    "valueGap": -16
+    "valueGap": -16,
+    "shift": 3
   },
   {
     "name": "Jerry Jeudy",
@@ -2556,8 +2874,10 @@
     "replacement": 67,
     "roachScore": 157,
     "startable": true,
+    "cbsRank": null,
     "roachRank": 160,
-    "valueGap": 22
+    "valueGap": 22,
+    "shift": 1
   },
   {
     "name": "MarShawn Lloyd",
@@ -2572,8 +2892,10 @@
     "replacement": 55,
     "roachScore": 158,
     "startable": true,
+    "cbsRank": 36,
     "roachRank": 161,
-    "valueGap": -21
+    "valueGap": -21,
+    "shift": 3
   },
   {
     "name": "Braelon Allen",
@@ -2588,8 +2910,10 @@
     "replacement": 55,
     "roachScore": 159,
     "startable": false,
+    "cbsRank": 55,
     "roachRank": 162,
-    "valueGap": 34
+    "valueGap": 34,
+    "shift": 3
   },
   {
     "name": "Hunter Henry",
@@ -2604,8 +2928,10 @@
     "replacement": 24,
     "roachScore": 160,
     "startable": true,
+    "cbsRank": 21,
     "roachRank": 163,
-    "valueGap": -7
+    "valueGap": -7,
+    "shift": -8
   },
   {
     "name": "Bryce Young",
@@ -2620,8 +2946,10 @@
     "replacement": 19,
     "roachScore": 160,
     "startable": false,
+    "cbsRank": 29,
     "roachRank": 164,
-    "valueGap": 63
+    "valueGap": 63,
+    "shift": -4
   },
   {
     "name": "Jalen McMillan",
@@ -2636,8 +2964,10 @@
     "replacement": 67,
     "roachScore": 162,
     "startable": true,
+    "cbsRank": null,
     "roachRank": 165,
-    "valueGap": 37
+    "valueGap": 37,
+    "shift": 1
   },
   {
     "name": "Denver Broncos",
@@ -2652,8 +2982,10 @@
     "replacement": 13,
     "roachScore": 163,
     "startable": true,
+    "cbsRank": null,
     "roachRank": 166,
-    "valueGap": -52
+    "valueGap": -52,
+    "shift": -3
   },
   {
     "name": "Jauan Jennings",
@@ -2668,8 +3000,10 @@
     "replacement": 67,
     "roachScore": 165,
     "startable": true,
+    "cbsRank": null,
     "roachRank": 167,
-    "valueGap": 34
+    "valueGap": 34,
+    "shift": 2
   },
   {
     "name": "Kayshon Boutte",
@@ -2684,8 +3018,10 @@
     "replacement": 67,
     "roachScore": 166,
     "startable": true,
+    "cbsRank": 60,
     "roachRank": 168,
-    "valueGap": 51
+    "valueGap": 51,
+    "shift": 2
   },
   {
     "name": "Brian Robinson Jr.",
@@ -2700,8 +3036,10 @@
     "replacement": 55,
     "roachScore": 166,
     "startable": false,
+    "cbsRank": 53,
     "roachRank": 169,
-    "valueGap": -5
+    "valueGap": -5,
+    "shift": 3
   },
   {
     "name": "Los Angeles Rams",
@@ -2716,8 +3054,10 @@
     "replacement": 13,
     "roachScore": 167,
     "startable": true,
+    "cbsRank": null,
     "roachRank": 170,
-    "valueGap": -53
+    "valueGap": -53,
+    "shift": -3
   },
   {
     "name": "Tre' Harris",
@@ -2732,8 +3072,10 @@
     "replacement": 67,
     "roachScore": 167,
     "startable": true,
+    "cbsRank": null,
     "roachRank": 171,
-    "valueGap": 57
+    "valueGap": 57,
+    "shift": 0
   },
   {
     "name": "Seattle Seahawks",
@@ -2748,8 +3090,10 @@
     "replacement": 13,
     "roachScore": 168,
     "startable": true,
+    "cbsRank": null,
     "roachRank": 172,
-    "valueGap": -49
+    "valueGap": -49,
+    "shift": -4
   },
   {
     "name": "Dontayvion Wicks",
@@ -2764,8 +3108,10 @@
     "replacement": 67,
     "roachScore": 169,
     "startable": true,
+    "cbsRank": null,
     "roachRank": 173,
-    "valueGap": 81
+    "valueGap": 81,
+    "shift": 0
   },
   {
     "name": "Omar Cooper Jr.",
@@ -2780,8 +3126,10 @@
     "replacement": 67,
     "roachScore": 170,
     "startable": true,
+    "cbsRank": null,
     "roachRank": 174,
-    "valueGap": 46
+    "valueGap": 46,
+    "shift": 0
   },
   {
     "name": "Ryan Flournoy",
@@ -2796,8 +3144,10 @@
     "replacement": 67,
     "roachScore": 173,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 175,
-    "valueGap": 89
+    "valueGap": 89,
+    "shift": 2
   },
   {
     "name": "Emmett Johnson",
@@ -2812,8 +3162,10 @@
     "replacement": 55,
     "roachScore": 174,
     "startable": false,
+    "cbsRank": 51,
     "roachRank": 176,
-    "valueGap": 45
+    "valueGap": 45,
+    "shift": 4
   },
   {
     "name": "Philadelphia Eagles",
@@ -2828,8 +3180,10 @@
     "replacement": 13,
     "roachScore": 175,
     "startable": true,
+    "cbsRank": null,
     "roachRank": 177,
-    "valueGap": -39
+    "valueGap": -39,
+    "shift": -2
   },
   {
     "name": "Pat Bryant",
@@ -2844,8 +3198,10 @@
     "replacement": 67,
     "roachScore": 175,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 178,
-    "valueGap": 101
+    "valueGap": 101,
+    "shift": 1
   },
   {
     "name": "Brandon Aubrey",
@@ -2860,8 +3216,10 @@
     "replacement": 14,
     "roachScore": 178,
     "startable": true,
+    "cbsRank": 1,
     "roachRank": 179,
-    "valueGap": -81
+    "valueGap": -81,
+    "shift": -1
   },
   {
     "name": "Malik Washington",
@@ -2876,8 +3234,10 @@
     "replacement": 67,
     "roachScore": 180,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 180,
-    "valueGap": 37
+    "valueGap": 37,
+    "shift": 4
   },
   {
     "name": "T.J. Hockenson",
@@ -2892,8 +3252,10 @@
     "replacement": 24,
     "roachScore": 181,
     "startable": true,
+    "cbsRank": 25,
     "roachRank": 181,
-    "valueGap": -14
+    "valueGap": -14,
+    "shift": -5
   },
   {
     "name": "Pittsburgh Steelers",
@@ -2908,8 +3270,10 @@
     "replacement": 13,
     "roachScore": 181,
     "startable": true,
+    "cbsRank": null,
     "roachRank": 182,
-    "valueGap": -30
+    "valueGap": -30,
+    "shift": -1
   },
   {
     "name": "Ray Davis",
@@ -2924,8 +3288,10 @@
     "replacement": 55,
     "roachScore": 181,
     "startable": false,
+    "cbsRank": 57,
     "roachRank": 183,
-    "valueGap": 39
+    "valueGap": 39,
+    "shift": 4
   },
   {
     "name": "Jacoby Brissett",
@@ -2940,8 +3306,10 @@
     "replacement": 19,
     "roachScore": 182,
     "startable": false,
+    "cbsRank": 24,
     "roachRank": 184,
-    "valueGap": 52
+    "valueGap": 52,
+    "shift": -2
   },
   {
     "name": "Jalen Nailor",
@@ -2956,8 +3324,10 @@
     "replacement": 67,
     "roachScore": 182,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 185,
-    "valueGap": 13
+    "valueGap": 13,
+    "shift": 1
   },
   {
     "name": "New England Patriots",
@@ -2972,8 +3342,10 @@
     "replacement": 13,
     "roachScore": 183,
     "startable": true,
+    "cbsRank": null,
     "roachRank": 186,
-    "valueGap": -33
+    "valueGap": -33,
+    "shift": -3
   },
   {
     "name": "Minnesota Vikings",
@@ -2988,8 +3360,10 @@
     "replacement": 13,
     "roachScore": 185,
     "startable": true,
+    "cbsRank": null,
     "roachRank": 187,
-    "valueGap": -27
+    "valueGap": -27,
+    "shift": -2
   },
   {
     "name": "Jacksonville Jaguars",
@@ -3004,8 +3378,10 @@
     "replacement": 13,
     "roachScore": 188,
     "startable": true,
+    "cbsRank": null,
     "roachRank": 188,
-    "valueGap": -14
+    "valueGap": -14,
+    "shift": 0
   },
   {
     "name": "Travis Hunter",
@@ -3020,8 +3396,10 @@
     "replacement": 67,
     "roachScore": 188,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 189,
-    "valueGap": 55
+    "valueGap": 55,
+    "shift": 3
   },
   {
     "name": "Kimani Vidal",
@@ -3036,8 +3414,10 @@
     "replacement": 55,
     "roachScore": 188,
     "startable": false,
+    "cbsRank": 60,
     "roachRank": 190,
-    "valueGap": 45
+    "valueGap": 45,
+    "shift": 4
   },
   {
     "name": "Cameron Dicker",
@@ -3052,8 +3432,10 @@
     "replacement": 14,
     "roachScore": 189,
     "startable": true,
+    "cbsRank": 4,
     "roachRank": 191,
-    "valueGap": -60
+    "valueGap": -60,
+    "shift": -2
   },
   {
     "name": "Keenan Allen",
@@ -3068,8 +3450,10 @@
     "replacement": 67,
     "roachScore": 189,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 192,
-    "valueGap": -30
+    "valueGap": -30,
+    "shift": 1
   },
   {
     "name": "Ka'imi Fairbairn",
@@ -3084,8 +3468,10 @@
     "replacement": 14,
     "roachScore": 190,
     "startable": true,
+    "cbsRank": 2,
     "roachRank": 193,
-    "valueGap": -60
+    "valueGap": -60,
+    "shift": -3
   },
   {
     "name": "Los Angeles Chargers",
@@ -3100,8 +3486,10 @@
     "replacement": 13,
     "roachScore": 191,
     "startable": true,
+    "cbsRank": null,
     "roachRank": 194,
-    "valueGap": -18
+    "valueGap": -18,
+    "shift": -3
   },
   {
     "name": "Calvin Ridley",
@@ -3116,8 +3504,10 @@
     "replacement": 67,
     "roachScore": 191,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 195,
-    "valueGap": -3
+    "valueGap": -3,
+    "shift": 0
   },
   {
     "name": "Sean Tucker",
@@ -3132,8 +3522,10 @@
     "replacement": 55,
     "roachScore": 196,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 196,
-    "valueGap": 47
+    "valueGap": 47,
+    "shift": 6
   },
   {
     "name": "Baltimore Ravens",
@@ -3148,8 +3540,10 @@
     "replacement": 13,
     "roachScore": 197,
     "startable": true,
+    "cbsRank": null,
     "roachRank": 197,
-    "valueGap": -38
+    "valueGap": -38,
+    "shift": 0
   },
   {
     "name": "Jaylin Noel",
@@ -3164,8 +3558,10 @@
     "replacement": 67,
     "roachScore": 197,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 198,
-    "valueGap": 72
+    "valueGap": 72,
+    "shift": 3
   },
   {
     "name": "Cam Little",
@@ -3180,8 +3576,10 @@
     "replacement": 14,
     "roachScore": 199,
     "startable": true,
+    "cbsRank": 5,
     "roachRank": 199,
-    "valueGap": -50
+    "valueGap": -50,
+    "shift": 0
   },
   {
     "name": "Jason Myers",
@@ -3196,8 +3594,10 @@
     "replacement": 14,
     "roachScore": 200,
     "startable": true,
+    "cbsRank": 3,
     "roachRank": 200,
-    "valueGap": -66
+    "valueGap": -66,
+    "shift": 0
   },
   {
     "name": "AJ Barner",
@@ -3212,8 +3612,10 @@
     "replacement": 24,
     "roachScore": 201,
     "startable": true,
+    "cbsRank": 24,
     "roachRank": 201,
-    "valueGap": 3
+    "valueGap": 3,
+    "shift": -5
   },
   {
     "name": "Nicholas Singleton",
@@ -3228,8 +3630,10 @@
     "replacement": 55,
     "roachScore": 202,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 202,
-    "valueGap": 32
+    "valueGap": 32,
+    "shift": 6
   },
   {
     "name": "Terrance Ferguson",
@@ -3244,8 +3648,10 @@
     "replacement": 24,
     "roachScore": 203,
     "startable": true,
+    "cbsRank": 19,
     "roachRank": 203,
-    "valueGap": -4
+    "valueGap": -4,
+    "shift": -5
   },
   {
     "name": "James Conner",
@@ -3260,8 +3666,10 @@
     "replacement": 55,
     "roachScore": 203,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 204,
-    "valueGap": 11
+    "valueGap": 11,
+    "shift": 5
   },
   {
     "name": "Tyler Loop",
@@ -3276,8 +3684,10 @@
     "replacement": 14,
     "roachScore": 204,
     "startable": true,
+    "cbsRank": 13,
     "roachRank": 205,
-    "valueGap": -25
+    "valueGap": -25,
+    "shift": -1
   },
   {
     "name": "Kansas City Chiefs",
@@ -3292,8 +3702,10 @@
     "replacement": 13,
     "roachScore": 205,
     "startable": true,
+    "cbsRank": null,
     "roachRank": 206,
-    "valueGap": 0
+    "valueGap": 0,
+    "shift": -1
   },
   {
     "name": "Eddy Pineiro",
@@ -3308,8 +3720,10 @@
     "replacement": 14,
     "roachScore": 206,
     "startable": true,
+    "cbsRank": 6,
     "roachRank": 207,
-    "valueGap": -23
+    "valueGap": -23,
+    "shift": -1
   },
   {
     "name": "Oronde Gadsden II",
@@ -3324,8 +3738,10 @@
     "replacement": 24,
     "roachScore": 208,
     "startable": true,
+    "cbsRank": 28,
     "roachRank": 208,
-    "valueGap": 38
+    "valueGap": 38,
+    "shift": -5
   },
   {
     "name": "Tank Dell",
@@ -3340,8 +3756,10 @@
     "replacement": 67,
     "roachScore": 210,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 209,
-    "valueGap": -32
+    "valueGap": -32,
+    "shift": 5
   },
   {
     "name": "Aaron Rodgers",
@@ -3356,8 +3774,10 @@
     "replacement": 19,
     "roachScore": 211,
     "startable": false,
+    "cbsRank": 27,
     "roachRank": 210,
-    "valueGap": 23
+    "valueGap": 23,
+    "shift": 1
   },
   {
     "name": "Gunnar Helm",
@@ -3372,8 +3792,10 @@
     "replacement": 24,
     "roachScore": 212,
     "startable": false,
+    "cbsRank": 31,
     "roachRank": 211,
-    "valueGap": 60
+    "valueGap": 60,
+    "shift": -4
   },
   {
     "name": "Green Bay Packers",
@@ -3388,8 +3810,10 @@
     "replacement": 13,
     "roachScore": 212,
     "startable": true,
+    "cbsRank": null,
     "roachRank": 212,
-    "valueGap": -26
+    "valueGap": -26,
+    "shift": 0
   },
   {
     "name": "Geno Smith",
@@ -3404,8 +3828,10 @@
     "replacement": 19,
     "roachScore": 213,
     "startable": false,
+    "cbsRank": 28,
     "roachRank": 213,
-    "valueGap": 160
+    "valueGap": 160,
+    "shift": 0
   },
   {
     "name": "Cooper Kupp",
@@ -3420,8 +3846,10 @@
     "replacement": 67,
     "roachScore": 213,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 214,
-    "valueGap": -7
+    "valueGap": -7,
+    "shift": 3
   },
   {
     "name": "Darnell Mooney",
@@ -3436,8 +3864,10 @@
     "replacement": 67,
     "roachScore": 214,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 215,
-    "valueGap": 75
+    "valueGap": 75,
+    "shift": 3
   },
   {
     "name": "Kenyon Sadiq",
@@ -3452,8 +3882,10 @@
     "replacement": 24,
     "roachScore": 215,
     "startable": false,
+    "cbsRank": 26,
     "roachRank": 216,
-    "valueGap": -47
+    "valueGap": -47,
+    "shift": -6
   },
   {
     "name": "Jake Bates",
@@ -3468,8 +3900,10 @@
     "replacement": 14,
     "roachScore": 215,
     "startable": true,
+    "cbsRank": 12,
     "roachRank": 217,
-    "valueGap": -54
+    "valueGap": -54,
+    "shift": -2
   },
   {
     "name": "Cairo Santos",
@@ -3484,8 +3918,10 @@
     "replacement": 14,
     "roachScore": 216,
     "startable": true,
+    "cbsRank": 15,
     "roachRank": 218,
-    "valueGap": -25
+    "valueGap": -25,
+    "shift": -2
   },
   {
     "name": "Rashod Bateman",
@@ -3500,8 +3936,10 @@
     "replacement": 67,
     "roachScore": 217,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 219,
-    "valueGap": 59
+    "valueGap": 59,
+    "shift": 2
   },
   {
     "name": "Jaydon Blue",
@@ -3516,8 +3954,10 @@
     "replacement": 55,
     "roachScore": 217,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 220,
-    "valueGap": 5
+    "valueGap": 5,
+    "shift": 3
   },
   {
     "name": "Isaac TeSlaa",
@@ -3532,8 +3972,10 @@
     "replacement": 67,
     "roachScore": 218,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 221,
-    "valueGap": 39
+    "valueGap": 39,
+    "shift": 1
   },
   {
     "name": "Evan McPherson",
@@ -3548,8 +3990,10 @@
     "replacement": 14,
     "roachScore": 219,
     "startable": true,
+    "cbsRank": 7,
     "roachRank": 222,
-    "valueGap": -35
+    "valueGap": -35,
+    "shift": -3
   },
   {
     "name": "Detroit Lions",
@@ -3564,8 +4008,10 @@
     "replacement": 13,
     "roachScore": 220,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 223,
-    "valueGap": -50
+    "valueGap": -50,
+    "shift": -3
   },
   {
     "name": "Troy Franklin",
@@ -3580,8 +4026,10 @@
     "replacement": 67,
     "roachScore": 220,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 224,
-    "valueGap": 61
+    "valueGap": 61,
+    "shift": 0
   },
   {
     "name": "Kaytron Allen",
@@ -3596,8 +4044,10 @@
     "replacement": 55,
     "roachScore": 224,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 225,
-    "valueGap": 62
+    "valueGap": 62,
+    "shift": 5
   },
   {
     "name": "Harrison Mevis",
@@ -3612,8 +4062,10 @@
     "replacement": 14,
     "roachScore": 225,
     "startable": true,
+    "cbsRank": 14,
     "roachRank": 226,
-    "valueGap": -58
+    "valueGap": -58,
+    "shift": -1
   },
   {
     "name": "Emanuel Wilson",
@@ -3628,8 +4080,10 @@
     "replacement": 55,
     "roachScore": 225,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 227,
-    "valueGap": 70
+    "valueGap": 70,
+    "shift": 4
   },
   {
     "name": "Andy Borregales",
@@ -3644,8 +4098,10 @@
     "replacement": 14,
     "roachScore": 226,
     "startable": true,
+    "cbsRank": null,
     "roachRank": 228,
-    "valueGap": -2
+    "valueGap": -2,
+    "shift": -2
   },
   {
     "name": "Chase McLaughlin",
@@ -3660,8 +4116,10 @@
     "replacement": 14,
     "roachScore": 227,
     "startable": true,
+    "cbsRank": 9,
     "roachRank": 229,
-    "valueGap": -13
+    "valueGap": -13,
+    "shift": -2
   },
   {
     "name": "Ja'Kobi Lane",
@@ -3676,8 +4134,10 @@
     "replacement": 67,
     "roachScore": 228,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 230,
-    "valueGap": -59
+    "valueGap": -59,
+    "shift": 2
   },
   {
     "name": "Cleveland Browns",
@@ -3692,8 +4152,10 @@
     "replacement": 13,
     "roachScore": 229,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 231,
-    "valueGap": -36
+    "valueGap": -36,
+    "shift": -2
   },
   {
     "name": "Germie Bernard",
@@ -3708,8 +4170,10 @@
     "replacement": 67,
     "roachScore": 231,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 232,
-    "valueGap": 44
+    "valueGap": 44,
+    "shift": 3
   },
   {
     "name": "George Holani",
@@ -3724,8 +4188,10 @@
     "replacement": 55,
     "roachScore": 232,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 233,
-    "valueGap": 32
+    "valueGap": 32,
+    "shift": 5
   },
   {
     "name": "Pat Freiermuth",
@@ -3740,8 +4206,10 @@
     "replacement": 24,
     "roachScore": 233,
     "startable": false,
+    "cbsRank": 29,
     "roachRank": 234,
-    "valueGap": 6
+    "valueGap": 6,
+    "shift": -6
   },
   {
     "name": "Buffalo Bills",
@@ -3756,8 +4224,10 @@
     "replacement": 13,
     "roachScore": 233,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 235,
-    "valueGap": -44
+    "valueGap": -44,
+    "shift": -2
   },
   {
     "name": "Antonio Williams",
@@ -3772,8 +4242,10 @@
     "replacement": 67,
     "roachScore": 233,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 236,
-    "valueGap": 32
+    "valueGap": 32,
+    "shift": 1
   },
   {
     "name": "Jaylen Wright",
@@ -3788,8 +4260,10 @@
     "replacement": 55,
     "roachScore": 234,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 237,
-    "valueGap": 11
+    "valueGap": 11,
+    "shift": 3
   },
   {
     "name": "Zachariah Branch",
@@ -3804,8 +4278,10 @@
     "replacement": 67,
     "roachScore": 235,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 238,
-    "valueGap": 21
+    "valueGap": 21,
+    "shift": 1
   },
   {
     "name": "Justice Hill",
@@ -3820,8 +4296,10 @@
     "replacement": 55,
     "roachScore": 235,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 239,
-    "valueGap": 16
+    "valueGap": 16,
+    "shift": 2
   },
   {
     "name": "Caleb Douglas",
@@ -3836,8 +4314,10 @@
     "replacement": 67,
     "roachScore": 238,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 240,
-    "valueGap": -31
+    "valueGap": -31,
+    "shift": 2
   },
   {
     "name": "Kaelon Black",
@@ -3852,8 +4332,10 @@
     "replacement": 55,
     "roachScore": 238,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 241,
-    "valueGap": -41
+    "valueGap": -41,
+    "shift": 3
   },
   {
     "name": "Cade Otton",
@@ -3868,8 +4350,10 @@
     "replacement": 24,
     "roachScore": 239,
     "startable": false,
+    "cbsRank": 30,
     "roachRank": 242,
-    "valueGap": -4
+    "valueGap": -4,
+    "shift": -8
   },
   {
     "name": "Malachi Fields",
@@ -3884,8 +4368,10 @@
     "replacement": 67,
     "roachScore": 239,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 243,
-    "valueGap": -14
+    "valueGap": -14,
+    "shift": 0
   },
   {
     "name": "Greg Dulcich",
@@ -3900,8 +4386,10 @@
     "replacement": 24,
     "roachScore": 241,
     "startable": false,
+    "cbsRank": 18,
     "roachRank": 244,
-    "valueGap": -30
+    "valueGap": -30,
+    "shift": -8
   },
   {
     "name": "Jack Bech",
@@ -3916,8 +4404,10 @@
     "replacement": 67,
     "roachScore": 242,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 245,
-    "valueGap": 49
+    "valueGap": 49,
+    "shift": 1
   },
   {
     "name": "Keon Coleman",
@@ -3932,8 +4422,10 @@
     "replacement": 67,
     "roachScore": 244,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 246,
-    "valueGap": 49
+    "valueGap": 49,
+    "shift": 2
   },
   {
     "name": "Harrison Butker",
@@ -3948,8 +4440,10 @@
     "replacement": 14,
     "roachScore": 245,
     "startable": true,
+    "cbsRank": 10,
     "roachRank": 247,
-    "valueGap": -68
+    "valueGap": -68,
+    "shift": -2
   },
   {
     "name": "Chris Bell",
@@ -3964,8 +4458,10 @@
     "replacement": 67,
     "roachScore": 245,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 248,
-    "valueGap": -6
+    "valueGap": -6,
+    "shift": 1
   },
   {
     "name": "Devaughn Vele",
@@ -3980,8 +4476,10 @@
     "replacement": 67,
     "roachScore": 247,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 249,
-    "valueGap": 2
+    "valueGap": 2,
+    "shift": 2
   },
   {
     "name": "Ted Hurst III",
@@ -3996,8 +4494,10 @@
     "replacement": 67,
     "roachScore": 250,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 250,
-    "valueGap": 36
+    "valueGap": 36,
+    "shift": 4
   },
   {
     "name": "Isaiah Davis",
@@ -4012,8 +4512,10 @@
     "replacement": 55,
     "roachScore": 250,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 251,
-    "valueGap": 353
+    "valueGap": 353,
+    "shift": 5
   },
   {
     "name": "Chimere Dike",
@@ -4028,8 +4530,10 @@
     "replacement": 67,
     "roachScore": 251,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 252,
-    "valueGap": 21
+    "valueGap": 21,
+    "shift": 3
   },
   {
     "name": "Najee Harris",
@@ -4044,8 +4548,10 @@
     "replacement": 55,
     "roachScore": 251,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 253,
-    "valueGap": -16
+    "valueGap": -16,
+    "shift": 4
   },
   {
     "name": "David Njoku",
@@ -4060,8 +4566,10 @@
     "replacement": 24,
     "roachScore": 252,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 254,
-    "valueGap": -46
+    "valueGap": -46,
+    "shift": -7
   },
   {
     "name": "Chris Boswell",
@@ -4076,8 +4584,10 @@
     "replacement": 14,
     "roachScore": 252,
     "startable": false,
+    "cbsRank": 17,
     "roachRank": 255,
-    "valueGap": -50
+    "valueGap": -50,
+    "shift": -3
   },
   {
     "name": "Ollie Gordon II",
@@ -4092,8 +4602,10 @@
     "replacement": 55,
     "roachScore": 252,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 256,
-    "valueGap": 139
+    "valueGap": 139,
+    "shift": 2
   },
   {
     "name": "Fernando Mendoza",
@@ -4108,8 +4620,10 @@
     "replacement": 19,
     "roachScore": 253,
     "startable": false,
+    "cbsRank": 31,
     "roachRank": 257,
-    "valueGap": -33
+    "valueGap": -33,
+    "shift": -4
   },
   {
     "name": "Demond Claiborne",
@@ -4124,8 +4638,10 @@
     "replacement": 55,
     "roachScore": 253,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 258,
-    "valueGap": 48
+    "valueGap": 48,
+    "shift": 1
   },
   {
     "name": "Evan Engram",
@@ -4140,8 +4656,10 @@
     "replacement": 24,
     "roachScore": 255,
     "startable": false,
+    "cbsRank": 27,
     "roachRank": 259,
-    "valueGap": 97
+    "valueGap": 97,
+    "shift": -9
   },
   {
     "name": "Ty Johnson",
@@ -4156,8 +4674,10 @@
     "replacement": 55,
     "roachScore": 255,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 260,
-    "valueGap": 217
+    "valueGap": 217,
+    "shift": 1
   },
   {
     "name": "Elic Ayomanor",
@@ -4172,8 +4692,10 @@
     "replacement": 67,
     "roachScore": 256,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 261,
-    "valueGap": 49
+    "valueGap": 49,
+    "shift": -1
   },
   {
     "name": "Samaje Perine",
@@ -4188,8 +4710,10 @@
     "replacement": 55,
     "roachScore": 257,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 262,
-    "valueGap": 15
+    "valueGap": 15,
+    "shift": 1
   },
   {
     "name": "Cyrus Allen",
@@ -4204,8 +4728,10 @@
     "replacement": 67,
     "roachScore": 258,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 263,
-    "valueGap": -66
+    "valueGap": -66,
+    "shift": -1
   },
   {
     "name": "LeQuint Allen Jr.",
@@ -4220,8 +4746,10 @@
     "replacement": 55,
     "roachScore": 258,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 264,
-    "valueGap": 147
+    "valueGap": 147,
+    "shift": 0
   },
   {
     "name": "Jordan James",
@@ -4236,8 +4764,10 @@
     "replacement": 55,
     "roachScore": 259,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 265,
-    "valueGap": -33
+    "valueGap": -33,
+    "shift": 0
   },
   {
     "name": "Tory Horton",
@@ -4252,8 +4782,10 @@
     "replacement": 67,
     "roachScore": 264,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 266,
-    "valueGap": 30
+    "valueGap": 30,
+    "shift": 2
   },
   {
     "name": "Chris Brooks",
@@ -4268,8 +4800,10 @@
     "replacement": 55,
     "roachScore": 264,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 267,
-    "valueGap": 140
+    "valueGap": 140,
+    "shift": 3
   },
   {
     "name": "Tyquan Thornton",
@@ -4284,8 +4818,10 @@
     "replacement": 67,
     "roachScore": 265,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 268,
-    "valueGap": 147
+    "valueGap": 147,
+    "shift": 1
   },
   {
     "name": "Wil Lutz",
@@ -4300,8 +4836,10 @@
     "replacement": 14,
     "roachScore": 267,
     "startable": false,
+    "cbsRank": 18,
     "roachRank": 269,
-    "valueGap": -66
+    "valueGap": -66,
+    "shift": -2
   },
   {
     "name": "Darius Slayton",
@@ -4316,8 +4854,10 @@
     "replacement": 67,
     "roachScore": 268,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 270,
-    "valueGap": 193
+    "valueGap": 193,
+    "shift": 2
   },
   {
     "name": "Elijah Sarratt",
@@ -4332,8 +4872,10 @@
     "replacement": 67,
     "roachScore": 270,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 271,
-    "valueGap": 60
+    "valueGap": 60,
+    "shift": 3
   },
   {
     "name": "Colby Parkinson",
@@ -4348,8 +4890,10 @@
     "replacement": 24,
     "roachScore": 271,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 272,
-    "valueGap": 27
+    "valueGap": 27,
+    "shift": -6
   },
   {
     "name": "Will Reichard",
@@ -4364,8 +4908,10 @@
     "replacement": 14,
     "roachScore": 271,
     "startable": false,
+    "cbsRank": 11,
     "roachRank": 273,
-    "valueGap": -84
+    "valueGap": -84,
+    "shift": -2
   },
   {
     "name": "Christian Kirk",
@@ -4380,8 +4926,10 @@
     "replacement": 67,
     "roachScore": 271,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 274,
-    "valueGap": -21
+    "valueGap": -21,
+    "shift": 1
   },
   {
     "name": "Malik Davis",
@@ -4396,8 +4944,10 @@
     "replacement": 55,
     "roachScore": 271,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 275,
-    "valueGap": 130
+    "valueGap": 130,
+    "shift": 2
   },
   {
     "name": "Tua Tagovailoa",
@@ -4412,8 +4962,10 @@
     "replacement": 19,
     "roachScore": 273,
     "startable": false,
+    "cbsRank": 30,
     "roachRank": 276,
-    "valueGap": 12
+    "valueGap": 12,
+    "shift": -3
   },
   {
     "name": "Xavier Legette",
@@ -4428,8 +4980,10 @@
     "replacement": 67,
     "roachScore": 274,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 277,
-    "valueGap": 180
+    "valueGap": 180,
+    "shift": 1
   },
   {
     "name": "Marvin Mims Jr.",
@@ -4444,8 +4998,10 @@
     "replacement": 67,
     "roachScore": 275,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 278,
-    "valueGap": 14
+    "valueGap": 14,
+    "shift": 1
   },
   {
     "name": "Devin Neal",
@@ -4460,8 +5016,10 @@
     "replacement": 55,
     "roachScore": 275,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 279,
-    "valueGap": 53
+    "valueGap": 53,
+    "shift": 2
   },
   {
     "name": "DJ Giddens",
@@ -4476,8 +5034,10 @@
     "replacement": 55,
     "roachScore": 277,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 280,
-    "valueGap": 144
+    "valueGap": 144,
+    "shift": 3
   },
   {
     "name": "Seth McGowan",
@@ -4492,8 +5052,10 @@
     "replacement": 55,
     "roachScore": 279,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 281,
-    "valueGap": 34
+    "valueGap": 34,
+    "shift": 4
   },
   {
     "name": "Michael Penix Jr.",
@@ -4508,8 +5070,10 @@
     "replacement": 19,
     "roachScore": 280,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 282,
-    "valueGap": 0
+    "valueGap": 0,
+    "shift": -2
   },
   {
     "name": "Mason Taylor",
@@ -4524,8 +5088,10 @@
     "replacement": 24,
     "roachScore": 281,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 283,
-    "valueGap": 1
+    "valueGap": 1,
+    "shift": -7
   },
   {
     "name": "San Francisco 49ers",
@@ -4540,8 +5106,10 @@
     "replacement": 13,
     "roachScore": 282,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 284,
-    "valueGap": -71
+    "valueGap": -71,
+    "shift": -2
   },
   {
     "name": "Kendre Miller",
@@ -4556,8 +5124,10 @@
     "replacement": 55,
     "roachScore": 283,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 285,
-    "valueGap": 41
+    "valueGap": 41,
+    "shift": 4
   },
   {
     "name": "Atlanta Falcons",
@@ -4572,8 +5142,10 @@
     "replacement": 13,
     "roachScore": 286,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 286,
-    "valueGap": -55
+    "valueGap": -55,
+    "shift": 0
   },
   {
     "name": "Kyle Williams",
@@ -4588,8 +5160,10 @@
     "replacement": 67,
     "roachScore": 286,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 287,
-    "valueGap": -31
+    "valueGap": -31,
+    "shift": 3
   },
   {
     "name": "Kirk Cousins",
@@ -4604,8 +5178,10 @@
     "replacement": 19,
     "roachScore": 287,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 288,
-    "valueGap": 19
+    "valueGap": 19,
+    "shift": -1
   },
   {
     "name": "Brashard Smith",
@@ -4620,8 +5196,10 @@
     "replacement": 55,
     "roachScore": 287,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 289,
-    "valueGap": 46
+    "valueGap": 46,
+    "shift": 4
   },
   {
     "name": "Deshaun Watson",
@@ -4636,8 +5214,10 @@
     "replacement": 19,
     "roachScore": 288,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 290,
-    "valueGap": 90
+    "valueGap": 90,
+    "shift": -2
   },
   {
     "name": "Theo Johnson",
@@ -4652,8 +5232,10 @@
     "replacement": 24,
     "roachScore": 289,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 291,
-    "valueGap": 21
+    "valueGap": 21,
+    "shift": -7
   },
   {
     "name": "Emari Demercado",
@@ -4668,8 +5250,10 @@
     "replacement": 55,
     "roachScore": 289,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 292,
-    "valueGap": 79
+    "valueGap": 79,
+    "shift": 3
   },
   {
     "name": "Adam Randall",
@@ -4684,8 +5268,10 @@
     "replacement": 55,
     "roachScore": 290,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 293,
-    "valueGap": 342
+    "valueGap": 342,
+    "shift": 3
   },
   {
     "name": "New Orleans Saints",
@@ -4700,8 +5286,10 @@
     "replacement": 13,
     "roachScore": 292,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 294,
-    "valueGap": -49
+    "valueGap": -49,
+    "shift": -2
   },
   {
     "name": "Hollywood Brown",
@@ -4716,8 +5304,10 @@
     "replacement": 67,
     "roachScore": 293,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 295,
-    "valueGap": 9
+    "valueGap": 9,
+    "shift": 2
   },
   {
     "name": "Devin Singletary",
@@ -4732,8 +5322,10 @@
     "replacement": 55,
     "roachScore": 293,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 296,
-    "valueGap": -13
+    "valueGap": -13,
+    "shift": 3
   },
   {
     "name": "Shedeur Sanders",
@@ -4748,8 +5340,10 @@
     "replacement": 19,
     "roachScore": 294,
     "startable": false,
+    "cbsRank": 32,
     "roachRank": 297,
-    "valueGap": -50
+    "valueGap": -50,
+    "shift": -3
   },
   {
     "name": "Trey Benson",
@@ -4764,8 +5358,10 @@
     "replacement": 55,
     "roachScore": 295,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 298,
-    "valueGap": 18
+    "valueGap": 18,
+    "shift": 3
   },
   {
     "name": "Eli Stowers",
@@ -4780,8 +5376,10 @@
     "replacement": 24,
     "roachScore": 296,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 299,
-    "valueGap": -42
+    "valueGap": -42,
+    "shift": -8
   },
   {
     "name": "Mack Hollins",
@@ -4796,8 +5394,10 @@
     "replacement": 67,
     "roachScore": 296,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 300,
-    "valueGap": 328
+    "valueGap": 328,
+    "shift": 0
   },
   {
     "name": "Isaiah Bond",
@@ -4812,8 +5412,10 @@
     "replacement": 67,
     "roachScore": 298,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 301,
-    "valueGap": 277
+    "valueGap": 277,
+    "shift": 1
   },
   {
     "name": "Kaleb Johnson",
@@ -4828,8 +5430,10 @@
     "replacement": 55,
     "roachScore": 299,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 302,
-    "valueGap": 35
+    "valueGap": 35,
+    "shift": 3
   },
   {
     "name": "Skyler Bell",
@@ -4844,8 +5448,10 @@
     "replacement": 67,
     "roachScore": 300,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 303,
-    "valueGap": 35
+    "valueGap": 35,
+    "shift": 1
   },
   {
     "name": "Brandon Aiyuk",
@@ -4860,8 +5466,10 @@
     "replacement": 67,
     "roachScore": 302,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 304,
-    "valueGap": -41
+    "valueGap": -41,
+    "shift": 2
   },
   {
     "name": "Trevor Etienne",
@@ -4876,8 +5484,10 @@
     "replacement": 55,
     "roachScore": 302,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 305,
-    "valueGap": 315
+    "valueGap": 315,
+    "shift": 3
   },
   {
     "name": "Mike Gesicki",
@@ -4892,8 +5502,10 @@
     "replacement": 24,
     "roachScore": 303,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 306,
-    "valueGap": 53
+    "valueGap": 53,
+    "shift": -8
   },
   {
     "name": "Indianapolis Colts",
@@ -4908,8 +5520,10 @@
     "replacement": 13,
     "roachScore": 303,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 307,
-    "valueGap": -38
+    "valueGap": -38,
+    "shift": -4
   },
   {
     "name": "Jarquez Hunter",
@@ -4924,8 +5538,10 @@
     "replacement": 55,
     "roachScore": 304,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 308,
-    "valueGap": 80
+    "valueGap": 80,
+    "shift": 2
   },
   {
     "name": "Isaac Guerendo",
@@ -4940,8 +5556,10 @@
     "replacement": 55,
     "roachScore": 306,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 309,
-    "valueGap": 222
+    "valueGap": 222,
+    "shift": 3
   },
   {
     "name": "Jerome Ford",
@@ -4956,8 +5574,10 @@
     "replacement": 55,
     "roachScore": 307,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 310,
-    "valueGap": 282
+    "valueGap": 282,
+    "shift": 3
   },
   {
     "name": "Andrei Iosivas",
@@ -4972,8 +5592,10 @@
     "replacement": 67,
     "roachScore": 310,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 311,
-    "valueGap": 101
+    "valueGap": 101,
+    "shift": 3
   },
   {
     "name": "Jaleel McLaughlin",
@@ -4988,8 +5610,10 @@
     "replacement": 55,
     "roachScore": 310,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 312,
-    "valueGap": 298
+    "valueGap": 298,
+    "shift": 4
   },
   {
     "name": "Chicago Bears",
@@ -5004,8 +5628,10 @@
     "replacement": 13,
     "roachScore": 311,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 313,
-    "valueGap": -103
+    "valueGap": -103,
+    "shift": -2
   },
   {
     "name": "DeMario Douglas",
@@ -5020,8 +5646,10 @@
     "replacement": 67,
     "roachScore": 311,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 314,
-    "valueGap": 280
+    "valueGap": 280,
+    "shift": 1
   },
   {
     "name": "Audric Estime",
@@ -5036,8 +5664,10 @@
     "replacement": 55,
     "roachScore": 311,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 315,
-    "valueGap": 12
+    "valueGap": 12,
+    "shift": 2
   },
   {
     "name": "Darren Waller",
@@ -5052,8 +5682,10 @@
     "replacement": 24,
     "roachScore": 312,
     "startable": false,
+    "cbsRank": 22,
     "roachRank": 316,
-    "valueGap": 87
+    "valueGap": 87,
+    "shift": -9
   },
   {
     "name": "Tahj Brooks",
@@ -5068,8 +5700,10 @@
     "replacement": 55,
     "roachScore": 313,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 317,
-    "valueGap": 153
+    "valueGap": 153,
+    "shift": 2
   },
   {
     "name": "Jake Tonges",
@@ -5084,8 +5718,10 @@
     "replacement": 24,
     "roachScore": 314,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 318,
-    "valueGap": -20
+    "valueGap": -20,
+    "shift": -9
   },
   {
     "name": "Tyreek Hill",
@@ -5100,8 +5736,10 @@
     "replacement": 67,
     "roachScore": 316,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 319,
-    "valueGap": -80
+    "valueGap": -80,
+    "shift": 1
   },
   {
     "name": "Charlie Smyth",
@@ -5116,8 +5754,10 @@
     "replacement": 14,
     "roachScore": 318,
     "startable": false,
+    "cbsRank": 16,
     "roachRank": 320,
-    "valueGap": 70
+    "valueGap": 70,
+    "shift": -2
   },
   {
     "name": "Jahan Dotson",
@@ -5132,8 +5772,10 @@
     "replacement": 67,
     "roachScore": 318,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 321,
-    "valueGap": 199
+    "valueGap": 199,
+    "shift": 1
   },
   {
     "name": "Will Shipley",
@@ -5148,8 +5790,10 @@
     "replacement": 55,
     "roachScore": 319,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 322,
-    "valueGap": 185
+    "valueGap": 185,
+    "shift": 3
   },
   {
     "name": "Bryce Lance",
@@ -5164,8 +5808,10 @@
     "replacement": 67,
     "roachScore": 324,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 323,
-    "valueGap": 55
+    "valueGap": 55,
+    "shift": 5
   },
   {
     "name": "Jalen Tolbert",
@@ -5180,8 +5826,10 @@
     "replacement": 67,
     "roachScore": 325,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 324,
-    "valueGap": 174
+    "valueGap": 174,
+    "shift": 5
   },
   {
     "name": "Darnell Washington",
@@ -5196,8 +5844,10 @@
     "replacement": 24,
     "roachScore": 326,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 325,
-    "valueGap": -36
+    "valueGap": -36,
+    "shift": -4
   },
   {
     "name": "Xavier Hutchinson",
@@ -5212,8 +5862,10 @@
     "replacement": 67,
     "roachScore": 326,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 326,
-    "valueGap": 307
+    "valueGap": 307,
+    "shift": 4
   },
   {
     "name": "Michael Mayer",
@@ -5228,8 +5880,10 @@
     "replacement": 24,
     "roachScore": 328,
     "startable": false,
+    "cbsRank": 32,
     "roachRank": 327,
-    "valueGap": 139
+    "valueGap": 139,
+    "shift": -4
   },
   {
     "name": "Oscar Delp",
@@ -5244,8 +5898,10 @@
     "replacement": 24,
     "roachScore": 329,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 328,
-    "valueGap": 233
+    "valueGap": 233,
+    "shift": -4
   },
   {
     "name": "Elijah Arroyo",
@@ -5260,8 +5916,10 @@
     "replacement": 24,
     "roachScore": 331,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 329,
-    "valueGap": 12
+    "valueGap": 12,
+    "shift": -3
   },
   {
     "name": "Dallas Cowboys",
@@ -5276,8 +5934,10 @@
     "replacement": 13,
     "roachScore": 331,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 330,
-    "valueGap": -140
+    "valueGap": -140,
+    "shift": 1
   },
   {
     "name": "Charlie Kolar",
@@ -5292,8 +5952,10 @@
     "replacement": 24,
     "roachScore": 332,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 331,
-    "valueGap": 67
+    "valueGap": 67,
+    "shift": -4
   },
   {
     "name": "Carson Beck",
@@ -5308,8 +5970,10 @@
     "replacement": 19,
     "roachScore": 332,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 332,
-    "valueGap": 25
+    "valueGap": 25,
+    "shift": 0
   },
   {
     "name": "Konata Mumpfield",
@@ -5324,8 +5988,10 @@
     "replacement": 67,
     "roachScore": 333,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 333,
-    "valueGap": 20
+    "valueGap": 20,
+    "shift": 4
   },
   {
     "name": "Tez Johnson",
@@ -5340,8 +6006,10 @@
     "replacement": 67,
     "roachScore": 334,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 334,
-    "valueGap": 193
+    "valueGap": 193,
+    "shift": 4
   },
   {
     "name": "Olamide Zaccheaus",
@@ -5356,8 +6024,10 @@
     "replacement": 67,
     "roachScore": 336,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 335,
-    "valueGap": 276
+    "valueGap": 276,
+    "shift": 5
   },
   {
     "name": "Joe Mixon",
@@ -5372,8 +6042,10 @@
     "replacement": 55,
     "roachScore": 336,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 336,
-    "valueGap": -74
+    "valueGap": -74,
+    "shift": 6
   },
   {
     "name": "Jalen Royals",
@@ -5388,8 +6060,10 @@
     "replacement": 67,
     "roachScore": 337,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 337,
-    "valueGap": 111
+    "valueGap": 111,
+    "shift": 4
   },
   {
     "name": "Bam Knight",
@@ -5404,8 +6078,10 @@
     "replacement": 55,
     "roachScore": 337,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 338,
-    "valueGap": null
+    "valueGap": null,
+    "shift": 5
   },
   {
     "name": "Cole Kmet",
@@ -5420,8 +6096,10 @@
     "replacement": 24,
     "roachScore": 338,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 339,
-    "valueGap": -48
+    "valueGap": -48,
+    "shift": -6
   },
   {
     "name": "Kareem Hunt",
@@ -5436,8 +6114,10 @@
     "replacement": 55,
     "roachScore": 338,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 340,
-    "valueGap": 122
+    "valueGap": 122,
+    "shift": 4
   },
   {
     "name": "Erick All Jr.",
@@ -5452,8 +6132,10 @@
     "replacement": 24,
     "roachScore": 339,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 341,
-    "valueGap": null
+    "valueGap": null,
+    "shift": -7
   },
   {
     "name": "J.J. McCarthy",
@@ -5468,8 +6150,10 @@
     "replacement": 19,
     "roachScore": 339,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 342,
-    "valueGap": -93
+    "valueGap": -93,
+    "shift": -3
   },
   {
     "name": "Eli Raridon",
@@ -5484,8 +6168,10 @@
     "replacement": 24,
     "roachScore": 340,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 343,
-    "valueGap": -1
+    "valueGap": -1,
+    "shift": -8
   },
   {
     "name": "Tyler Higbee",
@@ -5500,8 +6186,10 @@
     "replacement": 24,
     "roachScore": 341,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 344,
-    "valueGap": -10
+    "valueGap": -10,
+    "shift": -8
   },
   {
     "name": "Luke McCaffrey",
@@ -5516,8 +6204,10 @@
     "replacement": 67,
     "roachScore": 341,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 345,
-    "valueGap": -27
+    "valueGap": -27,
+    "shift": 0
   },
   {
     "name": "Cedric Tillman",
@@ -5532,8 +6222,10 @@
     "replacement": 67,
     "roachScore": 342,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 346,
-    "valueGap": null
+    "valueGap": null,
+    "shift": 0
   },
   {
     "name": "Kendrick Bourne",
@@ -5548,8 +6240,10 @@
     "replacement": 67,
     "roachScore": 343,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 347,
-    "valueGap": 284
+    "valueGap": 284,
+    "shift": 0
   },
   {
     "name": "Chris Brazzell II",
@@ -5564,8 +6258,10 @@
     "replacement": 67,
     "roachScore": 346,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 348,
-    "valueGap": 295
+    "valueGap": 295,
+    "shift": 2
   },
   {
     "name": "Brenen Thompson",
@@ -5580,8 +6276,10 @@
     "replacement": 67,
     "roachScore": 347,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 349,
-    "valueGap": 246
+    "valueGap": 246,
+    "shift": 2
   },
   {
     "name": "Joshua Palmer",
@@ -5596,8 +6294,10 @@
     "replacement": 67,
     "roachScore": 349,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 350,
-    "valueGap": -11
+    "valueGap": -11,
+    "shift": 3
   },
   {
     "name": "Treylon Burks",
@@ -5612,8 +6312,10 @@
     "replacement": 67,
     "roachScore": 351,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 351,
-    "valueGap": 286
+    "valueGap": 286,
+    "shift": 4
   },
   {
     "name": "Dawson Knox",
@@ -5628,8 +6330,10 @@
     "replacement": 24,
     "roachScore": 353,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 352,
-    "valueGap": -39
+    "valueGap": -39,
+    "shift": -4
   },
   {
     "name": "Eli Heidenreich",
@@ -5644,8 +6348,10 @@
     "replacement": 55,
     "roachScore": 353,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 353,
-    "valueGap": null
+    "valueGap": null,
+    "shift": 6
   },
   {
     "name": "Max Klare",
@@ -5660,8 +6366,10 @@
     "replacement": 24,
     "roachScore": 354,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 354,
-    "valueGap": -2
+    "valueGap": -2,
+    "shift": -5
   },
   {
     "name": "Mac Jones",
@@ -5676,8 +6384,10 @@
     "replacement": 19,
     "roachScore": 354,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 355,
-    "valueGap": -9
+    "valueGap": -9,
+    "shift": -1
   },
   {
     "name": "Jake Elliott",
@@ -5692,8 +6402,10 @@
     "replacement": 14,
     "roachScore": 356,
     "startable": false,
+    "cbsRank": 20,
     "roachRank": 356,
-    "valueGap": -115
+    "valueGap": -115,
+    "shift": 0
   },
   {
     "name": "Noah Gray",
@@ -5708,8 +6420,10 @@
     "replacement": 24,
     "roachScore": 357,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 357,
-    "valueGap": 4
+    "valueGap": 4,
+    "shift": -5
   },
   {
     "name": "Tyler Bass",
@@ -5724,8 +6438,10 @@
     "replacement": 14,
     "roachScore": 358,
     "startable": false,
+    "cbsRank": 19,
     "roachRank": 358,
-    "valueGap": -135
+    "valueGap": -135,
+    "shift": 0
   },
   {
     "name": "Malik Benson",
@@ -5740,8 +6456,10 @@
     "replacement": 67,
     "roachScore": 359,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 359,
-    "valueGap": 152
+    "valueGap": 152,
+    "shift": 4
   },
   {
     "name": "Jawhar Jordan",
@@ -5756,8 +6474,10 @@
     "replacement": 55,
     "roachScore": 359,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 360,
-    "valueGap": 264
+    "valueGap": 264,
+    "shift": 5
   },
   {
     "name": "New York Giants",
@@ -5772,8 +6492,10 @@
     "replacement": 13,
     "roachScore": 360,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 361,
-    "valueGap": -143
+    "valueGap": -143,
+    "shift": -1
   },
   {
     "name": "Trey Smack",
@@ -5788,8 +6510,10 @@
     "replacement": 14,
     "roachScore": 361,
     "startable": false,
+    "cbsRank": 21,
     "roachRank": 362,
-    "valueGap": -151
+    "valueGap": -151,
+    "shift": -1
   },
   {
     "name": "Ja'Tavion Sanders",
@@ -5804,8 +6528,10 @@
     "replacement": 24,
     "roachScore": 362,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 363,
-    "valueGap": -19
+    "valueGap": -19,
+    "shift": -6
   },
   {
     "name": "Carolina Panthers",
@@ -5820,8 +6546,10 @@
     "replacement": 13,
     "roachScore": 362,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 364,
-    "valueGap": -114
+    "valueGap": -114,
+    "shift": -2
   },
   {
     "name": "Roman Wilson",
@@ -5836,8 +6564,10 @@
     "replacement": 67,
     "roachScore": 362,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 365,
-    "valueGap": 115
+    "valueGap": 115,
+    "shift": 1
   },
   {
     "name": "Michael Carter",
@@ -5852,8 +6582,10 @@
     "replacement": 55,
     "roachScore": 363,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 366,
-    "valueGap": 150
+    "valueGap": 150,
+    "shift": 3
   },
   {
     "name": "Justin Fields",
@@ -5868,8 +6600,10 @@
     "replacement": 19,
     "roachScore": 364,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 367,
-    "valueGap": -38
+    "valueGap": -38,
+    "shift": -3
   },
   {
     "name": "Savion Williams",
@@ -5884,8 +6618,10 @@
     "replacement": 67,
     "roachScore": 367,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 368,
-    "valueGap": 248
+    "valueGap": 248,
+    "shift": 3
   },
   {
     "name": "Ty Simpson",
@@ -5900,8 +6636,10 @@
     "replacement": 19,
     "roachScore": 368,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 369,
-    "valueGap": -111
+    "valueGap": -111,
+    "shift": -1
   },
   {
     "name": "Kalif Raymond",
@@ -5916,8 +6654,10 @@
     "replacement": 67,
     "roachScore": 368,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 370,
-    "valueGap": 95
+    "valueGap": 95,
+    "shift": 2
   },
   {
     "name": "Cincinnati Bengals",
@@ -5932,8 +6672,10 @@
     "replacement": 13,
     "roachScore": 370,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 371,
-    "valueGap": -119
+    "valueGap": -119,
+    "shift": -1
   },
   {
     "name": "KaVontae Turpin",
@@ -5948,8 +6690,10 @@
     "replacement": 67,
     "roachScore": 370,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 372,
-    "valueGap": -18
+    "valueGap": -18,
+    "shift": 2
   },
   {
     "name": "Raheim Sanders",
@@ -5964,8 +6708,10 @@
     "replacement": 55,
     "roachScore": 370,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 373,
-    "valueGap": 226
+    "valueGap": 226,
+    "shift": 3
   },
   {
     "name": "Kevin Coleman Jr.",
@@ -5980,8 +6726,10 @@
     "replacement": 67,
     "roachScore": 371,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 374,
-    "valueGap": 213
+    "valueGap": 213,
+    "shift": 1
   },
   {
     "name": "Justin Joly",
@@ -5996,8 +6744,10 @@
     "replacement": 24,
     "roachScore": 372,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 375,
-    "valueGap": 69
+    "valueGap": 69,
+    "shift": -8
   },
   {
     "name": "Tampa Bay Buccaneers",
@@ -6012,8 +6762,10 @@
     "replacement": 13,
     "roachScore": 373,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 376,
-    "valueGap": -95
+    "valueGap": -95,
+    "shift": -3
   },
   {
     "name": "Dont'e Thornton Jr.",
@@ -6028,8 +6780,10 @@
     "replacement": 67,
     "roachScore": 375,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 377,
-    "valueGap": 110
+    "valueGap": 110,
+    "shift": 2
   },
   {
     "name": "Colbie Young",
@@ -6044,8 +6798,10 @@
     "replacement": 67,
     "roachScore": 376,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 378,
-    "valueGap": -57
+    "valueGap": -57,
+    "shift": 2
   },
   {
     "name": "Zane Gonzalez",
@@ -6060,8 +6816,10 @@
     "replacement": 14,
     "roachScore": 377,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 379,
-    "valueGap": 56
+    "valueGap": 56,
+    "shift": -2
   },
   {
     "name": "Zavion Thomas",
@@ -6076,8 +6834,10 @@
     "replacement": 67,
     "roachScore": 377,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 380,
-    "valueGap": -5
+    "valueGap": -5,
+    "shift": 1
   },
   {
     "name": "Kyle Juszczyk",
@@ -6092,8 +6852,10 @@
     "replacement": 55,
     "roachScore": 377,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 381,
-    "valueGap": 6
+    "valueGap": 6,
+    "shift": 2
   },
   {
     "name": "Tennessee Titans",
@@ -6108,8 +6870,10 @@
     "replacement": 13,
     "roachScore": 378,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 382,
-    "valueGap": -115
+    "valueGap": -115,
+    "shift": -4
   },
   {
     "name": "J'Mari Taylor",
@@ -6124,8 +6888,10 @@
     "replacement": 55,
     "roachScore": 381,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 383,
-    "valueGap": null
+    "valueGap": null,
+    "shift": 4
   },
   {
     "name": "Tutu Atwell",
@@ -6140,8 +6906,10 @@
     "replacement": 67,
     "roachScore": 382,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 384,
-    "valueGap": 237
+    "valueGap": 237,
+    "shift": 2
   },
   {
     "name": "Anthony Richardson Sr.",
@@ -6156,8 +6924,10 @@
     "replacement": 19,
     "roachScore": 384,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 385,
-    "valueGap": 4
+    "valueGap": 4,
+    "shift": -1
   },
   {
     "name": "John Metchie III",
@@ -6172,8 +6942,10 @@
     "replacement": 67,
     "roachScore": 384,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 386,
-    "valueGap": 220
+    "valueGap": 220,
+    "shift": 2
   },
   {
     "name": "Joe Flacco",
@@ -6188,8 +6960,10 @@
     "replacement": 19,
     "roachScore": 385,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 387,
-    "valueGap": -76
+    "valueGap": -76,
+    "shift": -2
   },
   {
     "name": "Phil Mafah",
@@ -6204,8 +6978,10 @@
     "replacement": 55,
     "roachScore": 385,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 388,
-    "valueGap": null
+    "valueGap": null,
+    "shift": 3
   },
   {
     "name": "CJ Daniels",
@@ -6220,8 +6996,10 @@
     "replacement": 67,
     "roachScore": 386,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 389,
-    "valueGap": -23
+    "valueGap": -23,
+    "shift": 1
   },
   {
     "name": "Noah Fant",
@@ -6236,8 +7014,10 @@
     "replacement": 24,
     "roachScore": 387,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 390,
-    "valueGap": 40
+    "valueGap": 40,
+    "shift": -8
   },
   {
     "name": "Demarcus Robinson",
@@ -6252,8 +7032,10 @@
     "replacement": 67,
     "roachScore": 388,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 391,
-    "valueGap": 171
+    "valueGap": 171,
+    "shift": 1
   },
   {
     "name": "Nick Folk",
@@ -6268,8 +7050,10 @@
     "replacement": 14,
     "roachScore": 389,
     "startable": false,
+    "cbsRank": 31,
     "roachRank": 392,
-    "valueGap": -126
+    "valueGap": -126,
+    "shift": -3
   },
   {
     "name": "Nick Westbrook-Ikhine",
@@ -6284,8 +7068,10 @@
     "replacement": 67,
     "roachScore": 389,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 393,
-    "valueGap": 236
+    "valueGap": 236,
+    "shift": 0
   },
   {
     "name": "Jaylin Lane",
@@ -6300,8 +7086,10 @@
     "replacement": 67,
     "roachScore": 390,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 394,
-    "valueGap": 204
+    "valueGap": 204,
+    "shift": 0
   },
   {
     "name": "Roschon Johnson",
@@ -6316,8 +7104,10 @@
     "replacement": 55,
     "roachScore": 390,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 395,
-    "valueGap": 262
+    "valueGap": 262,
+    "shift": 1
   },
   {
     "name": "Jameis Winston",
@@ -6332,8 +7122,10 @@
     "replacement": 19,
     "roachScore": 395,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 396,
-    "valueGap": -88
+    "valueGap": -88,
+    "shift": -1
   },
   {
     "name": "Ashton Dulin",
@@ -6348,8 +7140,10 @@
     "replacement": 67,
     "roachScore": 395,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 397,
-    "valueGap": 78
+    "valueGap": 78,
+    "shift": 2
   },
   {
     "name": "Devontez Walker",
@@ -6364,8 +7158,10 @@
     "replacement": 67,
     "roachScore": 396,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 398,
-    "valueGap": -84
+    "valueGap": -84,
+    "shift": 2
   },
   {
     "name": "Washington Commanders",
@@ -6380,8 +7176,10 @@
     "replacement": 13,
     "roachScore": 398,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 399,
-    "valueGap": -125
+    "valueGap": -125,
+    "shift": -1
   },
   {
     "name": "Blake Grupe",
@@ -6396,8 +7194,10 @@
     "replacement": 14,
     "roachScore": 401,
     "startable": false,
+    "cbsRank": 22,
     "roachRank": 400,
-    "valueGap": -95
+    "valueGap": -95,
+    "shift": 1
   },
   {
     "name": "Jam Miller",
@@ -6412,8 +7212,10 @@
     "replacement": 55,
     "roachScore": 401,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 401,
-    "valueGap": 128
+    "valueGap": 128,
+    "shift": 6
   },
   {
     "name": "Luke Musgrave",
@@ -6428,8 +7230,10 @@
     "replacement": 24,
     "roachScore": 402,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 402,
-    "valueGap": -5
+    "valueGap": -5,
+    "shift": -5
   },
   {
     "name": "Marcus Mariota",
@@ -6444,8 +7248,10 @@
     "replacement": 19,
     "roachScore": 402,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 403,
-    "valueGap": 90
+    "valueGap": 90,
+    "shift": -1
   },
   {
     "name": "Las Vegas Raiders",
@@ -6460,8 +7266,10 @@
     "replacement": 13,
     "roachScore": 404,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 404,
-    "valueGap": -143
+    "valueGap": -143,
+    "shift": 0
   },
   {
     "name": "Ryan Fitzgerald",
@@ -6476,8 +7284,10 @@
     "replacement": 14,
     "roachScore": 405,
     "startable": false,
+    "cbsRank": 25,
     "roachRank": 405,
-    "valueGap": -80
+    "valueGap": -80,
+    "shift": 0
   },
   {
     "name": "Daniel Carlson",
@@ -6492,8 +7302,10 @@
     "replacement": 14,
     "roachScore": 406,
     "startable": false,
+    "cbsRank": 30,
     "roachRank": 406,
-    "valueGap": null
+    "valueGap": null,
+    "shift": 0
   },
   {
     "name": "Jordan Whittington",
@@ -6508,8 +7320,10 @@
     "replacement": 67,
     "roachScore": 406,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 407,
-    "valueGap": -49
+    "valueGap": -49,
+    "shift": 3
   },
   {
     "name": "Barion Brown",
@@ -6524,8 +7338,10 @@
     "replacement": 67,
     "roachScore": 407,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 408,
-    "valueGap": -60
+    "valueGap": -60,
+    "shift": 3
   },
   {
     "name": "Rasheen Ali",
@@ -6540,8 +7356,10 @@
     "replacement": 55,
     "roachScore": 407,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 409,
-    "valueGap": null
+    "valueGap": null,
+    "shift": 4
   },
   {
     "name": "Tommy Tremble",
@@ -6556,8 +7374,10 @@
     "replacement": 24,
     "roachScore": 408,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 410,
-    "valueGap": -43
+    "valueGap": -43,
+    "shift": -7
   },
   {
     "name": "Joey Slye",
@@ -6572,8 +7392,10 @@
     "replacement": 14,
     "roachScore": 408,
     "startable": false,
+    "cbsRank": 23,
     "roachRank": 411,
-    "valueGap": -89
+    "valueGap": -89,
+    "shift": -3
   },
   {
     "name": "Sione Vaki",
@@ -6588,8 +7410,10 @@
     "replacement": 55,
     "roachScore": 408,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 412,
-    "valueGap": 249
+    "valueGap": 249,
+    "shift": 2
   },
   {
     "name": "Chad Ryland",
@@ -6604,8 +7428,10 @@
     "replacement": 14,
     "roachScore": 409,
     "startable": false,
+    "cbsRank": 26,
     "roachRank": 413,
-    "valueGap": -104
+    "valueGap": -104,
+    "shift": -4
   },
   {
     "name": "Brandon McManus",
@@ -6620,8 +7446,10 @@
     "replacement": 14,
     "roachScore": 412,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 414,
-    "valueGap": -32
+    "valueGap": -32,
+    "shift": -2
   },
   {
     "name": "Ben Sauls",
@@ -6636,8 +7464,10 @@
     "replacement": 14,
     "roachScore": 415,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 415,
-    "valueGap": -114
+    "valueGap": -114,
+    "shift": 0
   },
   {
     "name": "Cade Klubnik",
@@ -6652,8 +7482,10 @@
     "replacement": 19,
     "roachScore": 416,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 416,
-    "valueGap": -66
+    "valueGap": -66,
+    "shift": 0
   },
   {
     "name": "Joe Milton III",
@@ -6668,8 +7500,10 @@
     "replacement": 19,
     "roachScore": 418,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 417,
-    "valueGap": -36
+    "valueGap": -36,
+    "shift": 1
   },
   {
     "name": "Isaiah Williams",
@@ -6684,8 +7518,10 @@
     "replacement": 67,
     "roachScore": 418,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 418,
-    "valueGap": 173
+    "valueGap": 173,
+    "shift": 4
   },
   {
     "name": "Tyler Goodson",
@@ -6700,8 +7536,10 @@
     "replacement": 55,
     "roachScore": 421,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 419,
-    "valueGap": null
+    "valueGap": null,
+    "shift": 8
   },
   {
     "name": "Ben Sinnott",
@@ -6716,8 +7554,10 @@
     "replacement": 24,
     "roachScore": 422,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 420,
-    "valueGap": null
+    "valueGap": null,
+    "shift": -3
   },
   {
     "name": "Odell Beckham Jr.",
@@ -6732,8 +7572,10 @@
     "replacement": 67,
     "roachScore": 422,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 421,
-    "valueGap": -78
+    "valueGap": -78,
+    "shift": 5
   },
   {
     "name": "John Bates",
@@ -6748,8 +7590,10 @@
     "replacement": 24,
     "roachScore": 424,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 422,
-    "valueGap": 166
+    "valueGap": 166,
+    "shift": -3
   },
   {
     "name": "Dyami Brown",
@@ -6764,8 +7608,10 @@
     "replacement": 67,
     "roachScore": 424,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 423,
-    "valueGap": null
+    "valueGap": null,
+    "shift": 5
   },
   {
     "name": "Elijah Higgins",
@@ -6780,8 +7626,10 @@
     "replacement": 24,
     "roachScore": 425,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 424,
-    "valueGap": -33
+    "valueGap": -33,
+    "shift": -4
   },
   {
     "name": "Spencer Shrader",
@@ -6796,8 +7644,10 @@
     "replacement": 14,
     "roachScore": 425,
     "startable": false,
+    "cbsRank": 29,
     "roachRank": 425,
-    "valueGap": -92
+    "valueGap": -92,
+    "shift": 0
   },
   {
     "name": "Greg Dortch",
@@ -6812,8 +7662,10 @@
     "replacement": 67,
     "roachScore": 425,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 426,
-    "valueGap": 47
+    "valueGap": 47,
+    "shift": 3
   },
   {
     "name": "Austin Hooper",
@@ -6828,8 +7680,10 @@
     "replacement": 24,
     "roachScore": 426,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 427,
-    "valueGap": 143
+    "valueGap": 143,
+    "shift": -6
   },
   {
     "name": "Dameon Pierce",
@@ -6844,8 +7698,10 @@
     "replacement": 55,
     "roachScore": 426,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 428,
-    "valueGap": null
+    "valueGap": null,
+    "shift": 4
   },
   {
     "name": "Austin Ekeler",
@@ -6860,8 +7716,10 @@
     "replacement": 55,
     "roachScore": 427,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 429,
-    "valueGap": 116
+    "valueGap": 116,
+    "shift": 4
   },
   {
     "name": "Mitchell Evans",
@@ -6876,8 +7734,10 @@
     "replacement": 24,
     "roachScore": 428,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 430,
-    "valueGap": null
+    "valueGap": null,
+    "shift": -7
   },
   {
     "name": "Hunter Luepke",
@@ -6892,8 +7752,10 @@
     "replacement": 55,
     "roachScore": 428,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 431,
-    "valueGap": 166
+    "valueGap": 166,
+    "shift": 3
   },
   {
     "name": "Daniel Bellinger",
@@ -6908,8 +7770,10 @@
     "replacement": 24,
     "roachScore": 429,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 432,
-    "valueGap": 183
+    "valueGap": 183,
+    "shift": -8
   },
   {
     "name": "Terrell Jennings",
@@ -6924,8 +7788,10 @@
     "replacement": 55,
     "roachScore": 430,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 433,
-    "valueGap": null
+    "valueGap": null,
+    "shift": 3
   },
   {
     "name": "Miami Dolphins",
@@ -6940,8 +7806,10 @@
     "replacement": 13,
     "roachScore": 431,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 434,
-    "valueGap": -154
+    "valueGap": -154,
+    "shift": -3
   },
   {
     "name": "Deion Burks",
@@ -6956,8 +7824,10 @@
     "replacement": 67,
     "roachScore": 433,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 435,
-    "valueGap": null
+    "valueGap": null,
+    "shift": 2
   },
   {
     "name": "Tommy Myers",
@@ -6972,8 +7842,10 @@
     "replacement": 24,
     "roachScore": 435,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 436,
-    "valueGap": null
+    "valueGap": null,
+    "shift": -6
   },
   {
     "name": "New York Jets",
@@ -6988,8 +7860,10 @@
     "replacement": 13,
     "roachScore": 435,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 437,
-    "valueGap": -16
+    "valueGap": -16,
+    "shift": -2
   },
   {
     "name": "Van Jefferson",
@@ -7004,8 +7878,10 @@
     "replacement": 67,
     "roachScore": 435,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 438,
-    "valueGap": 87
+    "valueGap": 87,
+    "shift": 1
   },
   {
     "name": "Drew Stevens",
@@ -7020,8 +7896,10 @@
     "replacement": 14,
     "roachScore": 438,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 439,
-    "valueGap": -139
+    "valueGap": -139,
+    "shift": -1
   },
   {
     "name": "Tai Felton",
@@ -7036,8 +7914,10 @@
     "replacement": 67,
     "roachScore": 438,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 440,
-    "valueGap": 60
+    "valueGap": 60,
+    "shift": 2
   },
   {
     "name": "Zavier Scott",
@@ -7052,8 +7932,10 @@
     "replacement": 55,
     "roachScore": 438,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 441,
-    "valueGap": null
+    "valueGap": null,
+    "shift": 3
   },
   {
     "name": "Jake Moody",
@@ -7068,8 +7950,10 @@
     "replacement": 14,
     "roachScore": 440,
     "startable": false,
+    "cbsRank": 24,
     "roachRank": 442,
-    "valueGap": -118
+    "valueGap": -118,
+    "shift": -2
   },
   {
     "name": "Jason Sanders",
@@ -7084,8 +7968,10 @@
     "replacement": 14,
     "roachScore": 441,
     "startable": false,
+    "cbsRank": 27,
     "roachRank": 443,
-    "valueGap": -141
+    "valueGap": -141,
+    "shift": -2
   },
   {
     "name": "Alec Ingold",
@@ -7100,8 +7986,10 @@
     "replacement": 55,
     "roachScore": 441,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 444,
-    "valueGap": null
+    "valueGap": null,
+    "shift": 3
   },
   {
     "name": "Isaiah Williams",
@@ -7116,8 +8004,10 @@
     "replacement": 67,
     "roachScore": 442,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 445,
-    "valueGap": null
+    "valueGap": null,
+    "shift": 1
   },
   {
     "name": "Jeremy McNichols",
@@ -7132,8 +8022,10 @@
     "replacement": 55,
     "roachScore": 442,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 446,
-    "valueGap": null
+    "valueGap": null,
+    "shift": 2
   },
   {
     "name": "Reggie Gilliam",
@@ -7148,8 +8040,10 @@
     "replacement": 55,
     "roachScore": 443,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 447,
-    "valueGap": 172
+    "valueGap": 172,
+    "shift": 2
   },
   {
     "name": "Ronnie Rivers",
@@ -7164,8 +8058,10 @@
     "replacement": 55,
     "roachScore": 445,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 448,
-    "valueGap": 208
+    "valueGap": 208,
+    "shift": 3
   },
   {
     "name": "Josh Williams",
@@ -7180,8 +8076,10 @@
     "replacement": 55,
     "roachScore": 446,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 449,
-    "valueGap": -113
+    "valueGap": -113,
+    "shift": 3
   },
   {
     "name": "Dylan Laube",
@@ -7196,8 +8094,10 @@
     "replacement": 55,
     "roachScore": 447,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 450,
-    "valueGap": null
+    "valueGap": null,
+    "shift": 3
   },
   {
     "name": "Marlin Klein",
@@ -7212,8 +8112,10 @@
     "replacement": 24,
     "roachScore": 448,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 451,
-    "valueGap": 43
+    "valueGap": 43,
+    "shift": -8
   },
   {
     "name": "Matt Hibner",
@@ -7228,8 +8130,10 @@
     "replacement": 24,
     "roachScore": 450,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 452,
-    "valueGap": null
+    "valueGap": null,
+    "shift": -7
   },
   {
     "name": "Roman Hemby",
@@ -7244,8 +8148,10 @@
     "replacement": 55,
     "roachScore": 450,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 453,
-    "valueGap": null
+    "valueGap": null,
+    "shift": 3
   },
   {
     "name": "Jahdae Walker",
@@ -7260,8 +8166,10 @@
     "replacement": 67,
     "roachScore": 451,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 454,
-    "valueGap": -25
+    "valueGap": -25,
+    "shift": 1
   },
   {
     "name": "Tyler Badie",
@@ -7276,8 +8184,10 @@
     "replacement": 55,
     "roachScore": 452,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 455,
-    "valueGap": null
+    "valueGap": null,
+    "shift": 3
   },
   {
     "name": "Mitch Tinsley",
@@ -7292,8 +8202,10 @@
     "replacement": 67,
     "roachScore": 453,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 456,
-    "valueGap": 147
+    "valueGap": 147,
+    "shift": 1
   },
   {
     "name": "Patrick Ricard",
@@ -7308,8 +8220,10 @@
     "replacement": 55,
     "roachScore": 453,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 457,
-    "valueGap": 51
+    "valueGap": 51,
+    "shift": 2
   },
   {
     "name": "Arizona Cardinals",
@@ -7324,8 +8238,10 @@
     "replacement": 13,
     "roachScore": 454,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 458,
-    "valueGap": -165
+    "valueGap": -165,
+    "shift": -4
   },
   {
     "name": "Jonnu Smith",
@@ -7340,8 +8256,10 @@
     "replacement": 24,
     "roachScore": 455,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 459,
-    "valueGap": 13
+    "valueGap": 13,
+    "shift": -9
   },
   {
     "name": "Elijah Moore",
@@ -7356,8 +8274,10 @@
     "replacement": 67,
     "roachScore": 456,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 460,
-    "valueGap": null
+    "valueGap": null,
+    "shift": 0
   },
   {
     "name": "Damien Martinez",
@@ -7372,8 +8292,10 @@
     "replacement": 55,
     "roachScore": 457,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 461,
-    "valueGap": null
+    "valueGap": null,
+    "shift": 2
   },
   {
     "name": "Khalil Herbert",
@@ -7388,8 +8310,10 @@
     "replacement": 55,
     "roachScore": 458,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 462,
-    "valueGap": 186
+    "valueGap": 186,
+    "shift": 2
   },
   {
     "name": "DeAndre Hopkins",
@@ -7404,8 +8328,10 @@
     "replacement": 67,
     "roachScore": 461,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 463,
-    "valueGap": 84
+    "valueGap": 84,
+    "shift": 2
   },
   {
     "name": "Riley Leonard",
@@ -7420,8 +8346,10 @@
     "replacement": 19,
     "roachScore": 462,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 464,
-    "valueGap": 58
+    "valueGap": 58,
+    "shift": -2
   },
   {
     "name": "Antonio Gibson",
@@ -7436,8 +8364,10 @@
     "replacement": 55,
     "roachScore": 462,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 465,
-    "valueGap": 99
+    "valueGap": 99,
+    "shift": 3
   },
   {
     "name": "Max Bredeson",
@@ -7452,8 +8382,10 @@
     "replacement": 55,
     "roachScore": 462.95,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 466,
-    "valueGap": 87
+    "valueGap": 87,
+    "shift": 1
   },
   {
     "name": "Will Kacmarek",
@@ -7468,8 +8400,10 @@
     "replacement": 24,
     "roachScore": 466,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 467,
-    "valueGap": -66
+    "valueGap": -66,
+    "shift": -6
   },
   {
     "name": "Tyler Lockett",
@@ -7484,8 +8418,10 @@
     "replacement": 67,
     "roachScore": 466,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 468,
-    "valueGap": null
+    "valueGap": null,
+    "shift": 2
   },
   {
     "name": "Xavier Smith",
@@ -7500,8 +8436,10 @@
     "replacement": 67,
     "roachScore": 469,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 469,
-    "valueGap": -41
+    "valueGap": -41,
+    "shift": 4
   },
   {
     "name": "Josh Oliver",
@@ -7516,8 +8454,10 @@
     "replacement": 24,
     "roachScore": 471,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 470,
-    "valueGap": -115
+    "valueGap": -115,
+    "shift": -4
   },
   {
     "name": "Adam Prentice",
@@ -7532,8 +8472,10 @@
     "replacement": 55,
     "roachScore": 471,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 471,
-    "valueGap": 130
+    "valueGap": 130,
+    "shift": 0
   },
   {
     "name": "Robert Henry Jr.",
@@ -7548,8 +8490,10 @@
     "replacement": 55,
     "roachScore": 471,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 472,
-    "valueGap": null
+    "valueGap": null,
+    "shift": 5
   },
   {
     "name": "Jordan Watkins",
@@ -7564,8 +8508,10 @@
     "replacement": 67,
     "roachScore": 472,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 473,
-    "valueGap": null
+    "valueGap": null,
+    "shift": -1
   },
   {
     "name": "Jacob Cowing",
@@ -7580,8 +8526,10 @@
     "replacement": 67,
     "roachScore": 472,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 474,
-    "valueGap": null
+    "valueGap": null,
+    "shift": 2
   },
   {
     "name": "British Brooks",
@@ -7596,8 +8544,10 @@
     "replacement": 55,
     "roachScore": 473,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 475,
-    "valueGap": null
+    "valueGap": null,
+    "shift": 4
   },
   {
     "name": "Zach Ertz",
@@ -7612,8 +8562,10 @@
     "replacement": 24,
     "roachScore": 474,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 476,
-    "valueGap": 76
+    "valueGap": 76,
+    "shift": -7
   },
   {
     "name": "Gardner Minshew II",
@@ -7628,8 +8580,10 @@
     "replacement": 19,
     "roachScore": 475,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 477,
-    "valueGap": 27
+    "valueGap": 27,
+    "shift": -2
   },
   {
     "name": "Jimmy Horn Jr.",
@@ -7644,8 +8598,10 @@
     "replacement": 67,
     "roachScore": 477,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 478,
-    "valueGap": -53
+    "valueGap": -53,
+    "shift": 3
   },
   {
     "name": "Quinn Ewers",
@@ -7660,8 +8616,10 @@
     "replacement": 19,
     "roachScore": 478,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 479,
-    "valueGap": -139
+    "valueGap": -139,
+    "shift": -1
   },
   {
     "name": "Tim Patrick",
@@ -7676,8 +8634,10 @@
     "replacement": 67,
     "roachScore": 478,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 480,
-    "valueGap": 159
+    "valueGap": 159,
+    "shift": 2
   },
   {
     "name": "Lew Nichols III",
@@ -7692,8 +8652,10 @@
     "replacement": 55,
     "roachScore": 478.05,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 481,
-    "valueGap": null
+    "valueGap": null,
+    "shift": 2
   },
   {
     "name": "Tanner Koziol",
@@ -7708,8 +8670,10 @@
     "replacement": 24,
     "roachScore": 479,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 482,
-    "valueGap": 52
+    "valueGap": 52,
+    "shift": -8
   },
   {
     "name": "Marquez Valdes-Scantling",
@@ -7724,8 +8688,10 @@
     "replacement": 67,
     "roachScore": 481,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 483,
-    "valueGap": 36
+    "valueGap": 36,
+    "shift": 2
   },
   {
     "name": "Chris Blair",
@@ -7740,8 +8706,10 @@
     "replacement": 67,
     "roachScore": 483,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 484,
-    "valueGap": null
+    "valueGap": null,
+    "shift": 3
   },
   {
     "name": "Cade Stover",
@@ -7756,8 +8724,10 @@
     "replacement": 24,
     "roachScore": 483.24,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 485,
-    "valueGap": -11
+    "valueGap": -11,
+    "shift": -5
   },
   {
     "name": "Drew Allar",
@@ -7772,8 +8742,10 @@
     "replacement": 19,
     "roachScore": 484,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 486,
-    "valueGap": -166
+    "valueGap": -166,
+    "shift": -2
   },
   {
     "name": "Jacob Saylors",
@@ -7788,8 +8760,10 @@
     "replacement": 55,
     "roachScore": 486,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 487,
-    "valueGap": null
+    "valueGap": null,
+    "shift": -1
   },
   {
     "name": "Michael Woods II",
@@ -7804,8 +8778,10 @@
     "replacement": 67,
     "roachScore": 488,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 488,
-    "valueGap": null
+    "valueGap": null,
+    "shift": 4
   },
   {
     "name": "Tyrod Taylor",
@@ -7820,8 +8796,10 @@
     "replacement": 19,
     "roachScore": 489,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 489,
-    "valueGap": -159
+    "valueGap": -159,
+    "shift": 0
   },
   {
     "name": "Jalen Reagor",
@@ -7836,8 +8814,10 @@
     "replacement": 67,
     "roachScore": 489,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 490,
-    "valueGap": null
+    "valueGap": null,
+    "shift": 3
   },
   {
     "name": "Frank Gore Jr.",
@@ -7852,8 +8832,10 @@
     "replacement": 55,
     "roachScore": 489,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 491,
-    "valueGap": 45
+    "valueGap": 45,
+    "shift": 4
   },
   {
     "name": "Xavier Restrepo",
@@ -7868,8 +8850,10 @@
     "replacement": 67,
     "roachScore": 490,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 492,
-    "valueGap": null
+    "valueGap": null,
+    "shift": 2
   },
   {
     "name": "Jake Browning",
@@ -7884,8 +8868,10 @@
     "replacement": 19,
     "roachScore": 491,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 493,
-    "valueGap": -10
+    "valueGap": -10,
+    "shift": -2
   },
   {
     "name": "Jackson Hawes",
@@ -7900,8 +8886,10 @@
     "replacement": 24,
     "roachScore": 493,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 494,
-    "valueGap": -71
+    "valueGap": -71,
+    "shift": -6
   },
   {
     "name": "Kene Nwangwu",
@@ -7916,8 +8904,10 @@
     "replacement": 55,
     "roachScore": 493,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 495,
-    "valueGap": null
+    "valueGap": null,
+    "shift": 4
   },
   {
     "name": "Moliki Matavao",
@@ -7932,8 +8922,10 @@
     "replacement": 24,
     "roachScore": 495,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 496,
-    "valueGap": null
+    "valueGap": null,
+    "shift": -6
   },
   {
     "name": "Noah Whittington",
@@ -7948,8 +8940,10 @@
     "replacement": 55,
     "roachScore": 495,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 497,
-    "valueGap": null
+    "valueGap": null,
+    "shift": 4
   },
   {
     "name": "Reggie Virgil",
@@ -7964,8 +8958,10 @@
     "replacement": 67,
     "roachScore": 496,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 498,
-    "valueGap": 120
+    "valueGap": 120,
+    "shift": 2
   },
   {
     "name": "Cash Jones",
@@ -7980,8 +8976,10 @@
     "replacement": 55,
     "roachScore": 496,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 499,
-    "valueGap": null
+    "valueGap": null,
+    "shift": 3
   },
   {
     "name": "Michael Burton",
@@ -7996,8 +8994,10 @@
     "replacement": 55,
     "roachScore": 497,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 500,
-    "valueGap": 102
+    "valueGap": 102,
+    "shift": 3
   },
   {
     "name": "Dominic Zvada",
@@ -8012,8 +9012,10 @@
     "replacement": 14,
     "roachScore": 498,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 501,
-    "valueGap": -137
+    "valueGap": -137,
+    "shift": -3
   },
   {
     "name": "Drew Sample",
@@ -8028,8 +9030,10 @@
     "replacement": 24,
     "roachScore": 501,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 502,
-    "valueGap": -35
+    "valueGap": -35,
+    "shift": -6
   },
   {
     "name": "Adam Trautman",
@@ -8044,8 +9048,10 @@
     "replacement": 24,
     "roachScore": 502,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 503,
-    "valueGap": -84
+    "valueGap": -84,
+    "shift": -6
   },
   {
     "name": "Luke Schoonmaker",
@@ -8060,8 +9066,10 @@
     "replacement": 24,
     "roachScore": 505,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 504,
-    "valueGap": -136
+    "valueGap": -136,
+    "shift": 1
   },
   {
     "name": "KeAndre Lambert-Smith",
@@ -8076,8 +9084,10 @@
     "replacement": 67,
     "roachScore": 506,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 505,
-    "valueGap": -20
+    "valueGap": -20,
+    "shift": 5
   },
   {
     "name": "Tyson Bagent",
@@ -8092,8 +9102,10 @@
     "replacement": 19,
     "roachScore": 507,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 506,
-    "valueGap": 76
+    "valueGap": 76,
+    "shift": 1
   },
   {
     "name": "Jaret Patterson",
@@ -8108,8 +9120,10 @@
     "replacement": 55,
     "roachScore": 507,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 507,
-    "valueGap": null
+    "valueGap": null,
+    "shift": 6
   },
   {
     "name": "Sam Roush",
@@ -8124,8 +9138,10 @@
     "replacement": 24,
     "roachScore": 509,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 508,
-    "valueGap": -5
+    "valueGap": -5,
+    "shift": -4
   },
   {
     "name": "Durham Smythe",
@@ -8140,8 +9156,10 @@
     "replacement": 24,
     "roachScore": 511,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 509,
-    "valueGap": 17
+    "valueGap": 17,
+    "shift": -3
   },
   {
     "name": "Tanner Hudson",
@@ -8156,8 +9174,10 @@
     "replacement": 24,
     "roachScore": 511,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 510,
-    "valueGap": 83
+    "valueGap": 83,
+    "shift": 1
   },
   {
     "name": "Jaydn Ott",
@@ -8172,8 +9192,10 @@
     "replacement": 55,
     "roachScore": 511.05,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 511,
-    "valueGap": null
+    "valueGap": null,
+    "shift": 5
   },
   {
     "name": "Josh Cameron",
@@ -8188,8 +9210,10 @@
     "replacement": 67,
     "roachScore": 511.3,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 512,
-    "valueGap": 11
+    "valueGap": 11,
+    "shift": 2
   },
   {
     "name": "Nate Boerkircher",
@@ -8204,8 +9228,10 @@
     "replacement": 24,
     "roachScore": 513,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 513,
-    "valueGap": 72
+    "valueGap": 72,
+    "shift": -5
   },
   {
     "name": "Jeremy Ruckert",
@@ -8220,8 +9246,10 @@
     "replacement": 24,
     "roachScore": 513.08,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 514,
-    "valueGap": 82
+    "valueGap": 82,
+    "shift": -5
   },
   {
     "name": "Lil'Jordan Humphrey",
@@ -8236,8 +9264,10 @@
     "replacement": 67,
     "roachScore": 514,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 515,
-    "valueGap": -192
+    "valueGap": -192,
+    "shift": 3
   },
   {
     "name": "Velus Jones Jr.",
@@ -8252,8 +9282,10 @@
     "replacement": 67,
     "roachScore": 515,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 516,
-    "valueGap": null
+    "valueGap": null,
+    "shift": -1
   },
   {
     "name": "Tyler Conklin",
@@ -8268,8 +9300,10 @@
     "replacement": 24,
     "roachScore": 515.38,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 517,
-    "valueGap": 92
+    "valueGap": 92,
+    "shift": -5
   },
   {
     "name": "Trey Lance",
@@ -8284,7 +9318,9 @@
     "replacement": 19,
     "roachScore": 517,
     "startable": false,
+    "cbsRank": null,
     "roachRank": 518,
-    "valueGap": -132
+    "valueGap": -132,
+    "shift": -1
   }
 ]

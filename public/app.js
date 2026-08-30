@@ -50,26 +50,31 @@ function renderDraftTable() {
   });
   el('draft-count').textContent = `${rows.length} players`;
   if (rows.length === 0) {
-    setRows('draft-table', '', 9);
+    setRows('draft-table', '', 11);
     return;
   }
   const html = rows.map((p) => {
     const taken = draftState.taken.has(p.name);
     const vg = p.valueGap;
     const vgStr = vg == null ? '—' : (vg > 0 ? '+' + vg : vg);
+    const shift = p.shift;
+    const shiftStr = shift == null ? '—' : (shift > 0 ? '+' + shift : shift);
+    const shiftCls = shift > 0 ? 'pos' : (shift < 0 ? 'neg' : '');
     return `<tr class="${taken ? 'taken' : ''}" data-name="${esc(p.name)}">
       <td class="num">${p.roachRank}</td>
       <td class="pname">${esc(p.name)}</td>
       <td><span class="pos-tag pos-${p.pos}">${posName[p.pos] || p.pos}</span></td>
       <td class="hide-sm">${esc(p.team || '')}</td>
-      <td class="num hide-sm">${p.tier ?? '—'}</td>
+      <td class="num">${p.ecr ?? '—'}</td>
+      <td class="num hide-sm ${shiftCls}">${shiftStr}</td>
+      <td class="num hide-sm">${p.cbsRank ?? '—'}</td>
       <td class="num">${p.adp ?? '—'}</td>
       <td class="num ${gapClass(vg)}">${vgStr}</td>
       <td class="num hide-sm">${p.bye ?? '—'}</td>
       <td><button class="taken-btn" data-name="${esc(p.name)}">${taken ? 'Undo' : 'Taken'}</button></td>
     </tr>`;
   }).join('');
-  setRows('draft-table', html, 9);
+  setRows('draft-table', html, 11);
   updateSortArrows();
 }
 

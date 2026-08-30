@@ -18,13 +18,36 @@ function normPos(pos) {
   return pos === 'DST' ? 'DST' : pos;
 }
 
+// Loose name match so "Michael Pittman" (CBS) finds "Michael Pittman Jr."
+// (FantasyPros) — strip suffixes/punctuation, not a fuzzy/edit-distance
+// match, so it won't silently pair two different people.
+function normName(name) {
+  return String(name || '')
+    .toLowerCase()
+    .replace(/\b(jr|sr|ii|iii|iv|v)\.?\b/g, '')
+    .replace(/[^a-z0-9]/g, '');
+}
+
 /**
  * @param {Array} ecrPlayers - raw FantasyPros ecrData.players array (or the
  *   trimmed {name,pos,team,ecr,tier,adp,sd,bye} shape already extracted).
+ * @param {Object} [cbsExpertRanks] - optional { QB: [{n,r}], RB: [...], ... }
+ *   pulled live from CBS's own SportsLine-powered "Expert" rank column —
+ *   the only CBS ranking signal populated preseason (their own season point
+ *   projections are all zero until the season starts). Purely informational;
+ *   never folds into roachScore/roachRank.
  * @returns {Array} players ranked by roachRank, richest fields first.
  */
-function buildBoard(ecrPlayers) {
+function buildBoard(ecrPlayers, cbsExpertRanks) {
   const replacement = computeReplacementLevels();
+
+  let cbsByPos = null;
+  if (cbsExpertRanks) {
+    cbsByPos = {};
+    for (const pos of Object.keys(cbsExpertRanks)) {
+      cbsByPos[pos] = new Map(cbsExpertRanks[pos].map((p) => [normName(p.n), p.r]));
+    }
+  }
 
   const normalized = ecrPlayers.map((p) => ({
     name: p.name ?? p.player_name,
@@ -52,11 +75,13 @@ function buildBoard(ecrPlayers) {
     const shiftCap = Math.min(sd * 1.5, SHIFT_CAP);
     const adjustment = sd >= SD_FLOOR ? shiftCap * (POS_DIRECTION[p.pos] || 0) : 0;
     const roachScore = p.ecr - adjustment;
+    const cbsRank = cbsByPos && cbsByPos[p.pos] ? cbsByPos[p.pos].get(normName(p.name)) ?? null : null;
     return {
       ...p,
       replacement: rep,
       roachScore: Math.round(roachScore * 100) / 100,
       startable: p.posRank <= rep,
+      cbsRank,
     };
   });
 
@@ -64,6 +89,9 @@ function buildBoard(ecrPlayers) {
   scored.forEach((p, i) => {
     p.roachRank = i + 1;
     p.valueGap = p.adp != null ? p.adp - p.roachRank : null;
+    // Shift: how far OUR rank moved him from ECR. Positive = we like him
+    // more than the market (moved him up); negative = we like him less.
+    p.shift = p.ecr - p.roachRank;
   });
 
   return scored;

@@ -29,8 +29,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 function loadBoardOrNull(year) {
   const boardPath = path.join(DATA_DIR, 'preseason', `${year}-roach-board.json`);
   const ecrPath = path.join(DATA_DIR, 'preseason', `${year}-fantasypros-ppr-ecr.json`);
+  const cbsPath = path.join(DATA_DIR, 'preseason', `${year}-cbs-expert-rank.json`);
   if (fs.existsSync(boardPath)) return JSON.parse(fs.readFileSync(boardPath, 'utf8'));
-  if (fs.existsSync(ecrPath)) return buildBoard(JSON.parse(fs.readFileSync(ecrPath, 'utf8')));
+  if (fs.existsSync(ecrPath)) {
+    const cbs = fs.existsSync(cbsPath) ? JSON.parse(fs.readFileSync(cbsPath, 'utf8')) : null;
+    return buildBoard(JSON.parse(fs.readFileSync(ecrPath, 'utf8')), cbs);
+  }
   return null;
 }
 

@@ -40,4 +40,22 @@ describe('buildBoard', () => {
       }
     }
   });
+
+  it('computes shift as ecr minus roachRank', () => {
+    const board = buildBoard(sample);
+    for (const p of board) {
+      expect(p.shift).toBe(p.ecr - p.roachRank);
+    }
+  });
+
+  it('merges CBS expert rank by loosely-matched name, without affecting roachRank', () => {
+    const cbsRanks = { RB: [{ n: 'Uncertain Rb', r: 12 }], WR: [{ n: 'Elite WR', r: 1 }] };
+    const withoutCbs = buildBoard(sample);
+    const withCbs = buildBoard(sample, cbsRanks);
+    expect(withCbs.find((p) => p.name === 'Uncertain RB').cbsRank).toBe(12);
+    expect(withCbs.find((p) => p.name === 'Elite WR').cbsRank).toBe(1);
+    expect(withCbs.find((p) => p.name === 'Elite RB').cbsRank).toBeNull();
+    // CBS rank is informational only — it must not change the actual ordering.
+    expect(withCbs.map((p) => p.name)).toEqual(withoutCbs.map((p) => p.name));
+  });
 });
