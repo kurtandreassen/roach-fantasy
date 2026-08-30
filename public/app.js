@@ -6,7 +6,7 @@ const posName = { QB: 'QB', RB: 'RB', WR: 'WR', TE: 'TE', K: 'K', DST: 'DST' };
 
 /* ---------------------------------------------------------------- tabs --- */
 
-const onShow = { coach: loadCoach, history: loadHistory };
+const onShow = { coach: loadCoach, history: loadHistory, trends: loadTrends };
 el('tabs').addEventListener('click', (e) => {
   const btn = e.target.closest('button[data-view]');
   if (!btn) return;
@@ -242,6 +242,102 @@ el('standings-save').addEventListener('click', async () => {
   await loadCoach();
   toggle('standings-panel');
 });
+
+/* -------------------------------------------------------------- trends --- */
+
+let trendsData = { weeks: [], players: [] };
+const trendsState = { q: '', team: 'ALL', sortKey: 'total', sortDir: -1 };
+
+function buildTrendsHeader() {
+  const row = el('trends-thead-row');
+  row.innerHTML = '<th data-key="name">Player</th><th data-key="pos">Pos</th><th data-key="team">Team</th>'
+    + trendsData.weeks.map((w) => `<th class="num" data-key="wk${w}">Wk${w}</th>`).join('')
+    + '<th class="num" data-key="total">Total</th><th class="num" data-key="avg">Avg</th>';
+  row.querySelectorAll('th[data-key]').forEach((th) => {
+    th.addEventListener('click', () => {
+      const key = th.dataset.key;
+      if (trendsState.sortKey === key) trendsState.sortDir *= -1;
+      else { trendsState.sortKey = key; trendsState.sortDir = key.startsWith('wk') || key === 'total' || key === 'avg' ? -1 : 1; }
+      renderTrendsTable();
+    });
+  });
+}
+
+function buildTrendsTeamFilter() {
+  const teams = [...new Set(trendsData.players.map((p) => p.team))].sort();
+  const wrap = el('trends-team-filter');
+  wrap.innerHTML = '<button class="chip active" data-team="ALL">All</button>'
+    + teams.map((t) => `<button class="chip" data-team="${esc(t)}">${esc(t)}</button>`).join('');
+  wrap.querySelectorAll('.chip').forEach((chip) => {
+    chip.addEventListener('click', () => {
+      wrap.querySelectorAll('.chip').forEach((c) => c.classList.remove('active'));
+      chip.classList.add('active');
+      trendsState.team = chip.dataset.team;
+      renderTrendsTable();
+    });
+  });
+}
+
+function trendsRowValue(p, key) {
+  if (key === 'name' || key === 'pos' || key === 'team') return p[key];
+  if (key === 'total') return p.total;
+  if (key === 'avg') return p.avg;
+  if (key.startsWith('wk')) {
+    const idx = trendsData.weeks.indexOf(Number(key.slice(2)));
+    return idx >= 0 ? p.pointsByWeek[idx] : null;
+  }
+  return null;
+}
+
+function renderTrendsTable() {
+  const q = trendsState.q.trim().toLowerCase();
+  let rows = trendsData.players.filter((p) => {
+    if (trendsState.team !== 'ALL' && p.team !== trendsState.team) return false;
+    if (q && !p.name.toLowerCase().includes(q)) return false;
+    return true;
+  });
+  rows.sort((a, b) => {
+    let av = trendsRowValue(a, trendsState.sortKey);
+    let bv = trendsRowValue(b, trendsState.sortKey);
+    if (av == null) av = trendsState.sortDir === 1 ? Infinity : -Infinity;
+    if (bv == null) bv = trendsState.sortDir === 1 ? Infinity : -Infinity;
+    if (typeof av === 'string') return av.localeCompare(bv) * trendsState.sortDir;
+    return (av - bv) * trendsState.sortDir;
+  });
+  el('trends-count').textContent = `${rows.length} players, ${trendsData.weeks.length} weeks logged`;
+  if (rows.length === 0) {
+    setRows('trends-table', '', 3 + trendsData.weeks.length + 2);
+    return;
+  }
+  const html = rows.map((p) => {
+    const weekCells = p.pointsByWeek.map((v) => `<td class="num">${v == null ? '—' : v}</td>`).join('');
+    return `<tr>
+      <td class="pname">${esc(p.name)}</td>
+      <td><span class="pos-tag pos-${p.pos}">${posName[p.pos] || p.pos}</span></td>
+      <td>${esc(p.team)}</td>
+      ${weekCells}
+      <td class="num">${p.total}</td>
+      <td class="num">${p.avg ?? '—'}</td>
+    </tr>`;
+  }).join('');
+  setRows('trends-table', html, 3 + trendsData.weeks.length + 2);
+}
+
+el('trends-search').addEventListener('input', (e) => { trendsState.q = e.target.value; renderTrendsTable(); });
+
+async function loadTrends() {
+  // Unlike history (static), trends can gain a new week any time someone
+  // asks Claude to log one — always refetch rather than caching once.
+  try {
+    const res = await fetch('/api/trends');
+    trendsData = await res.json();
+    buildTrendsHeader();
+    buildTrendsTeamFilter();
+    renderTrendsTable();
+  } catch (err) {
+    setRows('trends-table', `<tr><td colspan="6" class="error">${esc(err.message)}</td></tr>`, 6);
+  }
+}
 
 /* ------------------------------------------------------------- history --- */
 

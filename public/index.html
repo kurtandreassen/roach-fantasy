@@ -16,6 +16,7 @@
 <nav class="tabs" id="tabs">
   <button data-view="draft" class="active">Draft Board</button>
   <button data-view="coach">Coach</button>
+  <button data-view="trends">Trends</button>
   <button data-view="history">Draft History</button>
 </nav>
 
@@ -105,6 +106,26 @@
         <textarea id="standings-input" placeholder="BuzzKill, 0-0-0, 0"></textarea>
         <br><button class="action" id="standings-save" style="margin-top:10px;">Save Standings</button>
         <div id="standings-err"></div>
+      </div>
+    </section>
+  </section>
+
+  <!-- Trends -->
+  <section class="view" id="view-trends">
+    <section class="panel">
+      <h2>Weekly Scoring Trends <span class="meta" id="trends-count" style="margin-left:8px;"></span></h2>
+      <p class="empty" style="padding-top:0">No live CBS API exists — ask Claude to log each week's scores after games finish (your roster, all 12 teams, and a slice of the waiver wire) and it appends here rather than overwriting. Nothing to show until Week 1 is played.</p>
+      <div class="picker">
+        <input type="text" id="trends-search" placeholder="Search player…">
+      </div>
+      <div class="pos-filter" id="trends-team-filter">
+        <button class="chip active" data-team="ALL">All</button>
+      </div>
+      <div style="overflow-x:auto;">
+        <table id="trends-table">
+          <thead><tr id="trends-thead-row"><th data-key="name">Player</th><th data-key="pos">Pos</th><th data-key="team">Team</th></tr></thead>
+          <tbody><tr><td colspan="3" class="empty">No weeks recorded yet.</td></tr></tbody>
+        </table>
       </div>
     </section>
   </section>

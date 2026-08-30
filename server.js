@@ -15,6 +15,7 @@ const {
 const { optimizeLineup } = require('./src/coach/lineupOptimizer');
 const { suggestWaivers } = require('./src/coach/waiverSuggest');
 const stateStore = require('./src/state/store');
+const trendStore = require('./src/state/trendStore');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -189,6 +190,35 @@ app.post('/api/state/standings', (req, res) => {
   }
   const state = stateStore.updateStandings(teams);
   res.json(state);
+});
+
+// --- Weekly scoring trends -----------------------------------------------
+// Separate from the Coach state above: that's a single overwritten
+// snapshot, this APPENDS one entry per week so trends actually accumulate
+// over the season. Same "no CBS API, Claude reads the live scoring/box
+// score pages and pushes it" sync model as everything else here.
+
+app.get('/api/trends', (req, res) => {
+  res.json(trendStore.buildPlayerMatrix());
+});
+
+app.post('/api/trends/week', (req, res) => {
+  const { week, teams, freeAgents } = req.body || {};
+  if (typeof week !== 'number' || week < 1) {
+    return res.status(400).json({ error: 'Body must include a numeric `week` (1+).' });
+  }
+  if (teams && typeof teams !== 'object') {
+    return res.status(400).json({ error: '`teams` must be an object of { teamName: [{name,pos,points}] }.' });
+  }
+  if (freeAgents && !Array.isArray(freeAgents)) {
+    return res.status(400).json({ error: '`freeAgents` must be an array of {name,pos,points}.' });
+  }
+  try {
+    const recorded = trendStore.recordWeek(week, teams, freeAgents);
+    res.json({ week, recorded });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
 });
 
 app.get('/health', (req, res) => res.json({ status: 'ok' }));
