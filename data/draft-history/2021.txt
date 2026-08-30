@@ -1,0 +1,208 @@
+ROUND 1
+1 Afros Christian McCaffrey RB SF 127.5 127.5
+2 Thorbjorn Olesen Alvin Kamara RB NO 216.5 216.5
+3 Billy A Dalvin Cook RB FA 201.1 201.1
+4 Hong Kong Fluuey Ezekiel Elliott RB FA 248.2 244.1
+5 Malachi Crunch Derrick Henry RB BAL 205.5 193.3
+6 Nicaraguan Crab Sandwich Austin Ekeler RB WAS 320.9 320.9
+7 Team Rollaway Najee Harris RB NYG 296.1 291.2
+8 Appleseed Jonathan Taylor RB IND 364.6 364.6
+9 T-Bag Davante Adams WR LAR 350.8 332.8
+10 Dez Nuts Travis Kelce TE KC 302.9 251.5
+11 Tim Aaron Jones RB MIN 257.0 231.0
+12 Suq Madiq Nick Chubb RB HOU 210.3 210.3
+ROUND 2
+1 Suq Madiq Tyreek Hill WR MIA 335.2 297.7
+2 Tim Antonio Gibson RB NE 215.0 170.5
+3 Dez Nuts Saquon Barkley RB PHI 143.1 112.4
+4 T-Bag Stefon Diggs WR WAS 271.4 262.4
+5 Appleseed DeAndre Hopkins WR BAL 147.2 147.2
+6 Team Rollaway Patrick Mahomes QB KC 469.8 402.1
+7 Nicaraguan Crab Sandwich Clyde Edwards-Helaire RB KC 126.6 106.0
+8 Malachi Crunch Calvin Ridley WR TEN 71.1 71.1
+9 Hong Kong Fluuey DK Metcalf WR PIT 233.5 233.5
+10 Billy A Josh Allen QB BUF 483.1 441.1
+11 Thorbjorn Olesen Joe Mixon RB HOU 338.7 279.6
+12 Afros Darren Waller TE CAR 143.9 129.3
+ROUND 3
+1 Afros Justin Jefferson WR MIN 311.4 311.4
+2 Thorbjorn Olesen George Kittle TE SF 217.8 194.0
+3 Billy A Keenan Allen WR IND 246.6 246.6
+4 Hong Kong Fluuey A.J. Brown WR NE 189.3 164.1
+5 Malachi Crunch Robert Woods WR PIT 137.2 137.2
+6 Nicaraguan Crab Sandwich Allen Robinson WR DET 80.8 54.0
+7 Team Rollaway Cooper Kupp WR SEA 467.7 413.4
+8 Appleseed James Robinson RB FA 178.3 178.3
+9 T-Bag Mike Davis RB FA 138.4 93.1
+10 Dez Nuts Terry McLaurin WR WAS 200.2 193.1
+11 Tim CeeDee Lamb WR DAL 230.2 226.6
+12 Suq Madiq DJ Moore WR BUF 223.0 201.1
+ROUND 4
+1 Suq Madiq D'Andre Swift RB CHI 196.3 196.3
+2 Tim Diontae Johnson WR CLE 280.7 266.3
+3 Dez Nuts David Montgomery RB HOU 188.1 150.0
+4 T-Bag Myles Gaskin RB SEA 171.6 134.8
+5 Appleseed Amari Cooper WR LV 208.0 189.6
+6 Team Rollaway Josh Jacobs RB GB 224.8 197.4
+7 Nicaraguan Crab Sandwich Chris Godwin WR TB 246.4 246.4
+8 Malachi Crunch Chris Carson RB FA 50.1 50.1
+9 Hong Kong Fluuey Adam Thielen WR PIT 199.8 192.8
+10 Billy A Mike Evans WR SF 262.3 235.6
+11 Thorbjorn Olesen Miles Sanders RB DAL 125.3 72.3
+12 Afros Kyler Murray QB MIN 335.8 328.4
+ROUND 5
+1 Afros Gus Edwards RB LAC 0.0 0.0
+2 Thorbjorn Olesen Julio Jones WR FA 75.8 54.6
+3 Billy A Chase Edmonds RB WAS 148.1 137.3
+4 Hong Kong Fluuey Javonte Williams RB DAL 198.9 187.9
+5 Malachi Crunch Tyler Lockett WR LV 214.4 193.1
+6 Nicaraguan Crab Sandwich Lamar Jackson QB BAL 287.4 287.4
+7 Team Rollaway JuJu Smith-Schuster WR NYG 42.4 34.2
+8 Appleseed Jerry Jeudy WR CLE 80.0 80.0
+9 T-Bag Kyle Pitts TE ATL 173.8 146.9
+10 Dez Nuts Dak Prescott QB DAL 376.8 352.4
+11 Tim Mark Andrews TE BAL 284.6 284.6
+12 Suq Madiq Tee Higgins WR CIN 256.0 221.1
+ROUND 6
+1 Suq Madiq Kareem Hunt RB KC 110.0 63.4
+2 Tim Justin Herbert QB LAC 415.3 415.3
+3 Dez Nuts Chase Claypool WR FA 154.4 85.6
+4 T-Bag Damien Harris RB FA 202.2 175.4
+5 Appleseed Raheem Mostert RB LV 2.0 2.0
+6 Team Rollaway Tyler Boyd WR TEN 206.8 181.0
+7 Nicaraguan Crab Sandwich T.J. Hockenson TE MIN 145.3 130.4
+8 Malachi Crunch Russell Wilson QB NYG 252.2 223.0
+9 Hong Kong Fluuey Trey Sermon RB ATL 28.3 8.9
+10 Billy A Courtland Sutton WR DEN 147.3 77.9
+11 Thorbjorn Olesen Ja'Marr Chase WR CIN 358.9 302.2
+12 Afros Brandon Aiyuk WR SF 178.3 103.1
+ROUND 7
+1 Afros Antonio Brown WR TB 121.1 25.7
+2 Thorbjorn Olesen Aaron Rodgers QB PIT 374.2 279.5
+3 Billy A Darrell Henderson Jr. RB FA 163.4 124.7
+4 Hong Kong Fluuey Tom Brady QB FA 438.8 417.3
+5 Malachi Crunch Marquez Callaway WR LV 151.8 6.0
+6 Nicaraguan Crab Sandwich Odell Beckham Jr. WR NYG 163.0 96.5
+7 Team Rollaway Logan Thomas TE FA 55.6 35.7
+8 Appleseed Jalen Hurts QB PHI 377.1 338.0
+9 T-Bag Kenny Golladay WR FA 83.9 21.7
+10 Dez Nuts Brandin Cooks WR BUF 226.2 226.2
+11 Tim AJ Dillon RB CAR 188.4 39.8
+12 Suq Madiq Robbie Chosen WR WAS 120.5 14.5
+ROUND 8
+1 Suq Madiq Mike Gesicki TE CIN 160.8 118.4
+2 Tim DeVonta Smith WR PHI 192.5 130.5
+3 Dez Nuts Jamaal Williams RB NO 113.8 9.0
+4 T-Bag Jakobi Meyers WR JAC 187.7 83.3
+5 Appleseed Devin Singletary RB NYG 197.2 78.3
+6 Team Rollaway Mecole Hardman WR BUF 150.5 29.3
+7 Nicaraguan Crab Sandwich Darnell Mooney WR NYG 195.1 151.6
+8 Malachi Crunch Melvin Gordon RB FA 183.1 123.3
+9 Hong Kong Fluuey Deebo Samuel WR SF 365.1 314.0
+10 Billy A Laviska Shenault Jr. WR BUF 118.5 30.5
+11 Thorbjorn Olesen Michael Thomas WR FA 0.0 0.0
+12 Afros Michael Carter RB TEN 154.9 75.0
+ROUND 9
+1 Afros Michael Pittman WR PIT 218.2 158.8
+2 Thorbjorn Olesen Leonard Fournette RB FA 255.6 209.8
+3 Billy A Corey Davis WR FA 107.2 50.8
+4 Hong Kong Fluuey Sony Michel RB FA 150.8 61.2
+5 Malachi Crunch Noah Fant TE NO 156.4 156.4
+6 Nicaraguan Crab Sandwich Rhamondre Stevenson RB NE 122.3 27.4
+7 Team Rollaway Steelers DST PIT 91.0 19.0
+8 Appleseed Ryan Tannehill QB FA 310.2 23.1
+9 T-Bag Terrace Marshall Jr. WR MIA 32.8 0.0
+10 Dez Nuts James Conner RB ARI 239.8 161.3
+11 Tim Jaylen Waddle WR DEN 234.1 234.1
+12 Suq Madiq Jarvis Landry WR FA 117.5 59.0
+ROUND 10
+1 Suq Madiq Matthew Stafford QB LAR 429.6 350.0
+2 Tim Mark Ingram RB FA 111.0 41.9
+3 Dez Nuts Marvin Jones WR FA 158.4 14.8
+4 T-Bag Elijah Moore WR PHI 138.5 72.9
+5 Appleseed Henry Ruggs III WR FA 84.5 77.9
+6 Team Rollaway Tony Jones RB FA 20.4 0.0
+7 Nicaraguan Crab Sandwich Rondale Moore WR FA 119.3 11.6
+8 Malachi Crunch DJ Chark WR ATL 34.4 17.6
+9 Hong Kong Fluuey Robert Tonyan TE PIT 50.4 24.2
+10 Billy A J.D. McKissic RB FA 128.0 29.3
+11 Thorbjorn Olesen Will Fuller WR FA 8.6 1.6
+12 Afros Chuba Hubbard RB CAR 126.0 82.0
+ROUND 11
+1 Afros Mike Williams WR LAC 219.7 197.5
+2 Thorbjorn Olesen Curtis Samuel WR BUF 10.0 0.0
+3 Billy A Rams DST LAR 125.0 88.0
+4 Hong Kong Fluuey Michael Gallup WR WAS 91.5 14.6
+5 Malachi Crunch Marquise Brown WR PHI 222.6 179.9
+6 Nicaraguan Crab Sandwich Trevor Lawrence QB JAC 241.5 16.0
+7 Team Rollaway Tyrell Williams WR FA 3.4 3.4
+8 Appleseed Tyler Higbee TE LAR 134.9 100.2
+9 T-Bag Ronald Jones RB FA 83.2 16.1
+10 Dez Nuts Cole Beasley WR FA 155.1 5.1
+11 Tim Commanders DST WAS 59.0 7.0
+12 Suq Madiq Kenyan Drake RB FA 102.5 10.8
+ROUND 12
+1 Suq Madiq Joe Burrow QB CIN 439.2 182.3
+2 Tim Justin Fields QB KC 165.2 0.0
+3 Dez Nuts Nyheim Miller-Hines RB NO 112.9 4.9
+4 T-Bag Tua Tagovailoa QB ATL 205.9 31.4
+5 Appleseed Jamison Crowder WR WAS 109.1 31.6
+6 Team Rollaway Kylin Hill RB FA 3.9 0.0
+7 Nicaraguan Crab Sandwich Buccaneers DST TB 129.0 18.0
+8 Malachi Crunch Saints DST NO 113.0 45.0
+9 Hong Kong Fluuey Jonnu Smith TE GB 67.0 33.6
+10 Billy A Phillip Lindsay RB FA 41.8 0.0
+11 Thorbjorn Olesen Emmanuel Sanders WR FA 143.3 70.8
+12 Afros Kenneth Gainwell RB TB 123.2 2.7
+ROUND 13
+1 Afros Gabe Davis WR BUF 131.1 0.0
+2 Thorbjorn Olesen Rob Gronkowski TE FA 164.6 145.6
+3 Billy A Jared Cook TE FA 120.4 8.8
+4 Hong Kong Fluuey Zack Moss RB CIN 103.8 46.4
+5 Malachi Crunch Latavius Murray RB FA 82.6 12.4
+6 Nicaraguan Crab Sandwich Chiefs DST KC 115.0 55.0
+7 Team Rollaway Nelson Agholor WR BAL 102.9 0.0
+8 Appleseed Russell Gage WR SF 139.4 101.5
+9 T-Bag James White RB FA 31.2 0.0
+10 Dez Nuts Tony Pollard RB TEN 161.2 13.0
+11 Tim Jaret Patterson RB LAC 50.6 0.0
+12 Suq Madiq Bills DST BUF 124.0 115.0
+ROUND 14
+1 Suq Madiq Justin Tucker K BAL 140.0 75.5
+2 Tim Tevin Coleman RB FA 50.9 10.7
+3 Dez Nuts Ravens DST BAL 61.0 24.0
+4 T-Bag Ben Roethlisberger QB FA 279.6 13.9
+5 Appleseed Dolphins DST MIA 120.0 4.0
+6 Team Rollaway Tim Patrick WR NYJ 140.9 87.4
+7 Nicaraguan Crab Sandwich Dallas Goedert TE PHI 180.2 125.4
+8 Malachi Crunch Christian Kirk WR SF 212.7 140.2
+9 Hong Kong Fluuey Patriots DST NE 131.0 10.0
+10 Billy A Matt Ryan QB FA 268.4 23.8
+11 Thorbjorn Olesen Harrison Butker K KC 129.0 110.5
+12 Afros Trey Lance QB LAC 72.8 0.0
+ROUND 15
+1 Afros Cardinals DST ARI 103.0 18.0
+2 Thorbjorn Olesen Packers DST GB 116.0 9.0
+3 Billy A Younghoe Koo K NYJ 96.0 58.5
+4 Hong Kong Fluuey Tyler Bass K BUF 117.5 86.0
+5 Malachi Crunch Amon-Ra St. Brown WR DET 201.2 100.2
+6 Nicaraguan Crab Sandwich Jason Sanders K NYJ 93.5 6.0
+7 Team Rollaway Ryan Succop K FA 114.0 108.0
+8 Appleseed Greg Zuerlein K NYJ 122.0 17.5
+9 T-Bag Broncos DST DEN 99.0 33.0
+10 Dez Nuts Cole Kmet TE CHI 112.4 8.9
+11 Tim Alexander Mattison RB MIA 125.3 88.8
+12 Suq Madiq Zach Ertz TE WAS 170.4 13.6
+ROUND 16
+1 Suq Madiq Evan Engram TE DEN 103.4 31.1
+2 Tim Rodrigo Blankenship K FA 38.5 3.0
+3 Dez Nuts Daniel Carlson K NO 144.5 17.0
+4 T-Bag Matt Gay K LV 151.0 79.5
+5 Appleseed Gerald Everett TE CHI 119.3 16.8
+6 Team Rollaway Jared Goff QB DET 226.8 0.0
+7 Nicaraguan Crab Sandwich Hunter Henry TE NE 154.7 68.9
+8 Malachi Crunch Robbie Gould K FA 118.5 43.5
+9 Hong Kong Fluuey Bryan Edwards WR FA 105.9 0.0
+10 Billy A Sterling Shepard WR HOU 78.6 22.0
+11 Thorbjorn Olesen Giovani Bernard RB FA 78.4 0.0
+12 Afros Greg Joseph K LV 130.5 114.0

@@ -1,0 +1,208 @@
+ROUND 1
+1 Malachi Crunch Christian McCaffrey RB SF 470.0 380.0
+2 Suq Madiq Austin Ekeler RB WAS 178.0 151.0
+3 Mike Hunt Smells Justin Jefferson WR MIN 200.0 163.0
+4 Dez Nuts Tyreek Hill WR MIA 388.0 350.0
+5 Team Rollaway Patrick Mahomes QB KC 362.0 287.0
+6 Nicaraguan Crab Sandwich Travis Kelce TE KC 298.0 214.0
+7 Jerry's Nub Ja'Marr Chase WR CIN 258.0 253.0
+8 Billy A Cooper Kupp WR SEA 165.0 158.0
+9 Frank Thomas Tony Pollard RB TEN 231.0 195.0
+10 Appleseed Bijan Robinson RB ATL 240.0 215.0
+11 BuzzKill Stefon Diggs WR WAS 285.0 253.0
+12 BYE WEEK Amon-Ra St. Brown WR DET 379.0 298.0
+ROUND 2
+1 BYE WEEK Nick Chubb RB HOU 22.0 22.0
+2 BuzzKill Josh Jacobs RB GB 172.0 166.0
+3 Appleseed Saquon Barkley RB PHI 216.0 156.0
+4 Frank Thomas Garrett Wilson WR NYJ 211.0 206.0
+5 Billy A Derrick Henry RB BAL 234.0 213.0
+6 Jerry's Nub CeeDee Lamb WR DAL 414.0 360.0
+7 Nicaraguan Crab Sandwich A.J. Brown WR NE 285.0 284.0
+8 Team Rollaway Davante Adams WR LAR 258.0 243.0
+9 Dez Nuts Joe Mixon RB HOU 249.0 177.0
+10 Mike Hunt Smells Jalen Hurts QB PHI 381.0 366.0
+11 Suq Madiq DeVonta Smith WR PHI 243.0 221.0
+12 Malachi Crunch Najee Harris RB NYG 192.0 51.0
+ROUND 3
+1 Malachi Crunch Jaylen Waddle WR DEN 198.0 193.0
+2 Suq Madiq Jahmyr Gibbs RB DET 284.0 224.0
+3 Mike Hunt Smells Jonathan Taylor RB IND 146.0 99.0
+4 Dez Nuts Josh Allen QB BUF 465.0 376.0
+5 Team Rollaway Travis Etienne RB NO 266.0 253.0
+6 Nicaraguan Crab Sandwich Deebo Samuel WR SF 257.0 226.0
+7 Jerry's Nub Rhamondre Stevenson RB NE 138.0 138.0
+8 Billy A Calvin Ridley WR TEN 223.0 201.0
+9 Frank Thomas Mark Andrews TE BAL 135.0 132.0
+10 Appleseed Chris Olave WR NO 223.0 181.0
+11 BuzzKill Christian Watson WR GB 101.0 88.0
+12 BYE WEEK Tee Higgins WR CIN 133.0 133.0
+ROUND 4
+1 BYE WEEK Breece Hall RB NYJ 274.0 246.0
+2 BuzzKill Keenan Allen WR IND 272.0 272.0
+3 Appleseed DJ Moore WR BUF 281.0 271.0
+4 Frank Thomas Dameon Pierce RB PHI 67.0 38.0
+5 Billy A Justin Fields QB KC 231.0 124.0
+6 Jerry's Nub DK Metcalf WR PIT 218.0 216.0
+7 Nicaraguan Crab Sandwich Aaron Jones RB MIN 174.0 99.0
+8 Team Rollaway J.K. Dobbins RB DEN 11.0 11.0
+9 Dez Nuts T.J. Hockenson TE MIN 214.0 214.0
+10 Mike Hunt Smells Dalvin Cook RB FA 37.0 14.0
+11 Suq Madiq DeAndre Hopkins WR BAL 216.0 192.0
+12 Malachi Crunch Tyler Lockett WR LV 197.0 118.0
+ROUND 5
+1 Malachi Crunch Kenneth Walker III RB KC 187.0 151.0
+2 Suq Madiq Joe Burrow QB CIN 147.0 132.0
+3 Mike Hunt Smells Drake London WR ATL 166.0 128.0
+4 Dez Nuts Amari Cooper WR LV 229.0 158.0
+5 Team Rollaway Dallas Goedert TE PHI 144.0 70.0
+6 Nicaraguan Crab Sandwich Lamar Jackson QB BAL 391.0 335.0
+7 Jerry's Nub Justin Herbert QB LAC 233.0 233.0
+8 Billy A James Cook RB BUF 244.0 181.0
+9 Frank Thomas Diontae Johnson WR CLE 160.0 128.0
+10 Appleseed Christian Kirk WR SF 147.0 125.0
+11 BuzzKill Alexander Mattison RB MIA 126.0 113.0
+12 BYE WEEK Trevor Lawrence QB JAC 278.0 182.0
+ROUND 6
+1 BYE WEEK Darren Waller TE CAR 109.0 77.0
+2 BuzzKill Miles Sanders RB DAL 82.0 62.0
+3 Appleseed Rachaad White RB WAS 284.0 177.0
+4 Frank Thomas Terry McLaurin WR WAS 205.0 144.0
+5 Billy A George Kittle TE SF 217.0 193.0
+6 Jerry's Nub Isiah Pacheco RB DET 270.0 183.0
+7 Nicaraguan Crab Sandwich George Pickens WR DAL 211.0 165.0
+8 Team Rollaway Chris Godwin WR TB 222.0 189.0
+9 Dez Nuts James Conner RB ARI 191.0 66.0
+10 Mike Hunt Smells Alvin Kamara RB NO 223.0 180.0
+11 Suq Madiq D'Andre Swift RB CHI 200.0 178.0
+12 Malachi Crunch Cam Akers RB SEA 41.0 3.0
+ROUND 7
+1 Malachi Crunch Kyle Pitts TE ATL 130.0 11.0
+2 Suq Madiq Evan Engram TE DEN 224.0 201.0
+3 Mike Hunt Smells Mike Williams WR LAC 49.0 49.0
+4 Dez Nuts Javonte Williams RB DAL 170.0 72.0
+5 Team Rollaway Marquise Brown WR PHI 128.0 104.0
+6 Nicaraguan Crab Sandwich David Montgomery RB HOU 239.0 190.0
+7 Jerry's Nub Brandon Aiyuk WR SF 270.0 237.0
+8 Billy A Khalil Herbert RB SF 103.0 7.0
+9 Frank Thomas Kirk Cousins QB LV 157.0 127.0
+10 Appleseed Deshaun Watson QB CLE 90.0 21.0
+11 BuzzKill Aaron Rodgers QB PIT 0.0 0.0
+12 BYE WEEK Gabe Davis WR BUF 160.0 119.0
+ROUND 8
+1 BYE WEEK Brian Robinson Jr. RB ATL 191.0 151.0
+2 BuzzKill Dalton Kincaid TE BUF 168.0 91.0
+3 Appleseed Jerry Jeudy WR CLE 136.0 27.0
+4 Frank Thomas Jordan Addison WR MIN 214.0 181.0
+5 Billy A AJ Dillon RB CAR 108.0 21.0
+6 Jerry's Nub Pat Freiermuth TE PIT 84.0 24.0
+7 Nicaraguan Crab Sandwich Deuce Vaughn RB HOU 11.0 0.0
+8 Team Rollaway Jahan Dotson WR ATL 120.0 20.0
+9 Dez Nuts Mike Evans WR SF 311.0 271.0
+10 Mike Hunt Smells Sam LaPorta TE DET 273.0 209.0
+11 Suq Madiq Brandin Cooks WR BUF 173.0 66.0
+12 Malachi Crunch Michael Pittman WR PIT 244.0 226.0
+ROUND 9
+1 Malachi Crunch JuJu Smith-Schuster WR NYG 57.0 0.0
+2 Suq Madiq Zach Charbonnet RB SEA 94.0 9.0
+3 Mike Hunt Smells Zay Flowers WR BAL 227.0 197.0
+4 Dez Nuts Samaje Perine RB CIN 112.0 15.0
+5 Team Rollaway Michael Thomas WR FA 86.0 73.0
+6 Nicaraguan Crab Sandwich Allen Lazard WR NYJ 55.0 16.0
+7 Jerry's Nub Antonio Gibson RB NE 116.0 18.0
+8 Billy A Tua Tagovailoa QB ATL 291.0 156.0
+9 Frank Thomas Jamaal Williams RB NO 49.0 0.0
+10 Appleseed Jared Goff QB DET 348.0 243.0
+11 BuzzKill Jeff Wilson RB MIA 37.0 1.0
+12 BYE WEEK Skyy Moore WR GB 49.0 3.0
+ROUND 10
+1 BYE WEEK Elijah Moore WR PHI 132.0 121.0
+2 BuzzKill Roschon Johnson RB CHI 92.0 0.0
+3 Appleseed David Njoku TE LAC 213.0 102.0
+4 Frank Thomas Quentin Johnston WR LAC 86.0 0.0
+5 Billy A Adam Thielen WR PIT 223.0 106.0
+6 Jerry's Nub Kadarius Toney WR FA 47.0 2.0
+7 Nicaraguan Crab Sandwich Jaxon Smith-Njigba WR SEA 144.0 82.0
+8 Team Rollaway Rashaad Penny RB FA 2.0 0.0
+9 Dez Nuts Courtland Sutton WR DEN 190.0 97.0
+10 Mike Hunt Smells Justin Tucker K BAL 156.0 136.5
+11 Suq Madiq De'Von Achane RB MIA 190.0 95.0
+12 Malachi Crunch Jaylen Warren RB PIT 190.0 61.0
+ROUND 11
+1 Malachi Crunch Anthony Richardson QB IND 72.0 41.0
+2 Suq Madiq Jakobi Meyers WR JAC 210.0 123.0
+3 Mike Hunt Smells 49ers DST SF 145.0 130.0
+4 Dez Nuts Damien Harris RB FA 16.0 0.0
+5 Team Rollaway Gus Edwards RB LAC 190.0 145.0
+6 Nicaraguan Crab Sandwich Tyler Boyd WR TEN 136.0 19.0
+7 Jerry's Nub Tank Bigsby RB PHI 22.0 0.0
+8 Billy A Tyjae Spears RB TEN 137.0 0.0
+9 Frank Thomas Dak Prescott QB DAL 373.0 223.0
+10 Appleseed Cole Kmet TE CHI 174.0 134.0
+11 BuzzKill Rashod Bateman WR BAL 75.0 6.0
+12 BYE WEEK Daniel Jones QB IND 59.0 0.0
+ROUND 12
+1 BYE WEEK Jerick McKinnon RB FA 78.0 26.0
+2 BuzzKill D'Onta Foreman RB CLE 87.0 68.0
+3 Appleseed Raheem Mostert RB LV 261.0 170.0
+4 Frank Thomas Harrison Butker K KC 173.0 129.0
+5 Billy A Eagles DST PHI 81.0 67.0
+6 Jerry's Nub Romeo Doubs WR NE 207.0 12.0
+7 Nicaraguan Crab Sandwich Ezekiel Elliott RB FA 162.0 10.0
+8 Team Rollaway Tyler Bass K BUF 129.0 80.0
+9 Dez Nuts Elijah Mitchell RB PHI 51.0 0.0
+10 Mike Hunt Smells Greg Dulcich TE MIA 5.0 4.0
+11 Suq Madiq Chase Brown RB CIN 48.0 0.0
+12 Malachi Crunch Hunter Renfrow WR CAR 45.0 0.0
+ROUND 13
+1 Malachi Crunch Dalton Schultz TE HOU 166.0 3.0
+2 Suq Madiq Treylon Burks WR WAS 35.0 10.0
+3 Mike Hunt Smells Russell Wilson QB NYG 262.0 8.0
+4 Dez Nuts Geno Smith QB NYJ 234.0 0.0
+5 Team Rollaway Kenny Pickett QB CAR 106.0 0.0
+6 Nicaraguan Crab Sandwich Steelers DST PIT 129.0 103.0
+7 Jerry's Nub Michael Gallup WR WAS 99.0 8.0
+8 Billy A Nico Collins WR HOU 286.0 220.0
+9 Frank Thomas Gerald Everett TE CHI 104.0 43.0
+10 Appleseed Jake Elliott K PHI 142.0 135.0
+11 BuzzKill Derek Carr QB NO 247.0 5.0
+12 BYE WEEK Chigoziem Okonkwo TE WAS 104.0 0.0
+ROUND 14
+1 BYE WEEK Cowboys DST DAL 156.0 148.0
+2 BuzzKill Rondale Moore WR FA 95.0 6.0
+3 Appleseed Isaiah Hodgins WR NYG 58.0 0.0
+4 Frank Thomas Odell Beckham Jr. WR NYG 110.0 21.0
+5 Billy A Evan McPherson K CIN 124.5 2.0
+6 Jerry's Nub Tyler Allgeier RB ARI 127.0 0.0
+7 Nicaraguan Crab Sandwich Tyler Higbee TE LAR 102.0 27.0
+8 Team Rollaway Donovan Peoples-Jones WR NO 24.0 0.0
+9 Dez Nuts Juwan Johnson TE NO 93.0 0.0
+10 Mike Hunt Smells Younghoe Koo K NYJ 119.5 53.5
+11 Suq Madiq Brock Purdy QB SF 345.0 162.0
+12 Malachi Crunch Trey McBride TE ARI 175.0 109.0
+ROUND 15
+1 Malachi Crunch Commanders DST WAS 39.0 7.0
+2 Suq Madiq Lions DST DET 101.0 31.0
+3 Mike Hunt Smells Brandon Aubrey K DAL 161.5 95.5
+4 Dez Nuts Bills DST BUF 155.0 86.0
+5 Team Rollaway Ravens DST BAL 176.0 159.0
+6 Nicaraguan Crab Sandwich Zach Ertz TE WAS 49.0 0.0
+7 Jerry's Nub Jake Moody K WAS 147.0 47.5
+8 Billy A Jalin Hyatt WR NYG 55.0 0.0
+9 Frank Thomas Saints DST NO 120.0 99.0
+10 Appleseed Browns DST CLE 131.0 125.0
+11 BuzzKill DJ Chark WR ATL 109.0 17.0
+12 BYE WEEK Kenneth Gainwell RB TB 92.0 0.0
+ROUND 16
+1 BYE WEEK Daniel Carlson K NO 103.0 4.0
+2 BuzzKill Josh Palmer WR BUF 104.0 28.0
+3 Appleseed Jayden Reed WR GB 214.0 123.0
+4 Frank Thomas Darnell Mooney WR NYG 74.0 9.0
+5 Billy A Devin Singletary RB NYG 182.0 27.0
+6 Jerry's Nub Zack Moss RB CIN 159.0 39.0
+7 Nicaraguan Crab Sandwich Jake Ferguson TE DAL 206.0 21.0
+8 Team Rollaway Noah Fant TE NO 67.0 0.0
+9 Dez Nuts Jameson Williams WR DET 102.0 11.0
+10 Mike Hunt Smells Zay Jones WR HOU 74.0 10.0
+11 Suq Madiq Jason Myers K SEA 135.0 33.0
+12 Malachi Crunch Kendre Miller RB NO 39.0 0.0

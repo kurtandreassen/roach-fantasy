@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Roach Fantasy Tools</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Libre+Franklin:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<header>
+  <div class="titlebar">
+    <h1>Roach Fantasy Tools <span class="sub">BuzzKill &middot; Sept 7 draft</span></h1>
+    <span class="count" id="count"></span>
+  </div>
+  <div class="controls">
+    <input type="text" id="search" placeholder="Search player or team&hellip;" autocomplete="off">
+    <div class="chips" id="pos-chips">
+      <span class="chip active" data-pos="ALL">ALL</span>
+      <span class="chip" data-pos="QB">QB</span>
+      <span class="chip" data-pos="RB">RB</span>
+      <span class="chip" data-pos="WR">WR</span>
+      <span class="chip" data-pos="TE">TE</span>
+      <span class="chip" data-pos="K">K</span>
+      <span class="chip" data-pos="DST">DST</span>
+    </div>
+    <label class="showtaken"><input type="checkbox" id="show-taken"> Show taken</label>
+    <a class="hist-link" href="/coach.html">Coach &rarr;</a>
+    <a class="hist-link" href="/history.html">Draft History &rarr;</a>
+  </div>
+</header>
+
+<main>
+  <div class="tbl-scroll">
+    <table>
+      <thead>
+        <tr>
+          <th data-key="roachRank" class="num">Rank<span class="arrow"></span></th>
+          <th data-key="name">Player<span class="arrow"></span></th>
+          <th data-key="pos">Pos<span class="arrow"></span></th>
+          <th data-key="team">Team<span class="arrow"></span></th>
+          <th data-key="tier" class="num">Tier<span class="arrow"></span></th>
+          <th data-key="adp" class="num">ADP<span class="arrow"></span></th>
+          <th data-key="valueGap" class="num">Value<span class="arrow"></span></th>
+          <th data-key="bye" class="num">Bye<span class="arrow"></span></th>
+        </tr>
+      </thead>
+      <tbody id="rows"></tbody>
+    </table>
+  </div>
+  <div class="empty" id="empty" style="display:none;">No players match.</div>
+</main>
+
+<footer>
+  <span id="taken-count">0 marked taken</span>
+  <button id="reset-btn">Reset all taken</button>
+</footer>
+
+<script src="/app.js"></script>
+</body>
+</html>

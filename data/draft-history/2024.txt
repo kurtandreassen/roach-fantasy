@@ -1,0 +1,224 @@
+ROUND 1
+PICK TEAM PLAYER ELIG ELAPSED TIME
+1 Frank Thomas Christian McCaffrey RB • SF
+2 Nicaraguan Crab Sandwich Breece Hall RB • NYJ 56 sec
+3 Team 26 CeeDee Lamb WR • DAL 33 sec
+4 BuzzKill Bijan Robinson RB • ATL 50 sec
+5 De La Sloth Tyreek Hill WR • MIA 3 min 3 sec
+6 Billy A Amon-Ra St. Brown WR • DET 29 sec
+7 Appleseed Ja'Marr Chase WR • CIN 54 sec
+8 Jerry's Nub A.J. Brown WR • NE 18 sec
+9 Malachi Crunch Puka Nacua WR • LAR 1 min 47 sec
+10 Dez Nuts Justin Jefferson WR • MIN 26 sec
+11 Scotty P. Jahmyr Gibbs RB • DET 42 sec
+12 Team Rollaway Garrett Wilson WR • NYJ 32 sec
+ROUND 2
+PICK TEAM PLAYER ELIG ELAPSED TIME
+1 Team Rollaway Chris Olave WR • NO 1 min 44 sec
+2 Scotty P. Jonathan Taylor RB • IND 1 min 41 sec
+3 Dez Nuts Saquon Barkley RB • PHI 13 sec
+4 Malachi Crunch Marvin Harrison Jr. WR • ARI 1 min 9 sec
+5 Jerry's Nub Travis Etienne RB • NO 12 sec
+6 Appleseed Travis Kelce TE • KC 9 sec
+7 Billy A Kyren Williams RB • LAR 8 sec
+8 De La Sloth Derrick Henry RB • BAL 2 min 20 sec
+9 BuzzKill Davante Adams WR • LAR 1 min 17 sec
+10 Team 26 Sam LaPorta TE • DET 8 sec
+11 Nicaraguan Crab Sandwich Cooper Kupp WR • SEA 27 sec
+12 Frank Thomas James Cook RB • BUF 17 sec
+ROUND 3
+PICK TEAM PLAYER ELIG ELAPSED TIME
+1 Frank Thomas Drake London WR • ATL 28 sec
+2 Nicaraguan Crab Sandwich Jaylen Waddle WR • DEN 10 sec
+3 Team 26 Isiah Pacheco RB • DET 2 min 30 sec
+4 BuzzKill Rhamondre Stevenson RB • NE 1 min 8 sec
+5 De La Sloth De'Von Achane RB • MIA 1 min 50 sec
+6 Billy A Josh Allen QB • BUF 22 sec
+7 Appleseed Rachaad White RB • WAS 10 sec
+8 Jerry's Nub DJ Moore WR • BUF 48 sec
+9 Malachi Crunch Josh Jacobs RB • GB 1 min 29 sec
+10 Dez Nuts Mike Evans WR • SF 3 min 13 sec
+11 Scotty P. Deebo Samuel WR • SF 47 sec
+12 Team Rollaway Nico Collins WR • HOU 37 sec
+ROUND 4
+PICK TEAM PLAYER ELIG ELAPSED TIME
+1 Team Rollaway James Conner RB • ARI 7 sec
+2 Scotty P. Rashee Rice WR • KC 37 sec
+3 Dez Nuts Jalen Hurts QB • PHI 2 min 26 sec
+4 Malachi Crunch Kenneth Walker III RB • KC 2 min 35 sec
+5 Jerry's Nub DK Metcalf WR • PIT 20 sec
+6 Appleseed DeVonta Smith WR • PHI 55 sec
+7 Billy A Joe Mixon RB • HOU 24 sec
+8 De La Sloth Malik Nabers WR • NYG 55 sec
+9 BuzzKill Mark Andrews TE • BAL 60 sec
+10 Team 26 Patrick Mahomes QB • KC 25 sec
+11 Nicaraguan Crab Sandwich D'Andre Swift RB • CHI 12 sec
+12 Frank Thomas Lamar Jackson QB • BAL 42 sec
+ROUND 5
+PICK TEAM PLAYER ELIG ELAPSED TIME
+1 Frank Thomas Alvin Kamara RB • NO 1 min 27 sec
+2 Nicaraguan Crab Sandwich Terry McLaurin WR • WAS 17 sec
+3 Team 26 Brandon Aiyuk WR • SF 8 sec
+4 BuzzKill Jordan Love QB • GB 2 min 7 sec
+5 De La Sloth Michael Pittman WR • PIT 1 min 17 sec
+6 Billy A Tank Dell WR • HOU 34 sec
+7 Appleseed Zamir White RB • NO 18 sec
+8 Jerry's Nub Stefon Diggs WR • WAS 13 sec
+9 Malachi Crunch Anthony Richardson QB • IND 1 min 35 sec
+10 Dez Nuts Aaron Jones RB • MIN 1 min 11 sec
+11 Scotty P. David Montgomery RB • HOU 8 sec
+12 Team Rollaway Zack Moss RB • CIN 22 sec
+ROUND 6
+PICK TEAM PLAYER ELIG ELAPSED TIME
+1 Team Rollaway Calvin Ridley WR • TEN 2 min 8 sec
+2 Scotty P. Amari Cooper WR • LV 59 sec
+3 Dez Nuts Tee Higgins WR • CIN 49 sec
+4 Malachi Crunch George Kittle TE • SF 3 min 49 sec
+5 Jerry's Nub Raheem Mostert RB • LV 52 sec
+6 Appleseed Zay Flowers WR • BAL 7 sec
+7 Billy A Najee Harris RB • NYG 8 sec
+8 De La Sloth Diontae Johnson WR • CLE 1 min 18 sec
+9 BuzzKill George Pickens WR • DAL 12 sec
+10 Team 26 *David Njoku TE • LAC 5 min 1 sec
+11 Nicaraguan Crab Sandwich Dalton Kincaid TE • BUF 13 sec
+12 Frank Thomas Trey McBride TE • ARI 11 sec
+ROUND 7
+PICK TEAM PLAYER ELIG ELAPSED TIME
+1 Frank Thomas Jayden Reed WR • GB 32 sec
+2 Nicaraguan Crab Sandwich Xavier Worthy WR • KC 9 sec
+3 Team 26 *Evan Engram TE • DEN 0 sec
+4 BuzzKill Christian Watson WR • GB 49 sec
+5 De La Sloth Kyle Pitts TE • ATL 1 min 45 sec
+6 Billy A Jake Ferguson TE • DAL 26 sec
+7 Appleseed Brian Robinson Jr. RB • ATL 2 min 19 sec
+8 Jerry's Nub Kyler Murray QB • MIN 41 sec
+9 Malachi Crunch Christian Kirk WR • SF 1 min 43 sec
+10 Dez Nuts Chris Godwin WR • TB 2 min 42 sec
+11 Scotty P. Joe Burrow QB • CIN 15 sec
+12 Team Rollaway Jared Goff QB • DET 23 sec
+ROUND 8
+PICK TEAM PLAYER ELIG ELAPSED TIME
+1 Team Rollaway Chase Brown RB • CIN 1 min 13 sec
+2 Scotty P. Brock Bowers TE • LV 16 sec
+3 Dez Nuts Jerome Ford RB • WAS 4 min 14 sec
+4 Malachi Crunch Tony Pollard RB • TEN 2 min 5 sec
+5 Jerry's Nub Javonte Williams RB • DAL 24 sec
+6 Appleseed Caleb Williams QB • CHI 19 sec
+7 Billy A C.J. Stroud QB • HOU 50 sec
+8 De La Sloth Jayden Daniels QB • WAS 2 min 26 sec
+9 BuzzKill Austin Ekeler RB • WAS 17 sec
+10 Team 26 Tyjae Spears RB • TEN 2 min 47 sec
+11 Nicaraguan Crab Sandwich Matthew Stafford QB • LAR 21 sec
+12 Frank Thomas Devin Singletary RB • NYG 1 min 11 sec
+ROUND 9
+PICK TEAM PLAYER ELIG ELAPSED TIME
+1 Frank Thomas Ladd McConkey WR • LAC 7 sec
+2 Nicaraguan Crab Sandwich DeAndre Hopkins WR • BAL 1 min 43 sec
+3 Team 26 Jaylen Warren RB • PIT 1 min 11 sec
+4 BuzzKill Keon Coleman WR • BUF 6 sec
+5 De La Sloth Jonathon Brooks RB • CAR 20 sec
+6 Billy A Khalil Shakir WR • BUF 21 sec
+7 Appleseed J.K. Dobbins RB • DEN 5 sec
+8 Jerry's Nub Brian Thomas Jr. WR • JAC 60 sec
+9 Malachi Crunch Jaxon Smith-Njigba WR • SEA 2 min 53 sec
+10 Dez Nuts Gus Edwards RB • LAC 15 sec
+11 Scotty P. Jameson Williams WR • DET 1 min 8 sec
+12 Team Rollaway Luke Musgrave TE • GB 20 sec
+ROUND 10
+PICK TEAM PLAYER ELIG ELAPSED TIME
+1 Team Rollaway Trey Benson RB • ARI 8 sec
+2 Scotty P. Courtland Sutton WR • DEN 1 min 56 sec
+3 Dez Nuts Dallas Goedert TE • PHI 1 min 18 sec
+4 Malachi Crunch Nick Chubb RB • HOU 2 min 53 sec
+5 Jerry's Nub Blake Corum RB • LAR 18 sec
+6 Appleseed Keenan Allen WR • IND 14 sec
+7 Billy A Rico Dowdle RB • PIT 26 sec
+8 De La Sloth Josh Palmer WR • BUF 1 min 30 sec
+9 BuzzKill Adam Thielen WR • PIT 48 sec
+10 Team 26 Jordan Addison WR • MIN 40 sec
+11 Nicaraguan Crab Sandwich Dak Prescott QB • DAL 33 sec
+12 Frank Thomas Justin Herbert QB • LAC 22 sec
+ROUND 11
+PICK TEAM PLAYER ELIG ELAPSED TIME
+1 Frank Thomas Marquise Brown WR • PHI 1 min 40 sec
+2 Nicaraguan Crab Sandwich Rome Odunze WR • CHI 9 sec
+3 Team 26 Romeo Doubs WR • NE 2 min 37 sec
+4 BuzzKill Ezekiel Elliott RB • 4 sec
+5 De La Sloth Chuba Hubbard RB • CAR 5 sec
+6 Billy A Rashid Shaheed WR • SEA 1 min 46 sec
+7 Appleseed Trevor Lawrence QB • JAC 6 sec
+8 Jerry's Nub Jaleel McLaughlin RB • DEN 59 sec
+9 Malachi Crunch Antonio Gibson RB • NE 1 min 35 sec
+10 Dez Nuts Brandin Cooks WR • BUF 2 min 5 sec
+11 Scotty P. Jakobi Meyers WR • JAC 25 sec
+12 Team Rollaway Tyler Allgeier RB • ARI 12 sec
+ROUND 12
+PICK TEAM PLAYER ELIG ELAPSED TIME
+1 Team Rollaway Jets DST • NYJ 29 sec
+2 Scotty P. Mike Gesicki TE • CIN 1 min 33 sec
+3 Dez Nuts Dalton Schultz TE • HOU 1 min 6 sec
+4 Malachi Crunch Ravens DST • BAL 2 min 14 sec
+5 Jerry's Nub Isaiah Likely TE • NYG 13 sec
+6 Appleseed Cowboys DST • DAL 38 sec
+7 Billy A Justin Tucker K • BAL 31 sec
+8 De La Sloth Darnell Mooney WR • NYG 37 sec
+9 BuzzKill Brock Purdy QB • SF 5 sec
+10 Team 26 Deshaun Watson QB • CLE 1 min 57 sec
+11 Nicaraguan Crab Sandwich Bucky Irving RB • TB 6 sec
+12 Frank Thomas Harrison Butker K • KC 25 sec
+ROUND 13
+PICK TEAM PLAYER ELIG ELAPSED TIME
+1 Frank Thomas Khalil Herbert RB • SF 26 sec
+2 Nicaraguan Crab Sandwich Jaylen Wright RB • MIA 6 sec
+3 Team 26 Texans DST • HOU 41 sec
+4 BuzzKill MarShawn Lloyd RB • GB 7 sec
+5 De La Sloth Tyler Conklin TE • DET 3 min 36 sec
+6 Billy A Browns DST • CLE 35 sec
+7 Appleseed *Cole Kmet TE • CHI 5 min 2 sec
+8 Jerry's Nub Ray Davis RB • BUF 10 sec
+9 Malachi Crunch Tua Tagovailoa QB • ATL 51 sec
+10 Dez Nuts Baker Mayfield QB • TB 1 min 10 sec
+11 Scotty P. Brandon Aubrey K • DAL 13 sec
+12 Team Rollaway Justice Hill RB • BAL 25 sec
+ROUND 14
+PICK TEAM PLAYER ELIG ELAPSED TIME
+1 Team Rollaway Younghoe Koo K • NYJ 6 sec
+2 Scotty P. Bills DST • BUF 9 sec
+3 Dez Nuts Jerry Jeudy WR • CLE 56 sec
+4 Malachi Crunch Ka'imi Fairbairn K • HOU 1 min 47 sec
+5 Jerry's Nub Jonnu Smith TE • GB 12 sec
+6 Appleseed *T.J. Hockenson TE • MIN 0 sec
+7 Billy A Josh Downs WR • IND 24 sec
+8 De La Sloth Mike Williams WR • LAC 3 sec
+9 BuzzKill *Curtis Samuel WR • BUF 0 sec
+10 Team 26 Jake Moody K • WAS 1 min 49 sec
+11 Nicaraguan Crab Sandwich Bears DST • CHI 6 sec
+12 Frank Thomas Tyler Lockett WR • LV 42 sec
+ROUND 15
+PICK TEAM PLAYER ELIG ELAPSED TIME
+1 Frank Thomas Ja'Lynn Polk WR • NO 47 sec
+2 Nicaraguan Crab Sandwich Tyler Bass K • BUF 20 sec
+3 Team 26 Zach Charbonnet RB • SEA 30 sec
+4 BuzzKill *Dolphins DST • MIA 0 sec
+5 De La Sloth 49ers DST • SF 5 sec
+6 Billy A Ty Chandler RB • NO 14 sec
+7 Appleseed Jake Elliott K • PHI 6 sec
+8 Jerry's Nub Chiefs DST • KC 1 min 8 sec
+9 Malachi Crunch Greg Dortch WR • DET 45 sec
+10 Dez Nuts Steelers DST • PIT 1 min 14 sec
+11 Scotty P. Kenneth Gainwell RB • TB 14 sec
+12 Team Rollaway Rashod Bateman WR • BAL 18 sec
+ROUND 16
+PICK TEAM PLAYER ELIG ELAPSED TIME
+1 Team Rollaway Derek Carr QB • NO 3 sec (9 min 7 sec)
+2 Scotty P. Demario Douglas WR • NE 32 sec (11 min 35 sec)
+3 Dez Nuts Evan McPherson K • CIN 8 sec (23 min 26 sec)
+4 Malachi Crunch Kimani Vidal RB • LAC 11 sec (29 min 21 sec)
+5 Jerry's Nub Jason Sanders K • NYJ 60 sec (8 min 48 sec)
+6 Appleseed Audric Estime RB • NO 21 sec (11 min 43 sec)
+7 Billy A Pat Freiermuth TE • PIT 6 sec (7 min 44 sec)
+8 De La Sloth *Cam Little K • JAC 0 sec (21 min 10 sec)
+9 BuzzKill *Jason Myers K • SEA 0 sec (8 min 50 sec)
+10 Team 26 *Kirk Cousins QB • LV 5 min 2 sec (25 min 59 sec)
+11 Nicaraguan Crab Sandwich Braelon Allen RB • NYJ 36 sec (6 min 24 sec)
+12 Frank Thomas Vikings DST • MIN 35 sec (9 min 52 sec)

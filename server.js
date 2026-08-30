@@ -1,0 +1,145 @@
+const express = require('express');
+const cors = require('cors');
+const helmet = require('helmet');
+const compression = require('compression');
+const fs = require('fs');
+const path = require('path');
+
+const { buildBoard } = require('./src/rankings/buildBoard');
+const {
+  loadSeason,
+  resolveTeams,
+  pickOrderCorrelation,
+  managerRoundPerformance,
+} = require('./src/draftHistory/parseHistory');
+const { optimizeLineup } = require('./src/coach/lineupOptimizer');
+const { suggestWaivers } = require('./src/coach/waiverSuggest');
+
+const app = express();
+const PORT = process.env.PORT || 3000;
+const DATA_DIR = path.join(__dirname, 'data');
+
+app.use(helmet({ contentSecurityPolicy: false }));
+app.use(cors());
+app.use(compression());
+app.use(express.json());
+app.use(express.static(path.join(__dirname, 'public')));
+
+function loadBoardOrNull(year) {
+  const boardPath = path.join(DATA_DIR, 'preseason', `${year}-roach-board.json`);
+  const ecrPath = path.join(DATA_DIR, 'preseason', `${year}-fantasypros-ppr-ecr.json`);
+  if (fs.existsSync(boardPath)) return JSON.parse(fs.readFileSync(boardPath, 'utf8'));
+  if (fs.existsSync(ecrPath)) return buildBoard(JSON.parse(fs.readFileSync(ecrPath, 'utf8')));
+  return null;
+}
+
+// --- Board API ---------------------------------------------------------
+
+app.get('/api/board', (req, res) => {
+  const year = req.query.year || '2026';
+  const boardPath = path.join(DATA_DIR, 'preseason', `${year}-roach-board.json`);
+  const ecrPath = path.join(DATA_DIR, 'preseason', `${year}-fantasypros-ppr-ecr.json`);
+
+  try {
+    if (fs.existsSync(boardPath)) {
+      const board = JSON.parse(fs.readFileSync(boardPath, 'utf8'));
+      return res.json({ year, players: board, cached: true });
+    }
+    if (fs.existsSync(ecrPath)) {
+      const raw = JSON.parse(fs.readFileSync(ecrPath, 'utf8'));
+      const board = buildBoard(raw);
+      return res.json({ year, players: board, cached: false });
+    }
+    return res.status(404).json({ error: `No ECR snapshot for ${year}. See README for refresh steps.` });
+  } catch (err) {
+    return res.status(500).json({ error: err.message });
+  }
+});
+
+// --- Draft history API --------------------------------------------------
+
+const TEAM_NAMES = {
+  2021: ['Afros', 'Thorbjorn Olesen', 'Billy A', 'Hong Kong Fluuey', 'Malachi Crunch',
+    'Nicaraguan Crab Sandwich', 'Team Rollaway', 'Appleseed', 'T-Bag', 'Dez Nuts', 'Tim', 'Suq Madiq'],
+  2022: ['Malachi Crunch', 'Dez Nuts', 'Billy A', 'T-Bag', 'Nicaraguan Crab Sandwich', 'Appleseed',
+    'Afros', 'Bogota Express', 'Team Rollaway', 'Sloth', 'Tim', 'Suq Madiq'],
+  2023: ['Malachi Crunch', 'Suq Madiq', 'Mike Hunt Smells', 'Dez Nuts', 'Team Rollaway',
+    'Nicaraguan Crab Sandwich', "Jerry's Nub", 'Billy A', 'Frank Thomas', 'Appleseed', 'BuzzKill', 'BYE WEEK'],
+};
+const KURT_ALIASES = { 2021: 'Malachi Crunch', 2022: 'Malachi Crunch', 2023: 'BuzzKill' };
+const HISTORY_YEARS = [2020, 2021, 2022, 2023, 2024];
+
+app.get('/api/history/correlation', (req, res) => {
+  const results = {};
+  for (const year of [2021, 2022, 2023]) {
+    const picks = loadSeason(path.join(DATA_DIR, 'draft-history'), year);
+    results[year] = pickOrderCorrelation(picks);
+  }
+  res.json(results);
+});
+
+app.get('/api/history/kurt-rounds', (req, res) => {
+  const seasons = [2021, 2022, 2023].map((year) => {
+    const rawPicks = loadSeason(path.join(DATA_DIR, 'draft-history'), year);
+    const resolved = resolveTeams(rawPicks, TEAM_NAMES[year]).map((p) => ({
+      ...p,
+      team: p.team === KURT_ALIASES[year] ? '__KURT__' : p.team,
+    }));
+    return { picks: resolved, managerTeam: '__KURT__' };
+  });
+  res.json(managerRoundPerformance(seasons));
+});
+
+app.get('/api/history/years', (req, res) => {
+  const available = HISTORY_YEARS.filter((y) =>
+    fs.existsSync(path.join(DATA_DIR, 'draft-history', `${y}.txt`)));
+  res.json({ years: available });
+});
+
+// --- Coach API -----------------------------------------------------------
+// No live API exists to pull rosters/free agents automatically. These
+// endpoints take data the caller supplies (fetched live via Claude-in-Chrome
+// against CBS's actual pages) and do the actual decision-making in code.
+
+app.post('/api/coach/lineup', (req, res) => {
+  const { roster } = req.body || {};
+  if (!Array.isArray(roster) || roster.length === 0) {
+    return res.status(400).json({ error: 'Body must include a non-empty `roster` array of {name, pos, score}.' });
+  }
+  for (const p of roster) {
+    if (typeof p.name !== 'string' || typeof p.pos !== 'string' || typeof p.score !== 'number') {
+      return res.status(400).json({ error: 'Each roster entry needs {name: string, pos: string, score: number}.' });
+    }
+  }
+  try {
+    const result = optimizeLineup(roster);
+    res.json(result);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.post('/api/coach/waivers', (req, res) => {
+  const { roster, freeAgents, year, topN } = req.body || {};
+  if (!Array.isArray(roster) || !Array.isArray(freeAgents)) {
+    return res.status(400).json({ error: 'Body must include `roster` and `freeAgents` arrays of player names.' });
+  }
+  const board = loadBoardOrNull(year || '2026');
+  if (!board) {
+    return res.status(404).json({ error: `No board available for ${year || '2026'}. Run npm run build:board first.` });
+  }
+  try {
+    const suggestions = suggestWaivers(board, roster, freeAgents, topN || 10);
+    res.json({ suggestions });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.get('/health', (req, res) => res.json({ status: 'ok' }));
+
+app.listen(PORT, () => {
+  console.log(`Roach fantasy tools running on http://localhost:${PORT}`);
+});
+
+module.exports = app;
