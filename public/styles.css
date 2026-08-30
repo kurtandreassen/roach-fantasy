@@ -146,6 +146,15 @@ tr.chart-highlight td { background: rgba(245, 197, 24, 0.08); }
 .trade-card:last-child { margin-bottom: 0; }
 .trade-head { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; flex-wrap: wrap; }
 .trade-head .trade-team { font-weight: 600; font-size: 14px; }
+.trade-grade {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 24px; height: 24px; border-radius: 6px;
+  font-weight: 800; font-size: 13px; font-family: inherit;
+}
+.trade-grade.grade-A { background: rgba(62, 207, 142, 0.18); color: var(--win); }
+.trade-grade.grade-B { background: rgba(62, 207, 142, 0.12); color: var(--win); }
+.trade-grade.grade-C { background: rgba(245, 197, 24, 0.14); color: var(--accent); }
+.trade-grade.grade-D { background: rgba(139, 147, 163, 0.14); color: var(--muted); }
 .trade-likelihood {
   font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .03em;
   padding: 3px 9px; border-radius: 20px;

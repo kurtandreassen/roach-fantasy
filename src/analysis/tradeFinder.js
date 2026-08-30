@@ -1,21 +1,41 @@
-// Trade idea generator: proposes specific, named trades that (a) help the
-// requesting team and (b) are built to actually get accepted — matched to
-// need on both sides, not just closest-value swaps. The core insight from
-// how real leagues trade: a lopsided-looking-but-need-filling offer gets
-// accepted far more often than a "fair" one that doesn't solve anyone's
-// problem. Coaches trade to fix a specific hole, not to optimize a
-// spreadsheet — so every idea here is built need-first, value-checked
-// second.
+// Trade idea generator: proposes specific, named trades built to make YOUR
+// team better first, while still being realistic enough that the other
+// coach would say yes.
+//
+// Two separate axes, on purpose — conflating them produces either giveaway
+// trades or trades nobody accepts:
+//   - `grade` (A/B/C/D): how much this trade is worth to YOU, measured the
+//     way a championship actually gets won — the change in your OPTIMAL
+//     STARTING LINEUP's weekly output, not raw player value. A bench
+//     upgrade doesn't win playoff weeks; a starting-lineup upgrade does.
+//   - `likelihood` ('high'/'medium'): how likely the other coach is to
+//     accept, based on whether it fills their board-confirmed need and
+//     whether what you're giving up is the *minimum* sufficient piece
+//     rather than your best trade chip — real coaches negotiate, and
+//     offering your best asset when a lesser one already fixes their hole
+//     just overpays for no reason.
+//
+// The two can and should disagree: a high-grade trade for you is often
+// medium-likelihood, because the same thing that makes it great for you
+// (mutual need fill without overpaying) makes it a harder sell than just
+// handing over your best player. That tension is the point — it's shown,
+// not hidden.
 
 const { readTrends, buildPlayerMatrix } = require('../state/trendStore');
 const { readState } = require('../state/store');
 const { positionalGaps } = require('./scoutingReport');
+const { optimizeLineup } = require('../coach/lineupOptimizer');
 
 // Comfortable roster depth per position before extra copies count as
 // "surplus" — tradeable without weakening the team's own starting lineup.
 // Sized around Roach's shape (1 QB, 2 RB, 2 WR, 1 TE, 2 flex, 1 K, 1 DST):
 // RB/WR need the deepest bench since they also fill both flex slots.
 const SURPLUS_THRESHOLD = { QB: 2, RB: 4, WR: 4, TE: 2, K: 1, DST: 1 };
+
+// Season proj spread evenly across a 17-week schedule — same convention
+// scoutingReport.getMatchup() uses for weekly lineup math, so the "lineup
+// impact" grade here is directly comparable to what the Matchup panel shows.
+const weeklyEstimate = (proj) => (proj != null ? proj / 17 : 0);
 
 function latestRosters() {
   const data = readTrends();
@@ -46,8 +66,7 @@ function enrich(players, rankByName, seasonByName) {
 /**
  * Players a team could give up without weakening its own lineup: for each
  * position, whatever sits beyond the comfortable depth threshold, sorted
- * so the *best* surplus piece (most attractive to a trade partner) comes
- * first.
+ * best-first (lowest roachRank first).
  */
 function computeSurplus(roster) {
   const byPos = {};
@@ -62,6 +81,39 @@ function computeSurplus(roster) {
   return surplus;
 }
 
+/**
+ * The cheapest surplus piece that still genuinely upgrades the position —
+ * i.e. still outranks their current weakest-there player — rather than
+ * always reaching for the best one. Overpaying (offering your #1 surplus
+ * asset when your #3 already fixes the hole) helps nobody but the other
+ * team.
+ */
+function minimumSufficientGive(giveCandidates, theirWeakestRank) {
+  const worthwhile = giveCandidates.filter((p) => p.roachRank < theirWeakestRank);
+  if (worthwhile.length === 0) return giveCandidates[0]; // none clearly upgrade them; offer the best
+  return worthwhile[worthwhile.length - 1]; // worst-ranked (cheapest) of the ones that still help
+}
+
+/** Change in weekly starting-lineup output from swapping giveAsset out for
+ * getAsset in — the actual championship-relevant number, since points
+ * sitting on the bench don't win games. */
+function lineupImpact(fullRoster, giveAsset, getAsset) {
+  const scored = (list) => list.map((p) => ({ name: p.name, pos: p.pos, score: weeklyEstimate(p.proj) }));
+  const before = optimizeLineup(scored(fullRoster)).starters.reduce((s, p) => s + p.score, 0);
+  const after = optimizeLineup(scored([
+    ...fullRoster.filter((p) => p.name !== giveAsset.name),
+    getAsset,
+  ])).starters.reduce((s, p) => s + p.score, 0);
+  return Math.round((after - before) * 10) / 10;
+}
+
+function gradeFor(weeklyDelta) {
+  if (weeklyDelta >= 4) return 'A';
+  if (weeklyDelta >= 2) return 'B';
+  if (weeklyDelta > 0) return 'C';
+  return 'D';
+}
+
 function winPct(record) {
   if (!record) return null;
   const m = String(record).match(/(\d+)\s*-\s*(\d+)/);
@@ -70,47 +122,43 @@ function winPct(record) {
   return (w + l) > 0 ? w / (w + l) : null;
 }
 
-function buildReasoning({ giveAsset, getAsset, theirGap, myGap, doubleNeed, record, projSwing }) {
+function buildReasoning({ giveAsset, getAsset, theirGap, myGap, doubleNeed, record, projSwing, weeklyDelta, grade }) {
   const lines = [];
-  lines.push(`Fills their clearest hole at ${theirGap.weakestPos} — nobody on their roster currently outranks board #${theirGap.weakestRank} there.`);
-  lines.push(`${giveAsset.name} is surplus for you: bench depth at ${giveAsset.pos} you're not starting over your current group.`);
-  if (doubleNeed) {
-    lines.push(`In return, ${getAsset.name} directly upgrades your own weak spot at ${myGap.weakestPos} — and it's a position they're deep at too, so it costs them little to include.`);
+  const remainingWeeks = 14; // rough regular-season-remaining assumption for the total-impact framing
+  if (weeklyDelta > 0) {
+    lines.push(`Grade ${grade}: your OPTIMAL starting lineup gains ~${weeklyDelta} pts/week (~${Math.round(weeklyDelta * remainingWeeks)} pts the rest of the season) — that's the number that actually moves championship odds, not the raw player-value swing.`);
   } else {
-    lines.push(`${getAsset.name} comes back as the closest value-for-value piece at a position they're not thin at, so the offer should read as fair rather than lopsided.`);
+    lines.push(`Grade ${grade}: this doesn't actually improve your best starting lineup — you're only trading it because ${giveAsset.name} was dead bench weight anyway. Treat it as a lateral roster move, not a value add.`);
+  }
+  lines.push(`Fills their clearest hole at ${theirGap.weakestPos} — nobody on their roster currently outranks board #${theirGap.weakestRank} there.`);
+  lines.push(`${giveAsset.name} (#${giveAsset.roachRank}) is the cheapest piece from your surplus that still clears that bar — you're not overpaying with a better trade chip than the job requires.`);
+  if (doubleNeed) {
+    lines.push(`In return, ${getAsset.name} directly upgrades your own weak spot at ${myGap.weakestPos} — it's a position they're deep at too, so it costs them real bench depth but not a starter.`);
+  } else {
+    lines.push(`${getAsset.name} comes back as the closest value-for-value piece at a position they're not thin at, so the offer should still read as fair rather than a pure need-exploit.`);
   }
   if (projSwing != null) {
-    if (Math.abs(projSwing) < 15) {
-      lines.push(`Rest-of-season projections are close (${projSwing >= 0 ? '+' : ''}${projSwing.toFixed(1)} pts for you) — a fair-value trade like this is an easier yes than one that looks lopsided on paper.`);
-    } else if (projSwing < 0) {
-      lines.push(`You're giving up ${Math.abs(projSwing).toFixed(1)} more projected season points than you get back — that gap is what makes this an easy accept for them, and it's worth it if it plugs your ${doubleNeed ? myGap.weakestPos : 'roster'} hole for the stretch run.`);
-    } else {
-      lines.push(`You're actually netting +${projSwing.toFixed(1)} projected season points on top of fixing your need — worth offering before they notice.`);
-    }
+    if (projSwing < -5) lines.push(`Note: they're getting the better rest-of-season projection (${projSwing.toFixed(1)} pts in their favor) — expected, since minimum-sufficient offers concede some value swing to lower what you give up.`);
+    else if (projSwing > 5) lines.push(`You're also netting +${projSwing.toFixed(1)} projected season points on top of the lineup upgrade — a genuinely light ask for what you're getting.`);
   }
   const givenGames = giveAsset.gamesPlayed, gotGames = getAsset.gamesPlayed;
-  if (givenGames > 0 && gotGames > 0) {
-    if (getAsset.seasonAvg > giveAsset.seasonAvg) {
-      lines.push(`Actual production so far backs it up: ${getAsset.name} is averaging ${getAsset.seasonAvg} pts/game (${gotGames} games) vs. ${giveAsset.name}'s ${giveAsset.seasonAvg} (${givenGames} games).`);
-    } else {
-      lines.push(`Fair warning: ${giveAsset.name} has actually outscored ${getAsset.name} so far this season (${giveAsset.seasonAvg} vs. ${getAsset.seasonAvg} pts/game) — the case here is need and rest-of-season outlook, not recent form.`);
-    }
+  if (givenGames > 0 && gotGames > 0 && giveAsset.seasonAvg > getAsset.seasonAvg) {
+    lines.push(`Fair warning: ${giveAsset.name} has actually outscored ${getAsset.name} so far this season (${giveAsset.seasonAvg} vs. ${getAsset.seasonAvg} pts/game) — the case here is roster construction and rest-of-season outlook, not recent form.`);
   }
   const pct = winPct(record);
   if (pct != null) {
-    if (pct < 0.4) lines.push(`They're under .500 — likely to prioritize a role/need fit over pure rank value right now.`);
+    if (pct < 0.4) lines.push(`They're under .500 — likely to prioritize a role/need fit over pure rank value right now, which makes a minimum-sufficient offer more likely to land.`);
     else if (pct > 0.6) lines.push(`They're near the top of the standings and likely want an immediate plug-and-play starter more than long-term upside, which is exactly what this offer gives them.`);
   }
   return lines;
 }
 
 /**
- * Named, ranked trade proposals for `myTeam`: built by matching your
- * tradeable surplus against each opponent's board-confirmed weakest
- * position, then trying to fill your own weakest position back from
- * their surplus (a real two-way need match, ranked 'high' likelihood) —
- * falling back to a value-matched piece at a position they're not thin at
- * when no mutual need exists ('medium' likelihood).
+ * Named, ranked trade proposals for `myTeam`, graded on how much they'd
+ * actually help you win (weekly starting-lineup impact) and separately
+ * flagged with how likely the other side is to accept — matched to their
+ * board-confirmed weakest position, paid for with the cheapest surplus
+ * piece that still clears the bar rather than your best trade chip.
  */
 function generateTradeIdeas(myTeam, board, opts) {
   opts = opts || {};
@@ -146,7 +194,7 @@ function generateTradeIdeas(myTeam, board, opts) {
     let doubleNeed = false;
     const theirSurplusAtMyGap = theirSurplus[myGap.weakestPos];
     if (theirSurplusAtMyGap && theirSurplusAtMyGap.length) {
-      getAsset = theirSurplusAtMyGap[0];
+      getAsset = theirSurplusAtMyGap[0]; // their best surplus there — maximize what it does for you
       doubleNeed = true;
     } else {
       // Fallback: closest-value piece at a position they're not thin at
@@ -160,10 +208,13 @@ function generateTradeIdeas(myTeam, board, opts) {
     }
     if (!getAsset) continue;
 
-    const giveAsset = giveCandidates[0];
+    const giveAsset = minimumSufficientGive(giveCandidates, theirGap.weakestRank);
     const projSwing = (getAsset.proj != null && giveAsset.proj != null)
       ? Math.round((getAsset.proj - giveAsset.proj) * 10) / 10
       : null;
+    const weeklyDelta = lineupImpact(myRoster, giveAsset, getAsset);
+    const grade = gradeFor(weeklyDelta);
+
     const assetView = (a) => ({
       name: a.name,
       pos: a.pos,
@@ -174,20 +225,22 @@ function generateTradeIdeas(myTeam, board, opts) {
       gamesPlayed: a.gamesPlayed,
     });
 
-    const idea = {
+    ideas.push({
       team,
       give: [assetView(giveAsset)],
       get: [assetView(getAsset)],
+      grade,
+      weeklyLineupDelta: weeklyDelta,
       likelihood: doubleNeed ? 'high' : 'medium',
       projSwing,
       reasoning: buildReasoning({
-        giveAsset, getAsset, theirGap, myGap, doubleNeed, record: recordByTeam.get(team), projSwing,
+        giveAsset, getAsset, theirGap, myGap, doubleNeed, record: recordByTeam.get(team), projSwing, weeklyDelta, grade,
       }),
-    };
-    ideas.push(idea);
+    });
   }
 
-  ideas.sort((a, b) => (a.likelihood === b.likelihood ? 0 : a.likelihood === 'high' ? -1 : 1));
+  const gradeRank = { A: 0, B: 1, C: 2, D: 3 };
+  ideas.sort((a, b) => gradeRank[a.grade] - gradeRank[b.grade]);
   return ideas.slice(0, maxTotal);
 }
 

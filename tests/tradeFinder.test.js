@@ -88,6 +88,10 @@ describe('tradeFinder', () => {
     expect(idea.projSwing).toBeCloseTo(15, 5);
     expect(idea.give[0].proj).toBe(80);
     expect(idea.get[0].proj).toBe(95);
+    // Trading a dead-bench TE(60) for a real TE(95) should improve my
+    // optimal starting lineup — that's what the grade is measuring.
+    expect(['A', 'B', 'C']).toContain(idea.grade);
+    expect(idea.weeklyLineupDelta).toBeGreaterThan(0);
   });
 
   it('carries season-to-date actual production (avg/total/games) on each asset', () => {
@@ -102,13 +106,54 @@ describe('tradeFinder', () => {
     expect(idea.get[0].gamesPlayed).toBe(1);
   });
 
-  it('gives the best (lowest roachRank) surplus player, not just any surplus player', () => {
+  it('offers the cheapest surplus player that still clears their gap, not the best available', () => {
     const trendStore = require('../src/state/trendStore');
     seedTrends(trendStore);
     const { generateTradeIdeas } = require('../src/analysis/tradeFinder');
 
+    // Only one RB is surplus here, so it's necessarily offered — the real
+    // "minimum sufficient" behavior is covered below with two candidates.
     const idea = generateTradeIdeas('BuzzKill', board)[0];
-    expect(idea.give[0].name).toBe('My RB5'); // 5th-best RB, first one beyond the surplus threshold
+    expect(idea.give[0].name).toBe('My RB5');
+  });
+
+  it('with two qualifying surplus players, offers the cheaper one rather than the best one', () => {
+    const trendStore = require('../src/state/trendStore');
+    const boardWithExtraRB = [
+      ...board,
+      { name: 'My RB6', pos: 'RB', roachRank: 75, proj: 75 }, // also surplus, also clears Rival's RB1 (#90)
+    ];
+    trendStore.recordWeek(1, {
+      BuzzKill: [
+        { name: 'My QB1', pos: 'QB', points: 20 },
+        { name: 'My RB1', pos: 'RB', points: 15 },
+        { name: 'My RB2', pos: 'RB', points: 10 },
+        { name: 'My RB3', pos: 'RB', points: 5 },
+        { name: 'My RB4', pos: 'RB', points: 4 },
+        { name: 'My RB5', pos: 'RB', points: 3 },
+        { name: 'My RB6', pos: 'RB', points: 2 },
+        { name: 'My WR1', pos: 'WR', points: 14 },
+        { name: 'My TE1', pos: 'TE', points: 2 },
+        { name: 'My K1', pos: 'K', points: 6 },
+        { name: 'My DST1', pos: 'DST', points: 5 },
+      ],
+      Rival: [
+        { name: 'Rival QB1', pos: 'QB', points: 19 },
+        { name: 'Rival RB1', pos: 'RB', points: 14 },
+        { name: 'Rival WR1', pos: 'WR', points: 13 },
+        { name: 'Rival TE1', pos: 'TE', points: 10 },
+        { name: 'Rival TE2', pos: 'TE', points: 6 },
+        { name: 'Rival TE3', pos: 'TE', points: 5 },
+        { name: 'Rival K1', pos: 'K', points: 6 },
+        { name: 'Rival DST1', pos: 'DST', points: 5 },
+      ],
+    }, []);
+    const { generateTradeIdeas } = require('../src/analysis/tradeFinder');
+
+    const idea = generateTradeIdeas('BuzzKill', boardWithExtraRB)[0];
+    // Both RB5 (#70) and RB6 (#75) are surplus and both clear Rival RB1's
+    // #90 — the weaker/cheaper one (RB6) should be offered, not RB5.
+    expect(idea.give[0].name).toBe('My RB6');
   });
 
   it('computeSurplus only flags players beyond the position threshold', () => {

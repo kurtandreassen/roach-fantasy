@@ -613,9 +613,10 @@ async function loadScouting() {
       ? data.tradeIdeas.map((t) => `
         <div class="trade-card">
           <div class="trade-head">
+            <span class="trade-grade grade-${esc(t.grade)}">${esc(t.grade)}</span>
             <span class="trade-team">Trade with ${esc(t.team)}</span>
-            <span class="trade-likelihood ${esc(t.likelihood)}">${t.likelihood} likelihood</span>
-            ${t.projSwing != null ? `<span class="trade-swing ${t.projSwing >= 0 ? 'pos' : 'neg'}">${t.projSwing >= 0 ? '+' : ''}${t.projSwing} proj pts</span>` : ''}
+            <span class="trade-likelihood ${esc(t.likelihood)}">${t.likelihood} accept odds</span>
+            <span class="trade-swing ${t.weeklyLineupDelta >= 0 ? 'pos' : 'neg'}">${t.weeklyLineupDelta >= 0 ? '+' : ''}${t.weeklyLineupDelta} pts/wk to your lineup</span>
           </div>
           <div class="trade-swap">
             <span class="trade-dir give">You give</span>
