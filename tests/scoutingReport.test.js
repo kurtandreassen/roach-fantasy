@@ -2,13 +2,16 @@ const fs = require('fs');
 const path = require('path');
 
 const TRENDS_PATH = path.join(__dirname, '..', 'data', 'state', 'weekly-trends.json');
+const SCHEDULE_PATH = path.join(__dirname, '..', 'data', 'state', 'schedule.json');
 
 beforeEach(() => {
   if (fs.existsSync(TRENDS_PATH)) fs.unlinkSync(TRENDS_PATH);
+  if (fs.existsSync(SCHEDULE_PATH)) fs.unlinkSync(SCHEDULE_PATH);
   jest.resetModules();
 });
 afterAll(() => {
   if (fs.existsSync(TRENDS_PATH)) fs.unlinkSync(TRENDS_PATH);
+  if (fs.existsSync(SCHEDULE_PATH)) fs.unlinkSync(SCHEDULE_PATH);
 });
 
 describe('scoutingReport', () => {
@@ -76,10 +79,29 @@ describe('scoutingReport', () => {
       ],
     };
     const alerts = trendAlerts(matrix);
-    expect(alerts.find((a) => a.name === 'Riser').direction).toBe('up');
-    expect(alerts.find((a) => a.name === 'Faller').direction).toBe('down');
-    expect(alerts.find((a) => a.name === 'Flat')).toBeUndefined();
-    expect(alerts.find((a) => a.name === 'TooFew')).toBeUndefined();
+    expect(alerts.rising.find((a) => a.name === 'Riser')).toBeTruthy();
+    expect(alerts.falling.find((a) => a.name === 'Faller')).toBeTruthy();
+    expect(alerts.rising.find((a) => a.name === 'Flat')).toBeUndefined();
+    expect(alerts.falling.find((a) => a.name === 'Flat')).toBeUndefined();
+    expect(alerts.rising.find((a) => a.name === 'TooFew')).toBeUndefined();
+  });
+
+  it('caps rising/falling to the top movers and can filter by team', () => {
+    const { trendAlerts } = require('../src/analysis/scoutingReport');
+    const players = [];
+    for (let i = 1; i <= 5; i++) {
+      players.push({ name: `Riser${i}`, pos: 'WR', team: 'BuzzKill', pointsByWeek: [1, 5, i + 5] });
+    }
+    players.push({ name: 'WaiverGuy', pos: 'RB', team: 'Free Agent', pointsByWeek: [1, 5, 20] });
+    const matrix = { players };
+
+    const all = trendAlerts(matrix);
+    expect(all.rising.length).toBe(3);
+    expect(all.rising[0].name).toBe('WaiverGuy'); // biggest swing first
+
+    const faOnly = trendAlerts(matrix, { team: 'Free Agent' });
+    expect(faOnly.rising.length).toBe(1);
+    expect(faOnly.rising[0].name).toBe('WaiverGuy');
   });
 
   it('builds a season efficiency table sorted by worst regret first', () => {
@@ -99,5 +121,33 @@ describe('scoutingReport', () => {
     const table = seasonEfficiencyTable();
     expect(table[0].team).toBe('BuzzKill');
     expect(table[0].regret).toBeGreaterThan(table[1].regret);
+  });
+
+  it('returns null when the schedule has no matchup for that team/week', () => {
+    const { getMatchup } = require('../src/analysis/scoutingReport');
+    expect(getMatchup(1, 'BuzzKill', [])).toBeNull();
+  });
+
+  it('builds a matchup with projected scores and slot edges from board proj', () => {
+    const trendStore = require('../src/state/trendStore');
+    const scheduleStore = require('../src/state/scheduleStore');
+    const { getMatchup } = require('../src/analysis/scoutingReport');
+
+    scheduleStore.recordWeek(1, [{ home: 'BuzzKill', away: 'Rival' }]);
+    trendStore.recordWeek(1, {
+      BuzzKill: [{ name: 'Star QB', pos: 'QB', points: 20 }],
+      Rival: [{ name: 'Weak QB', pos: 'QB', points: 5 }],
+    }, []);
+
+    const board = [
+      { name: 'Star QB', pos: 'QB', proj: 340, roachRank: 3 },
+      { name: 'Weak QB', pos: 'QB', proj: 170, roachRank: 40 },
+    ];
+
+    const matchup = getMatchup(1, 'BuzzKill', board);
+    expect(matchup.opponent).toBe('Rival');
+    expect(matchup.projected.self).toBeGreaterThan(matchup.projected.opponent);
+    const qbEdge = matchup.edgeBySlot.find((e) => e.slot === 'QB');
+    expect(qbEdge.edge).toBeGreaterThan(0);
   });
 });

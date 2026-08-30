@@ -346,12 +346,76 @@ function luckClass(v) {
   return v > 0 ? 'pos' : v < 0 ? 'neg' : '';
 }
 
+let scoutingAlertsTeam = 'ALL';
+
+function renderMatchup(matchup) {
+  const empty = el('scouting-matchup-empty');
+  const body = el('scouting-matchup-body');
+  if (!matchup) {
+    empty.style.display = '';
+    body.style.display = 'none';
+    return;
+  }
+  empty.style.display = 'none';
+  body.style.display = '';
+
+  el('scouting-matchup-label').textContent = `— Week ${matchup.week}`;
+  el('scouting-matchup-self-name').textContent = matchup.team;
+  el('scouting-matchup-opp-name').textContent = matchup.opponent;
+  el('scouting-matchup-self-proj').textContent = matchup.projected.self;
+  el('scouting-matchup-opp-proj').textContent = matchup.projected.opponent;
+
+  const edgeRows = matchup.edgeBySlot.map((e) => `
+    <tr>
+      <td>${esc(e.slot)}</td>
+      <td class="num ${e.edge > 0 ? 'pos' : e.edge < 0 ? 'neg' : ''}">${e.edge > 0 ? '+' : ''}${e.edge}</td>
+    </tr>`).join('');
+  setRows('scouting-matchup-edge-table', edgeRows, 2);
+
+  const notes = [];
+  if (matchup.opponentGap) {
+    const targets = matchup.opponentGap.targets.map((t) => esc(t.name)).join(', ') || 'none available';
+    notes.push(`<div class="stat"><div class="label">Their weakest slot</div><div class="value">${esc(matchup.opponentGap.weakestPos)} <span style="font-size:12px; color:var(--muted); font-weight:400;">— upgrades: ${targets}</span></div></div>`);
+  }
+  if (matchup.myGap) {
+    const targets = matchup.myGap.targets.map((t) => esc(t.name)).join(', ') || 'none available';
+    notes.push(`<div class="stat"><div class="label">Your weakest slot</div><div class="value">${esc(matchup.myGap.weakestPos)} <span style="font-size:12px; color:var(--muted); font-weight:400;">— upgrades: ${targets}</span></div></div>`);
+  }
+  if (matchup.form.opponent.length) {
+    const scores = matchup.form.opponent.map((f) => f.actual).join(', ');
+    notes.push(`<div class="stat"><div class="label">Their recent scores</div><div class="value">${esc(scores)}</div></div>`);
+  }
+  el('scouting-matchup-notes').innerHTML = notes.join('') || '<p class="empty" style="padding-top:0">No gap or form data yet.</p>';
+}
+
+function renderAlertCard(a) {
+  return `
+    <div class="stat">
+      <div class="label">${esc(a.name)} · ${esc(a.pos)} · ${esc(a.team)}</div>
+      <div class="value ${a.last3[2] > a.last3[0] ? 'pos' : 'neg'}">${a.last3.join(' → ')}</div>
+    </div>`;
+}
+
 async function loadScouting() {
   // Same reasoning as trends: this can change any time a new week is
   // synced, so always refetch rather than caching once.
   try {
-    const res = await fetch('/api/scouting-report');
+    const res = await fetch(`/api/scouting-report?alertsTeam=${encodeURIComponent(scoutingAlertsTeam)}`);
     const data = await res.json();
+
+    renderMatchup(data.matchup);
+
+    // Populate the alerts team filter once (idempotent) with real team names.
+    const filterEl = el('scouting-alerts-team-filter');
+    if (filterEl.options.length <= 1 && data.trendTeams.length) {
+      data.trendTeams.forEach((t) => {
+        const opt = document.createElement('option');
+        opt.value = t;
+        opt.textContent = t === 'Free Agent' ? 'Waiver Wire (Free Agents)' : t;
+        filterEl.appendChild(opt);
+      });
+      filterEl.value = scoutingAlertsTeam;
+    }
 
     // Weekly actual vs optimal
     if (data.latestWeek) {
@@ -395,15 +459,13 @@ async function loadScouting() {
       </tr>`).join('');
     setRows('scouting-season-table', seasonRows, 6);
 
-    // Trend alerts
-    el('scouting-alerts-count').textContent = data.trendAlerts.length ? `(${data.trendAlerts.length})` : '';
-    el('scouting-alerts-grid').innerHTML = data.trendAlerts.length
-      ? data.trendAlerts.map((a) => `
-        <div class="stat">
-          <div class="label">${esc(a.name)} · ${esc(a.pos)} · ${esc(a.team)}</div>
-          <div class="value ${a.direction === 'up' ? 'pos' : 'neg'}">${a.direction === 'up' ? '↑' : '↓'} ${a.last3.join(' → ')}</div>
-        </div>`).join('')
-      : `<p class="empty">No 3-week trends yet.</p>`;
+    // Trend alerts — split rising/falling, already capped to top movers server-side
+    el('scouting-alerts-up').innerHTML = data.trendAlerts.rising.length
+      ? data.trendAlerts.rising.map(renderAlertCard).join('')
+      : `<p class="empty">No risers yet.</p>`;
+    el('scouting-alerts-down').innerHTML = data.trendAlerts.falling.length
+      ? data.trendAlerts.falling.map(renderAlertCard).join('')
+      : `<p class="empty">No fallers yet.</p>`;
 
     // Positional gaps
     const gapRows = data.positionalGaps.map((g) => `
@@ -417,6 +479,11 @@ async function loadScouting() {
     setRows('scouting-week-table', `<tr><td colspan="5" class="error">${esc(err.message)}</td></tr>`, 5);
   }
 }
+
+el('scouting-alerts-team-filter').addEventListener('change', (e) => {
+  scoutingAlertsTeam = e.target.value;
+  loadScouting();
+});
 
 /* ------------------------------------------------------------- history --- */
 

@@ -11,6 +11,7 @@
 // degrades gracefully rather than crashing.
 
 const { readTrends } = require('../state/trendStore');
+const { getOpponent } = require('../state/scheduleStore');
 const { optimizeLineup } = require('../coach/lineupOptimizer');
 
 /**
@@ -125,20 +126,33 @@ function seasonEfficiencyTable() {
 /**
  * Trend alerts: players on a strict 3-consecutive-week rise or fall,
  * pulled straight from the trend matrix rather than a separate data source.
+ * Split into rising/falling (rather than one mixed list) and capped to the
+ * biggest movers, since a full-league list is noise, not a scouting tool.
+ * `team` filters to one roster or 'Free Agent' (the waiver-wire slice);
+ * omitted/'ALL' covers everyone, own team and free agents included.
  */
-function trendAlerts(playerMatrix) {
-  const alerts = [];
+function trendAlerts(playerMatrix, opts) {
+  opts = opts || {};
+  const teamFilter = opts.team;
+  const limit = opts.limit || 3;
+
+  const rising = [];
+  const falling = [];
   for (const p of playerMatrix.players) {
+    if (teamFilter && teamFilter !== 'ALL' && p.team !== teamFilter) continue;
     const played = p.pointsByWeek.filter((v) => v != null);
     if (played.length < 3) continue;
     const last3 = played.slice(-3);
-    const rising = last3[0] < last3[1] && last3[1] < last3[2];
-    const falling = last3[0] > last3[1] && last3[1] > last3[2];
-    if (rising || falling) {
-      alerts.push({ name: p.name, pos: p.pos, team: p.team, direction: rising ? 'up' : 'down', last3 });
-    }
+    const risingFlag = last3[0] < last3[1] && last3[1] < last3[2];
+    const fallingFlag = last3[0] > last3[1] && last3[1] > last3[2];
+    if (!risingFlag && !fallingFlag) continue;
+    const swing = Math.round(Math.abs(last3[2] - last3[0]) * 10) / 10;
+    const entry = { name: p.name, pos: p.pos, team: p.team, last3, swing };
+    (risingFlag ? rising : falling).push(entry);
   }
-  return alerts;
+  rising.sort((a, b) => b.swing - a.swing);
+  falling.sort((a, b) => b.swing - a.swing);
+  return { rising: rising.slice(0, limit), falling: falling.slice(0, limit) };
 }
 
 /**
@@ -181,4 +195,69 @@ function positionalGaps(board) {
   return gaps;
 }
 
-module.exports = { computeTeamWeek, weekReport, seasonEfficiencyTable, trendAlerts, positionalGaps };
+/**
+ * This week's matchup for one team: their scheduled opponent, a projected
+ * score for each side (season `proj` from the board, spread evenly across
+ * 17 weeks, run through the optimizer), the edge/deficit by starting slot,
+ * each side's positional gap, and recent actual-score form. Returns null
+ * if the schedule for this week hasn't been synced or the team has a bye.
+ */
+function getMatchup(week, team, board) {
+  const opponent = getOpponent(week, team);
+  if (!opponent) return null;
+
+  const data = readTrends();
+  const weekNums = Object.keys(data.weeks).map(Number).sort((a, b) => a - b);
+  const latestWeek = weekNums.length ? data.weeks[weekNums[weekNums.length - 1]] : null;
+  const myRoster = (latestWeek && latestWeek.teams[team]) || [];
+  const oppRoster = (latestWeek && latestWeek.teams[opponent]) || [];
+
+  const projByName = new Map(board.map((p) => [p.name, p.proj]));
+  const weeklyEstimate = (name, fallback) => {
+    const proj = projByName.get(name);
+    return proj != null ? Math.round((proj / 17) * 10) / 10 : (fallback || 0);
+  };
+  const buildProjRoster = (players) => players.map((p) => (
+    { name: p.name, pos: p.pos, score: weeklyEstimate(p.name, p.points) }
+  ));
+
+  const myOpt = optimizeLineup(buildProjRoster(myRoster));
+  const oppOpt = optimizeLineup(buildProjRoster(oppRoster));
+  const myProjTotal = Math.round(myOpt.starters.reduce((s, p) => s + p.score, 0) * 10) / 10;
+  const oppProjTotal = Math.round(oppOpt.starters.reduce((s, p) => s + p.score, 0) * 10) / 10;
+
+  const edgeBySlot = Object.keys(myOpt.slots).map((slotName) => {
+    const mine = (myOpt.slots[slotName] || []).reduce((s, p) => s + p.score, 0);
+    const theirs = (oppOpt.slots[slotName] || []).reduce((s, p) => s + p.score, 0);
+    return { slot: slotName, edge: Math.round((mine - theirs) * 10) / 10 };
+  });
+
+  const recentForm = (teamName) => weekNums.slice(-3).map((w) => {
+    const players = data.weeks[w].teams[teamName];
+    if (!players) return null;
+    const result = computeTeamWeek(players);
+    return result && result.actual != null ? { week: w, actual: result.actual } : null;
+  }).filter(Boolean);
+
+  const gaps = positionalGaps(board);
+
+  return {
+    week,
+    team,
+    opponent,
+    projected: { self: myProjTotal, opponent: oppProjTotal },
+    edgeBySlot,
+    myGap: gaps.find((g) => g.team === team) || null,
+    opponentGap: gaps.find((g) => g.team === opponent) || null,
+    form: { self: recentForm(team), opponent: recentForm(opponent) },
+  };
+}
+
+module.exports = {
+  computeTeamWeek,
+  weekReport,
+  seasonEfficiencyTable,
+  trendAlerts,
+  positionalGaps,
+  getMatchup,
+};

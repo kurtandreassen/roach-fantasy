@@ -133,6 +133,31 @@
 
   <!-- Scouting Report -->
   <section class="view" id="view-scouting">
+    <section class="panel" id="scouting-matchup-panel">
+      <h2>This Week's Matchup <span class="meta" id="scouting-matchup-label"></span></h2>
+      <p class="empty" style="padding-top:0" id="scouting-matchup-empty">No matchup to show — sync this week's schedule (who plays whom) and at least one week of trends first.</p>
+      <div id="scouting-matchup-body" style="display:none;">
+        <div style="display:flex; align-items:center; justify-content:center; gap:24px; margin-bottom:18px;">
+          <div style="text-align:center;">
+            <div class="meta">You</div>
+            <div style="font-size:22px; font-weight:600; color:var(--accent);" id="scouting-matchup-self-name"></div>
+            <div class="mono" style="font-size:28px;" id="scouting-matchup-self-proj"></div>
+          </div>
+          <div class="meta">vs</div>
+          <div style="text-align:center;">
+            <div class="meta">Opponent</div>
+            <div style="font-size:22px; font-weight:600;" id="scouting-matchup-opp-name"></div>
+            <div class="mono" style="font-size:28px;" id="scouting-matchup-opp-proj"></div>
+          </div>
+        </div>
+        <table id="scouting-matchup-edge-table">
+          <thead><tr><th>Slot</th><th class="num">Your Edge</th></tr></thead>
+          <tbody></tbody>
+        </table>
+        <div id="scouting-matchup-notes" style="margin-top:14px; display:flex; flex-direction:column; gap:8px;"></div>
+      </div>
+    </section>
+
     <section class="panel">
       <h2>This Week: Actual vs. Optimal <span class="meta" id="scouting-week-label"></span></h2>
       <p class="empty" style="padding-top:0" id="scouting-empty-note">No weeks logged yet — sync a week in Trends with each player's <code>started</code> flag to unlock this report.</p>
@@ -161,9 +186,24 @@
     </section>
 
     <section class="panel">
-      <h2>Trend Alerts <span class="meta" id="scouting-alerts-count" style="margin-left:8px;"></span></h2>
-      <p class="empty" style="padding-top:0">Players on a 3-straight-week rise or fall.</p>
-      <div id="scouting-alerts-grid" class="stat-grid"></div>
+      <h2>Trend Alerts</h2>
+      <p class="empty" style="padding-top:0">Players on a 3-straight-week rise or fall — top movers only. Filter to a single roster or the waiver wire.</p>
+      <div class="picker">
+        <label class="picker" style="gap:6px;">
+          Show:
+          <select id="scouting-alerts-team-filter"><option value="ALL">All (rosters + waiver wire)</option></select>
+        </label>
+      </div>
+      <div style="display:grid; grid-template-columns: 1fr 1fr; gap:18px; margin-top:14px;">
+        <div>
+          <h3 style="margin:0 0 8px; font-size:14px; color:var(--win);">Trending Up</h3>
+          <div id="scouting-alerts-up" class="stat-grid"></div>
+        </div>
+        <div>
+          <h3 style="margin:0 0 8px; font-size:14px; color:var(--loss);">Trending Down</h3>
+          <div id="scouting-alerts-down" class="stat-grid"></div>
+        </div>
+      </div>
     </section>
 
     <section class="panel">

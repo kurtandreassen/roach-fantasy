@@ -16,6 +16,7 @@ const { optimizeLineup } = require('./src/coach/lineupOptimizer');
 const { suggestWaivers } = require('./src/coach/waiverSuggest');
 const stateStore = require('./src/state/store');
 const trendStore = require('./src/state/trendStore');
+const scheduleStore = require('./src/state/scheduleStore');
 const scoutingReport = require('./src/analysis/scoutingReport');
 
 const app = express();
@@ -222,22 +223,51 @@ app.post('/api/trends/week', (req, res) => {
   }
 });
 
+// --- Weekly schedule --------------------------------------------------------
+// Who plays whom each week. No CBS API, same manual-sync model: ask Claude
+// to read the live CBS matchup page and push it here.
+
+app.get('/api/schedule', (req, res) => {
+  res.json(scheduleStore.readSchedule());
+});
+
+app.post('/api/schedule/week', (req, res) => {
+  const { week, matchups } = req.body || {};
+  if (typeof week !== 'number' || week < 1) {
+    return res.status(400).json({ error: 'Body must include a numeric `week` (1+).' });
+  }
+  if (!Array.isArray(matchups)) {
+    return res.status(400).json({ error: '`matchups` must be an array of {home, away}.' });
+  }
+  try {
+    const recorded = scheduleStore.recordWeek(week, matchups);
+    res.json({ week, recorded });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
 // --- Scouting report -------------------------------------------------------
-// Built entirely from data already synced (trends + board) — no new inputs
-// required. Actual-vs-optimal needs each player's `started` flag in the
-// weekly trend payload; without it those fields come back null and the
-// report still renders (optimal, trend alerts, gaps all still work).
+// Built entirely from data already synced (trends + schedule + board) — no
+// new sync flow beyond those. Actual-vs-optimal needs each player's
+// `started` flag in the weekly trend payload; without it those fields come
+// back null and the report still renders (optimal, trend alerts, gaps,
+// matchup projections all still work).
 
 app.get('/api/scouting-report', (req, res) => {
   const board = loadBoardOrNull(req.query.year || '2026');
   const matrix = trendStore.buildPlayerMatrix();
   const weekNums = matrix.weeks;
   const latestWeek = weekNums.length ? weekNums[weekNums.length - 1] : null;
+  const team = req.query.team || 'BuzzKill';
+  const alertsTeam = req.query.alertsTeam; // undefined/'ALL' = everyone
 
   res.json({
     latestWeek: latestWeek != null ? scoutingReport.weekReport(latestWeek) : null,
+    matchup: (latestWeek != null && board) ? scoutingReport.getMatchup(latestWeek, team, board) : null,
     season: scoutingReport.seasonEfficiencyTable(),
-    trendAlerts: scoutingReport.trendAlerts(matrix),
+    trendAlerts: scoutingReport.trendAlerts(matrix, { team: alertsTeam }),
+    trendTeams: [...new Set(matrix.players.map((p) => p.team))].sort(),
     positionalGaps: board ? scoutingReport.positionalGaps(board) : [],
   });
 });
