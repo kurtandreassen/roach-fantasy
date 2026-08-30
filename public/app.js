@@ -50,7 +50,7 @@ function renderDraftTable() {
   });
   el('draft-count').textContent = `${rows.length} players`;
   if (rows.length === 0) {
-    setRows('draft-table', '', 11);
+    setRows('draft-table', '', 13);
     return;
   }
   const html = rows.map((p) => {
@@ -60,6 +60,9 @@ function renderDraftTable() {
     const shift = p.shift;
     const shiftStr = shift == null ? '—' : (shift > 0 ? '+' + shift : shift);
     const shiftCls = shift > 0 ? 'pos' : (shift < 0 ? 'neg' : '');
+    const projStr = p.proj == null ? '—' : p.proj.toFixed(1);
+    const vorStr = p.vor == null ? '—' : (p.vor > 0 ? '+' : '') + p.vor.toFixed(1);
+    const vorCls = p.vor == null ? '' : (p.vor > 0 ? 'pos' : (p.vor < 0 ? 'neg' : ''));
     return `<tr class="${taken ? 'taken' : ''}" data-name="${esc(p.name)}">
       <td class="num">${p.roachRank}</td>
       <td class="pname">${esc(p.name)}</td>
@@ -68,6 +71,8 @@ function renderDraftTable() {
       <td class="num">${p.ecr ?? '—'}</td>
       <td class="num hide-sm ${shiftCls}">${shiftStr}</td>
       <td class="num hide-sm">${p.cbsRank ?? '—'}</td>
+      <td class="num hide-sm">${projStr}</td>
+      <td class="num hide-sm ${vorCls}">${vorStr}</td>
       <td class="num">${p.adp ?? '—'}</td>
       <td class="num ${gapClass(vg)}">${vgStr}</td>
       <td class="num hide-sm">${p.bye ?? '—'}</td>

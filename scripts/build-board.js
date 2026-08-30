@@ -12,6 +12,7 @@ const { buildBoard } = require('../src/rankings/buildBoard');
 const YEAR = process.argv[2] || '2026';
 const inputPath = path.join(__dirname, '..', 'data', 'preseason', `${YEAR}-fantasypros-ppr-ecr.json`);
 const cbsPath = path.join(__dirname, '..', 'data', 'preseason', `${YEAR}-cbs-expert-rank.json`);
+const espnPath = path.join(__dirname, '..', 'data', 'preseason', `${YEAR}-espn-stat-projections.json`);
 const outputPath = path.join(__dirname, '..', 'data', 'preseason', `${YEAR}-roach-board.json`);
 
 if (!fs.existsSync(inputPath)) {
@@ -25,11 +26,15 @@ const cbsExpertRanks = fs.existsSync(cbsPath) ? JSON.parse(fs.readFileSync(cbsPa
 if (!cbsExpertRanks) {
   console.log(`No CBS expert-rank snapshot at ${cbsPath} — building without the CBS column.`);
 }
-const board = buildBoard(raw, cbsExpertRanks);
+const espnProjections = fs.existsSync(espnPath) ? JSON.parse(fs.readFileSync(espnPath, 'utf8')) : null;
+if (!espnProjections) {
+  console.log(`No ESPN stat-projection snapshot at ${espnPath} — building without real Proj/VOR.`);
+}
+const board = buildBoard(raw, cbsExpertRanks, espnProjections);
 
 fs.writeFileSync(outputPath, JSON.stringify(board, null, 2));
 console.log(`Wrote ${board.length} players to ${outputPath}`);
 console.log('Top 10:');
 board.slice(0, 10).forEach((p) => {
-  console.log(`  ${p.roachRank}. ${p.name} (${p.pos}, ${p.team}) — ecr ${p.ecr}, adp ${p.adp}, shift ${p.shift}, cbs ${p.cbsRank}`);
+  console.log(`  ${p.roachRank}. ${p.name} (${p.pos}, ${p.team}) — ecr ${p.ecr}, adp ${p.adp}, shift ${p.shift}, cbs ${p.cbsRank}, proj ${p.proj}, vor ${p.vor}`);
 });

@@ -9,6 +9,7 @@
 // rankings are built around, and slightly less unique demand on TE.
 
 const { computeReplacementLevels } = require('./leagueConfig');
+const { buildRoachProjections } = require('./roachScoring');
 
 const POS_DIRECTION = { QB: 0, RB: 0.6, WR: 0.4, TE: -0.5, K: 0, DST: 0 };
 const SD_FLOOR = 4; // below this, experts agree — don't touch the pick
@@ -36,9 +37,18 @@ function normName(name) {
  *   the only CBS ranking signal populated preseason (their own season point
  *   projections are all zero until the season starts). Purely informational;
  *   never folds into roachScore/roachRank.
+ * @param {Array} [espnProjections] - optional raw ESPN per-category season
+ *   stat projections ({n, pos, "3":passYds, "24":rushYds, ...}), reapplied
+ *   through Roach's OWN scoring formula (roachScoring.js) to get real,
+ *   points-based Proj/VOR for QB/RB/WR/TE. K/DST can't be scored this way —
+ *   see roachScoring.js header. Informational, like cbsRank: proj/vor are
+ *   exposed for comparison but do NOT change roachRank/roachScore, same
+ *   "market beats homemade projections" call the ESPN board's own backtest
+ *   validated — an unvalidated pivot to VOR-primary here would repeat the
+ *   mistake that backtest caught, not avoid it.
  * @returns {Array} players ranked by roachRank, richest fields first.
  */
-function buildBoard(ecrPlayers, cbsExpertRanks) {
+function buildBoard(ecrPlayers, cbsExpertRanks, espnProjections) {
   const replacement = computeReplacementLevels();
 
   let cbsByPos = null;
@@ -48,6 +58,8 @@ function buildBoard(ecrPlayers, cbsExpertRanks) {
       cbsByPos[pos] = new Map(cbsExpertRanks[pos].map((p) => [normName(p.n), p.r]));
     }
   }
+
+  const roachProjByName = espnProjections ? buildRoachProjections(espnProjections, normName) : null;
 
   const normalized = ecrPlayers.map((p) => ({
     name: p.name ?? p.player_name,
@@ -76,14 +88,41 @@ function buildBoard(ecrPlayers, cbsExpertRanks) {
     const adjustment = sd >= SD_FLOOR ? shiftCap * (POS_DIRECTION[p.pos] || 0) : 0;
     const roachScore = p.ecr - adjustment;
     const cbsRank = cbsByPos && cbsByPos[p.pos] ? cbsByPos[p.pos].get(normName(p.name)) ?? null : null;
+    const proj = roachProjByName ? roachProjByName.get(normName(p.name))?.proj ?? null : null;
     return {
       ...p,
       replacement: rep,
       roachScore: Math.round(roachScore * 100) / 100,
       startable: p.posRank <= rep,
       cbsRank,
+      proj,
     };
   });
+
+  // Real points-based replacement level, position by position: the Nth-best
+  // PROJECTION (not the Nth-best ECR rank — those are two different
+  // players' worth of points, and mixing them was a bug the ESPN board's
+  // own mock-draft testing caught once already).
+  if (roachProjByName) {
+    const projByPos = {};
+    for (const p of scored) {
+      if (p.proj == null) continue;
+      (projByPos[p.pos] = projByPos[p.pos] || []).push(p.proj);
+    }
+    const replacementProj = {};
+    for (const pos of Object.keys(projByPos)) {
+      const sorted = [...projByPos[pos]].sort((a, b) => b - a);
+      const rep = replacement[pos] || sorted.length;
+      replacementProj[pos] = sorted[Math.min(rep - 1, sorted.length - 1)] ?? 0;
+    }
+    for (const p of scored) {
+      p.vor = p.proj != null && replacementProj[p.pos] != null
+        ? Math.round((p.proj - replacementProj[p.pos]) * 100) / 100
+        : null;
+    }
+  } else {
+    for (const p of scored) p.vor = null;
+  }
 
   scored.sort((a, b) => a.roachScore - b.roachScore || a.ecr - b.ecr);
   scored.forEach((p, i) => {

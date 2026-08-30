@@ -13,6 +13,8 @@
     "roachScore": 1,
     "startable": true,
     "cbsRank": null,
+    "proj": 340.8,
+    "vor": 212.08,
     "roachRank": 1,
     "valueGap": 2,
     "shift": 0
@@ -31,6 +33,8 @@
     "roachScore": 2,
     "startable": true,
     "cbsRank": 1,
+    "proj": 318,
+    "vor": 233.45,
     "roachRank": 2,
     "valueGap": -1,
     "shift": 0
@@ -49,6 +53,8 @@
     "roachScore": 3,
     "startable": true,
     "cbsRank": 2,
+    "proj": 299.33,
+    "vor": 170.61,
     "roachRank": 3,
     "valueGap": 1,
     "shift": 0
@@ -67,6 +73,8 @@
     "roachScore": 4,
     "startable": true,
     "cbsRank": 2,
+    "proj": 340.59,
+    "vor": 256.04,
     "roachRank": 4,
     "valueGap": -2,
     "shift": 0
@@ -85,6 +93,8 @@
     "roachScore": 5,
     "startable": true,
     "cbsRank": 3,
+    "proj": 241.53,
+    "vor": 112.81,
     "roachRank": 5,
     "valueGap": 2,
     "shift": 0
@@ -103,6 +113,8 @@
     "roachScore": 5.03,
     "startable": true,
     "cbsRank": 4,
+    "proj": 320.52,
+    "vor": 235.97,
     "roachRank": 6,
     "valueGap": -1,
     "shift": 3
@@ -121,6 +133,8 @@
     "roachScore": 5.19,
     "startable": true,
     "cbsRank": 3,
+    "proj": 290.87,
+    "vor": 206.32,
     "roachRank": 7,
     "valueGap": -1,
     "shift": 3
@@ -139,6 +153,8 @@
     "roachScore": 6,
     "startable": true,
     "cbsRank": 4,
+    "proj": 291.31,
+    "vor": 162.59,
     "roachRank": 8,
     "valueGap": 0,
     "shift": -2
@@ -157,6 +173,8 @@
     "roachScore": 7,
     "startable": true,
     "cbsRank": null,
+    "proj": 318.59,
+    "vor": 189.87,
     "roachRank": 9,
     "valueGap": 1,
     "shift": -2
@@ -175,6 +193,8 @@
     "roachScore": 7.25,
     "startable": true,
     "cbsRank": 5,
+    "proj": 271.04,
+    "vor": 186.49,
     "roachRank": 10,
     "valueGap": -1,
     "shift": 3
@@ -193,6 +213,8 @@
     "roachScore": 8,
     "startable": true,
     "cbsRank": 6,
+    "proj": 316.76,
+    "vor": 188.04,
     "roachRank": 11,
     "valueGap": 1,
     "shift": -3
@@ -211,6 +233,8 @@
     "roachScore": 8.95,
     "startable": true,
     "cbsRank": 10,
+    "proj": 275.83,
+    "vor": 147.11,
     "roachRank": 12,
     "valueGap": 8,
     "shift": 0
@@ -229,6 +253,8 @@
     "roachScore": 9.36,
     "startable": true,
     "cbsRank": 6,
+    "proj": 282.54,
+    "vor": 197.99,
     "roachRank": 13,
     "valueGap": 0,
     "shift": 2
@@ -247,6 +273,8 @@
     "roachScore": 11,
     "startable": true,
     "cbsRank": 7,
+    "proj": 267.73,
+    "vor": 139.01,
     "roachRank": 14,
     "valueGap": 5,
     "shift": -3
@@ -265,6 +293,8 @@
     "roachScore": 12.42,
     "startable": true,
     "cbsRank": 11,
+    "proj": 210.96,
+    "vor": 82.24,
     "roachRank": 15,
     "valueGap": 11,
     "shift": 1
@@ -283,6 +313,8 @@
     "roachScore": 14,
     "startable": true,
     "cbsRank": null,
+    "proj": 289.38,
+    "vor": 160.66,
     "roachRank": 16,
     "valueGap": 9,
     "shift": -2
@@ -301,6 +333,8 @@
     "roachScore": 14,
     "startable": true,
     "cbsRank": 7,
+    "proj": 307.92,
+    "vor": 223.37,
     "roachRank": 17,
     "valueGap": -6,
     "shift": 3
@@ -319,6 +353,8 @@
     "roachScore": 15,
     "startable": true,
     "cbsRank": 10,
+    "proj": 327.3,
+    "vor": 242.75,
     "roachRank": 18,
     "valueGap": -4,
     "shift": 3
@@ -337,6 +373,8 @@
     "roachScore": 15.23,
     "startable": true,
     "cbsRank": null,
+    "proj": 222.2,
+    "vor": 93.48,
     "roachRank": 19,
     "valueGap": 5,
     "shift": 0
@@ -355,6 +393,8 @@
     "roachScore": 18,
     "startable": true,
     "cbsRank": 14,
+    "proj": 223.37,
+    "vor": 94.65,
     "roachRank": 20,
     "valueGap": 13,
     "shift": 2
@@ -373,6 +413,8 @@
     "roachScore": 18,
     "startable": true,
     "cbsRank": 8,
+    "proj": 239.5,
+    "vor": 154.95,
     "roachRank": 21,
     "valueGap": -3,
     "shift": 3
@@ -391,6 +433,8 @@
     "roachScore": 19,
     "startable": true,
     "cbsRank": null,
+    "proj": 301.74,
+    "vor": 173.02,
     "roachRank": 22,
     "valueGap": 6,
     "shift": 1
@@ -409,6 +453,8 @@
     "roachScore": 19,
     "startable": true,
     "cbsRank": 9,
+    "proj": 260.4,
+    "vor": 175.85,
     "roachRank": 23,
     "valueGap": -6,
     "shift": 2
@@ -427,6 +473,8 @@
     "roachScore": 20.83,
     "startable": true,
     "cbsRank": 1,
+    "proj": 262.31,
+    "vor": 127.33,
     "roachRank": 24,
     "valueGap": -3,
     "shift": -7
@@ -445,6 +493,8 @@
     "roachScore": 22,
     "startable": true,
     "cbsRank": null,
+    "proj": 163.93,
+    "vor": 35.21,
     "roachRank": 25,
     "valueGap": 2,
     "shift": 1
@@ -463,6 +513,8 @@
     "roachScore": 22,
     "startable": true,
     "cbsRank": 12,
+    "proj": 303.37,
+    "vor": 218.82,
     "roachRank": 26,
     "valueGap": -11,
     "shift": 2
@@ -481,6 +533,8 @@
     "roachScore": 22.82,
     "startable": true,
     "cbsRank": 2,
+    "proj": 259.38,
+    "vor": 124.4,
     "roachRank": 27,
     "valueGap": -4,
     "shift": -9
@@ -499,6 +553,8 @@
     "roachScore": 25,
     "startable": true,
     "cbsRank": null,
+    "proj": 242.69,
+    "vor": 113.97,
     "roachRank": 28,
     "valueGap": 10,
     "shift": 1
@@ -517,6 +573,8 @@
     "roachScore": 26,
     "startable": true,
     "cbsRank": 16,
+    "proj": 232.84,
+    "vor": 104.12,
     "roachRank": 29,
     "valueGap": 6,
     "shift": 1
@@ -535,6 +593,8 @@
     "roachScore": 27,
     "startable": true,
     "cbsRank": 1,
+    "proj": 382.81,
+    "vor": 87.57,
     "roachRank": 30,
     "valueGap": -8,
     "shift": -3
@@ -553,6 +613,8 @@
     "roachScore": 28,
     "startable": true,
     "cbsRank": null,
+    "proj": 244.48,
+    "vor": 115.76,
     "roachRank": 31,
     "valueGap": 13,
     "shift": 1
@@ -571,6 +633,8 @@
     "roachScore": 29,
     "startable": true,
     "cbsRank": 19,
+    "proj": 227.18,
+    "vor": 98.46,
     "roachRank": 32,
     "valueGap": 16,
     "shift": 1
@@ -589,6 +653,8 @@
     "roachScore": 31,
     "startable": true,
     "cbsRank": 2,
+    "proj": 379.05,
+    "vor": 83.81,
     "roachRank": 33,
     "valueGap": 7,
     "shift": -2
@@ -607,6 +673,8 @@
     "roachScore": 31,
     "startable": true,
     "cbsRank": 11,
+    "proj": 283.05,
+    "vor": 198.5,
     "roachRank": 34,
     "valueGap": -18,
     "shift": 3
@@ -625,6 +693,8 @@
     "roachScore": 31.2,
     "startable": true,
     "cbsRank": 18,
+    "proj": 235.46,
+    "vor": 106.74,
     "roachRank": 35,
     "valueGap": 4,
     "shift": 0
@@ -643,6 +713,8 @@
     "roachScore": 32,
     "startable": true,
     "cbsRank": 15,
+    "proj": 266.24,
+    "vor": 137.52,
     "roachRank": 36,
     "valueGap": 6,
     "shift": 0
@@ -661,6 +733,8 @@
     "roachScore": 33.64,
     "startable": true,
     "cbsRank": 16,
+    "proj": 228.68,
+    "vor": 144.13,
     "roachRank": 37,
     "valueGap": -5,
     "shift": 2
@@ -679,6 +753,8 @@
     "roachScore": 35.07,
     "startable": true,
     "cbsRank": 13,
+    "proj": 286.22,
+    "vor": 201.67,
     "roachRank": 38,
     "valueGap": -8,
     "shift": 3
@@ -697,6 +773,8 @@
     "roachScore": 36,
     "startable": true,
     "cbsRank": 22,
+    "proj": 175.27,
+    "vor": 46.55,
     "roachRank": 39,
     "valueGap": 2,
     "shift": 1
@@ -715,6 +793,8 @@
     "roachScore": 36,
     "startable": true,
     "cbsRank": 18,
+    "proj": 280.11,
+    "vor": 195.56,
     "roachRank": 40,
     "valueGap": -11,
     "shift": 2
@@ -733,6 +813,8 @@
     "roachScore": 37.46,
     "startable": true,
     "cbsRank": 15,
+    "proj": 218.44,
+    "vor": 133.89,
     "roachRank": 41,
     "valueGap": -10,
     "shift": 2
@@ -751,6 +833,8 @@
     "roachScore": 38,
     "startable": true,
     "cbsRank": 3,
+    "proj": 305.35,
+    "vor": 10.11,
     "roachRank": 42,
     "valueGap": 11,
     "shift": -4
@@ -769,6 +853,8 @@
     "roachScore": 39,
     "startable": true,
     "cbsRank": 3,
+    "proj": 155.4,
+    "vor": 20.42,
     "roachRank": 43,
     "valueGap": 0,
     "shift": -9
@@ -787,6 +873,8 @@
     "roachScore": 40,
     "startable": true,
     "cbsRank": 14,
+    "proj": 189.27,
+    "vor": 104.72,
     "roachRank": 44,
     "valueGap": -8,
     "shift": 2
@@ -805,6 +893,8 @@
     "roachScore": 41,
     "startable": true,
     "cbsRank": 23,
+    "proj": 91.56,
+    "vor": -37.16,
     "roachRank": 45,
     "valueGap": 11,
     "shift": 0
@@ -823,6 +913,8 @@
     "roachScore": 42,
     "startable": true,
     "cbsRank": 26,
+    "proj": 284.66,
+    "vor": 200.11,
     "roachRank": 46,
     "valueGap": -12,
     "shift": 2
@@ -841,6 +933,8 @@
     "roachScore": 43.26,
     "startable": true,
     "cbsRank": 24,
+    "proj": 248.09,
+    "vor": 119.37,
     "roachRank": 47,
     "valueGap": 8,
     "shift": 0
@@ -859,6 +953,8 @@
     "roachScore": 44,
     "startable": true,
     "cbsRank": 4,
+    "proj": 347.87,
+    "vor": 52.63,
     "roachRank": 48,
     "valueGap": 6,
     "shift": -4
@@ -877,6 +973,8 @@
     "roachScore": 45,
     "startable": true,
     "cbsRank": 25,
+    "proj": 257.07,
+    "vor": 128.35,
     "roachRank": 49,
     "valueGap": 0,
     "shift": 0
@@ -895,6 +993,8 @@
     "roachScore": 46,
     "startable": true,
     "cbsRank": 21,
+    "proj": 238.53,
+    "vor": 109.81,
     "roachRank": 50,
     "valueGap": 1,
     "shift": 0
@@ -913,6 +1013,8 @@
     "roachScore": 48,
     "startable": true,
     "cbsRank": 17,
+    "proj": 228.11,
+    "vor": 143.56,
     "roachRank": 51,
     "valueGap": -5,
     "shift": 3
@@ -931,6 +1033,8 @@
     "roachScore": 49,
     "startable": true,
     "cbsRank": 26,
+    "proj": 218.91,
+    "vor": 90.19,
     "roachRank": 52,
     "valueGap": 6,
     "shift": 1
@@ -949,6 +1053,8 @@
     "roachScore": 51,
     "startable": true,
     "cbsRank": 5,
+    "proj": 386.38,
+    "vor": 91.14,
     "roachRank": 53,
     "valueGap": 9,
     "shift": -2
@@ -967,6 +1073,8 @@
     "roachScore": 51,
     "startable": true,
     "cbsRank": 29,
+    "proj": 50.02,
+    "vor": -78.7,
     "roachRank": 54,
     "valueGap": 12,
     "shift": 1
@@ -985,6 +1093,8 @@
     "roachScore": 52,
     "startable": true,
     "cbsRank": 32,
+    "proj": 235.03,
+    "vor": 106.31,
     "roachRank": 55,
     "valueGap": 9,
     "shift": 1
@@ -1003,6 +1113,8 @@
     "roachScore": 53,
     "startable": true,
     "cbsRank": 28,
+    "proj": 217.81,
+    "vor": 89.09,
     "roachRank": 56,
     "valueGap": 5,
     "shift": 1
@@ -1021,6 +1133,8 @@
     "roachScore": 53,
     "startable": true,
     "cbsRank": 21,
+    "proj": 139.97,
+    "vor": 55.42,
     "roachRank": 57,
     "valueGap": -20,
     "shift": 2
@@ -1039,6 +1153,8 @@
     "roachScore": 54,
     "startable": true,
     "cbsRank": 20,
+    "proj": 284.44,
+    "vor": 199.89,
     "roachRank": 58,
     "valueGap": -13,
     "shift": 2
@@ -1057,6 +1173,8 @@
     "roachScore": 55,
     "startable": true,
     "cbsRank": 19,
+    "proj": 49.81,
+    "vor": -34.74,
     "roachRank": 59,
     "valueGap": -12,
     "shift": 2
@@ -1075,6 +1193,8 @@
     "roachScore": 56,
     "startable": true,
     "cbsRank": 22,
+    "proj": 214.3,
+    "vor": 129.75,
     "roachRank": 60,
     "valueGap": -10,
     "shift": 2
@@ -1093,6 +1213,8 @@
     "roachScore": 57,
     "startable": true,
     "cbsRank": 4,
+    "proj": 166.24,
+    "vor": 31.26,
     "roachRank": 61,
     "valueGap": -9,
     "shift": -9
@@ -1111,6 +1233,8 @@
     "roachScore": 58,
     "startable": true,
     "cbsRank": 6,
+    "proj": 380.6,
+    "vor": 85.36,
     "roachRank": 62,
     "valueGap": 1,
     "shift": -4
@@ -1129,6 +1253,8 @@
     "roachScore": 59,
     "startable": true,
     "cbsRank": 27,
+    "proj": 43.2,
+    "vor": -85.52,
     "roachRank": 63,
     "valueGap": 5,
     "shift": 0
@@ -1147,6 +1273,8 @@
     "roachScore": 59,
     "startable": true,
     "cbsRank": 23,
+    "proj": 3.54,
+    "vor": -81.01,
     "roachRank": 64,
     "valueGap": -7,
     "shift": 1
@@ -1165,6 +1293,8 @@
     "roachScore": 62,
     "startable": true,
     "cbsRank": 35,
+    "proj": 203.77,
+    "vor": 75.05,
     "roachRank": 65,
     "valueGap": 9,
     "shift": 1
@@ -1183,6 +1313,8 @@
     "roachScore": 62,
     "startable": true,
     "cbsRank": 30,
+    "proj": 224.02,
+    "vor": 139.47,
     "roachRank": 66,
     "valueGap": -6,
     "shift": 2
@@ -1201,6 +1333,8 @@
     "roachScore": 63,
     "startable": true,
     "cbsRank": 31,
+    "proj": 240.51,
+    "vor": 111.79,
     "roachRank": 67,
     "valueGap": 6,
     "shift": 0
@@ -1219,6 +1353,8 @@
     "roachScore": 64,
     "startable": true,
     "cbsRank": 10,
+    "proj": 296.47,
+    "vor": 1.23,
     "roachRank": 68,
     "valueGap": 9,
     "shift": -4
@@ -1237,6 +1373,8 @@
     "roachScore": 64,
     "startable": true,
     "cbsRank": 24,
+    "proj": 195.45,
+    "vor": 110.9,
     "roachRank": 69,
     "valueGap": -10,
     "shift": 1
@@ -1255,6 +1393,8 @@
     "roachScore": 67,
     "startable": true,
     "cbsRank": 25,
+    "proj": 175.19,
+    "vor": 90.64,
     "roachRank": 70,
     "valueGap": -5,
     "shift": 3
@@ -1273,6 +1413,8 @@
     "roachScore": 68,
     "startable": true,
     "cbsRank": 33,
+    "proj": 188.38,
+    "vor": 59.66,
     "roachRank": 71,
     "valueGap": 19,
     "shift": 1
@@ -1291,6 +1433,8 @@
     "roachScore": 68,
     "startable": true,
     "cbsRank": 31,
+    "proj": 251.58,
+    "vor": 167.03,
     "roachRank": 72,
     "valueGap": -1,
     "shift": 2
@@ -1309,6 +1453,8 @@
     "roachScore": 69,
     "startable": true,
     "cbsRank": 8,
+    "proj": 298.51,
+    "vor": 3.27,
     "roachRank": 73,
     "valueGap": 11,
     "shift": -4
@@ -1327,6 +1473,8 @@
     "roachScore": 74,
     "startable": true,
     "cbsRank": 39,
+    "proj": 241.5,
+    "vor": 112.78,
     "roachRank": 74,
     "valueGap": 6,
     "shift": 4
@@ -1345,6 +1493,8 @@
     "roachScore": 75,
     "startable": true,
     "cbsRank": 7,
+    "proj": 304.66,
+    "vor": 9.42,
     "roachRank": 75,
     "valueGap": 0,
     "shift": 0
@@ -1363,6 +1513,8 @@
     "roachScore": 75,
     "startable": true,
     "cbsRank": 30,
+    "proj": 270.89,
+    "vor": 142.17,
     "roachRank": 76,
     "valueGap": 5,
     "shift": 3
@@ -1381,6 +1533,8 @@
     "roachScore": 76,
     "startable": true,
     "cbsRank": 8,
+    "proj": 53.6,
+    "vor": -81.38,
     "roachRank": 77,
     "valueGap": -10,
     "shift": -6
@@ -1399,6 +1553,8 @@
     "roachScore": 76,
     "startable": true,
     "cbsRank": 44,
+    "proj": 202.21,
+    "vor": 73.49,
     "roachRank": 78,
     "valueGap": 16,
     "shift": 2
@@ -1417,6 +1573,8 @@
     "roachScore": 77,
     "startable": true,
     "cbsRank": 9,
+    "proj": 298.38,
+    "vor": 3.14,
     "roachRank": 79,
     "valueGap": 7,
     "shift": -2
@@ -1435,6 +1593,8 @@
     "roachScore": 77,
     "startable": true,
     "cbsRank": 27,
+    "proj": 223.35,
+    "vor": 138.8,
     "roachRank": 80,
     "valueGap": -1,
     "shift": 3
@@ -1453,6 +1613,8 @@
     "roachScore": 78,
     "startable": true,
     "cbsRank": 34,
+    "proj": 227.99,
+    "vor": 99.27,
     "roachRank": 81,
     "valueGap": -5,
     "shift": 1
@@ -1471,6 +1633,8 @@
     "roachScore": 80,
     "startable": true,
     "cbsRank": 47,
+    "proj": 153.1,
+    "vor": 24.38,
     "roachRank": 82,
     "valueGap": 15,
     "shift": 2
@@ -1489,6 +1653,8 @@
     "roachScore": 81,
     "startable": true,
     "cbsRank": 7,
+    "proj": 143.01,
+    "vor": 8.03,
     "roachRank": 83,
     "valueGap": -13,
     "shift": -7
@@ -1507,6 +1673,8 @@
     "roachScore": 81,
     "startable": true,
     "cbsRank": 29,
+    "proj": 84.55,
+    "vor": 0,
     "roachRank": 84,
     "valueGap": -6,
     "shift": 3
@@ -1525,6 +1693,8 @@
     "roachScore": 82,
     "startable": true,
     "cbsRank": 42,
+    "proj": 178.59,
+    "vor": 49.87,
     "roachRank": 85,
     "valueGap": 30,
     "shift": 1
@@ -1543,6 +1713,8 @@
     "roachScore": 83,
     "startable": true,
     "cbsRank": 28,
+    "proj": 0,
+    "vor": -84.55,
     "roachRank": 86,
     "valueGap": -4,
     "shift": 3
@@ -1561,6 +1733,8 @@
     "roachScore": 84,
     "startable": true,
     "cbsRank": 37,
+    "proj": 116.24,
+    "vor": -12.48,
     "roachRank": 87,
     "valueGap": -2,
     "shift": 1
@@ -1579,6 +1753,8 @@
     "roachScore": 85,
     "startable": true,
     "cbsRank": 38,
+    "proj": 208.21,
+    "vor": 123.66,
     "roachRank": 88,
     "valueGap": -5,
     "shift": 3
@@ -1597,6 +1773,8 @@
     "roachScore": 86,
     "startable": true,
     "cbsRank": 6,
+    "proj": 160.29,
+    "vor": 25.31,
     "roachRank": 89,
     "valueGap": -20,
     "shift": -8
@@ -1615,6 +1793,8 @@
     "roachScore": 86,
     "startable": true,
     "cbsRank": null,
+    "proj": 164.19,
+    "vor": 35.47,
     "roachRank": 90,
     "valueGap": 16,
     "shift": 0
@@ -1633,6 +1813,8 @@
     "roachScore": 90,
     "startable": true,
     "cbsRank": 5,
+    "proj": 191.54,
+    "vor": 56.56,
     "roachRank": 91,
     "valueGap": -19,
     "shift": -6
@@ -1651,6 +1833,8 @@
     "roachScore": 91,
     "startable": true,
     "cbsRank": 42,
+    "proj": 260.52,
+    "vor": 175.97,
     "roachRank": 92,
     "valueGap": -3,
     "shift": 5
@@ -1669,6 +1853,8 @@
     "roachScore": 92,
     "startable": true,
     "cbsRank": 11,
+    "proj": 323.67,
+    "vor": 28.43,
     "roachRank": 93,
     "valueGap": 16,
     "shift": -1
@@ -1687,6 +1873,8 @@
     "roachScore": 92,
     "startable": true,
     "cbsRank": null,
+    "proj": 193.03,
+    "vor": 108.48,
     "roachRank": 94,
     "valueGap": 2,
     "shift": 4
@@ -1705,6 +1893,8 @@
     "roachScore": 93,
     "startable": true,
     "cbsRank": 14,
+    "proj": 142.51,
+    "vor": -152.73,
     "roachRank": 95,
     "valueGap": -4,
     "shift": -2
@@ -1723,6 +1913,8 @@
     "roachScore": 94,
     "startable": true,
     "cbsRank": 33,
+    "proj": 171.67,
+    "vor": 87.12,
     "roachRank": 96,
     "valueGap": -8,
     "shift": 4
@@ -1741,6 +1933,8 @@
     "roachScore": 95,
     "startable": true,
     "cbsRank": 16,
+    "proj": 316.35,
+    "vor": 21.11,
     "roachRank": 97,
     "valueGap": 13,
     "shift": -2
@@ -1759,6 +1953,8 @@
     "roachScore": 95,
     "startable": true,
     "cbsRank": 41,
+    "proj": 71.01,
+    "vor": -57.71,
     "roachRank": 98,
     "valueGap": -5,
     "shift": 1
@@ -1777,6 +1973,8 @@
     "roachScore": 98,
     "startable": true,
     "cbsRank": 40,
+    "proj": 161.22,
+    "vor": 32.5,
     "roachRank": 99,
     "valueGap": 5,
     "shift": 3
@@ -1795,6 +1993,8 @@
     "roachScore": 99,
     "startable": true,
     "cbsRank": 10,
+    "proj": 181.64,
+    "vor": 46.66,
     "roachRank": 100,
     "valueGap": -5,
     "shift": -6
@@ -1813,6 +2013,8 @@
     "roachScore": 100,
     "startable": true,
     "cbsRank": 46,
+    "proj": 178.17,
+    "vor": 49.45,
     "roachRank": 101,
     "valueGap": 18,
     "shift": 3
@@ -1831,6 +2033,8 @@
     "roachScore": 101,
     "startable": true,
     "cbsRank": 11,
+    "proj": 227.97,
+    "vor": 92.99,
     "roachRank": 102,
     "valueGap": -15,
     "shift": -6
@@ -1849,6 +2053,8 @@
     "roachScore": 101,
     "startable": true,
     "cbsRank": 15,
+    "proj": 340.65,
+    "vor": 45.41,
     "roachRank": 103,
     "valueGap": 0,
     "shift": -2
@@ -1867,6 +2073,8 @@
     "roachScore": 101,
     "startable": true,
     "cbsRank": 50,
+    "proj": 220.25,
+    "vor": 91.53,
     "roachRank": 104,
     "valueGap": 16,
     "shift": 1
@@ -1885,6 +2093,8 @@
     "roachScore": 102,
     "startable": true,
     "cbsRank": null,
+    "proj": 167.46,
+    "vor": 38.74,
     "roachRank": 105,
     "valueGap": 2,
     "shift": 1
@@ -1903,6 +2113,8 @@
     "roachScore": 103,
     "startable": true,
     "cbsRank": 13,
+    "proj": 289.93,
+    "vor": -5.31,
     "roachRank": 106,
     "valueGap": -14,
     "shift": -3
@@ -1921,6 +2133,8 @@
     "roachScore": 103,
     "startable": true,
     "cbsRank": 35,
+    "proj": 74.75,
+    "vor": -9.8,
     "roachRank": 107,
     "valueGap": -7,
     "shift": 2
@@ -1939,6 +2153,8 @@
     "roachScore": 104,
     "startable": true,
     "cbsRank": 52,
+    "proj": 154.9,
+    "vor": 26.18,
     "roachRank": 108,
     "valueGap": 5,
     "shift": 0
@@ -1957,6 +2173,8 @@
     "roachScore": 105,
     "startable": true,
     "cbsRank": 41,
+    "proj": 128.85,
+    "vor": 44.3,
     "roachRank": 109,
     "valueGap": 7,
     "shift": 2
@@ -1975,6 +2193,8 @@
     "roachScore": 107,
     "startable": true,
     "cbsRank": 12,
+    "proj": 276.99,
+    "vor": -18.25,
     "roachRank": 110,
     "valueGap": 15,
     "shift": -3
@@ -1993,6 +2213,8 @@
     "roachScore": 107,
     "startable": true,
     "cbsRank": 32,
+    "proj": 164.7,
+    "vor": 80.15,
     "roachRank": 111,
     "valueGap": -3,
     "shift": 2
@@ -2011,6 +2233,8 @@
     "roachScore": 108,
     "startable": true,
     "cbsRank": 34,
+    "proj": 135.1,
+    "vor": 50.55,
     "roachRank": 112,
     "valueGap": -10,
     "shift": 2
@@ -2029,6 +2253,8 @@
     "roachScore": 110,
     "startable": true,
     "cbsRank": 43,
+    "proj": 218.03,
+    "vor": 133.48,
     "roachRank": 113,
     "valueGap": 5,
     "shift": 3
@@ -2047,6 +2273,8 @@
     "roachScore": 111,
     "startable": true,
     "cbsRank": 43,
+    "proj": 156.23,
+    "vor": 27.51,
     "roachRank": 114,
     "valueGap": 12,
     "shift": 1
@@ -2065,6 +2293,8 @@
     "roachScore": 111,
     "startable": true,
     "cbsRank": 39,
+    "proj": 51.34,
+    "vor": -33.21,
     "roachRank": 115,
     "valueGap": -14,
     "shift": 2
@@ -2083,6 +2313,8 @@
     "roachScore": 112,
     "startable": true,
     "cbsRank": 17,
+    "proj": 323.91,
+    "vor": 28.67,
     "roachRank": 116,
     "valueGap": 21,
     "shift": -4
@@ -2101,6 +2333,8 @@
     "roachScore": 115,
     "startable": true,
     "cbsRank": 13,
+    "proj": 147.3,
+    "vor": 12.32,
     "roachRank": 117,
     "valueGap": 5,
     "shift": -7
@@ -2119,6 +2353,8 @@
     "roachScore": 119,
     "startable": true,
     "cbsRank": 58,
+    "proj": 196.98,
+    "vor": 68.26,
     "roachRank": 118,
     "valueGap": 23,
     "shift": 5
@@ -2137,6 +2373,8 @@
     "roachScore": 120,
     "startable": true,
     "cbsRank": 21,
+    "proj": 330.69,
+    "vor": 35.45,
     "roachRank": 119,
     "valueGap": 17,
     "shift": 1
@@ -2155,6 +2393,8 @@
     "roachScore": 120,
     "startable": true,
     "cbsRank": 45,
+    "proj": 109.11,
+    "vor": -19.61,
     "roachRank": 120,
     "valueGap": 27,
     "shift": 4
@@ -2173,6 +2413,8 @@
     "roachScore": 121,
     "startable": true,
     "cbsRank": 20,
+    "proj": 281.98,
+    "vor": -13.26,
     "roachRank": 121,
     "valueGap": 27,
     "shift": 0
@@ -2191,6 +2433,8 @@
     "roachScore": 122,
     "startable": true,
     "cbsRank": null,
+    "proj": 127.03,
+    "vor": -1.69,
     "roachRank": 122,
     "valueGap": 7,
     "shift": 4
@@ -2209,6 +2453,8 @@
     "roachScore": 123,
     "startable": true,
     "cbsRank": 17,
+    "proj": 151.5,
+    "vor": 16.52,
     "roachRank": 123,
     "valueGap": -11,
     "shift": -5
@@ -2227,6 +2473,8 @@
     "roachScore": 123,
     "startable": true,
     "cbsRank": 48,
+    "proj": 202.9,
+    "vor": 74.18,
     "roachRank": 124,
     "valueGap": 0,
     "shift": 3
@@ -2245,6 +2493,8 @@
     "roachScore": 124,
     "startable": true,
     "cbsRank": 12,
+    "proj": 157.55,
+    "vor": 22.57,
     "roachRank": 125,
     "valueGap": -14,
     "shift": -6
@@ -2263,6 +2513,8 @@
     "roachScore": 125,
     "startable": false,
     "cbsRank": 18,
+    "proj": 108.67,
+    "vor": -186.57,
     "roachRank": 126,
     "valueGap": 24,
     "shift": -1
@@ -2281,6 +2533,8 @@
     "roachScore": 125,
     "startable": true,
     "cbsRank": 53,
+    "proj": 166.77,
+    "vor": 38.05,
     "roachRank": 127,
     "valueGap": 1,
     "shift": 2
@@ -2299,6 +2553,8 @@
     "roachScore": 127,
     "startable": true,
     "cbsRank": 9,
+    "proj": 99.35,
+    "vor": -35.63,
     "roachRank": 128,
     "valueGap": -23,
     "shift": -6
@@ -2317,6 +2573,8 @@
     "roachScore": 127,
     "startable": true,
     "cbsRank": 44,
+    "proj": 73.65,
+    "vor": -10.9,
     "roachRank": 129,
     "valueGap": 3,
     "shift": 4
@@ -2335,6 +2593,8 @@
     "roachScore": 128,
     "startable": false,
     "cbsRank": 19,
+    "proj": 2.55,
+    "vor": -292.69,
     "roachRank": 130,
     "valueGap": 35,
     "shift": -2
@@ -2353,6 +2613,8 @@
     "roachScore": 128,
     "startable": true,
     "cbsRank": 55,
+    "proj": 100.19,
+    "vor": -28.53,
     "roachRank": 131,
     "valueGap": 8,
     "shift": 1
@@ -2371,6 +2633,8 @@
     "roachScore": 129,
     "startable": true,
     "cbsRank": 49,
+    "proj": 104.98,
+    "vor": 20.43,
     "roachRank": 132,
     "valueGap": 12,
     "shift": 3
@@ -2389,6 +2653,8 @@
     "roachScore": 130,
     "startable": true,
     "cbsRank": 49,
+    "proj": 150.42,
+    "vor": 21.7,
     "roachRank": 133,
     "valueGap": -12,
     "shift": 1
@@ -2407,6 +2673,8 @@
     "roachScore": 130,
     "startable": true,
     "cbsRank": 47,
+    "proj": 118.83,
+    "vor": 34.28,
     "roachRank": 134,
     "valueGap": 12,
     "shift": 2
@@ -2425,6 +2693,8 @@
     "roachScore": 131,
     "startable": true,
     "cbsRank": 45,
+    "proj": 34.1,
+    "vor": -50.45,
     "roachRank": 135,
     "valueGap": 0,
     "shift": 2
@@ -2443,6 +2713,8 @@
     "roachScore": 135,
     "startable": true,
     "cbsRank": 15,
+    "proj": 118.12,
+    "vor": -16.86,
     "roachRank": 136,
     "valueGap": 15,
     "shift": -6
@@ -2461,6 +2733,8 @@
     "roachScore": 136,
     "startable": true,
     "cbsRank": 14,
+    "proj": 173.71,
+    "vor": 38.73,
     "roachRank": 137,
     "valueGap": -10,
     "shift": -6
@@ -2479,6 +2753,8 @@
     "roachScore": 136,
     "startable": true,
     "cbsRank": 52,
+    "proj": 200.26,
+    "vor": 115.71,
     "roachRank": 138,
     "valueGap": 56,
     "shift": 4
@@ -2497,6 +2773,8 @@
     "roachScore": 137,
     "startable": true,
     "cbsRank": 51,
+    "proj": 204.27,
+    "vor": 75.55,
     "roachRank": 139,
     "valueGap": -9,
     "shift": 2
@@ -2515,6 +2793,8 @@
     "roachScore": 138,
     "startable": false,
     "cbsRank": 25,
+    "proj": 261.3,
+    "vor": -33.94,
     "roachRank": 140,
     "valueGap": 43,
     "shift": -2
@@ -2533,6 +2813,8 @@
     "roachScore": 138,
     "startable": true,
     "cbsRank": 54,
+    "proj": 26.49,
+    "vor": -58.06,
     "roachRank": 141,
     "valueGap": 17,
     "shift": 3
@@ -2551,6 +2833,8 @@
     "roachScore": 139,
     "startable": false,
     "cbsRank": 23,
+    "proj": 296.65,
+    "vor": 1.41,
     "roachRank": 142,
     "valueGap": 36,
     "shift": -3
@@ -2569,6 +2853,8 @@
     "roachScore": 139,
     "startable": true,
     "cbsRank": null,
+    "proj": 178.27,
+    "vor": 49.55,
     "roachRank": 143,
     "valueGap": 2,
     "shift": 0
@@ -2587,6 +2873,8 @@
     "roachScore": 140,
     "startable": false,
     "cbsRank": 22,
+    "proj": 225.26,
+    "vor": -69.98,
     "roachRank": 144,
     "valueGap": 31,
     "shift": -4
@@ -2605,6 +2893,8 @@
     "roachScore": 140,
     "startable": true,
     "cbsRank": 46,
+    "proj": 137.2,
+    "vor": 52.65,
     "roachRank": 145,
     "valueGap": -3,
     "shift": 1
@@ -2623,6 +2913,8 @@
     "roachScore": 141,
     "startable": true,
     "cbsRank": 57,
+    "proj": 142.65,
+    "vor": 13.93,
     "roachRank": 146,
     "valueGap": 20,
     "shift": -1
@@ -2641,6 +2933,8 @@
     "roachScore": 142,
     "startable": true,
     "cbsRank": 48,
+    "proj": 74.8,
+    "vor": -9.75,
     "roachRank": 147,
     "valueGap": 14,
     "shift": 1
@@ -2659,6 +2953,8 @@
     "roachScore": 147,
     "startable": false,
     "cbsRank": 26,
+    "proj": 276.76,
+    "vor": -18.48,
     "roachRank": 148,
     "valueGap": 64,
     "shift": -1
@@ -2677,6 +2973,8 @@
     "roachScore": 148,
     "startable": true,
     "cbsRank": 56,
+    "proj": 128.72,
+    "vor": 0,
     "roachRank": 149,
     "valueGap": 23,
     "shift": 3
@@ -2695,6 +2993,8 @@
     "roachScore": 148,
     "startable": true,
     "cbsRank": 56,
+    "proj": 214.65,
+    "vor": 130.1,
     "roachRank": 150,
     "valueGap": 5,
     "shift": 4
@@ -2713,6 +3013,8 @@
     "roachScore": 150,
     "startable": true,
     "cbsRank": 58,
+    "proj": 209.52,
+    "vor": 124.97,
     "roachRank": 151,
     "valueGap": 37,
     "shift": 5
@@ -2731,6 +3033,8 @@
     "roachScore": 151,
     "startable": true,
     "cbsRank": 59,
+    "proj": 267.58,
+    "vor": 183.03,
     "roachRank": 152,
     "valueGap": 2,
     "shift": 5
@@ -2749,6 +3053,8 @@
     "roachScore": 153,
     "startable": true,
     "cbsRank": null,
+    "proj": null,
+    "vor": null,
     "roachRank": 153,
     "valueGap": -54,
     "shift": 0
@@ -2767,6 +3073,8 @@
     "roachScore": 153,
     "startable": true,
     "cbsRank": 50,
+    "proj": 110.76,
+    "vor": 26.21,
     "roachRank": 154,
     "valueGap": 16,
     "shift": 5
@@ -2785,6 +3093,8 @@
     "roachScore": 154,
     "startable": true,
     "cbsRank": 20,
+    "proj": 139.91,
+    "vor": 4.93,
     "roachRank": 155,
     "valueGap": 2,
     "shift": -6
@@ -2803,6 +3113,8 @@
     "roachScore": 154,
     "startable": true,
     "cbsRank": null,
+    "proj": 84.63,
+    "vor": -44.09,
     "roachRank": 156,
     "valueGap": 74,
     "shift": 2
@@ -2821,6 +3133,8 @@
     "roachScore": 155,
     "startable": true,
     "cbsRank": null,
+    "proj": 135.98,
+    "vor": 1,
     "roachRank": 157,
     "valueGap": 28,
     "shift": -7
@@ -2839,6 +3153,8 @@
     "roachScore": 156,
     "startable": true,
     "cbsRank": 16,
+    "proj": 126.27,
+    "vor": -8.71,
     "roachRank": 158,
     "valueGap": 23,
     "shift": -7
@@ -2857,6 +3173,8 @@
     "roachScore": 156,
     "startable": true,
     "cbsRank": 40,
+    "proj": 65.6,
+    "vor": -18.95,
     "roachRank": 159,
     "valueGap": -16,
     "shift": 3
@@ -2875,6 +3193,8 @@
     "roachScore": 157,
     "startable": true,
     "cbsRank": null,
+    "proj": 232.23,
+    "vor": 103.51,
     "roachRank": 160,
     "valueGap": 22,
     "shift": 1
@@ -2893,6 +3213,8 @@
     "roachScore": 158,
     "startable": true,
     "cbsRank": 36,
+    "proj": 53.92,
+    "vor": -30.63,
     "roachRank": 161,
     "valueGap": -21,
     "shift": 3
@@ -2911,6 +3233,8 @@
     "roachScore": 159,
     "startable": false,
     "cbsRank": 55,
+    "proj": 94.48,
+    "vor": 9.93,
     "roachRank": 162,
     "valueGap": 34,
     "shift": 3
@@ -2929,6 +3253,8 @@
     "roachScore": 160,
     "startable": true,
     "cbsRank": 21,
+    "proj": 147.96,
+    "vor": 12.98,
     "roachRank": 163,
     "valueGap": -7,
     "shift": -8
@@ -2947,6 +3273,8 @@
     "roachScore": 160,
     "startable": false,
     "cbsRank": 29,
+    "proj": 285.97,
+    "vor": -9.27,
     "roachRank": 164,
     "valueGap": 63,
     "shift": -4
@@ -2965,6 +3293,8 @@
     "roachScore": 162,
     "startable": true,
     "cbsRank": null,
+    "proj": 30.57,
+    "vor": -98.15,
     "roachRank": 165,
     "valueGap": 37,
     "shift": 1
@@ -2983,6 +3313,8 @@
     "roachScore": 163,
     "startable": true,
     "cbsRank": null,
+    "proj": null,
+    "vor": null,
     "roachRank": 166,
     "valueGap": -52,
     "shift": -3
@@ -3001,6 +3333,8 @@
     "roachScore": 165,
     "startable": true,
     "cbsRank": null,
+    "proj": 193.62,
+    "vor": 64.9,
     "roachRank": 167,
     "valueGap": 34,
     "shift": 2
@@ -3019,6 +3353,8 @@
     "roachScore": 166,
     "startable": true,
     "cbsRank": 60,
+    "proj": 110.48,
+    "vor": -18.24,
     "roachRank": 168,
     "valueGap": 51,
     "shift": 2
@@ -3037,6 +3373,8 @@
     "roachScore": 166,
     "startable": false,
     "cbsRank": 53,
+    "proj": 76.94,
+    "vor": -7.61,
     "roachRank": 169,
     "valueGap": -5,
     "shift": 3
@@ -3055,6 +3393,8 @@
     "roachScore": 167,
     "startable": true,
     "cbsRank": null,
+    "proj": null,
+    "vor": null,
     "roachRank": 170,
     "valueGap": -53,
     "shift": -3
@@ -3073,6 +3413,8 @@
     "roachScore": 167,
     "startable": true,
     "cbsRank": null,
+    "proj": 25.78,
+    "vor": -102.94,
     "roachRank": 171,
     "valueGap": 57,
     "shift": 0
@@ -3091,6 +3433,8 @@
     "roachScore": 168,
     "startable": true,
     "cbsRank": null,
+    "proj": null,
+    "vor": null,
     "roachRank": 172,
     "valueGap": -49,
     "shift": -4
@@ -3109,6 +3453,8 @@
     "roachScore": 169,
     "startable": true,
     "cbsRank": null,
+    "proj": 20.6,
+    "vor": -108.12,
     "roachRank": 173,
     "valueGap": 81,
     "shift": 0
@@ -3127,6 +3473,8 @@
     "roachScore": 170,
     "startable": true,
     "cbsRank": null,
+    "proj": 87.55,
+    "vor": -41.17,
     "roachRank": 174,
     "valueGap": 46,
     "shift": 0
@@ -3145,6 +3493,8 @@
     "roachScore": 173,
     "startable": false,
     "cbsRank": null,
+    "proj": 19.48,
+    "vor": -109.24,
     "roachRank": 175,
     "valueGap": 89,
     "shift": 2
@@ -3163,6 +3513,8 @@
     "roachScore": 174,
     "startable": false,
     "cbsRank": 51,
+    "proj": 46.87,
+    "vor": -37.68,
     "roachRank": 176,
     "valueGap": 45,
     "shift": 4
@@ -3181,6 +3533,8 @@
     "roachScore": 175,
     "startable": true,
     "cbsRank": null,
+    "proj": null,
+    "vor": null,
     "roachRank": 177,
     "valueGap": -39,
     "shift": -2
@@ -3199,6 +3553,8 @@
     "roachScore": 175,
     "startable": false,
     "cbsRank": null,
+    "proj": 95.51,
+    "vor": -33.21,
     "roachRank": 178,
     "valueGap": 101,
     "shift": 1
@@ -3217,6 +3573,8 @@
     "roachScore": 178,
     "startable": true,
     "cbsRank": 1,
+    "proj": 98.18,
+    "vor": 3.95,
     "roachRank": 179,
     "valueGap": -81,
     "shift": -1
@@ -3235,6 +3593,8 @@
     "roachScore": 180,
     "startable": false,
     "cbsRank": null,
+    "proj": 53.8,
+    "vor": -74.92,
     "roachRank": 180,
     "valueGap": 37,
     "shift": 4
@@ -3253,6 +3613,8 @@
     "roachScore": 181,
     "startable": true,
     "cbsRank": 25,
+    "proj": 185.18,
+    "vor": 50.2,
     "roachRank": 181,
     "valueGap": -14,
     "shift": -5
@@ -3271,6 +3633,8 @@
     "roachScore": 181,
     "startable": true,
     "cbsRank": null,
+    "proj": null,
+    "vor": null,
     "roachRank": 182,
     "valueGap": -30,
     "shift": -1
@@ -3289,6 +3653,8 @@
     "roachScore": 181,
     "startable": false,
     "cbsRank": 57,
+    "proj": 81.46,
+    "vor": -3.09,
     "roachRank": 183,
     "valueGap": 39,
     "shift": 4
@@ -3307,6 +3673,8 @@
     "roachScore": 182,
     "startable": false,
     "cbsRank": 24,
+    "proj": 2.38,
+    "vor": -292.86,
     "roachRank": 184,
     "valueGap": 52,
     "shift": -2
@@ -3325,6 +3693,8 @@
     "roachScore": 182,
     "startable": false,
     "cbsRank": null,
+    "proj": 23.87,
+    "vor": -104.85,
     "roachRank": 185,
     "valueGap": 13,
     "shift": 1
@@ -3343,6 +3713,8 @@
     "roachScore": 183,
     "startable": true,
     "cbsRank": null,
+    "proj": null,
+    "vor": null,
     "roachRank": 186,
     "valueGap": -33,
     "shift": -3
@@ -3361,6 +3733,8 @@
     "roachScore": 185,
     "startable": true,
     "cbsRank": null,
+    "proj": null,
+    "vor": null,
     "roachRank": 187,
     "valueGap": -27,
     "shift": -2
@@ -3379,6 +3753,8 @@
     "roachScore": 188,
     "startable": true,
     "cbsRank": null,
+    "proj": null,
+    "vor": null,
     "roachRank": 188,
     "valueGap": -14,
     "shift": 0
@@ -3397,6 +3773,8 @@
     "roachScore": 188,
     "startable": false,
     "cbsRank": null,
+    "proj": 212.4,
+    "vor": 83.68,
     "roachRank": 189,
     "valueGap": 55,
     "shift": 3
@@ -3415,6 +3793,8 @@
     "roachScore": 188,
     "startable": false,
     "cbsRank": 60,
+    "proj": 0,
+    "vor": -84.55,
     "roachRank": 190,
     "valueGap": 45,
     "shift": 4
@@ -3433,6 +3813,8 @@
     "roachScore": 189,
     "startable": true,
     "cbsRank": 4,
+    "proj": 99.58,
+    "vor": 5.35,
     "roachRank": 191,
     "valueGap": -60,
     "shift": -2
@@ -3451,6 +3833,8 @@
     "roachScore": 189,
     "startable": false,
     "cbsRank": null,
+    "proj": 213.4,
+    "vor": 84.68,
     "roachRank": 192,
     "valueGap": -30,
     "shift": 1
@@ -3469,6 +3853,8 @@
     "roachScore": 190,
     "startable": true,
     "cbsRank": 2,
+    "proj": 93.48,
+    "vor": -0.75,
     "roachRank": 193,
     "valueGap": -60,
     "shift": -3
@@ -3487,6 +3873,8 @@
     "roachScore": 191,
     "startable": true,
     "cbsRank": null,
+    "proj": null,
+    "vor": null,
     "roachRank": 194,
     "valueGap": -18,
     "shift": -3
@@ -3505,6 +3893,8 @@
     "roachScore": 191,
     "startable": false,
     "cbsRank": null,
+    "proj": 229.67,
+    "vor": 100.95,
     "roachRank": 195,
     "valueGap": -3,
     "shift": 0
@@ -3523,6 +3913,8 @@
     "roachScore": 196,
     "startable": false,
     "cbsRank": null,
+    "proj": 27.36,
+    "vor": -57.19,
     "roachRank": 196,
     "valueGap": 47,
     "shift": 6
@@ -3541,6 +3933,8 @@
     "roachScore": 197,
     "startable": true,
     "cbsRank": null,
+    "proj": null,
+    "vor": null,
     "roachRank": 197,
     "valueGap": -38,
     "shift": 0
@@ -3559,6 +3953,8 @@
     "roachScore": 197,
     "startable": false,
     "cbsRank": null,
+    "proj": 36.29,
+    "vor": -92.43,
     "roachRank": 198,
     "valueGap": 72,
     "shift": 3
@@ -3577,6 +3973,8 @@
     "roachScore": 199,
     "startable": true,
     "cbsRank": 5,
+    "proj": 92.68,
+    "vor": -1.55,
     "roachRank": 199,
     "valueGap": -50,
     "shift": 0
@@ -3595,6 +3993,8 @@
     "roachScore": 200,
     "startable": true,
     "cbsRank": 3,
+    "proj": 93.18,
+    "vor": -1.05,
     "roachRank": 200,
     "valueGap": -66,
     "shift": 0
@@ -3613,6 +4013,8 @@
     "roachScore": 201,
     "startable": true,
     "cbsRank": 24,
+    "proj": 81.99,
+    "vor": -52.99,
     "roachRank": 201,
     "valueGap": 3,
     "shift": -5
@@ -3631,6 +4033,8 @@
     "roachScore": 202,
     "startable": false,
     "cbsRank": null,
+    "proj": 19.94,
+    "vor": -64.61,
     "roachRank": 202,
     "valueGap": 32,
     "shift": 6
@@ -3649,6 +4053,8 @@
     "roachScore": 203,
     "startable": true,
     "cbsRank": 19,
+    "proj": 49.38,
+    "vor": -85.6,
     "roachRank": 203,
     "valueGap": -4,
     "shift": -5
@@ -3667,6 +4073,8 @@
     "roachScore": 203,
     "startable": false,
     "cbsRank": null,
+    "proj": 251.44,
+    "vor": 166.89,
     "roachRank": 204,
     "valueGap": 11,
     "shift": 5
@@ -3685,6 +4093,8 @@
     "roachScore": 204,
     "startable": true,
     "cbsRank": 13,
+    "proj": 102.47,
+    "vor": 8.24,
     "roachRank": 205,
     "valueGap": -25,
     "shift": -1
@@ -3703,6 +4113,8 @@
     "roachScore": 205,
     "startable": true,
     "cbsRank": null,
+    "proj": null,
+    "vor": null,
     "roachRank": 206,
     "valueGap": 0,
     "shift": -1
@@ -3721,6 +4133,8 @@
     "roachScore": 206,
     "startable": true,
     "cbsRank": 6,
+    "proj": 0,
+    "vor": -94.23,
     "roachRank": 207,
     "valueGap": -23,
     "shift": -1
@@ -3739,6 +4153,8 @@
     "roachScore": 208,
     "startable": true,
     "cbsRank": 28,
+    "proj": 0,
+    "vor": -134.98,
     "roachRank": 208,
     "valueGap": 38,
     "shift": -5
@@ -3757,6 +4173,8 @@
     "roachScore": 210,
     "startable": false,
     "cbsRank": null,
+    "proj": 0,
+    "vor": -128.72,
     "roachRank": 209,
     "valueGap": -32,
     "shift": 5
@@ -3775,6 +4193,8 @@
     "roachScore": 211,
     "startable": false,
     "cbsRank": 27,
+    "proj": 247.61,
+    "vor": -47.63,
     "roachRank": 210,
     "valueGap": 23,
     "shift": 1
@@ -3793,6 +4213,8 @@
     "roachScore": 212,
     "startable": false,
     "cbsRank": 31,
+    "proj": 63.67,
+    "vor": -71.31,
     "roachRank": 211,
     "valueGap": 60,
     "shift": -4
@@ -3811,6 +4233,8 @@
     "roachScore": 212,
     "startable": true,
     "cbsRank": null,
+    "proj": null,
+    "vor": null,
     "roachRank": 212,
     "valueGap": -26,
     "shift": 0
@@ -3829,6 +4253,8 @@
     "roachScore": 213,
     "startable": false,
     "cbsRank": 28,
+    "proj": 280.3,
+    "vor": -14.94,
     "roachRank": 213,
     "valueGap": 160,
     "shift": 0
@@ -3847,6 +4273,8 @@
     "roachScore": 213,
     "startable": false,
     "cbsRank": null,
+    "proj": 203.09,
+    "vor": 74.37,
     "roachRank": 214,
     "valueGap": -7,
     "shift": 3
@@ -3865,6 +4293,8 @@
     "roachScore": 214,
     "startable": false,
     "cbsRank": null,
+    "proj": 160.93,
+    "vor": 32.21,
     "roachRank": 215,
     "valueGap": 75,
     "shift": 3
@@ -3883,6 +4313,8 @@
     "roachScore": 215,
     "startable": false,
     "cbsRank": 26,
+    "proj": 147.77,
+    "vor": 12.79,
     "roachRank": 216,
     "valueGap": -47,
     "shift": -6
@@ -3901,6 +4333,8 @@
     "roachScore": 215,
     "startable": true,
     "cbsRank": 12,
+    "proj": 103.88,
+    "vor": 9.65,
     "roachRank": 217,
     "valueGap": -54,
     "shift": -2
@@ -3919,6 +4353,8 @@
     "roachScore": 216,
     "startable": true,
     "cbsRank": 15,
+    "proj": 97.51,
+    "vor": 3.28,
     "roachRank": 218,
     "valueGap": -25,
     "shift": -2
@@ -3937,6 +4373,8 @@
     "roachScore": 217,
     "startable": false,
     "cbsRank": null,
+    "proj": 136.05,
+    "vor": 7.33,
     "roachRank": 219,
     "valueGap": 59,
     "shift": 2
@@ -3955,6 +4393,8 @@
     "roachScore": 217,
     "startable": false,
     "cbsRank": null,
+    "proj": 19.38,
+    "vor": -65.17,
     "roachRank": 220,
     "valueGap": 5,
     "shift": 3
@@ -3973,6 +4413,8 @@
     "roachScore": 218,
     "startable": false,
     "cbsRank": null,
+    "proj": 56.45,
+    "vor": -72.27,
     "roachRank": 221,
     "valueGap": 39,
     "shift": 1
@@ -3991,6 +4433,8 @@
     "roachScore": 219,
     "startable": true,
     "cbsRank": 7,
+    "proj": 96.09,
+    "vor": 1.86,
     "roachRank": 222,
     "valueGap": -35,
     "shift": -3
@@ -4009,6 +4453,8 @@
     "roachScore": 220,
     "startable": false,
     "cbsRank": null,
+    "proj": null,
+    "vor": null,
     "roachRank": 223,
     "valueGap": -50,
     "shift": -3
@@ -4027,6 +4473,8 @@
     "roachScore": 220,
     "startable": false,
     "cbsRank": null,
+    "proj": 79.94,
+    "vor": -48.78,
     "roachRank": 224,
     "valueGap": 61,
     "shift": 0
@@ -4045,6 +4493,8 @@
     "roachScore": 224,
     "startable": false,
     "cbsRank": null,
+    "proj": 15.79,
+    "vor": -68.76,
     "roachRank": 225,
     "valueGap": 62,
     "shift": 5
@@ -4063,6 +4513,8 @@
     "roachScore": 225,
     "startable": true,
     "cbsRank": 14,
+    "proj": 0,
+    "vor": -94.23,
     "roachRank": 226,
     "valueGap": -58,
     "shift": -1
@@ -4081,6 +4533,8 @@
     "roachScore": 225,
     "startable": false,
     "cbsRank": null,
+    "proj": 32.25,
+    "vor": -52.3,
     "roachRank": 227,
     "valueGap": 70,
     "shift": 4
@@ -4099,6 +4553,8 @@
     "roachScore": 226,
     "startable": true,
     "cbsRank": null,
+    "proj": 90.54,
+    "vor": -3.69,
     "roachRank": 228,
     "valueGap": -2,
     "shift": -2
@@ -4117,6 +4573,8 @@
     "roachScore": 227,
     "startable": true,
     "cbsRank": 9,
+    "proj": 103.18,
+    "vor": 8.95,
     "roachRank": 229,
     "valueGap": -13,
     "shift": -2
@@ -4135,6 +4593,8 @@
     "roachScore": 228,
     "startable": false,
     "cbsRank": null,
+    "proj": 100.87,
+    "vor": -27.85,
     "roachRank": 230,
     "valueGap": -59,
     "shift": 2
@@ -4153,6 +4613,8 @@
     "roachScore": 229,
     "startable": false,
     "cbsRank": null,
+    "proj": null,
+    "vor": null,
     "roachRank": 231,
     "valueGap": -36,
     "shift": -2
@@ -4171,6 +4633,8 @@
     "roachScore": 231,
     "startable": false,
     "cbsRank": null,
+    "proj": 109.12,
+    "vor": -19.6,
     "roachRank": 232,
     "valueGap": 44,
     "shift": 3
@@ -4189,6 +4653,8 @@
     "roachScore": 232,
     "startable": false,
     "cbsRank": null,
+    "proj": 8.98,
+    "vor": -75.57,
     "roachRank": 233,
     "valueGap": 32,
     "shift": 5
@@ -4207,6 +4673,8 @@
     "roachScore": 233,
     "startable": false,
     "cbsRank": 29,
+    "proj": 134.98,
+    "vor": 0,
     "roachRank": 234,
     "valueGap": 6,
     "shift": -6
@@ -4225,6 +4693,8 @@
     "roachScore": 233,
     "startable": false,
     "cbsRank": null,
+    "proj": null,
+    "vor": null,
     "roachRank": 235,
     "valueGap": -44,
     "shift": -2
@@ -4243,6 +4713,8 @@
     "roachScore": 233,
     "startable": false,
     "cbsRank": null,
+    "proj": 77.43,
+    "vor": -51.29,
     "roachRank": 236,
     "valueGap": 32,
     "shift": 1
@@ -4261,6 +4733,8 @@
     "roachScore": 234,
     "startable": false,
     "cbsRank": null,
+    "proj": 45.83,
+    "vor": -38.72,
     "roachRank": 237,
     "valueGap": 11,
     "shift": 3
@@ -4279,6 +4753,8 @@
     "roachScore": 235,
     "startable": false,
     "cbsRank": null,
+    "proj": 80.92,
+    "vor": -47.8,
     "roachRank": 238,
     "valueGap": 21,
     "shift": 1
@@ -4297,6 +4773,8 @@
     "roachScore": 235,
     "startable": false,
     "cbsRank": null,
+    "proj": 107.96,
+    "vor": 23.41,
     "roachRank": 239,
     "valueGap": 16,
     "shift": 2
@@ -4315,6 +4793,8 @@
     "roachScore": 238,
     "startable": false,
     "cbsRank": null,
+    "proj": 115.2,
+    "vor": -13.52,
     "roachRank": 240,
     "valueGap": -31,
     "shift": 2
@@ -4333,6 +4813,8 @@
     "roachScore": 238,
     "startable": false,
     "cbsRank": null,
+    "proj": 60.88,
+    "vor": -23.67,
     "roachRank": 241,
     "valueGap": -41,
     "shift": 3
@@ -4351,6 +4833,8 @@
     "roachScore": 239,
     "startable": false,
     "cbsRank": 30,
+    "proj": 138.87,
+    "vor": 3.89,
     "roachRank": 242,
     "valueGap": -4,
     "shift": -8
@@ -4369,6 +4853,8 @@
     "roachScore": 239,
     "startable": false,
     "cbsRank": null,
+    "proj": 68.92,
+    "vor": -59.8,
     "roachRank": 243,
     "valueGap": -14,
     "shift": 0
@@ -4387,6 +4873,8 @@
     "roachScore": 241,
     "startable": false,
     "cbsRank": 18,
+    "proj": 0,
+    "vor": -134.98,
     "roachRank": 244,
     "valueGap": -30,
     "shift": -8
@@ -4405,6 +4893,8 @@
     "roachScore": 242,
     "startable": false,
     "cbsRank": null,
+    "proj": 58.11,
+    "vor": -70.61,
     "roachRank": 245,
     "valueGap": 49,
     "shift": 1
@@ -4423,6 +4913,8 @@
     "roachScore": 244,
     "startable": false,
     "cbsRank": null,
+    "proj": 201.32,
+    "vor": 72.6,
     "roachRank": 246,
     "valueGap": 49,
     "shift": 2
@@ -4441,6 +4933,8 @@
     "roachScore": 245,
     "startable": true,
     "cbsRank": 10,
+    "proj": 98.64,
+    "vor": 4.41,
     "roachRank": 247,
     "valueGap": -68,
     "shift": -2
@@ -4459,6 +4953,8 @@
     "roachScore": 245,
     "startable": false,
     "cbsRank": null,
+    "proj": 71.06,
+    "vor": -57.66,
     "roachRank": 248,
     "valueGap": -6,
     "shift": 1
@@ -4477,6 +4973,8 @@
     "roachScore": 247,
     "startable": false,
     "cbsRank": null,
+    "proj": 45.74,
+    "vor": -82.98,
     "roachRank": 249,
     "valueGap": 2,
     "shift": 2
@@ -4495,6 +4993,8 @@
     "roachScore": 250,
     "startable": false,
     "cbsRank": null,
+    "proj": 65.04,
+    "vor": -63.68,
     "roachRank": 250,
     "valueGap": 36,
     "shift": 4
@@ -4513,6 +5013,8 @@
     "roachScore": 250,
     "startable": false,
     "cbsRank": null,
+    "proj": 26.67,
+    "vor": -57.88,
     "roachRank": 251,
     "valueGap": 353,
     "shift": 5
@@ -4531,6 +5033,8 @@
     "roachScore": 251,
     "startable": false,
     "cbsRank": null,
+    "proj": 36.53,
+    "vor": -92.19,
     "roachRank": 252,
     "valueGap": 21,
     "shift": 3
@@ -4549,6 +5053,8 @@
     "roachScore": 251,
     "startable": false,
     "cbsRank": null,
+    "proj": 95.24,
+    "vor": 10.69,
     "roachRank": 253,
     "valueGap": -16,
     "shift": 4
@@ -4567,6 +5073,8 @@
     "roachScore": 252,
     "startable": false,
     "cbsRank": null,
+    "proj": 176.4,
+    "vor": 41.42,
     "roachRank": 254,
     "valueGap": -46,
     "shift": -7
@@ -4585,6 +5093,8 @@
     "roachScore": 252,
     "startable": false,
     "cbsRank": 17,
+    "proj": 94.29,
+    "vor": 0.06,
     "roachRank": 255,
     "valueGap": -50,
     "shift": -3
@@ -4603,6 +5113,8 @@
     "roachScore": 252,
     "startable": false,
     "cbsRank": null,
+    "proj": 84.76,
+    "vor": 0.21,
     "roachRank": 256,
     "valueGap": 139,
     "shift": 2
@@ -4621,6 +5133,8 @@
     "roachScore": 253,
     "startable": false,
     "cbsRank": 31,
+    "proj": 202.7,
+    "vor": -92.54,
     "roachRank": 257,
     "valueGap": -33,
     "shift": -4
@@ -4639,6 +5153,8 @@
     "roachScore": 253,
     "startable": false,
     "cbsRank": null,
+    "proj": 16.85,
+    "vor": -67.7,
     "roachRank": 258,
     "valueGap": 48,
     "shift": 1
@@ -4657,6 +5173,8 @@
     "roachScore": 255,
     "startable": false,
     "cbsRank": 27,
+    "proj": 169.63,
+    "vor": 34.65,
     "roachRank": 259,
     "valueGap": 97,
     "shift": -9
@@ -4675,6 +5193,8 @@
     "roachScore": 255,
     "startable": false,
     "cbsRank": null,
+    "proj": 54.38,
+    "vor": -30.17,
     "roachRank": 260,
     "valueGap": 217,
     "shift": 1
@@ -4693,6 +5213,8 @@
     "roachScore": 256,
     "startable": false,
     "cbsRank": null,
+    "proj": 88.96,
+    "vor": -39.76,
     "roachRank": 261,
     "valueGap": 49,
     "shift": -1
@@ -4711,6 +5233,8 @@
     "roachScore": 257,
     "startable": false,
     "cbsRank": null,
+    "proj": 62.88,
+    "vor": -21.67,
     "roachRank": 262,
     "valueGap": 15,
     "shift": 1
@@ -4729,6 +5253,8 @@
     "roachScore": 258,
     "startable": false,
     "cbsRank": null,
+    "proj": 53.3,
+    "vor": -75.42,
     "roachRank": 263,
     "valueGap": -66,
     "shift": -1
@@ -4747,6 +5273,8 @@
     "roachScore": 258,
     "startable": false,
     "cbsRank": null,
+    "proj": 49.77,
+    "vor": -34.78,
     "roachRank": 264,
     "valueGap": 147,
     "shift": 0
@@ -4765,6 +5293,8 @@
     "roachScore": 259,
     "startable": false,
     "cbsRank": null,
+    "proj": 2.61,
+    "vor": -81.94,
     "roachRank": 265,
     "valueGap": -33,
     "shift": 0
@@ -4783,6 +5313,8 @@
     "roachScore": 264,
     "startable": false,
     "cbsRank": null,
+    "proj": 53.38,
+    "vor": -75.34,
     "roachRank": 266,
     "valueGap": 30,
     "shift": 2
@@ -4801,6 +5333,8 @@
     "roachScore": 264,
     "startable": false,
     "cbsRank": null,
+    "proj": 25.28,
+    "vor": -59.27,
     "roachRank": 267,
     "valueGap": 140,
     "shift": 3
@@ -4819,6 +5353,8 @@
     "roachScore": 265,
     "startable": false,
     "cbsRank": null,
+    "proj": 42.42,
+    "vor": -86.3,
     "roachRank": 268,
     "valueGap": 147,
     "shift": 1
@@ -4837,6 +5373,8 @@
     "roachScore": 267,
     "startable": false,
     "cbsRank": 18,
+    "proj": 94.88,
+    "vor": 0.65,
     "roachRank": 269,
     "valueGap": -66,
     "shift": -2
@@ -4855,6 +5393,8 @@
     "roachScore": 268,
     "startable": false,
     "cbsRank": null,
+    "proj": 115.6,
+    "vor": -13.12,
     "roachRank": 270,
     "valueGap": 193,
     "shift": 2
@@ -4873,6 +5413,8 @@
     "roachScore": 270,
     "startable": false,
     "cbsRank": null,
+    "proj": 33.76,
+    "vor": -94.96,
     "roachRank": 271,
     "valueGap": 60,
     "shift": 3
@@ -4891,6 +5433,8 @@
     "roachScore": 271,
     "startable": false,
     "cbsRank": null,
+    "proj": 14.75,
+    "vor": -120.23,
     "roachRank": 272,
     "valueGap": 27,
     "shift": -6
@@ -4909,6 +5453,8 @@
     "roachScore": 271,
     "startable": false,
     "cbsRank": 11,
+    "proj": 94.23,
+    "vor": 0,
     "roachRank": 273,
     "valueGap": -84,
     "shift": -2
@@ -4927,6 +5473,8 @@
     "roachScore": 271,
     "startable": false,
     "cbsRank": null,
+    "proj": 129.8,
+    "vor": 1.08,
     "roachRank": 274,
     "valueGap": -21,
     "shift": 1
@@ -4945,6 +5493,8 @@
     "roachScore": 271,
     "startable": false,
     "cbsRank": null,
+    "proj": 0,
+    "vor": -84.55,
     "roachRank": 275,
     "valueGap": 130,
     "shift": 2
@@ -4963,6 +5513,8 @@
     "roachScore": 273,
     "startable": false,
     "cbsRank": 30,
+    "proj": 295.24,
+    "vor": 0,
     "roachRank": 276,
     "valueGap": 12,
     "shift": -3
@@ -4981,6 +5533,8 @@
     "roachScore": 274,
     "startable": false,
     "cbsRank": null,
+    "proj": 165.98,
+    "vor": 37.26,
     "roachRank": 277,
     "valueGap": 180,
     "shift": 1
@@ -4999,6 +5553,8 @@
     "roachScore": 275,
     "startable": false,
     "cbsRank": null,
+    "proj": 144.45,
+    "vor": 15.73,
     "roachRank": 278,
     "valueGap": 14,
     "shift": 1
@@ -5017,6 +5573,8 @@
     "roachScore": 275,
     "startable": false,
     "cbsRank": null,
+    "proj": 52.48,
+    "vor": -32.07,
     "roachRank": 279,
     "valueGap": 53,
     "shift": 2
@@ -5035,6 +5593,8 @@
     "roachScore": 277,
     "startable": false,
     "cbsRank": null,
+    "proj": 20.1,
+    "vor": -64.45,
     "roachRank": 280,
     "valueGap": 144,
     "shift": 3
@@ -5053,6 +5613,8 @@
     "roachScore": 279,
     "startable": false,
     "cbsRank": null,
+    "proj": 15.79,
+    "vor": -68.76,
     "roachRank": 281,
     "valueGap": 34,
     "shift": 4
@@ -5071,6 +5633,8 @@
     "roachScore": 280,
     "startable": false,
     "cbsRank": null,
+    "proj": 270.4,
+    "vor": -24.84,
     "roachRank": 282,
     "valueGap": 0,
     "shift": -2
@@ -5089,6 +5653,8 @@
     "roachScore": 281,
     "startable": false,
     "cbsRank": null,
+    "proj": 130.28,
+    "vor": -4.7,
     "roachRank": 283,
     "valueGap": 1,
     "shift": -7
@@ -5107,6 +5673,8 @@
     "roachScore": 282,
     "startable": false,
     "cbsRank": null,
+    "proj": null,
+    "vor": null,
     "roachRank": 284,
     "valueGap": -71,
     "shift": -2
@@ -5125,6 +5693,8 @@
     "roachScore": 283,
     "startable": false,
     "cbsRank": null,
+    "proj": 80.57,
+    "vor": -3.98,
     "roachRank": 285,
     "valueGap": 41,
     "shift": 4
@@ -5143,6 +5713,8 @@
     "roachScore": 286,
     "startable": false,
     "cbsRank": null,
+    "proj": null,
+    "vor": null,
     "roachRank": 286,
     "valueGap": -55,
     "shift": 0
@@ -5161,6 +5733,8 @@
     "roachScore": 286,
     "startable": false,
     "cbsRank": null,
+    "proj": 41.62,
+    "vor": -87.1,
     "roachRank": 287,
     "valueGap": -31,
     "shift": 3
@@ -5179,6 +5753,8 @@
     "roachScore": 287,
     "startable": false,
     "cbsRank": null,
+    "proj": 2.61,
+    "vor": -292.63,
     "roachRank": 288,
     "valueGap": 19,
     "shift": -1
@@ -5197,6 +5773,8 @@
     "roachScore": 287,
     "startable": false,
     "cbsRank": null,
+    "proj": 49.13,
+    "vor": -35.42,
     "roachRank": 289,
     "valueGap": 46,
     "shift": 4
@@ -5215,6 +5793,8 @@
     "roachScore": 288,
     "startable": false,
     "cbsRank": null,
+    "proj": 0,
+    "vor": -295.24,
     "roachRank": 290,
     "valueGap": 90,
     "shift": -2
@@ -5233,6 +5813,8 @@
     "roachScore": 289,
     "startable": false,
     "cbsRank": null,
+    "proj": 122.28,
+    "vor": -12.7,
     "roachRank": 291,
     "valueGap": 21,
     "shift": -7
@@ -5251,6 +5833,8 @@
     "roachScore": 289,
     "startable": false,
     "cbsRank": null,
+    "proj": 29.76,
+    "vor": -54.79,
     "roachRank": 292,
     "valueGap": 79,
     "shift": 3
@@ -5269,6 +5853,8 @@
     "roachScore": 290,
     "startable": false,
     "cbsRank": null,
+    "proj": 25.22,
+    "vor": -59.33,
     "roachRank": 293,
     "valueGap": 342,
     "shift": 3
@@ -5287,6 +5873,8 @@
     "roachScore": 292,
     "startable": false,
     "cbsRank": null,
+    "proj": null,
+    "vor": null,
     "roachRank": 294,
     "valueGap": -49,
     "shift": -2
@@ -5305,6 +5893,8 @@
     "roachScore": 293,
     "startable": false,
     "cbsRank": null,
+    "proj": 174.53,
+    "vor": 45.81,
     "roachRank": 295,
     "valueGap": 9,
     "shift": 2
@@ -5323,6 +5913,8 @@
     "roachScore": 293,
     "startable": false,
     "cbsRank": null,
+    "proj": 19.41,
+    "vor": -65.14,
     "roachRank": 296,
     "valueGap": -13,
     "shift": 3
@@ -5341,6 +5933,8 @@
     "roachScore": 294,
     "startable": false,
     "cbsRank": 32,
+    "proj": 60.95,
+    "vor": -234.29,
     "roachRank": 297,
     "valueGap": -50,
     "shift": -3
@@ -5359,6 +5953,8 @@
     "roachScore": 295,
     "startable": false,
     "cbsRank": null,
+    "proj": 129.51,
+    "vor": 44.96,
     "roachRank": 298,
     "valueGap": 18,
     "shift": 3
@@ -5377,6 +5973,8 @@
     "roachScore": 296,
     "startable": false,
     "cbsRank": null,
+    "proj": 29.08,
+    "vor": -105.9,
     "roachRank": 299,
     "valueGap": -42,
     "shift": -8
@@ -5395,6 +5993,8 @@
     "roachScore": 296,
     "startable": false,
     "cbsRank": null,
+    "proj": 53.88,
+    "vor": -74.84,
     "roachRank": 300,
     "valueGap": 328,
     "shift": 0
@@ -5413,6 +6013,8 @@
     "roachScore": 298,
     "startable": false,
     "cbsRank": null,
+    "proj": 58.2,
+    "vor": -70.52,
     "roachRank": 301,
     "valueGap": 277,
     "shift": 1
@@ -5431,6 +6033,8 @@
     "roachScore": 299,
     "startable": false,
     "cbsRank": null,
+    "proj": 160.68,
+    "vor": 76.13,
     "roachRank": 302,
     "valueGap": 35,
     "shift": 3
@@ -5449,6 +6053,8 @@
     "roachScore": 300,
     "startable": false,
     "cbsRank": null,
+    "proj": 28.55,
+    "vor": -100.17,
     "roachRank": 303,
     "valueGap": 35,
     "shift": 1
@@ -5467,6 +6073,8 @@
     "roachScore": 302,
     "startable": false,
     "cbsRank": null,
+    "proj": 112.86,
+    "vor": -15.86,
     "roachRank": 304,
     "valueGap": -41,
     "shift": 2
@@ -5485,6 +6093,8 @@
     "roachScore": 302,
     "startable": false,
     "cbsRank": null,
+    "proj": 21.87,
+    "vor": -62.68,
     "roachRank": 305,
     "valueGap": 315,
     "shift": 3
@@ -5503,6 +6113,8 @@
     "roachScore": 303,
     "startable": false,
     "cbsRank": null,
+    "proj": 116.03,
+    "vor": -18.95,
     "roachRank": 306,
     "valueGap": 53,
     "shift": -8
@@ -5521,6 +6133,8 @@
     "roachScore": 303,
     "startable": false,
     "cbsRank": null,
+    "proj": null,
+    "vor": null,
     "roachRank": 307,
     "valueGap": -38,
     "shift": -4
@@ -5539,6 +6153,8 @@
     "roachScore": 304,
     "startable": false,
     "cbsRank": null,
+    "proj": 0,
+    "vor": -84.55,
     "roachRank": 308,
     "valueGap": 80,
     "shift": 2
@@ -5557,6 +6173,8 @@
     "roachScore": 306,
     "startable": false,
     "cbsRank": null,
+    "proj": 32.88,
+    "vor": -51.67,
     "roachRank": 309,
     "valueGap": 222,
     "shift": 3
@@ -5575,6 +6193,8 @@
     "roachScore": 307,
     "startable": false,
     "cbsRank": null,
+    "proj": 109,
+    "vor": 24.45,
     "roachRank": 310,
     "valueGap": 282,
     "shift": 3
@@ -5593,6 +6213,8 @@
     "roachScore": 310,
     "startable": false,
     "cbsRank": null,
+    "proj": 71.71,
+    "vor": -57.01,
     "roachRank": 311,
     "valueGap": 101,
     "shift": 3
@@ -5611,6 +6233,8 @@
     "roachScore": 310,
     "startable": false,
     "cbsRank": null,
+    "proj": 20.78,
+    "vor": -63.77,
     "roachRank": 312,
     "valueGap": 298,
     "shift": 4
@@ -5629,6 +6253,8 @@
     "roachScore": 311,
     "startable": false,
     "cbsRank": null,
+    "proj": null,
+    "vor": null,
     "roachRank": 313,
     "valueGap": -103,
     "shift": -2
@@ -5647,6 +6273,8 @@
     "roachScore": 311,
     "startable": false,
     "cbsRank": null,
+    "proj": 142.67,
+    "vor": 13.95,
     "roachRank": 314,
     "valueGap": 280,
     "shift": 1
@@ -5665,6 +6293,8 @@
     "roachScore": 311,
     "startable": false,
     "cbsRank": null,
+    "proj": 0,
+    "vor": -84.55,
     "roachRank": 315,
     "valueGap": 12,
     "shift": 2
@@ -5683,6 +6313,8 @@
     "roachScore": 312,
     "startable": false,
     "cbsRank": 22,
+    "proj": 131.8,
+    "vor": -3.18,
     "roachRank": 316,
     "valueGap": 87,
     "shift": -9
@@ -5701,6 +6333,8 @@
     "roachScore": 313,
     "startable": false,
     "cbsRank": null,
+    "proj": 19.62,
+    "vor": -64.93,
     "roachRank": 317,
     "valueGap": 153,
     "shift": 2
@@ -5719,6 +6353,8 @@
     "roachScore": 314,
     "startable": false,
     "cbsRank": null,
+    "proj": 0,
+    "vor": -134.98,
     "roachRank": 318,
     "valueGap": -20,
     "shift": -9
@@ -5737,6 +6373,8 @@
     "roachScore": 316,
     "startable": false,
     "cbsRank": null,
+    "proj": 264.06,
+    "vor": 135.34,
     "roachRank": 319,
     "valueGap": -80,
     "shift": 1
@@ -5755,6 +6393,8 @@
     "roachScore": 318,
     "startable": false,
     "cbsRank": 16,
+    "proj": 0,
+    "vor": -94.23,
     "roachRank": 320,
     "valueGap": 70,
     "shift": -2
@@ -5773,6 +6413,8 @@
     "roachScore": 318,
     "startable": false,
     "cbsRank": null,
+    "proj": 32.85,
+    "vor": -95.87,
     "roachRank": 321,
     "valueGap": 199,
     "shift": 1
@@ -5791,6 +6433,8 @@
     "roachScore": 319,
     "startable": false,
     "cbsRank": null,
+    "proj": 56.55,
+    "vor": -28,
     "roachRank": 322,
     "valueGap": 185,
     "shift": 3
@@ -5809,6 +6453,8 @@
     "roachScore": 324,
     "startable": false,
     "cbsRank": null,
+    "proj": 39.7,
+    "vor": -89.02,
     "roachRank": 323,
     "valueGap": 55,
     "shift": 5
@@ -5827,6 +6473,8 @@
     "roachScore": 325,
     "startable": false,
     "cbsRank": null,
+    "proj": 71.2,
+    "vor": -57.52,
     "roachRank": 324,
     "valueGap": 174,
     "shift": 5
@@ -5845,6 +6493,8 @@
     "roachScore": 326,
     "startable": false,
     "cbsRank": null,
+    "proj": 13.53,
+    "vor": -121.45,
     "roachRank": 325,
     "valueGap": -36,
     "shift": -4
@@ -5863,6 +6513,8 @@
     "roachScore": 326,
     "startable": false,
     "cbsRank": null,
+    "proj": 45.57,
+    "vor": -83.15,
     "roachRank": 326,
     "valueGap": 307,
     "shift": 4
@@ -5881,6 +6533,8 @@
     "roachScore": 328,
     "startable": false,
     "cbsRank": 32,
+    "proj": 73.24,
+    "vor": -61.74,
     "roachRank": 327,
     "valueGap": 139,
     "shift": -4
@@ -5899,6 +6553,8 @@
     "roachScore": 329,
     "startable": false,
     "cbsRank": null,
+    "proj": 18.08,
+    "vor": -116.9,
     "roachRank": 328,
     "valueGap": 233,
     "shift": -4
@@ -5917,6 +6573,8 @@
     "roachScore": 331,
     "startable": false,
     "cbsRank": null,
+    "proj": 115.15,
+    "vor": -19.83,
     "roachRank": 329,
     "valueGap": 12,
     "shift": -3
@@ -5935,6 +6593,8 @@
     "roachScore": 331,
     "startable": false,
     "cbsRank": null,
+    "proj": null,
+    "vor": null,
     "roachRank": 330,
     "valueGap": -140,
     "shift": 1
@@ -5953,6 +6613,8 @@
     "roachScore": 332,
     "startable": false,
     "cbsRank": null,
+    "proj": 14.2,
+    "vor": -120.78,
     "roachRank": 331,
     "valueGap": 67,
     "shift": -4
@@ -5971,6 +6633,8 @@
     "roachScore": 332,
     "startable": false,
     "cbsRank": null,
+    "proj": 31.48,
+    "vor": -263.76,
     "roachRank": 332,
     "valueGap": 25,
     "shift": 0
@@ -5989,6 +6653,8 @@
     "roachScore": 333,
     "startable": false,
     "cbsRank": null,
+    "proj": 4.83,
+    "vor": -123.89,
     "roachRank": 333,
     "valueGap": 20,
     "shift": 4
@@ -6007,6 +6673,8 @@
     "roachScore": 334,
     "startable": false,
     "cbsRank": null,
+    "proj": 2.25,
+    "vor": -126.47,
     "roachRank": 334,
     "valueGap": 193,
     "shift": 4
@@ -6025,6 +6693,8 @@
     "roachScore": 336,
     "startable": false,
     "cbsRank": null,
+    "proj": 36.93,
+    "vor": -91.79,
     "roachRank": 335,
     "valueGap": 276,
     "shift": 5
@@ -6043,6 +6713,8 @@
     "roachScore": 336,
     "startable": false,
     "cbsRank": null,
+    "proj": 118.15,
+    "vor": 33.6,
     "roachRank": 336,
     "valueGap": -74,
     "shift": 6
@@ -6061,6 +6733,8 @@
     "roachScore": 337,
     "startable": false,
     "cbsRank": null,
+    "proj": 24.46,
+    "vor": -104.26,
     "roachRank": 337,
     "valueGap": 111,
     "shift": 4
@@ -6079,6 +6753,8 @@
     "roachScore": 337,
     "startable": false,
     "cbsRank": null,
+    "proj": 6.67,
+    "vor": -77.88,
     "roachRank": 338,
     "valueGap": null,
     "shift": 5
@@ -6097,6 +6773,8 @@
     "roachScore": 338,
     "startable": false,
     "cbsRank": null,
+    "proj": 44.31,
+    "vor": -90.67,
     "roachRank": 339,
     "valueGap": -48,
     "shift": -6
@@ -6115,6 +6793,8 @@
     "roachScore": 338,
     "startable": false,
     "cbsRank": null,
+    "proj": 99.92,
+    "vor": 15.37,
     "roachRank": 340,
     "valueGap": 122,
     "shift": 4
@@ -6133,6 +6813,8 @@
     "roachScore": 339,
     "startable": false,
     "cbsRank": null,
+    "proj": 0,
+    "vor": -134.98,
     "roachRank": 341,
     "valueGap": null,
     "shift": -7
@@ -6151,6 +6833,8 @@
     "roachScore": 339,
     "startable": false,
     "cbsRank": null,
+    "proj": 304.26,
+    "vor": 9.02,
     "roachRank": 342,
     "valueGap": -93,
     "shift": -3
@@ -6169,6 +6853,8 @@
     "roachScore": 340,
     "startable": false,
     "cbsRank": null,
+    "proj": 37.2,
+    "vor": -97.78,
     "roachRank": 343,
     "valueGap": -1,
     "shift": -8
@@ -6187,6 +6873,8 @@
     "roachScore": 341,
     "startable": false,
     "cbsRank": null,
+    "proj": 124.23,
+    "vor": -10.75,
     "roachRank": 344,
     "valueGap": -10,
     "shift": -8
@@ -6205,6 +6893,8 @@
     "roachScore": 341,
     "startable": false,
     "cbsRank": null,
+    "proj": 27.41,
+    "vor": -101.31,
     "roachRank": 345,
     "valueGap": -27,
     "shift": 0
@@ -6223,6 +6913,8 @@
     "roachScore": 342,
     "startable": false,
     "cbsRank": null,
+    "proj": 166.88,
+    "vor": 38.16,
     "roachRank": 346,
     "valueGap": null,
     "shift": 0
@@ -6241,6 +6933,8 @@
     "roachScore": 343,
     "startable": false,
     "cbsRank": null,
+    "proj": 0,
+    "vor": -128.72,
     "roachRank": 347,
     "valueGap": 284,
     "shift": 0
@@ -6259,6 +6953,8 @@
     "roachScore": 346,
     "startable": false,
     "cbsRank": null,
+    "proj": 0,
+    "vor": -128.72,
     "roachRank": 348,
     "valueGap": 295,
     "shift": 2
@@ -6277,6 +6973,8 @@
     "roachScore": 347,
     "startable": false,
     "cbsRank": null,
+    "proj": 27.69,
+    "vor": -101.03,
     "roachRank": 349,
     "valueGap": 246,
     "shift": 2
@@ -6295,6 +6993,8 @@
     "roachScore": 349,
     "startable": false,
     "cbsRank": null,
+    "proj": 111.62,
+    "vor": -17.1,
     "roachRank": 350,
     "valueGap": -11,
     "shift": 3
@@ -6313,6 +7013,8 @@
     "roachScore": 351,
     "startable": false,
     "cbsRank": null,
+    "proj": 0,
+    "vor": -128.72,
     "roachRank": 351,
     "valueGap": 286,
     "shift": 4
@@ -6331,6 +7033,8 @@
     "roachScore": 353,
     "startable": false,
     "cbsRank": null,
+    "proj": 46.96,
+    "vor": -88.02,
     "roachRank": 352,
     "valueGap": -39,
     "shift": -4
@@ -6349,6 +7053,8 @@
     "roachScore": 353,
     "startable": false,
     "cbsRank": null,
+    "proj": null,
+    "vor": null,
     "roachRank": 353,
     "valueGap": null,
     "shift": 6
@@ -6367,6 +7073,8 @@
     "roachScore": 354,
     "startable": false,
     "cbsRank": null,
+    "proj": 10,
+    "vor": -124.98,
     "roachRank": 354,
     "valueGap": -2,
     "shift": -5
@@ -6385,6 +7093,8 @@
     "roachScore": 354,
     "startable": false,
     "cbsRank": null,
+    "proj": 2.33,
+    "vor": -292.91,
     "roachRank": 355,
     "valueGap": -9,
     "shift": -1
@@ -6403,6 +7113,8 @@
     "roachScore": 356,
     "startable": false,
     "cbsRank": 20,
+    "proj": 101.48,
+    "vor": 7.25,
     "roachRank": 356,
     "valueGap": -115,
     "shift": 0
@@ -6421,6 +7133,8 @@
     "roachScore": 357,
     "startable": false,
     "cbsRank": null,
+    "proj": 71.21,
+    "vor": -63.77,
     "roachRank": 357,
     "valueGap": 4,
     "shift": -5
@@ -6439,6 +7153,8 @@
     "roachScore": 358,
     "startable": false,
     "cbsRank": 19,
+    "proj": 79.24,
+    "vor": -14.99,
     "roachRank": 358,
     "valueGap": -135,
     "shift": 0
@@ -6457,6 +7173,8 @@
     "roachScore": 359,
     "startable": false,
     "cbsRank": null,
+    "proj": 48.62,
+    "vor": -80.1,
     "roachRank": 359,
     "valueGap": 152,
     "shift": 4
@@ -6475,6 +7193,8 @@
     "roachScore": 359,
     "startable": false,
     "cbsRank": null,
+    "proj": 0,
+    "vor": -84.55,
     "roachRank": 360,
     "valueGap": 264,
     "shift": 5
@@ -6493,6 +7213,8 @@
     "roachScore": 360,
     "startable": false,
     "cbsRank": null,
+    "proj": null,
+    "vor": null,
     "roachRank": 361,
     "valueGap": -143,
     "shift": -1
@@ -6511,6 +7233,8 @@
     "roachScore": 361,
     "startable": false,
     "cbsRank": 21,
+    "proj": 100.7,
+    "vor": 6.47,
     "roachRank": 362,
     "valueGap": -151,
     "shift": -1
@@ -6529,6 +7253,8 @@
     "roachScore": 362,
     "startable": false,
     "cbsRank": null,
+    "proj": 102.71,
+    "vor": -32.27,
     "roachRank": 363,
     "valueGap": -19,
     "shift": -6
@@ -6547,6 +7273,8 @@
     "roachScore": 362,
     "startable": false,
     "cbsRank": null,
+    "proj": null,
+    "vor": null,
     "roachRank": 364,
     "valueGap": -114,
     "shift": -2
@@ -6565,6 +7293,8 @@
     "roachScore": 362,
     "startable": false,
     "cbsRank": null,
+    "proj": 69.84,
+    "vor": -58.88,
     "roachRank": 365,
     "valueGap": 115,
     "shift": 1
@@ -6583,6 +7313,8 @@
     "roachScore": 363,
     "startable": false,
     "cbsRank": null,
+    "proj": 0,
+    "vor": -84.55,
     "roachRank": 366,
     "valueGap": 150,
     "shift": 3
@@ -6601,6 +7333,8 @@
     "roachScore": 364,
     "startable": false,
     "cbsRank": null,
+    "proj": 321.11,
+    "vor": 25.87,
     "roachRank": 367,
     "valueGap": -38,
     "shift": -3
@@ -6619,6 +7353,8 @@
     "roachScore": 367,
     "startable": false,
     "cbsRank": null,
+    "proj": 20.63,
+    "vor": -108.09,
     "roachRank": 368,
     "valueGap": 248,
     "shift": 3
@@ -6637,6 +7373,8 @@
     "roachScore": 368,
     "startable": false,
     "cbsRank": null,
+    "proj": 10.87,
+    "vor": -284.37,
     "roachRank": 369,
     "valueGap": -111,
     "shift": -1
@@ -6655,6 +7393,8 @@
     "roachScore": 368,
     "startable": false,
     "cbsRank": null,
+    "proj": 24.75,
+    "vor": -103.97,
     "roachRank": 370,
     "valueGap": 95,
     "shift": 2
@@ -6673,6 +7413,8 @@
     "roachScore": 370,
     "startable": false,
     "cbsRank": null,
+    "proj": null,
+    "vor": null,
     "roachRank": 371,
     "valueGap": -119,
     "shift": -1
@@ -6691,6 +7433,8 @@
     "roachScore": 370,
     "startable": false,
     "cbsRank": null,
+    "proj": 99.98,
+    "vor": -28.74,
     "roachRank": 372,
     "valueGap": -18,
     "shift": 2
@@ -6709,6 +7453,8 @@
     "roachScore": 370,
     "startable": false,
     "cbsRank": null,
+    "proj": 0,
+    "vor": -84.55,
     "roachRank": 373,
     "valueGap": 226,
     "shift": 3
@@ -6727,6 +7473,8 @@
     "roachScore": 371,
     "startable": false,
     "cbsRank": null,
+    "proj": 31.34,
+    "vor": -97.38,
     "roachRank": 374,
     "valueGap": 213,
     "shift": 1
@@ -6745,6 +7493,8 @@
     "roachScore": 372,
     "startable": false,
     "cbsRank": null,
+    "proj": 9.59,
+    "vor": -125.39,
     "roachRank": 375,
     "valueGap": 69,
     "shift": -8
@@ -6763,6 +7513,8 @@
     "roachScore": 373,
     "startable": false,
     "cbsRank": null,
+    "proj": null,
+    "vor": null,
     "roachRank": 376,
     "valueGap": -95,
     "shift": -3
@@ -6781,6 +7533,8 @@
     "roachScore": 375,
     "startable": false,
     "cbsRank": null,
+    "proj": 70.5,
+    "vor": -58.22,
     "roachRank": 377,
     "valueGap": 110,
     "shift": 2
@@ -6799,6 +7553,8 @@
     "roachScore": 376,
     "startable": false,
     "cbsRank": null,
+    "proj": 39.75,
+    "vor": -88.97,
     "roachRank": 378,
     "valueGap": -57,
     "shift": 2
@@ -6817,6 +7573,8 @@
     "roachScore": 377,
     "startable": false,
     "cbsRank": null,
+    "proj": 0,
+    "vor": -94.23,
     "roachRank": 379,
     "valueGap": 56,
     "shift": -2
@@ -6835,6 +7593,8 @@
     "roachScore": 377,
     "startable": false,
     "cbsRank": null,
+    "proj": 35.14,
+    "vor": -93.58,
     "roachRank": 380,
     "valueGap": -5,
     "shift": 1
@@ -6853,6 +7613,8 @@
     "roachScore": 377,
     "startable": false,
     "cbsRank": null,
+    "proj": 27.13,
+    "vor": -57.42,
     "roachRank": 381,
     "valueGap": 6,
     "shift": 2
@@ -6871,6 +7633,8 @@
     "roachScore": 378,
     "startable": false,
     "cbsRank": null,
+    "proj": null,
+    "vor": null,
     "roachRank": 382,
     "valueGap": -115,
     "shift": -4
@@ -6889,6 +7653,8 @@
     "roachScore": 381,
     "startable": false,
     "cbsRank": null,
+    "proj": null,
+    "vor": null,
     "roachRank": 383,
     "valueGap": null,
     "shift": 4
@@ -6907,6 +7673,8 @@
     "roachScore": 382,
     "startable": false,
     "cbsRank": null,
+    "proj": 114.83,
+    "vor": -13.89,
     "roachRank": 384,
     "valueGap": 237,
     "shift": 2
@@ -6925,6 +7693,8 @@
     "roachScore": 384,
     "startable": false,
     "cbsRank": null,
+    "proj": 76.15,
+    "vor": -219.09,
     "roachRank": 385,
     "valueGap": 4,
     "shift": -1
@@ -6943,6 +7713,8 @@
     "roachScore": 384,
     "startable": false,
     "cbsRank": null,
+    "proj": 0.42,
+    "vor": -128.3,
     "roachRank": 386,
     "valueGap": 220,
     "shift": 2
@@ -6961,6 +7733,8 @@
     "roachScore": 385,
     "startable": false,
     "cbsRank": null,
+    "proj": 114.44,
+    "vor": -180.8,
     "roachRank": 387,
     "valueGap": -76,
     "shift": -2
@@ -6979,6 +7753,8 @@
     "roachScore": 385,
     "startable": false,
     "cbsRank": null,
+    "proj": 0,
+    "vor": -84.55,
     "roachRank": 388,
     "valueGap": null,
     "shift": 3
@@ -6997,6 +7773,8 @@
     "roachScore": 386,
     "startable": false,
     "cbsRank": null,
+    "proj": 9.67,
+    "vor": -119.05,
     "roachRank": 389,
     "valueGap": -23,
     "shift": 1
@@ -7015,6 +7793,8 @@
     "roachScore": 387,
     "startable": false,
     "cbsRank": null,
+    "proj": 85.65,
+    "vor": -49.33,
     "roachRank": 390,
     "valueGap": 40,
     "shift": -8
@@ -7033,6 +7813,8 @@
     "roachScore": 388,
     "startable": false,
     "cbsRank": null,
+    "proj": 25.19,
+    "vor": -103.53,
     "roachRank": 391,
     "valueGap": 171,
     "shift": 1
@@ -7051,6 +7833,8 @@
     "roachScore": 389,
     "startable": false,
     "cbsRank": 31,
+    "proj": 91.86,
+    "vor": -2.37,
     "roachRank": 392,
     "valueGap": -126,
     "shift": -3
@@ -7069,6 +7853,8 @@
     "roachScore": 389,
     "startable": false,
     "cbsRank": null,
+    "proj": 109.67,
+    "vor": -19.05,
     "roachRank": 393,
     "valueGap": 236,
     "shift": 0
@@ -7087,6 +7873,8 @@
     "roachScore": 390,
     "startable": false,
     "cbsRank": null,
+    "proj": 19.71,
+    "vor": -109.01,
     "roachRank": 394,
     "valueGap": 204,
     "shift": 0
@@ -7105,6 +7893,8 @@
     "roachScore": 390,
     "startable": false,
     "cbsRank": null,
+    "proj": 80.68,
+    "vor": -3.87,
     "roachRank": 395,
     "valueGap": 262,
     "shift": 1
@@ -7123,6 +7913,8 @@
     "roachScore": 395,
     "startable": false,
     "cbsRank": null,
+    "proj": 0,
+    "vor": -295.24,
     "roachRank": 396,
     "valueGap": -88,
     "shift": -1
@@ -7141,6 +7933,8 @@
     "roachScore": 395,
     "startable": false,
     "cbsRank": null,
+    "proj": 3.98,
+    "vor": -124.74,
     "roachRank": 397,
     "valueGap": 78,
     "shift": 2
@@ -7159,6 +7953,8 @@
     "roachScore": 396,
     "startable": false,
     "cbsRank": null,
+    "proj": 5.3,
+    "vor": -123.42,
     "roachRank": 398,
     "valueGap": -84,
     "shift": 2
@@ -7177,6 +7973,8 @@
     "roachScore": 398,
     "startable": false,
     "cbsRank": null,
+    "proj": null,
+    "vor": null,
     "roachRank": 399,
     "valueGap": -125,
     "shift": -1
@@ -7195,6 +7993,8 @@
     "roachScore": 401,
     "startable": false,
     "cbsRank": 22,
+    "proj": 85.51,
+    "vor": -8.72,
     "roachRank": 400,
     "valueGap": -95,
     "shift": 1
@@ -7213,6 +8013,8 @@
     "roachScore": 401,
     "startable": false,
     "cbsRank": null,
+    "proj": null,
+    "vor": null,
     "roachRank": 401,
     "valueGap": 128,
     "shift": 6
@@ -7231,6 +8033,8 @@
     "roachScore": 402,
     "startable": false,
     "cbsRank": null,
+    "proj": 34.36,
+    "vor": -100.62,
     "roachRank": 402,
     "valueGap": -5,
     "shift": -5
@@ -7249,6 +8053,8 @@
     "roachScore": 402,
     "startable": false,
     "cbsRank": null,
+    "proj": 2.94,
+    "vor": -292.3,
     "roachRank": 403,
     "valueGap": 90,
     "shift": -1
@@ -7267,6 +8073,8 @@
     "roachScore": 404,
     "startable": false,
     "cbsRank": null,
+    "proj": null,
+    "vor": null,
     "roachRank": 404,
     "valueGap": -143,
     "shift": 0
@@ -7285,6 +8093,8 @@
     "roachScore": 405,
     "startable": false,
     "cbsRank": 25,
+    "proj": 88.24,
+    "vor": -5.99,
     "roachRank": 405,
     "valueGap": -80,
     "shift": 0
@@ -7303,6 +8113,8 @@
     "roachScore": 406,
     "startable": false,
     "cbsRank": 30,
+    "proj": 89.05,
+    "vor": -5.18,
     "roachRank": 406,
     "valueGap": null,
     "shift": 0
@@ -7321,6 +8133,8 @@
     "roachScore": 406,
     "startable": false,
     "cbsRank": null,
+    "proj": 57.55,
+    "vor": -71.17,
     "roachRank": 407,
     "valueGap": -49,
     "shift": 3
@@ -7339,6 +8153,8 @@
     "roachScore": 407,
     "startable": false,
     "cbsRank": null,
+    "proj": 11.94,
+    "vor": -116.78,
     "roachRank": 408,
     "valueGap": -60,
     "shift": 3
@@ -7357,6 +8173,8 @@
     "roachScore": 407,
     "startable": false,
     "cbsRank": null,
+    "proj": 6.67,
+    "vor": -77.88,
     "roachRank": 409,
     "valueGap": null,
     "shift": 4
@@ -7375,6 +8193,8 @@
     "roachScore": 408,
     "startable": false,
     "cbsRank": null,
+    "proj": 51.6,
+    "vor": -83.38,
     "roachRank": 410,
     "valueGap": -43,
     "shift": -7
@@ -7393,6 +8213,8 @@
     "roachScore": 408,
     "startable": false,
     "cbsRank": 23,
+    "proj": 86.6,
+    "vor": -7.63,
     "roachRank": 411,
     "valueGap": -89,
     "shift": -3
@@ -7411,6 +8233,8 @@
     "roachScore": 408,
     "startable": false,
     "cbsRank": null,
+    "proj": 0,
+    "vor": -84.55,
     "roachRank": 412,
     "valueGap": 249,
     "shift": 2
@@ -7429,6 +8253,8 @@
     "roachScore": 409,
     "startable": false,
     "cbsRank": 26,
+    "proj": 90.47,
+    "vor": -3.76,
     "roachRank": 413,
     "valueGap": -104,
     "shift": -4
@@ -7447,6 +8273,8 @@
     "roachScore": 412,
     "startable": false,
     "cbsRank": null,
+    "proj": 96.34,
+    "vor": 2.11,
     "roachRank": 414,
     "valueGap": -32,
     "shift": -2
@@ -7465,6 +8293,8 @@
     "roachScore": 415,
     "startable": false,
     "cbsRank": null,
+    "proj": 0,
+    "vor": -94.23,
     "roachRank": 415,
     "valueGap": -114,
     "shift": 0
@@ -7483,6 +8313,8 @@
     "roachScore": 416,
     "startable": false,
     "cbsRank": null,
+    "proj": 9.13,
+    "vor": -286.11,
     "roachRank": 416,
     "valueGap": -66,
     "shift": 0
@@ -7501,6 +8333,8 @@
     "roachScore": 418,
     "startable": false,
     "cbsRank": null,
+    "proj": 2.8,
+    "vor": -292.44,
     "roachRank": 417,
     "valueGap": -36,
     "shift": 1
@@ -7519,6 +8353,8 @@
     "roachScore": 418,
     "startable": false,
     "cbsRank": null,
+    "proj": 0,
+    "vor": -128.72,
     "roachRank": 418,
     "valueGap": 173,
     "shift": 4
@@ -7537,6 +8373,8 @@
     "roachScore": 421,
     "startable": false,
     "cbsRank": null,
+    "proj": 8.73,
+    "vor": -75.82,
     "roachRank": 419,
     "valueGap": null,
     "shift": 8
@@ -7555,6 +8393,8 @@
     "roachScore": 422,
     "startable": false,
     "cbsRank": null,
+    "proj": 45.82,
+    "vor": -89.16,
     "roachRank": 420,
     "valueGap": null,
     "shift": -3
@@ -7573,6 +8413,8 @@
     "roachScore": 422,
     "startable": false,
     "cbsRank": null,
+    "proj": 0,
+    "vor": -128.72,
     "roachRank": 421,
     "valueGap": -78,
     "shift": 5
@@ -7591,6 +8433,8 @@
     "roachScore": 424,
     "startable": false,
     "cbsRank": null,
+    "proj": 18.15,
+    "vor": -116.83,
     "roachRank": 422,
     "valueGap": 166,
     "shift": -3
@@ -7609,6 +8453,8 @@
     "roachScore": 424,
     "startable": false,
     "cbsRank": null,
+    "proj": 107.82,
+    "vor": -20.9,
     "roachRank": 423,
     "valueGap": null,
     "shift": 5
@@ -7627,6 +8473,8 @@
     "roachScore": 425,
     "startable": false,
     "cbsRank": null,
+    "proj": 35.9,
+    "vor": -99.08,
     "roachRank": 424,
     "valueGap": -33,
     "shift": -4
@@ -7645,6 +8493,8 @@
     "roachScore": 425,
     "startable": false,
     "cbsRank": 29,
+    "proj": 91.4,
+    "vor": -2.83,
     "roachRank": 425,
     "valueGap": -92,
     "shift": 0
@@ -7663,6 +8513,8 @@
     "roachScore": 425,
     "startable": false,
     "cbsRank": null,
+    "proj": 58.44,
+    "vor": -70.28,
     "roachRank": 426,
     "valueGap": 47,
     "shift": 3
@@ -7681,6 +8533,8 @@
     "roachScore": 426,
     "startable": false,
     "cbsRank": null,
+    "proj": 60.27,
+    "vor": -74.71,
     "roachRank": 427,
     "valueGap": 143,
     "shift": -6
@@ -7699,6 +8553,8 @@
     "roachScore": 426,
     "startable": false,
     "cbsRank": null,
+    "proj": 50.9,
+    "vor": -33.65,
     "roachRank": 428,
     "valueGap": null,
     "shift": 4
@@ -7717,6 +8573,8 @@
     "roachScore": 427,
     "startable": false,
     "cbsRank": null,
+    "proj": 208.64,
+    "vor": 124.09,
     "roachRank": 429,
     "valueGap": 116,
     "shift": 4
@@ -7735,6 +8593,8 @@
     "roachScore": 428,
     "startable": false,
     "cbsRank": null,
+    "proj": 4.58,
+    "vor": -130.4,
     "roachRank": 430,
     "valueGap": null,
     "shift": -7
@@ -7753,6 +8613,8 @@
     "roachScore": 428,
     "startable": false,
     "cbsRank": null,
+    "proj": 12.28,
+    "vor": -72.27,
     "roachRank": 431,
     "valueGap": 166,
     "shift": 3
@@ -7771,6 +8633,8 @@
     "roachScore": 429,
     "startable": false,
     "cbsRank": null,
+    "proj": 16.75,
+    "vor": -118.23,
     "roachRank": 432,
     "valueGap": 183,
     "shift": -8
@@ -7789,6 +8653,8 @@
     "roachScore": 430,
     "startable": false,
     "cbsRank": null,
+    "proj": 0,
+    "vor": -84.55,
     "roachRank": 433,
     "valueGap": null,
     "shift": 3
@@ -7807,6 +8673,8 @@
     "roachScore": 431,
     "startable": false,
     "cbsRank": null,
+    "proj": null,
+    "vor": null,
     "roachRank": 434,
     "valueGap": -154,
     "shift": -3
@@ -7825,6 +8693,8 @@
     "roachScore": 433,
     "startable": false,
     "cbsRank": null,
+    "proj": null,
+    "vor": null,
     "roachRank": 435,
     "valueGap": null,
     "shift": 2
@@ -7843,6 +8713,8 @@
     "roachScore": 435,
     "startable": false,
     "cbsRank": null,
+    "proj": null,
+    "vor": null,
     "roachRank": 436,
     "valueGap": null,
     "shift": -6
@@ -7861,6 +8733,8 @@
     "roachScore": 435,
     "startable": false,
     "cbsRank": null,
+    "proj": null,
+    "vor": null,
     "roachRank": 437,
     "valueGap": -16,
     "shift": -2
@@ -7879,6 +8753,8 @@
     "roachScore": 435,
     "startable": false,
     "cbsRank": null,
+    "proj": 53.57,
+    "vor": -75.15,
     "roachRank": 438,
     "valueGap": 87,
     "shift": 1
@@ -7897,6 +8773,8 @@
     "roachScore": 438,
     "startable": false,
     "cbsRank": null,
+    "proj": 92.58,
+    "vor": -1.65,
     "roachRank": 439,
     "valueGap": -139,
     "shift": -1
@@ -7915,6 +8793,8 @@
     "roachScore": 438,
     "startable": false,
     "cbsRank": null,
+    "proj": 10.16,
+    "vor": -118.56,
     "roachRank": 440,
     "valueGap": 60,
     "shift": 2
@@ -7933,6 +8813,8 @@
     "roachScore": 438,
     "startable": false,
     "cbsRank": null,
+    "proj": 0,
+    "vor": -84.55,
     "roachRank": 441,
     "valueGap": null,
     "shift": 3
@@ -7951,6 +8833,8 @@
     "roachScore": 440,
     "startable": false,
     "cbsRank": 24,
+    "proj": 90.26,
+    "vor": -3.97,
     "roachRank": 442,
     "valueGap": -118,
     "shift": -2
@@ -7969,6 +8853,8 @@
     "roachScore": 441,
     "startable": false,
     "cbsRank": 27,
+    "proj": 75.36,
+    "vor": -18.87,
     "roachRank": 443,
     "valueGap": -141,
     "shift": -2
@@ -7987,6 +8873,8 @@
     "roachScore": 441,
     "startable": false,
     "cbsRank": null,
+    "proj": 22.51,
+    "vor": -62.04,
     "roachRank": 444,
     "valueGap": null,
     "shift": 3
@@ -8005,6 +8893,8 @@
     "roachScore": 442,
     "startable": false,
     "cbsRank": null,
+    "proj": 0,
+    "vor": -128.72,
     "roachRank": 445,
     "valueGap": null,
     "shift": 1
@@ -8023,6 +8913,8 @@
     "roachScore": 442,
     "startable": false,
     "cbsRank": null,
+    "proj": null,
+    "vor": null,
     "roachRank": 446,
     "valueGap": null,
     "shift": 2
@@ -8041,6 +8933,8 @@
     "roachScore": 443,
     "startable": false,
     "cbsRank": null,
+    "proj": 0,
+    "vor": -84.55,
     "roachRank": 447,
     "valueGap": 172,
     "shift": 2
@@ -8059,6 +8953,8 @@
     "roachScore": 445,
     "startable": false,
     "cbsRank": null,
+    "proj": 0,
+    "vor": -84.55,
     "roachRank": 448,
     "valueGap": 208,
     "shift": 3
@@ -8077,6 +8973,8 @@
     "roachScore": 446,
     "startable": false,
     "cbsRank": null,
+    "proj": 2.6,
+    "vor": -81.95,
     "roachRank": 449,
     "valueGap": -113,
     "shift": 3
@@ -8095,6 +8993,8 @@
     "roachScore": 447,
     "startable": false,
     "cbsRank": null,
+    "proj": 0,
+    "vor": -84.55,
     "roachRank": 450,
     "valueGap": null,
     "shift": 3
@@ -8113,6 +9013,8 @@
     "roachScore": 448,
     "startable": false,
     "cbsRank": null,
+    "proj": 8.89,
+    "vor": -126.09,
     "roachRank": 451,
     "valueGap": 43,
     "shift": -8
@@ -8131,6 +9033,8 @@
     "roachScore": 450,
     "startable": false,
     "cbsRank": null,
+    "proj": null,
+    "vor": null,
     "roachRank": 452,
     "valueGap": null,
     "shift": -7
@@ -8149,6 +9053,8 @@
     "roachScore": 450,
     "startable": false,
     "cbsRank": null,
+    "proj": null,
+    "vor": null,
     "roachRank": 453,
     "valueGap": null,
     "shift": 3
@@ -8167,6 +9073,8 @@
     "roachScore": 451,
     "startable": false,
     "cbsRank": null,
+    "proj": 8.7,
+    "vor": -120.02,
     "roachRank": 454,
     "valueGap": -25,
     "shift": 1
@@ -8185,6 +9093,8 @@
     "roachScore": 452,
     "startable": false,
     "cbsRank": null,
+    "proj": 21.01,
+    "vor": -63.54,
     "roachRank": 455,
     "valueGap": null,
     "shift": 3
@@ -8203,6 +9113,8 @@
     "roachScore": 453,
     "startable": false,
     "cbsRank": null,
+    "proj": null,
+    "vor": null,
     "roachRank": 456,
     "valueGap": 147,
     "shift": 1
@@ -8221,6 +9133,8 @@
     "roachScore": 453,
     "startable": false,
     "cbsRank": null,
+    "proj": 6.64,
+    "vor": -77.91,
     "roachRank": 457,
     "valueGap": 51,
     "shift": 2
@@ -8239,6 +9153,8 @@
     "roachScore": 454,
     "startable": false,
     "cbsRank": null,
+    "proj": null,
+    "vor": null,
     "roachRank": 458,
     "valueGap": -165,
     "shift": -4
@@ -8257,6 +9173,8 @@
     "roachScore": 455,
     "startable": false,
     "cbsRank": null,
+    "proj": 135.79,
+    "vor": 0.81,
     "roachRank": 459,
     "valueGap": 13,
     "shift": -9
@@ -8275,6 +9193,8 @@
     "roachScore": 456,
     "startable": false,
     "cbsRank": null,
+    "proj": 22.46,
+    "vor": -106.26,
     "roachRank": 460,
     "valueGap": null,
     "shift": 0
@@ -8293,6 +9213,8 @@
     "roachScore": 457,
     "startable": false,
     "cbsRank": null,
+    "proj": null,
+    "vor": null,
     "roachRank": 461,
     "valueGap": null,
     "shift": 2
@@ -8311,6 +9233,8 @@
     "roachScore": 458,
     "startable": false,
     "cbsRank": null,
+    "proj": null,
+    "vor": null,
     "roachRank": 462,
     "valueGap": 186,
     "shift": 2
@@ -8329,6 +9253,8 @@
     "roachScore": 461,
     "startable": false,
     "cbsRank": null,
+    "proj": 88.87,
+    "vor": -39.85,
     "roachRank": 463,
     "valueGap": 84,
     "shift": 2
@@ -8347,6 +9273,8 @@
     "roachScore": 462,
     "startable": false,
     "cbsRank": null,
+    "proj": 0,
+    "vor": -295.24,
     "roachRank": 464,
     "valueGap": 58,
     "shift": -2
@@ -8365,6 +9293,8 @@
     "roachScore": 462,
     "startable": false,
     "cbsRank": null,
+    "proj": null,
+    "vor": null,
     "roachRank": 465,
     "valueGap": 99,
     "shift": 3
@@ -8383,6 +9313,8 @@
     "roachScore": 462.95,
     "startable": false,
     "cbsRank": null,
+    "proj": 9.67,
+    "vor": -74.88,
     "roachRank": 466,
     "valueGap": 87,
     "shift": 1
@@ -8401,6 +9333,8 @@
     "roachScore": 466,
     "startable": false,
     "cbsRank": null,
+    "proj": 40.1,
+    "vor": -94.88,
     "roachRank": 467,
     "valueGap": -66,
     "shift": -6
@@ -8419,6 +9353,8 @@
     "roachScore": 466,
     "startable": false,
     "cbsRank": null,
+    "proj": 100.2,
+    "vor": -28.52,
     "roachRank": 468,
     "valueGap": null,
     "shift": 2
@@ -8437,6 +9373,8 @@
     "roachScore": 469,
     "startable": false,
     "cbsRank": null,
+    "proj": 2.02,
+    "vor": -126.7,
     "roachRank": 469,
     "valueGap": -41,
     "shift": 4
@@ -8455,6 +9393,8 @@
     "roachScore": 471,
     "startable": false,
     "cbsRank": null,
+    "proj": 32.35,
+    "vor": -102.63,
     "roachRank": 470,
     "valueGap": -115,
     "shift": -4
@@ -8473,6 +9413,8 @@
     "roachScore": 471,
     "startable": false,
     "cbsRank": null,
+    "proj": 0,
+    "vor": -84.55,
     "roachRank": 471,
     "valueGap": 130,
     "shift": 0
@@ -8491,6 +9433,8 @@
     "roachScore": 471,
     "startable": false,
     "cbsRank": null,
+    "proj": null,
+    "vor": null,
     "roachRank": 472,
     "valueGap": null,
     "shift": 5
@@ -8509,6 +9453,8 @@
     "roachScore": 472,
     "startable": false,
     "cbsRank": null,
+    "proj": null,
+    "vor": null,
     "roachRank": 473,
     "valueGap": null,
     "shift": -1
@@ -8527,6 +9473,8 @@
     "roachScore": 472,
     "startable": false,
     "cbsRank": null,
+    "proj": null,
+    "vor": null,
     "roachRank": 474,
     "valueGap": null,
     "shift": 2
@@ -8545,6 +9493,8 @@
     "roachScore": 473,
     "startable": false,
     "cbsRank": null,
+    "proj": null,
+    "vor": null,
     "roachRank": 475,
     "valueGap": null,
     "shift": 4
@@ -8563,6 +9513,8 @@
     "roachScore": 474,
     "startable": false,
     "cbsRank": null,
+    "proj": 141.82,
+    "vor": 6.84,
     "roachRank": 476,
     "valueGap": 76,
     "shift": -7
@@ -8581,6 +9533,8 @@
     "roachScore": 475,
     "startable": false,
     "cbsRank": null,
+    "proj": 2.89,
+    "vor": -292.35,
     "roachRank": 477,
     "valueGap": 27,
     "shift": -2
@@ -8599,6 +9553,8 @@
     "roachScore": 477,
     "startable": false,
     "cbsRank": null,
+    "proj": 0,
+    "vor": -128.72,
     "roachRank": 478,
     "valueGap": -53,
     "shift": 3
@@ -8617,6 +9573,8 @@
     "roachScore": 478,
     "startable": false,
     "cbsRank": null,
+    "proj": 0,
+    "vor": -295.24,
     "roachRank": 479,
     "valueGap": -139,
     "shift": -1
@@ -8635,6 +9593,8 @@
     "roachScore": 478,
     "startable": false,
     "cbsRank": null,
+    "proj": null,
+    "vor": null,
     "roachRank": 480,
     "valueGap": 159,
     "shift": 2
@@ -8653,6 +9613,8 @@
     "roachScore": 478.05,
     "startable": false,
     "cbsRank": null,
+    "proj": null,
+    "vor": null,
     "roachRank": 481,
     "valueGap": null,
     "shift": 2
@@ -8671,6 +9633,8 @@
     "roachScore": 479,
     "startable": false,
     "cbsRank": null,
+    "proj": null,
+    "vor": null,
     "roachRank": 482,
     "valueGap": 52,
     "shift": -8
@@ -8689,6 +9653,8 @@
     "roachScore": 481,
     "startable": false,
     "cbsRank": null,
+    "proj": 8.26,
+    "vor": -120.46,
     "roachRank": 483,
     "valueGap": 36,
     "shift": 2
@@ -8707,6 +9673,8 @@
     "roachScore": 483,
     "startable": false,
     "cbsRank": null,
+    "proj": null,
+    "vor": null,
     "roachRank": 484,
     "valueGap": null,
     "shift": 3
@@ -8725,6 +9693,8 @@
     "roachScore": 483.24,
     "startable": false,
     "cbsRank": null,
+    "proj": 37.86,
+    "vor": -97.12,
     "roachRank": 485,
     "valueGap": -11,
     "shift": -5
@@ -8743,6 +9713,8 @@
     "roachScore": 484,
     "startable": false,
     "cbsRank": null,
+    "proj": 10.22,
+    "vor": -285.02,
     "roachRank": 486,
     "valueGap": -166,
     "shift": -2
@@ -8761,6 +9733,8 @@
     "roachScore": 486,
     "startable": false,
     "cbsRank": null,
+    "proj": 0,
+    "vor": -84.55,
     "roachRank": 487,
     "valueGap": null,
     "shift": -1
@@ -8779,6 +9753,8 @@
     "roachScore": 488,
     "startable": false,
     "cbsRank": null,
+    "proj": null,
+    "vor": null,
     "roachRank": 488,
     "valueGap": null,
     "shift": 4
@@ -8797,6 +9773,8 @@
     "roachScore": 489,
     "startable": false,
     "cbsRank": null,
+    "proj": 2.34,
+    "vor": -292.9,
     "roachRank": 489,
     "valueGap": -159,
     "shift": 0
@@ -8815,6 +9793,8 @@
     "roachScore": 489,
     "startable": false,
     "cbsRank": null,
+    "proj": null,
+    "vor": null,
     "roachRank": 490,
     "valueGap": null,
     "shift": 3
@@ -8833,6 +9813,8 @@
     "roachScore": 489,
     "startable": false,
     "cbsRank": null,
+    "proj": 0,
+    "vor": -84.55,
     "roachRank": 491,
     "valueGap": 45,
     "shift": 4
@@ -8851,6 +9833,8 @@
     "roachScore": 490,
     "startable": false,
     "cbsRank": null,
+    "proj": null,
+    "vor": null,
     "roachRank": 492,
     "valueGap": null,
     "shift": 2
@@ -8869,6 +9853,8 @@
     "roachScore": 491,
     "startable": false,
     "cbsRank": null,
+    "proj": 3.16,
+    "vor": -292.08,
     "roachRank": 493,
     "valueGap": -10,
     "shift": -2
@@ -8887,6 +9873,8 @@
     "roachScore": 493,
     "startable": false,
     "cbsRank": null,
+    "proj": 4.4,
+    "vor": -130.58,
     "roachRank": 494,
     "valueGap": -71,
     "shift": -6
@@ -8905,6 +9893,8 @@
     "roachScore": 493,
     "startable": false,
     "cbsRank": null,
+    "proj": 0,
+    "vor": -84.55,
     "roachRank": 495,
     "valueGap": null,
     "shift": 4
@@ -8923,6 +9913,8 @@
     "roachScore": 495,
     "startable": false,
     "cbsRank": null,
+    "proj": null,
+    "vor": null,
     "roachRank": 496,
     "valueGap": null,
     "shift": -6
@@ -8941,6 +9933,8 @@
     "roachScore": 495,
     "startable": false,
     "cbsRank": null,
+    "proj": null,
+    "vor": null,
     "roachRank": 497,
     "valueGap": null,
     "shift": 4
@@ -8959,6 +9953,8 @@
     "roachScore": 496,
     "startable": false,
     "cbsRank": null,
+    "proj": 8.13,
+    "vor": -120.59,
     "roachRank": 498,
     "valueGap": 120,
     "shift": 2
@@ -8977,6 +9973,8 @@
     "roachScore": 496,
     "startable": false,
     "cbsRank": null,
+    "proj": null,
+    "vor": null,
     "roachRank": 499,
     "valueGap": null,
     "shift": 3
@@ -8995,6 +9993,8 @@
     "roachScore": 497,
     "startable": false,
     "cbsRank": null,
+    "proj": 0,
+    "vor": -84.55,
     "roachRank": 500,
     "valueGap": 102,
     "shift": 3
@@ -9013,6 +10013,8 @@
     "roachScore": 498,
     "startable": false,
     "cbsRank": null,
+    "proj": 94.05,
+    "vor": -0.18,
     "roachRank": 501,
     "valueGap": -137,
     "shift": -3
@@ -9031,6 +10033,8 @@
     "roachScore": 501,
     "startable": false,
     "cbsRank": null,
+    "proj": 15.29,
+    "vor": -119.69,
     "roachRank": 502,
     "valueGap": -35,
     "shift": -6
@@ -9049,6 +10053,8 @@
     "roachScore": 502,
     "startable": false,
     "cbsRank": null,
+    "proj": 34.39,
+    "vor": -100.59,
     "roachRank": 503,
     "valueGap": -84,
     "shift": -6
@@ -9067,6 +10073,8 @@
     "roachScore": 505,
     "startable": false,
     "cbsRank": null,
+    "proj": 29.25,
+    "vor": -105.73,
     "roachRank": 504,
     "valueGap": -136,
     "shift": 1
@@ -9085,6 +10093,8 @@
     "roachScore": 506,
     "startable": false,
     "cbsRank": null,
+    "proj": 21.98,
+    "vor": -106.74,
     "roachRank": 505,
     "valueGap": -20,
     "shift": 5
@@ -9103,6 +10113,8 @@
     "roachScore": 507,
     "startable": false,
     "cbsRank": null,
+    "proj": 2.69,
+    "vor": -292.55,
     "roachRank": 506,
     "valueGap": 76,
     "shift": 1
@@ -9121,6 +10133,8 @@
     "roachScore": 507,
     "startable": false,
     "cbsRank": null,
+    "proj": null,
+    "vor": null,
     "roachRank": 507,
     "valueGap": null,
     "shift": 6
@@ -9139,6 +10153,8 @@
     "roachScore": 509,
     "startable": false,
     "cbsRank": null,
+    "proj": 8.71,
+    "vor": -126.27,
     "roachRank": 508,
     "valueGap": -5,
     "shift": -4
@@ -9157,6 +10173,8 @@
     "roachScore": 511,
     "startable": false,
     "cbsRank": null,
+    "proj": 8.35,
+    "vor": -126.63,
     "roachRank": 509,
     "valueGap": 17,
     "shift": -3
@@ -9175,6 +10193,8 @@
     "roachScore": 511,
     "startable": false,
     "cbsRank": null,
+    "proj": null,
+    "vor": null,
     "roachRank": 510,
     "valueGap": 83,
     "shift": 1
@@ -9193,6 +10213,8 @@
     "roachScore": 511.05,
     "startable": false,
     "cbsRank": null,
+    "proj": null,
+    "vor": null,
     "roachRank": 511,
     "valueGap": null,
     "shift": 5
@@ -9211,6 +10233,8 @@
     "roachScore": 511.3,
     "startable": false,
     "cbsRank": null,
+    "proj": null,
+    "vor": null,
     "roachRank": 512,
     "valueGap": 11,
     "shift": 2
@@ -9229,6 +10253,8 @@
     "roachScore": 513,
     "startable": false,
     "cbsRank": null,
+    "proj": 18.53,
+    "vor": -116.45,
     "roachRank": 513,
     "valueGap": 72,
     "shift": -5
@@ -9247,6 +10273,8 @@
     "roachScore": 513.08,
     "startable": false,
     "cbsRank": null,
+    "proj": 17.14,
+    "vor": -117.84,
     "roachRank": 514,
     "valueGap": 82,
     "shift": -5
@@ -9265,6 +10293,8 @@
     "roachScore": 514,
     "startable": false,
     "cbsRank": null,
+    "proj": 0,
+    "vor": -128.72,
     "roachRank": 515,
     "valueGap": -192,
     "shift": 3
@@ -9283,6 +10313,8 @@
     "roachScore": 515,
     "startable": false,
     "cbsRank": null,
+    "proj": null,
+    "vor": null,
     "roachRank": 516,
     "valueGap": null,
     "shift": -1
@@ -9301,6 +10333,8 @@
     "roachScore": 515.38,
     "startable": false,
     "cbsRank": null,
+    "proj": 73.86,
+    "vor": -61.12,
     "roachRank": 517,
     "valueGap": 92,
     "shift": -5
@@ -9319,6 +10353,8 @@
     "roachScore": 517,
     "startable": false,
     "cbsRank": null,
+    "proj": 2.7,
+    "vor": -292.54,
     "roachRank": 518,
     "valueGap": -132,
     "shift": -1

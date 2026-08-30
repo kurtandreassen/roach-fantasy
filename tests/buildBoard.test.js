@@ -58,4 +58,24 @@ describe('buildBoard', () => {
     // CBS rank is informational only — it must not change the actual ordering.
     expect(withCbs.map((p) => p.name)).toEqual(withoutCbs.map((p) => p.name));
   });
+
+  it('computes real Roach-scored proj/VOR from ESPN stat projections without changing roachRank', () => {
+    const espnProjections = [
+      { n: 'Elite RB', pos: 'RB', 24: 1200, 25: 12, 53: 40, 42: 300, 43: 2 },
+      { n: 'Uncertain RB', pos: 'RB', 24: 400, 25: 3, 53: 20, 42: 100, 43: 1 },
+    ];
+    const withoutProj = buildBoard(sample);
+    const withProj = buildBoard(sample, null, espnProjections);
+    const eliteRb = withProj.find((p) => p.name === 'Elite RB');
+    const uncertainRb = withProj.find((p) => p.name === 'Uncertain RB');
+    expect(eliteRb.proj).toBeGreaterThan(0);
+    expect(eliteRb.vor).not.toBeNull();
+    expect(eliteRb.proj).toBeGreaterThan(uncertainRb.proj);
+    // Players with no ESPN projection data get null, not a crash or a zero.
+    const eliteWr = withProj.find((p) => p.name === 'Elite WR');
+    expect(eliteWr.proj).toBeNull();
+    expect(eliteWr.vor).toBeNull();
+    // Proj/VOR are informational — ranking order is unchanged.
+    expect(withProj.map((p) => p.name)).toEqual(withoutProj.map((p) => p.name));
+  });
 });
