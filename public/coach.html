@@ -28,13 +28,22 @@
   .result-tbl th, .result-tbl td{ text-align:left; padding:8px 10px; border-bottom:1px solid var(--line-soft); }
   .result-tbl th{ font-family:'IBM Plex Mono',monospace; font-size:11px; text-transform:uppercase; color:var(--muted); background:var(--surface2); }
   .err{ color:var(--warn); font-family:'IBM Plex Mono',monospace; font-size:0.85rem; margin-top:10px; }
+  .saved-badge{
+    display:flex; align-items:center; justify-content:space-between; gap:12px; margin-top:12px;
+    font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--muted);
+  }
+  .saved-badge button{
+    font-family:'IBM Plex Mono',monospace; font-size:11px; background:none; border:1px solid var(--line); color:var(--muted);
+    border-radius:4px; padding:3px 9px; cursor:pointer;
+  }
+  .saved-badge button:hover{ color:var(--text); border-color:var(--accent); }
 </style>
 </head>
 <body>
 <div class="coach-wrap">
   <p><a href="/" style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--accent);">&larr; Back to Draft Board</a></p>
   <h1>Roach Coach</h1>
-  <p class="hint">No live CBS API exists, so this doesn't auto-pull your roster. Ask Claude to read your current CBS roster / free-agent page, then paste the results below &mdash; the lineup math and waiver ranking happen here, in code.</p>
+  <p class="hint">No live CBS API exists, so this doesn't auto-pull your roster. Ask Claude to read your current CBS roster / free-agent page, then paste the results below &mdash; the lineup math and waiver ranking happen here, in code. Results stay visible on this page (saved to this browser) until you run a new one.</p>
 
   <h2>Lineup Optimizer</h2>
   <p class="hint">One player per line: <code>Name, POS, score</code> &mdash; score can be a weekly projection or any relative ranking (higher = better).</p>
@@ -58,6 +67,9 @@ Another One" style="min-height:80px;"></textarea>
 </div>
 
 <script>
+const LINEUP_KEY = 'roach_coach_lineup_v1';
+const WAIVER_KEY = 'roach_coach_waivers_v1';
+
 function parseLineupInput(text) {
   return text.split('\n').map(l => l.trim()).filter(Boolean).map(line => {
     const parts = line.split(',').map(s => s.trim());
@@ -67,14 +79,42 @@ function parseLineupInput(text) {
 function parseNames(text) {
   return text.split('\n').map(l => l.trim()).filter(Boolean);
 }
+function fmtWhen(ts) {
+  const d = new Date(ts);
+  return d.toLocaleString(undefined, { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' });
+}
+
+function lineupResultHtml(body) {
+  const rows = Object.entries(body.slots).map(([slot, players]) =>
+    players.map(p => `<tr><td>${slot}</td><td>${p.name}</td><td>${p.pos}</td><td>${p.score}</td></tr>`).join('')
+  ).join('');
+  const benchRows = body.bench.map(p => `<tr><td>BENCH</td><td>${p.name}</td><td>${p.pos}</td><td>${p.score}</td></tr>`).join('');
+  return `<table class="result-tbl"><thead><tr><th>Slot</th><th>Player</th><th>Pos</th><th>Score</th></tr></thead><tbody>${rows}${benchRows}</tbody></table>`;
+}
+
+function waiverResultHtml(body) {
+  if (body.suggestions.length === 0) return `<p class="hint">No matches found on the board for those free agent names.</p>`;
+  const rows = body.suggestions.map(s => `
+    <tr>
+      <td>${s.add.name} (${s.add.pos}) — rank ${s.add.roachRank}</td>
+      <td>${s.dropCandidate ? s.dropCandidate.name + ' — rank ' + s.dropCandidate.roachRank : '—'}</td>
+      <td>${s.isUpgrade ? '<strong style="color:var(--good);">Upgrade</strong>' : 'Not an upgrade'}</td>
+    </tr>`).join('');
+  return `<table class="result-tbl"><thead><tr><th>Add</th><th>Drop candidate</th><th>Verdict</th></tr></thead><tbody>${rows}</tbody></table>`;
+}
+
+function badgeHtml(ts, clearId) {
+  return `<div class="saved-badge"><span>Last generated ${fmtWhen(ts)}</span><button id="${clearId}">Clear</button></div>`;
+}
 
 document.getElementById('lineup-go').addEventListener('click', async () => {
   const resultEl = document.getElementById('lineup-result');
   resultEl.innerHTML = '';
+  const inputText = document.getElementById('lineup-input').value;
   let roster;
   try {
-    roster = parseLineupInput(document.getElementById('lineup-input').value);
-    if (roster.some(p => !p.name || !p.pos || isNaN(p.score))) throw new Error('Each line needs Name, POS, score');
+    roster = parseLineupInput(inputText);
+    if (roster.length === 0 || roster.some(p => !p.name || !p.pos || isNaN(p.score))) throw new Error('Each line needs Name, POS, score');
   } catch (e) {
     resultEl.innerHTML = `<div class="err">${e.message}</div>`;
     return;
@@ -84,32 +124,65 @@ document.getElementById('lineup-go').addEventListener('click', async () => {
   });
   const body = await res.json();
   if (!res.ok) { resultEl.innerHTML = `<div class="err">${body.error}</div>`; return; }
-  const rows = Object.entries(body.slots).map(([slot, players]) =>
-    players.map(p => `<tr><td>${slot}</td><td>${p.name}</td><td>${p.pos}</td><td>${p.score}</td></tr>`).join('')
-  ).join('');
-  const benchRows = body.bench.map(p => `<tr><td>BENCH</td><td>${p.name}</td><td>${p.pos}</td><td>${p.score}</td></tr>`).join('');
-  resultEl.innerHTML = `<table class="result-tbl"><thead><tr><th>Slot</th><th>Player</th><th>Pos</th><th>Score</th></tr></thead><tbody>${rows}${benchRows}</tbody></table>`;
+  const ts = Date.now();
+  localStorage.setItem(LINEUP_KEY, JSON.stringify({ inputText, body, ts }));
+  resultEl.innerHTML = lineupResultHtml(body) + badgeHtml(ts, 'lineup-clear');
+  document.getElementById('lineup-clear').addEventListener('click', () => {
+    localStorage.removeItem(LINEUP_KEY);
+    resultEl.innerHTML = '';
+  });
 });
 
 document.getElementById('waiver-go').addEventListener('click', async () => {
   const resultEl = document.getElementById('waiver-result');
   resultEl.innerHTML = '';
-  const roster = parseNames(document.getElementById('roster-input').value);
-  const freeAgents = parseNames(document.getElementById('fa-input').value);
+  const rosterText = document.getElementById('roster-input').value;
+  const faText = document.getElementById('fa-input').value;
+  const roster = parseNames(rosterText);
+  const freeAgents = parseNames(faText);
   const res = await fetch('/api/coach/waivers', {
     method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ roster, freeAgents })
   });
   const body = await res.json();
   if (!res.ok) { resultEl.innerHTML = `<div class="err">${body.error}</div>`; return; }
-  if (body.suggestions.length === 0) { resultEl.innerHTML = `<p class="hint">No matches found on the board for those free agent names.</p>`; return; }
-  const rows = body.suggestions.map(s => `
-    <tr>
-      <td>${s.add.name} (${s.add.pos}) — rank ${s.add.roachRank}</td>
-      <td>${s.dropCandidate ? s.dropCandidate.name + ' — rank ' + s.dropCandidate.roachRank : '—'}</td>
-      <td>${s.isUpgrade ? '<strong style="color:var(--good);">Upgrade</strong>' : 'Not an upgrade'}</td>
-    </tr>`).join('');
-  resultEl.innerHTML = `<table class="result-tbl"><thead><tr><th>Add</th><th>Drop candidate</th><th>Verdict</th></tr></thead><tbody>${rows}</tbody></table>`;
+  const ts = Date.now();
+  localStorage.setItem(WAIVER_KEY, JSON.stringify({ rosterText, faText, body, ts }));
+  resultEl.innerHTML = waiverResultHtml(body) + badgeHtml(ts, 'waiver-clear');
+  document.getElementById('waiver-clear').addEventListener('click', () => {
+    localStorage.removeItem(WAIVER_KEY);
+    resultEl.innerHTML = '';
+  });
 });
+
+// Restore last-saved results on page load, if present.
+(function restore() {
+  try {
+    const savedLineup = JSON.parse(localStorage.getItem(LINEUP_KEY) || 'null');
+    if (savedLineup) {
+      document.getElementById('lineup-input').value = savedLineup.inputText;
+      const resultEl = document.getElementById('lineup-result');
+      resultEl.innerHTML = lineupResultHtml(savedLineup.body) + badgeHtml(savedLineup.ts, 'lineup-clear');
+      document.getElementById('lineup-clear').addEventListener('click', () => {
+        localStorage.removeItem(LINEUP_KEY);
+        resultEl.innerHTML = '';
+      });
+    }
+  } catch (e) { /* corrupt saved state, ignore */ }
+
+  try {
+    const savedWaivers = JSON.parse(localStorage.getItem(WAIVER_KEY) || 'null');
+    if (savedWaivers) {
+      document.getElementById('roster-input').value = savedWaivers.rosterText;
+      document.getElementById('fa-input').value = savedWaivers.faText;
+      const resultEl = document.getElementById('waiver-result');
+      resultEl.innerHTML = waiverResultHtml(savedWaivers.body) + badgeHtml(savedWaivers.ts, 'waiver-clear');
+      document.getElementById('waiver-clear').addEventListener('click', () => {
+        localStorage.removeItem(WAIVER_KEY);
+        resultEl.innerHTML = '';
+      });
+    }
+  } catch (e) { /* corrupt saved state, ignore */ }
+})();
 </script>
 </body>
 </html>
