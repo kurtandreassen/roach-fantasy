@@ -115,6 +115,23 @@ tr.taken td.pname { text-decoration: line-through; }
 .bar-fill.pos { background: var(--win); left: 50%; }
 .bar-fill.neg { background: var(--loss); right: 50%; }
 
+.swap-item {
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 4px; border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+.swap-item:last-child { border-bottom: none; }
+.swap-side { display: flex; align-items: center; gap: 8px; }
+.swap-side .swap-name { font-weight: 500; }
+.swap-side .swap-score { font-variant-numeric: tabular-nums; color: var(--muted); font-size: 13px; }
+.swap-side.out .swap-name { color: var(--muted); text-decoration: line-through; text-decoration-color: var(--border); }
+.swap-arrow { color: var(--muted); font-size: 13px; }
+.swap-swing {
+  margin-left: auto; font-variant-numeric: tabular-nums; font-weight: 700;
+  color: var(--win); background: rgba(62, 207, 142, 0.12);
+  padding: 3px 9px; border-radius: 20px; font-size: 12.5px; white-space: nowrap;
+}
+
 .chart-box { position: relative; width: 100%; margin-bottom: 14px; }
 .chart-box canvas { display: block; width: 100%; }
 .chart-legend { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 11.5px; color: var(--muted); margin-top: 8px; }

@@ -551,17 +551,26 @@ async function loadScouting() {
       setRows('scouting-week-table', rows, 5);
 
       const mySwaps = (data.latestWeek.teams.BuzzKill && data.latestWeek.teams.BuzzKill.missedSwaps) || [];
-      const swapRows = mySwaps.map((s) => `
-        <tr>
-          <td>${esc(s.startInstead)}</td><td class="num">${s.startInsteadScore}</td>
-          <td>${esc(s.satPlayer)}</td><td class="num">${s.satPlayerScore}</td>
-          <td class="num pos">+${s.swing}</td>
-        </tr>`).join('');
-      setRows('scouting-swaps-table', swapRows, 5);
-      if (!swapRows) setRows('scouting-swaps-table', `<tr><td colspan="5" class="empty">No missed opportunities — your lineup was optimal.</td></tr>`, 5);
+      el('scouting-swaps-list').innerHTML = mySwaps.length
+        ? mySwaps.map((s) => `
+          <div class="swap-item">
+            <div class="swap-side in">
+              <span class="pos-tag pos-${esc(s.startInsteadPos)}">${esc(s.startInsteadPos)}</span>
+              <span class="swap-name">${esc(s.startInstead)}</span>
+              <span class="swap-score">${s.startInsteadScore} pts</span>
+            </div>
+            <span class="swap-arrow">should've started over</span>
+            <div class="swap-side out">
+              <span class="pos-tag pos-${esc(s.satPlayerPos)}">${esc(s.satPlayerPos)}</span>
+              <span class="swap-name">${esc(s.satPlayer)}</span>
+              <span class="swap-score">${s.satPlayerScore} pts</span>
+            </div>
+            <span class="swap-swing">+${s.swing} pts</span>
+          </div>`).join('')
+        : `<p class="empty">No missed opportunities — your lineup was optimal.</p>`;
     } else {
       setRows('scouting-week-table', '', 5);
-      setRows('scouting-swaps-table', '', 5);
+      el('scouting-swaps-list').innerHTML = `<p class="empty">No data yet.</p>`;
     }
 
     // Season efficiency table

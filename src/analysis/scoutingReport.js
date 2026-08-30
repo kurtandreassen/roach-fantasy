@@ -43,8 +43,10 @@ function computeTeamWeek(players) {
       if (down) {
         missedSwaps.push({
           startInstead: up.name,
+          startInsteadPos: up.pos,
           startInsteadScore: up.score,
           satPlayer: down.name,
+          satPlayerPos: down.pos,
           satPlayerScore: down.points,
           swing: Math.round((up.score - down.points) * 10) / 10,
         });
