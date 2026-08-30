@@ -6,7 +6,7 @@ const posName = { QB: 'QB', RB: 'RB', WR: 'WR', TE: 'TE', K: 'K', DST: 'DST' };
 
 /* ---------------------------------------------------------------- tabs --- */
 
-const onShow = { coach: loadCoach, history: loadHistory, trends: loadTrends };
+const onShow = { coach: loadCoach, history: loadHistory, trends: loadTrends, scouting: loadScouting };
 el('tabs').addEventListener('click', (e) => {
   const btn = e.target.closest('button[data-view]');
   if (!btn) return;
@@ -336,6 +336,85 @@ async function loadTrends() {
     renderTrendsTable();
   } catch (err) {
     setRows('trends-table', `<tr><td colspan="6" class="error">${esc(err.message)}</td></tr>`, 6);
+  }
+}
+
+/* --------------------------------------------------------- scouting report --- */
+
+function luckClass(v) {
+  if (v == null) return '';
+  return v > 0 ? 'pos' : v < 0 ? 'neg' : '';
+}
+
+async function loadScouting() {
+  // Same reasoning as trends: this can change any time a new week is
+  // synced, so always refetch rather than caching once.
+  try {
+    const res = await fetch('/api/scouting-report');
+    const data = await res.json();
+
+    // Weekly actual vs optimal
+    if (data.latestWeek) {
+      el('scouting-empty-note').style.display = 'none';
+      el('scouting-week-label').textContent = `— Week ${data.latestWeek.week} (league avg ${data.latestWeek.leagueAvg ?? '—'})`;
+      const rows = Object.entries(data.latestWeek.teams)
+        .sort((a, b) => (b[1].regret ?? -Infinity) - (a[1].regret ?? -Infinity))
+        .map(([team, r]) => `
+          <tr>
+            <td>${esc(team)}</td>
+            <td class="num">${r.actual ?? '—'}</td>
+            <td class="num">${r.optimal}</td>
+            <td class="num ${r.regret > 0 ? 'neg' : ''}">${r.regret ?? '—'}</td>
+            <td class="num ${luckClass(r.luckDelta)}">${r.luckDelta != null ? (r.luckDelta > 0 ? '+' : '') + r.luckDelta : '—'}</td>
+          </tr>`).join('');
+      setRows('scouting-week-table', rows, 5);
+
+      const mySwaps = (data.latestWeek.teams.BuzzKill && data.latestWeek.teams.BuzzKill.missedSwaps) || [];
+      const swapRows = mySwaps.map((s) => `
+        <tr>
+          <td>${esc(s.startInstead)}</td><td class="num">${s.startInsteadScore}</td>
+          <td>${esc(s.satPlayer)}</td><td class="num">${s.satPlayerScore}</td>
+          <td class="num pos">+${s.swing}</td>
+        </tr>`).join('');
+      setRows('scouting-swaps-table', swapRows, 5);
+      if (!swapRows) setRows('scouting-swaps-table', `<tr><td colspan="5" class="empty">No missed opportunities — your lineup was optimal.</td></tr>`, 5);
+    } else {
+      setRows('scouting-week-table', '', 5);
+      setRows('scouting-swaps-table', '', 5);
+    }
+
+    // Season efficiency table
+    const seasonRows = data.season.map((r) => `
+      <tr>
+        <td>${esc(r.team)}</td>
+        <td class="num">${r.weeks}</td>
+        <td class="num">${r.actual}</td>
+        <td class="num">${r.optimal}</td>
+        <td class="num ${r.regret > 0 ? 'neg' : ''}">${r.regret}</td>
+        <td class="num">${r.efficiencyPct != null ? r.efficiencyPct + '%' : '—'}</td>
+      </tr>`).join('');
+    setRows('scouting-season-table', seasonRows, 6);
+
+    // Trend alerts
+    el('scouting-alerts-count').textContent = data.trendAlerts.length ? `(${data.trendAlerts.length})` : '';
+    el('scouting-alerts-grid').innerHTML = data.trendAlerts.length
+      ? data.trendAlerts.map((a) => `
+        <div class="stat">
+          <div class="label">${esc(a.name)} · ${esc(a.pos)} · ${esc(a.team)}</div>
+          <div class="value ${a.direction === 'up' ? 'pos' : 'neg'}">${a.direction === 'up' ? '↑' : '↓'} ${a.last3.join(' → ')}</div>
+        </div>`).join('')
+      : `<p class="empty">No 3-week trends yet.</p>`;
+
+    // Positional gaps
+    const gapRows = data.positionalGaps.map((g) => `
+      <tr>
+        <td>${esc(g.team)}</td>
+        <td>${esc(g.weakestPos)}</td>
+        <td>${g.targets.length ? g.targets.map((t) => esc(t.name)).join(', ') : '—'}</td>
+      </tr>`).join('');
+    setRows('scouting-gaps-table', gapRows, 3);
+  } catch (err) {
+    setRows('scouting-week-table', `<tr><td colspan="5" class="error">${esc(err.message)}</td></tr>`, 5);
   }
 }
 

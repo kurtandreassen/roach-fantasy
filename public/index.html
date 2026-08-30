@@ -17,6 +17,7 @@
   <button data-view="draft" class="active">Draft Board</button>
   <button data-view="coach">Coach</button>
   <button data-view="trends">Trends</button>
+  <button data-view="scouting">Scouting Report</button>
   <button data-view="history">Draft History</button>
 </nav>
 
@@ -127,6 +128,51 @@
           <tbody><tr><td colspan="3" class="empty">No weeks recorded yet.</td></tr></tbody>
         </table>
       </div>
+    </section>
+  </section>
+
+  <!-- Scouting Report -->
+  <section class="view" id="view-scouting">
+    <section class="panel">
+      <h2>This Week: Actual vs. Optimal <span class="meta" id="scouting-week-label"></span></h2>
+      <p class="empty" style="padding-top:0" id="scouting-empty-note">No weeks logged yet — sync a week in Trends with each player's <code>started</code> flag to unlock this report.</p>
+      <table id="scouting-week-table">
+        <thead><tr><th>Team</th><th class="num">Actual</th><th class="num">Optimal</th><th class="num">Regret</th><th class="num">Luck (vs. league avg)</th></tr></thead>
+        <tbody><tr><td colspan="5" class="empty">Nothing synced yet.</td></tr></tbody>
+      </table>
+    </section>
+
+    <section class="panel">
+      <h2>Your Missed Opportunities</h2>
+      <p class="empty" style="padding-top:0">Bench players who would have outscored who you started, biggest swing first.</p>
+      <table id="scouting-swaps-table">
+        <thead><tr><th>Start Instead</th><th class="num">Pts</th><th>Sat</th><th class="num">Pts</th><th class="num">Swing</th></tr></thead>
+        <tbody><tr><td colspan="5" class="empty">No data yet.</td></tr></tbody>
+      </table>
+    </section>
+
+    <section class="panel">
+      <h2>Season Efficiency — Every Team</h2>
+      <p class="empty" style="padding-top:0">Actual points scored vs. the best possible lineup each week. Worst efficiency = best trade/waiver leverage against them.</p>
+      <table id="scouting-season-table">
+        <thead><tr><th>Team</th><th class="num">Weeks</th><th class="num">Actual</th><th class="num">Optimal</th><th class="num">Regret</th><th class="num">Efficiency</th></tr></thead>
+        <tbody><tr><td colspan="6" class="empty">No data yet.</td></tr></tbody>
+      </table>
+    </section>
+
+    <section class="panel">
+      <h2>Trend Alerts <span class="meta" id="scouting-alerts-count" style="margin-left:8px;"></span></h2>
+      <p class="empty" style="padding-top:0">Players on a 3-straight-week rise or fall.</p>
+      <div id="scouting-alerts-grid" class="stat-grid"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Opponent Positional Gaps</h2>
+      <p class="empty" style="padding-top:0">Each team's weakest starting position by our own board rank, plus available upgrades — theirs and yours.</p>
+      <table id="scouting-gaps-table">
+        <thead><tr><th>Team</th><th>Weakest Slot</th><th>Available Targets</th></tr></thead>
+        <tbody><tr><td colspan="3" class="empty">No data yet.</td></tr></tbody>
+      </table>
     </section>
   </section>
 

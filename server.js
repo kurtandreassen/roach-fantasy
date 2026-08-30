@@ -16,6 +16,7 @@ const { optimizeLineup } = require('./src/coach/lineupOptimizer');
 const { suggestWaivers } = require('./src/coach/waiverSuggest');
 const stateStore = require('./src/state/store');
 const trendStore = require('./src/state/trendStore');
+const scoutingReport = require('./src/analysis/scoutingReport');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -219,6 +220,26 @@ app.post('/api/trends/week', (req, res) => {
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
+});
+
+// --- Scouting report -------------------------------------------------------
+// Built entirely from data already synced (trends + board) — no new inputs
+// required. Actual-vs-optimal needs each player's `started` flag in the
+// weekly trend payload; without it those fields come back null and the
+// report still renders (optimal, trend alerts, gaps all still work).
+
+app.get('/api/scouting-report', (req, res) => {
+  const board = loadBoardOrNull(req.query.year || '2026');
+  const matrix = trendStore.buildPlayerMatrix();
+  const weekNums = matrix.weeks;
+  const latestWeek = weekNums.length ? weekNums[weekNums.length - 1] : null;
+
+  res.json({
+    latestWeek: latestWeek != null ? scoutingReport.weekReport(latestWeek) : null,
+    season: scoutingReport.seasonEfficiencyTable(),
+    trendAlerts: scoutingReport.trendAlerts(matrix),
+    positionalGaps: board ? scoutingReport.positionalGaps(board) : [],
+  });
 });
 
 app.get('/health', (req, res) => res.json({ status: 'ok' }));
