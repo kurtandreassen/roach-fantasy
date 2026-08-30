@@ -37,27 +37,56 @@ const SURPLUS_THRESHOLD = { QB: 2, RB: 4, WR: 4, TE: 2, K: 1, DST: 1 };
 // impact" grade here is directly comparable to what the Matchup panel shows.
 const weeklyEstimate = (proj) => (proj != null ? proj / 17 : 0);
 
-function latestRosters() {
-  const data = readTrends();
-  const weekNums = Object.keys(data.weeks).map(Number).sort((a, b) => a - b);
-  if (weekNums.length === 0) return {};
-  return data.weeks[weekNums[weekNums.length - 1]].teams || {};
+function allWeeks() {
+  return readTrends().weeks;
 }
 
-function enrich(players, rankByName, seasonByName) {
+function latestRosters() {
+  const weeks = allWeeks();
+  const weekNums = Object.keys(weeks).map(Number).sort((a, b) => a - b);
+  if (weekNums.length === 0) return {};
+  return weeks[weekNums[weekNums.length - 1]].teams || {};
+}
+
+/**
+ * Started/benched week counts per team+player, across every synced week —
+ * hard evidence for "surplus" beyond just a board-rank inference. Only
+ * counts weeks where a `started` flag was actually recorded.
+ */
+function buildBenchStats(weeks) {
+  const stats = {}; // team -> name -> { started, benched }
+  for (const wk of Object.values(weeks)) {
+    for (const [team, players] of Object.entries(wk.teams || {})) {
+      for (const p of players) {
+        if (p.started == null) continue;
+        stats[team] = stats[team] || {};
+        stats[team][p.name] = stats[team][p.name] || { started: 0, benched: 0 };
+        if (p.started) stats[team][p.name].started += 1;
+        else stats[team][p.name].benched += 1;
+      }
+    }
+  }
+  return stats;
+}
+
+function enrich(players, team, rankByName, seasonByName, benchStats) {
   return players
     .map((p) => {
       const boardEntry = rankByName.get(p.name);
       if (!boardEntry) return null;
       const season = seasonByName.get(p.name);
+      const bench = (benchStats[team] && benchStats[team][p.name]) || null;
       return {
         name: p.name,
         pos: p.pos,
         roachRank: boardEntry.roachRank,
         proj: boardEntry.proj,
+        bye: boardEntry.bye ?? null,
         seasonAvg: season ? season.avg : null,
         seasonTotal: season ? season.total : null,
         gamesPlayed: season ? season.pointsByWeek.filter((v) => v != null).length : 0,
+        startedWeeks: bench ? bench.started : null,
+        benchedWeeks: bench ? bench.benched : null,
       };
     })
     .filter(Boolean);
@@ -114,6 +143,35 @@ function gradeFor(weeklyDelta) {
   return 'D';
 }
 
+/**
+ * Bye-week read for the incoming player against the rest of your roster at
+ * shared-flex-eligible positions (RB/WR/TE all draw from the same two flex
+ * slots, so a bye collision there is a real lineup risk even across
+ * different listed positions). Returns null when there's nothing notable.
+ */
+const FLEX_POOL = ['RB', 'WR', 'TE'];
+function byeNote(getAsset, myRosterAfterGive) {
+  if (getAsset.bye == null) return null;
+  const pool = FLEX_POOL.includes(getAsset.pos) ? FLEX_POOL : [getAsset.pos];
+  const collisions = myRosterAfterGive
+    .filter((p) => p.name !== getAsset.name && pool.includes(p.pos) && p.bye === getAsset.bye)
+    .map((p) => p.name);
+  if (collisions.length) {
+    return `Bye-week flag: ${getAsset.name}'s Week ${getAsset.bye} bye lines up with ${collisions.join(' and ')} — you'll be thin at ${pool.join('/')} that week.`;
+  }
+  return `No bye-week overlap with your other ${pool.join('/')} options — clean fit for the fall stretch.`;
+}
+
+function benchEvidenceNote(giveAsset) {
+  if (giveAsset.startedWeeks == null && giveAsset.benchedWeeks == null) return null;
+  const tracked = (giveAsset.startedWeeks || 0) + (giveAsset.benchedWeeks || 0);
+  if (tracked === 0) return null;
+  if (giveAsset.benchedWeeks > 0) {
+    return `Bench evidence: ${giveAsset.name} sat ${giveAsset.benchedWeeks} of ${tracked} tracked weeks for you — this isn't just a board-rank guess, you've actually treated him as surplus.`;
+  }
+  return `Caution: ${giveAsset.name} was actually started all ${tracked} tracked weeks for you — double-check he's really surplus before offering him, regardless of what the depth chart math says.`;
+}
+
 function winPct(record) {
   if (!record) return null;
   const m = String(record).match(/(\d+)\s*-\s*(\d+)/);
@@ -122,7 +180,7 @@ function winPct(record) {
   return (w + l) > 0 ? w / (w + l) : null;
 }
 
-function buildReasoning({ giveAsset, getAsset, theirGap, myGap, doubleNeed, record, projSwing, weeklyDelta, grade }) {
+function buildReasoning({ giveAsset, getAsset, theirGap, myGap, doubleNeed, record, projSwing, weeklyDelta, grade, myRosterAfterGive }) {
   const lines = [];
   const remainingWeeks = 14; // rough regular-season-remaining assumption for the total-impact framing
   if (weeklyDelta > 0) {
@@ -132,6 +190,8 @@ function buildReasoning({ giveAsset, getAsset, theirGap, myGap, doubleNeed, reco
   }
   lines.push(`Fills their clearest hole at ${theirGap.weakestPos} — nobody on their roster currently outranks board #${theirGap.weakestRank} there.`);
   lines.push(`${giveAsset.name} (#${giveAsset.roachRank}) is the cheapest piece from your surplus that still clears that bar — you're not overpaying with a better trade chip than the job requires.`);
+  const benchNote = benchEvidenceNote(giveAsset);
+  if (benchNote) lines.push(benchNote);
   if (doubleNeed) {
     lines.push(`In return, ${getAsset.name} directly upgrades your own weak spot at ${myGap.weakestPos} — it's a position they're deep at too, so it costs them real bench depth but not a starter.`);
   } else {
@@ -141,6 +201,8 @@ function buildReasoning({ giveAsset, getAsset, theirGap, myGap, doubleNeed, reco
     if (projSwing < -5) lines.push(`Note: they're getting the better rest-of-season projection (${projSwing.toFixed(1)} pts in their favor) — expected, since minimum-sufficient offers concede some value swing to lower what you give up.`);
     else if (projSwing > 5) lines.push(`You're also netting +${projSwing.toFixed(1)} projected season points on top of the lineup upgrade — a genuinely light ask for what you're getting.`);
   }
+  const bye = byeNote(getAsset, myRosterAfterGive);
+  if (bye) lines.push(bye);
   const givenGames = giveAsset.gamesPlayed, gotGames = getAsset.gamesPlayed;
   if (givenGames > 0 && gotGames > 0 && giveAsset.seasonAvg > getAsset.seasonAvg) {
     lines.push(`Fair warning: ${giveAsset.name} has actually outscored ${getAsset.name} so far this season (${giveAsset.seasonAvg} vs. ${getAsset.seasonAvg} pts/game) — the case here is roster construction and rest-of-season outlook, not recent form.`);
@@ -169,11 +231,12 @@ function generateTradeIdeas(myTeam, board, opts) {
 
   const rankByName = new Map(board.map((p) => [p.name, p]));
   const seasonByName = new Map(buildPlayerMatrix().players.map((p) => [p.name, p]));
+  const benchStats = buildBenchStats(allWeeks());
   const gaps = positionalGaps(board);
   const myGap = gaps.find((g) => g.team === myTeam);
   if (!myGap) return [];
 
-  const myRoster = enrich(rosters[myTeam], rankByName, seasonByName);
+  const myRoster = enrich(rosters[myTeam], myTeam, rankByName, seasonByName, benchStats);
   const mySurplus = computeSurplus(myRoster);
 
   const standings = readState().standings.teams || [];
@@ -187,7 +250,7 @@ function generateTradeIdeas(myTeam, board, opts) {
     const giveCandidates = mySurplus[theirGap.weakestPos];
     if (!giveCandidates || giveCandidates.length === 0) continue;
 
-    const theirRoster = enrich(players, rankByName, seasonByName);
+    const theirRoster = enrich(players, team, rankByName, seasonByName, benchStats);
     const theirSurplus = computeSurplus(theirRoster);
 
     let getAsset = null;
@@ -214,15 +277,19 @@ function generateTradeIdeas(myTeam, board, opts) {
       : null;
     const weeklyDelta = lineupImpact(myRoster, giveAsset, getAsset);
     const grade = gradeFor(weeklyDelta);
+    const myRosterAfterGive = myRoster.filter((p) => p.name !== giveAsset.name);
 
     const assetView = (a) => ({
       name: a.name,
       pos: a.pos,
       roachRank: a.roachRank,
       proj: a.proj,
+      bye: a.bye,
       seasonAvg: a.seasonAvg,
       seasonTotal: a.seasonTotal,
       gamesPlayed: a.gamesPlayed,
+      startedWeeks: a.startedWeeks,
+      benchedWeeks: a.benchedWeeks,
     });
 
     ideas.push({
@@ -234,7 +301,7 @@ function generateTradeIdeas(myTeam, board, opts) {
       likelihood: doubleNeed ? 'high' : 'medium',
       projSwing,
       reasoning: buildReasoning({
-        giveAsset, getAsset, theirGap, myGap, doubleNeed, record: recordByTeam.get(team), projSwing, weeklyDelta, grade,
+        giveAsset, getAsset, theirGap, myGap, doubleNeed, record: recordByTeam.get(team), projSwing, weeklyDelta, grade, myRosterAfterGive,
       }),
     });
   }

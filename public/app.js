@@ -607,6 +607,10 @@ async function loadScouting() {
     const tradeAssetDetail = (a) => {
       const bits = [`Proj ${a.proj != null ? a.proj : '—'}`];
       if (a.gamesPlayed > 0) bits.push(`${a.seasonAvg} pts/gm (${a.gamesPlayed} gm)`);
+      if (a.bye != null) bits.push(`Bye ${a.bye}`);
+      if (a.benchedWeeks != null && (a.benchedWeeks + a.startedWeeks) > 0) {
+        bits.push(`benched ${a.benchedWeeks}/${a.benchedWeeks + a.startedWeeks} wks`);
+      }
       return bits.join(' · ');
     };
     el('scouting-trades-list').innerHTML = data.tradeIdeas.length

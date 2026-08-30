@@ -156,6 +156,54 @@ describe('tradeFinder', () => {
     expect(idea.give[0].name).toBe('My RB6');
   });
 
+  it('flags actual bench history on the give-side asset, not just board-rank inference', () => {
+    const trendStore = require('../src/state/trendStore');
+    trendStore.recordWeek(1, {
+      BuzzKill: [
+        { name: 'My QB1', pos: 'QB', points: 20, started: true },
+        { name: 'My RB1', pos: 'RB', points: 15, started: true },
+        { name: 'My RB2', pos: 'RB', points: 10, started: true },
+        { name: 'My RB3', pos: 'RB', points: 5, started: true },
+        { name: 'My RB4', pos: 'RB', points: 4, started: true },
+        { name: 'My RB5', pos: 'RB', points: 3, started: false },
+        { name: 'My WR1', pos: 'WR', points: 14, started: true },
+        { name: 'My TE1', pos: 'TE', points: 2, started: true },
+        { name: 'My K1', pos: 'K', points: 6, started: true },
+        { name: 'My DST1', pos: 'DST', points: 5, started: true },
+      ],
+      Rival: [
+        { name: 'Rival QB1', pos: 'QB', points: 19 },
+        { name: 'Rival RB1', pos: 'RB', points: 14 },
+        { name: 'Rival WR1', pos: 'WR', points: 13 },
+        { name: 'Rival TE1', pos: 'TE', points: 10 },
+        { name: 'Rival TE2', pos: 'TE', points: 6 },
+        { name: 'Rival TE3', pos: 'TE', points: 5 },
+        { name: 'Rival K1', pos: 'K', points: 6 },
+        { name: 'Rival DST1', pos: 'DST', points: 5 },
+      ],
+    }, []);
+
+    const { generateTradeIdeas } = require('../src/analysis/tradeFinder');
+    const idea = generateTradeIdeas('BuzzKill', board)[0];
+    expect(idea.give[0].benchedWeeks).toBe(1);
+    expect(idea.give[0].startedWeeks).toBe(0);
+    expect(idea.reasoning.some((l) => l.includes('Bench evidence'))).toBe(true);
+  });
+
+  it('flags a bye-week collision between the incoming player and existing roster', () => {
+    const trendStore = require('../src/state/trendStore');
+    seedTrends(trendStore);
+    const boardWithByes = board.map((p) => {
+      if (p.name === 'My WR1') return { ...p, bye: 9 };
+      if (p.name === 'Rival TE3') return { ...p, bye: 9 }; // collides with My WR1's bye
+      return { ...p, bye: p.name.includes('RB') ? 5 : 7 };
+    });
+
+    const { generateTradeIdeas } = require('../src/analysis/tradeFinder');
+    const idea = generateTradeIdeas('BuzzKill', boardWithByes)[0];
+    expect(idea.reasoning.some((l) => l.includes('Bye-week flag') && l.includes('My WR1'))).toBe(true);
+  });
+
   it('computeSurplus only flags players beyond the position threshold', () => {
     const { computeSurplus } = require('../src/analysis/tradeFinder');
     const roster = [
