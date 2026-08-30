@@ -124,6 +124,35 @@ function seasonEfficiencyTable() {
 }
 
 /**
+ * The same actual/optimal data as seasonEfficiencyTable, but week-by-week
+ * per team instead of summed — feeds a line chart so a team's efficiency
+ * trend (not just the season total) is visible. A team's array is null at
+ * any week it wasn't synced with `started` flags, rather than 0, so a gap
+ * in the data doesn't read as a trough in the chart.
+ */
+function seasonEfficiencyTrend() {
+  const data = readTrends();
+  const weekNums = Object.keys(data.weeks).map(Number).sort((a, b) => a - b);
+  const teamNames = new Set();
+  for (const week of weekNums) {
+    Object.keys(data.weeks[week].teams || {}).forEach((t) => teamNames.add(t));
+  }
+
+  const teams = {};
+  for (const team of teamNames) {
+    teams[team] = weekNums.map((week) => {
+      const players = data.weeks[week].teams && data.weeks[week].teams[team];
+      if (!players) return null;
+      const result = computeTeamWeek(players);
+      if (!result || result.actual == null || result.optimal <= 0) return null;
+      return Math.round((result.actual / result.optimal) * 1000) / 10;
+    });
+  }
+
+  return { weeks: weekNums, teams };
+}
+
+/**
  * Trend alerts: players on a strict 3-consecutive-week rise or fall,
  * pulled straight from the trend matrix rather than a separate data source.
  * Split into rising/falling (rather than one mixed list) and capped to the
@@ -257,6 +286,7 @@ module.exports = {
   computeTeamWeek,
   weekReport,
   seasonEfficiencyTable,
+  seasonEfficiencyTrend,
   trendAlerts,
   positionalGaps,
   getMatchup,

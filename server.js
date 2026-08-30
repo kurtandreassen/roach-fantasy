@@ -266,6 +266,7 @@ app.get('/api/scouting-report', (req, res) => {
     latestWeek: latestWeek != null ? scoutingReport.weekReport(latestWeek) : null,
     matchup: (latestWeek != null && board) ? scoutingReport.getMatchup(latestWeek, team, board) : null,
     season: scoutingReport.seasonEfficiencyTable(),
+    seasonTrend: scoutingReport.seasonEfficiencyTrend(),
     trendAlerts: scoutingReport.trendAlerts(matrix, { team: alertsTeam }),
     trendTeams: [...new Set(matrix.players.map((p) => p.team))].sort(),
     positionalGaps: board ? scoutingReport.positionalGaps(board) : [],

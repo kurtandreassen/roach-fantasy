@@ -123,6 +123,29 @@ describe('scoutingReport', () => {
     expect(table[0].regret).toBeGreaterThan(table[1].regret);
   });
 
+  it('builds a per-week efficiency trend per team, nulling weeks a team was not synced', () => {
+    const trendStore = require('../src/state/trendStore');
+    const { seasonEfficiencyTrend } = require('../src/analysis/scoutingReport');
+    const roster = (rbBpts) => [
+      { name: 'QB A', pos: 'QB', points: 20, started: true },
+      { name: 'RB A', pos: 'RB', points: 10, started: true },
+      { name: 'RB B', pos: 'RB', points: rbBpts, started: true },
+      { name: 'WR A', pos: 'WR', points: 12, started: true },
+      { name: 'WR B', pos: 'WR', points: 9, started: true },
+      { name: 'TE A', pos: 'TE', points: 7, started: true },
+      { name: 'K A', pos: 'K', points: 6, started: true },
+      { name: 'DST A', pos: 'DST', points: 5, started: true },
+    ];
+    trendStore.recordWeek(1, { BuzzKill: roster(8) }, []);
+    trendStore.recordWeek(2, { BuzzKill: roster(20), Rival: roster(20) }, []);
+
+    const trend = seasonEfficiencyTrend();
+    expect(trend.weeks).toEqual([1, 2]);
+    expect(trend.teams.BuzzKill.length).toBe(2);
+    expect(trend.teams.BuzzKill[1]).toBe(100); // optimal lineup = actual lineup that week
+    expect(trend.teams.Rival[0]).toBeNull(); // Rival wasn't synced week 1
+  });
+
   it('returns null when the schedule has no matchup for that team/week', () => {
     const { getMatchup } = require('../src/analysis/scoutingReport');
     expect(getMatchup(1, 'BuzzKill', [])).toBeNull();

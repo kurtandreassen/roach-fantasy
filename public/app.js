@@ -347,6 +347,123 @@ function luckClass(v) {
 }
 
 let scoutingAlertsTeam = 'ALL';
+let scoutingSeasonTrend = null;
+let scoutingHighlightTeam = null;
+
+const TEAM_LINE_COLORS = ['#6db3e0', '#b39ddb', '#c9a4a0', '#e0a15b', '#7fd1c9', '#e08fd1', '#9fb87a', '#d19a9a', '#8fa8d1', '#c4c46a'];
+function colorForTeam(team, index) {
+  return team === 'BuzzKill' ? getComputedStyle(document.documentElement).getPropertyValue('--accent').trim()
+    : TEAM_LINE_COLORS[index % TEAM_LINE_COLORS.length];
+}
+
+function fitChartCanvas(canvas) {
+  const cssH = canvas.height || canvas.clientHeight;
+  const rect = canvas.getBoundingClientRect();
+  const cssW = rect.width || canvas.clientWidth;
+  const dpr = window.devicePixelRatio || 1;
+  canvas.width = Math.round(cssW * dpr);
+  canvas.height = Math.round(cssH * dpr);
+  canvas.style.height = `${cssH}px`;
+  const ctx = canvas.getContext('2d');
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  return { ctx, w: cssW, h: cssH };
+}
+
+function renderEfficiencyChart(trend) {
+  scoutingSeasonTrend = trend;
+  const box = el('scouting-eff-chart-box');
+  const teamNames = trend ? Object.keys(trend.teams) : [];
+  if (!trend || trend.weeks.length < 2 || !teamNames.length) {
+    box.style.display = 'none';
+    return;
+  }
+  box.style.display = '';
+  drawEfficiencyChart();
+}
+
+function drawEfficiencyChart() {
+  const trend = scoutingSeasonTrend;
+  if (!trend) return;
+  const canvas = el('scouting-eff-chart');
+  const { ctx, w, h } = fitChartCanvas(canvas);
+  const padL = 34, padR = 10, padT = 10, padB = 20;
+  const plotW = w - padL - padR, plotH = h - padT - padB;
+  const weeks = trend.weeks;
+  const teamNames = Object.keys(trend.teams);
+  const muted = getComputedStyle(document.documentElement).getPropertyValue('--muted').trim();
+  const border = getComputedStyle(document.documentElement).getPropertyValue('--border').trim();
+
+  ctx.clearRect(0, 0, w, h);
+
+  // gridlines at 0/50/100%
+  ctx.strokeStyle = border;
+  ctx.lineWidth = 1;
+  ctx.fillStyle = muted;
+  ctx.font = '11px Inter, system-ui, sans-serif';
+  ctx.textBaseline = 'middle';
+  [0, 50, 100].forEach((pct) => {
+    const y = padT + plotH - (pct / 100) * plotH;
+    ctx.beginPath();
+    ctx.moveTo(padL, y);
+    ctx.lineTo(w - padR, y);
+    ctx.stroke();
+    ctx.textAlign = 'right';
+    ctx.fillText(`${pct}%`, padL - 6, y);
+  });
+
+  const xAt = (i) => padL + (weeks.length === 1 ? plotW / 2 : (i / (weeks.length - 1)) * plotW);
+  const yAt = (pct) => padT + plotH - (Math.max(0, Math.min(100, pct)) / 100) * plotH;
+
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'top';
+  weeks.forEach((wk, i) => ctx.fillText(`W${wk}`, xAt(i), h - padB + 4));
+
+  const drawLine = (teamName, colorIdx, emphasize) => {
+    const values = trend.teams[teamName];
+    const color = colorForTeam(teamName, colorIdx);
+    ctx.strokeStyle = color;
+    ctx.lineWidth = emphasize ? 3 : 1.5;
+    ctx.globalAlpha = scoutingHighlightTeam && !emphasize ? 0.18 : 1;
+    ctx.lineJoin = 'round';
+    ctx.beginPath();
+    let started = false;
+    values.forEach((v, i) => {
+      if (v == null) { started = false; return; }
+      const x = xAt(i), y = yAt(v);
+      if (!started) { ctx.moveTo(x, y); started = true; } else { ctx.lineTo(x, y); }
+    });
+    ctx.stroke();
+    values.forEach((v, i) => {
+      if (v == null) return;
+      ctx.beginPath();
+      ctx.arc(xAt(i), yAt(v), emphasize ? 3 : 2, 0, Math.PI * 2);
+      ctx.fillStyle = color;
+      ctx.fill();
+    });
+    ctx.globalAlpha = 1;
+  };
+
+  const teamNamesOrdered = teamNames.slice().sort((a, b) => (a === 'BuzzKill' ? -1 : b === 'BuzzKill' ? 1 : 0));
+  teamNamesOrdered.forEach((teamName, i) => {
+    const emphasize = teamName === 'BuzzKill' || teamName === scoutingHighlightTeam;
+    if (!emphasize) drawLine(teamName, i, false);
+  });
+  teamNamesOrdered.forEach((teamName, i) => {
+    const emphasize = teamName === 'BuzzKill' || teamName === scoutingHighlightTeam;
+    if (emphasize) drawLine(teamName, i, true);
+  });
+}
+
+document.addEventListener('click', (e) => {
+  const row = e.target.closest('#scouting-season-table tbody tr[data-team]');
+  if (!row) return;
+  const team = row.dataset.team;
+  scoutingHighlightTeam = scoutingHighlightTeam === team ? null : team;
+  document.querySelectorAll('#scouting-season-table tbody tr').forEach((r) => {
+    r.classList.toggle('chart-highlight', r.dataset.team === scoutingHighlightTeam);
+  });
+  drawEfficiencyChart();
+});
 
 function renderMatchup(matchup) {
   const empty = el('scouting-matchup-empty');
@@ -449,7 +566,7 @@ async function loadScouting() {
 
     // Season efficiency table
     const seasonRows = data.season.map((r) => `
-      <tr>
+      <tr data-team="${esc(r.team)}">
         <td>${esc(r.team)}</td>
         <td class="num">${r.weeks}</td>
         <td class="num">${r.actual}</td>
@@ -458,6 +575,7 @@ async function loadScouting() {
         <td class="num">${r.efficiencyPct != null ? r.efficiencyPct + '%' : '—'}</td>
       </tr>`).join('');
     setRows('scouting-season-table', seasonRows, 6);
+    renderEfficiencyChart(data.seasonTrend);
 
     // Trend alerts — split rising/falling, already capped to top movers server-side
     el('scouting-alerts-up').innerHTML = data.trendAlerts.rising.length
