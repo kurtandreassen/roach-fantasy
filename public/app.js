@@ -613,6 +613,13 @@ async function loadScouting() {
       }
       return bits.join(' · ');
     };
+    const tradeAssetRow = (a, dir, label) => `
+          <div class="trade-swap">
+            <span class="trade-dir ${dir}">${esc(label)}</span>
+            <span class="pos-tag pos-${esc(a.pos)}">${esc(a.pos)}</span>
+            <span class="trade-name">${esc(a.name)}</span>
+            <span class="trade-rank">#${a.roachRank} · ${esc(tradeAssetDetail(a))}</span>
+          </div>`;
     el('scouting-trades-list').innerHTML = data.tradeIdeas.length
       ? data.tradeIdeas.map((t) => `
         <div class="trade-card">
@@ -622,18 +629,8 @@ async function loadScouting() {
             <span class="trade-likelihood ${esc(t.likelihood)}">${t.likelihood} accept odds</span>
             <span class="trade-swing ${t.weeklyLineupDelta >= 0 ? 'pos' : 'neg'}">${t.weeklyLineupDelta >= 0 ? '+' : ''}${t.weeklyLineupDelta} pts/wk to your lineup</span>
           </div>
-          <div class="trade-swap">
-            <span class="trade-dir give">You give</span>
-            <span class="pos-tag pos-${esc(t.give[0].pos)}">${esc(t.give[0].pos)}</span>
-            <span class="trade-name">${esc(t.give[0].name)}</span>
-            <span class="trade-rank">#${t.give[0].roachRank} · ${esc(tradeAssetDetail(t.give[0]))}</span>
-          </div>
-          <div class="trade-swap">
-            <span class="trade-dir get">You get</span>
-            <span class="pos-tag pos-${esc(t.get[0].pos)}">${esc(t.get[0].pos)}</span>
-            <span class="trade-name">${esc(t.get[0].name)}</span>
-            <span class="trade-rank">#${t.get[0].roachRank} · ${esc(tradeAssetDetail(t.get[0]))}</span>
-          </div>
+          ${t.give.map((a, i) => tradeAssetRow(a, 'give', i === 0 ? 'You give' : 'and')).join('')}
+          ${t.get.map((a, i) => tradeAssetRow(a, 'get', i === 0 ? 'You get' : 'and')).join('')}
           <ul class="trade-reasoning">
             ${t.reasoning.map((line) => `<li>${esc(line)}</li>`).join('')}
           </ul>

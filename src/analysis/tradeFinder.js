@@ -123,17 +123,36 @@ function minimumSufficientGive(giveCandidates, theirWeakestRank) {
   return worthwhile[worthwhile.length - 1]; // worst-ranked (cheapest) of the ones that still help
 }
 
-/** Change in weekly starting-lineup output from swapping giveAsset out for
- * getAsset in — the actual championship-relevant number, since points
- * sitting on the bench don't win games. */
-function lineupImpact(fullRoster, giveAsset, getAsset) {
+/** Change in weekly starting-lineup output from swapping giveAssets out for
+ * getAssets in — the actual championship-relevant number, since points
+ * sitting on the bench don't win games. Takes arrays so a sweetened
+ * (2-for-1) trade is measured the same way as a straight swap. */
+function lineupImpact(fullRoster, giveAssets, getAssets) {
   const scored = (list) => list.map((p) => ({ name: p.name, pos: p.pos, score: weeklyEstimate(p.proj) }));
+  const giveNames = new Set(giveAssets.map((p) => p.name));
   const before = optimizeLineup(scored(fullRoster)).starters.reduce((s, p) => s + p.score, 0);
   const after = optimizeLineup(scored([
-    ...fullRoster.filter((p) => p.name !== giveAsset.name),
-    getAsset,
+    ...fullRoster.filter((p) => !giveNames.has(p.name)),
+    ...getAssets,
   ])).starters.reduce((s, p) => s + p.score, 0);
   return Math.round((after - before) * 10) / 10;
+}
+
+// How lopsided (in your favor) a straight 1-for-1 needs to look, in
+// projected season points, before it's worth sweetening with a small
+// throw-in from your other surplus — real leagues don't sign trades that
+// look like a fleece, even when the need-fill logic is sound.
+const SWEETEN_THRESHOLD = 20;
+
+/**
+ * The cheapest available throw-in from your OTHER surplus (any position),
+ * excluding the primary give asset — must be strictly less valuable than
+ * it, or it isn't a sweetener, it's a second real trade chip.
+ */
+function findSweetener(mySurplus, giveAsset) {
+  const pool = Object.values(mySurplus).flat().filter((p) => p.name !== giveAsset.name && p.roachRank > giveAsset.roachRank);
+  if (!pool.length) return null;
+  return pool.reduce((worst, p) => (p.roachRank > worst.roachRank ? p : worst), pool[0]);
 }
 
 function gradeFor(weeklyDelta) {
@@ -180,7 +199,7 @@ function winPct(record) {
   return (w + l) > 0 ? w / (w + l) : null;
 }
 
-function buildReasoning({ giveAsset, getAsset, theirGap, myGap, doubleNeed, record, projSwing, weeklyDelta, grade, myRosterAfterGive }) {
+function buildReasoning({ giveAsset, sweetener, getAsset, theirGap, myGap, doubleNeed, record, projSwing, weeklyDelta, grade, myRosterAfterGive }) {
   const lines = [];
   const remainingWeeks = 14; // rough regular-season-remaining assumption for the total-impact framing
   if (weeklyDelta > 0) {
@@ -192,6 +211,9 @@ function buildReasoning({ giveAsset, getAsset, theirGap, myGap, doubleNeed, reco
   lines.push(`${giveAsset.name} (#${giveAsset.roachRank}) is the cheapest piece from your surplus that still clears that bar — you're not overpaying with a better trade chip than the job requires.`);
   const benchNote = benchEvidenceNote(giveAsset);
   if (benchNote) lines.push(benchNote);
+  if (sweetener) {
+    lines.push(`Added ${sweetener.name} (#${sweetener.roachRank}) as a small sweetener: the straight 1-for-1 looked lopsided in your favor, and a true throw-in from your other surplus is what turns a "why would I do that" into a real yes — it costs you nothing you'd otherwise start.`);
+  }
   if (doubleNeed) {
     lines.push(`In return, ${getAsset.name} directly upgrades your own weak spot at ${myGap.weakestPos} — it's a position they're deep at too, so it costs them real bench depth but not a starter.`);
   } else {
@@ -272,12 +294,26 @@ function generateTradeIdeas(myTeam, board, opts) {
     if (!getAsset) continue;
 
     const giveAsset = minimumSufficientGive(giveCandidates, theirGap.weakestRank);
-    const projSwing = (getAsset.proj != null && giveAsset.proj != null)
+    let projSwing = (getAsset.proj != null && giveAsset.proj != null)
       ? Math.round((getAsset.proj - giveAsset.proj) * 10) / 10
       : null;
-    const weeklyDelta = lineupImpact(myRoster, giveAsset, getAsset);
+
+    // A 1-for-1 that looks too good to be true for you usually is, in the
+    // sense that the other coach won't sign it — sweeten it with a real
+    // throw-in from other surplus so the ask matches what it's worth to them.
+    let sweetener = null;
+    if (doubleNeed && projSwing != null && projSwing > SWEETEN_THRESHOLD) {
+      sweetener = findSweetener(mySurplus, giveAsset);
+    }
+    const giveAssets = sweetener ? [giveAsset, sweetener] : [giveAsset];
+    if (sweetener) {
+      projSwing = Math.round((getAsset.proj - (giveAsset.proj + sweetener.proj)) * 10) / 10;
+    }
+
+    const weeklyDelta = lineupImpact(myRoster, giveAssets, [getAsset]);
     const grade = gradeFor(weeklyDelta);
-    const myRosterAfterGive = myRoster.filter((p) => p.name !== giveAsset.name);
+    const giveNames = new Set(giveAssets.map((a) => a.name));
+    const myRosterAfterGive = myRoster.filter((p) => !giveNames.has(p.name));
 
     const assetView = (a) => ({
       name: a.name,
@@ -294,14 +330,14 @@ function generateTradeIdeas(myTeam, board, opts) {
 
     ideas.push({
       team,
-      give: [assetView(giveAsset)],
+      give: giveAssets.map(assetView),
       get: [assetView(getAsset)],
       grade,
       weeklyLineupDelta: weeklyDelta,
       likelihood: doubleNeed ? 'high' : 'medium',
       projSwing,
       reasoning: buildReasoning({
-        giveAsset, getAsset, theirGap, myGap, doubleNeed, record: recordByTeam.get(team), projSwing, weeklyDelta, grade, myRosterAfterGive,
+        giveAsset, sweetener, getAsset, theirGap, myGap, doubleNeed, record: recordByTeam.get(team), projSwing, weeklyDelta, grade, myRosterAfterGive,
       }),
     });
   }

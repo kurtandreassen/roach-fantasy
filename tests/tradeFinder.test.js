@@ -156,6 +156,53 @@ describe('tradeFinder', () => {
     expect(idea.give[0].name).toBe('My RB6');
   });
 
+  it('sweetens a lopsided-in-your-favor 1-for-1 with a throw-in from other surplus', () => {
+    const trendStore = require('../src/state/trendStore');
+    // Rival TE3 is worth much more than My RB5 (proj gap > the 20pt
+    // sweeten threshold) — real coaches wouldn't sign that as a bare 1-for-1.
+    const lopsidedBoard = board.map((p) => (p.name === 'Rival TE3' ? { ...p, proj: 140 } : p));
+    // Give myself a 5th WR so there's surplus elsewhere to throw in.
+    lopsidedBoard.push({ name: 'My WR2', pos: 'WR', roachRank: 200, proj: 40 });
+    lopsidedBoard.push({ name: 'My WR3', pos: 'WR', roachRank: 210, proj: 35 });
+    lopsidedBoard.push({ name: 'My WR4', pos: 'WR', roachRank: 220, proj: 30 });
+    lopsidedBoard.push({ name: 'My WR5', pos: 'WR', roachRank: 230, proj: 20 }); // 5th WR -> surplus, cheapest
+
+    trendStore.recordWeek(1, {
+      BuzzKill: [
+        { name: 'My QB1', pos: 'QB', points: 20 },
+        { name: 'My RB1', pos: 'RB', points: 15 },
+        { name: 'My RB2', pos: 'RB', points: 10 },
+        { name: 'My RB3', pos: 'RB', points: 5 },
+        { name: 'My RB4', pos: 'RB', points: 4 },
+        { name: 'My RB5', pos: 'RB', points: 3 },
+        { name: 'My WR1', pos: 'WR', points: 14 },
+        { name: 'My WR2', pos: 'WR', points: 3 },
+        { name: 'My WR3', pos: 'WR', points: 3 },
+        { name: 'My WR4', pos: 'WR', points: 2 },
+        { name: 'My WR5', pos: 'WR', points: 1 },
+        { name: 'My TE1', pos: 'TE', points: 2 },
+        { name: 'My K1', pos: 'K', points: 6 },
+        { name: 'My DST1', pos: 'DST', points: 5 },
+      ],
+      Rival: [
+        { name: 'Rival QB1', pos: 'QB', points: 19 },
+        { name: 'Rival RB1', pos: 'RB', points: 14 },
+        { name: 'Rival WR1', pos: 'WR', points: 13 },
+        { name: 'Rival TE1', pos: 'TE', points: 10 },
+        { name: 'Rival TE2', pos: 'TE', points: 6 },
+        { name: 'Rival TE3', pos: 'TE', points: 5 },
+        { name: 'Rival K1', pos: 'K', points: 6 },
+        { name: 'Rival DST1', pos: 'DST', points: 5 },
+      ],
+    }, []);
+    const { generateTradeIdeas } = require('../src/analysis/tradeFinder');
+
+    const idea = generateTradeIdeas('BuzzKill', lopsidedBoard)[0];
+    expect(idea.give.length).toBe(2);
+    expect(idea.give.map((a) => a.name)).toEqual(expect.arrayContaining(['My RB5', 'My WR5']));
+    expect(idea.reasoning.some((l) => l.includes('sweetener'))).toBe(true);
+  });
+
   it('flags actual bench history on the give-side asset, not just board-rank inference', () => {
     const trendStore = require('../src/state/trendStore');
     trendStore.recordWeek(1, {
