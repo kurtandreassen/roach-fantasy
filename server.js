@@ -14,6 +14,7 @@ const {
 } = require('./src/draftHistory/parseHistory');
 const { optimizeLineup } = require('./src/coach/lineupOptimizer');
 const { suggestWaivers } = require('./src/coach/waiverSuggest');
+const stateStore = require('./src/state/store');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -134,6 +135,54 @@ app.post('/api/coach/waivers', (req, res) => {
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
+});
+
+// --- Persistent Coach dashboard state ------------------------------------
+// Unlike /api/coach/lineup and /api/coach/waivers above (stateless, one-off
+// calculations), these endpoints hold the CURRENT roster/free-agent/
+// standings snapshot server-side, so the dashboard shows the same thing on
+// any device until the next sync — not just whatever's in one browser's
+// localStorage. Sync itself still has to go through Claude reading the
+// live CBS pages (via Claude-in-Chrome) and calling these endpoints; no
+// button here can reach into your browser's other tabs on its own.
+
+app.get('/api/state', (req, res) => {
+  const board = loadBoardOrNull(req.query.year || '2026');
+  res.json(stateStore.getFullState(board));
+});
+
+app.post('/api/state/roster', (req, res) => {
+  const { players } = req.body || {};
+  if (!Array.isArray(players)) {
+    return res.status(400).json({ error: 'Body must include a `players` array of {name, pos, score}.' });
+  }
+  for (const p of players) {
+    if (typeof p.name !== 'string' || typeof p.pos !== 'string' || typeof p.score !== 'number') {
+      return res.status(400).json({ error: 'Each player needs {name: string, pos: string, score: number}.' });
+    }
+  }
+  const state = stateStore.updateRoster(players);
+  const board = loadBoardOrNull(req.query.year || '2026');
+  res.json({ ...state, derived: stateStore.getFullState(board).derived });
+});
+
+app.post('/api/state/waivers', (req, res) => {
+  const { freeAgents } = req.body || {};
+  if (!Array.isArray(freeAgents)) {
+    return res.status(400).json({ error: 'Body must include a `freeAgents` array of names.' });
+  }
+  const state = stateStore.updateWaivers(freeAgents);
+  const board = loadBoardOrNull(req.query.year || '2026');
+  res.json({ ...state, derived: stateStore.getFullState(board).derived });
+});
+
+app.post('/api/state/standings', (req, res) => {
+  const { teams } = req.body || {};
+  if (!Array.isArray(teams)) {
+    return res.status(400).json({ error: 'Body must include a `teams` array.' });
+  }
+  const state = stateStore.updateStandings(teams);
+  res.json(state);
 });
 
 app.get('/health', (req, res) => res.json({ status: 'ok' }));
