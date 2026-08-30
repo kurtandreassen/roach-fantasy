@@ -602,6 +602,32 @@ async function loadScouting() {
         <td>${g.targets.length ? g.targets.map((t) => esc(t.name)).join(', ') : '—'}</td>
       </tr>`).join('');
     setRows('scouting-gaps-table', gapRows, 3);
+
+    // Trade ideas
+    el('scouting-trades-list').innerHTML = data.tradeIdeas.length
+      ? data.tradeIdeas.map((t) => `
+        <div class="trade-card">
+          <div class="trade-head">
+            <span class="trade-team">Trade with ${esc(t.team)}</span>
+            <span class="trade-likelihood ${esc(t.likelihood)}">${t.likelihood} likelihood</span>
+          </div>
+          <div class="trade-swap">
+            <span class="trade-dir give">You give</span>
+            <span class="pos-tag pos-${esc(t.give[0].pos)}">${esc(t.give[0].pos)}</span>
+            <span class="trade-name">${esc(t.give[0].name)}</span>
+            <span class="trade-rank">#${t.give[0].roachRank}</span>
+          </div>
+          <div class="trade-swap">
+            <span class="trade-dir get">You get</span>
+            <span class="pos-tag pos-${esc(t.get[0].pos)}">${esc(t.get[0].pos)}</span>
+            <span class="trade-name">${esc(t.get[0].name)}</span>
+            <span class="trade-rank">#${t.get[0].roachRank}</span>
+          </div>
+          <ul class="trade-reasoning">
+            ${t.reasoning.map((line) => `<li>${esc(line)}</li>`).join('')}
+          </ul>
+        </div>`).join('')
+      : `<p class="empty">No trade ideas yet — needs at least one synced roster per team and the draft board.</p>`;
   } catch (err) {
     setRows('scouting-week-table', `<tr><td colspan="5" class="error">${esc(err.message)}</td></tr>`, 5);
   }

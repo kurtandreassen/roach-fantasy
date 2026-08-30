@@ -186,11 +186,18 @@ function trendAlerts(playerMatrix, opts) {
   return { rising: rising.slice(0, limit), falling: falling.slice(0, limit) };
 }
 
+// K/DST are excluded from gap-finding: every roster carries exactly one of
+// each with no bench depth or flex eligibility, so their board rank is
+// always far worse than any skill-position player's — they'd dominate
+// "weakest position" for every team and drown out the gaps that are
+// actually actionable (via waiver or trade).
+const GAP_POSITIONS = ['QB', 'RB', 'WR', 'TE'];
+
 /**
  * Positional gaps: for each team, using their most-recently-logged roster
- * and the draft board's own roachRank, the single weakest position among
- * their players at that position (worst = highest roachRank number = least
- * valuable per our own board) — real trade/waiver leverage, not a guess.
+ * and the draft board's own roachRank, the single weakest skill position
+ * among their players (worst = highest roachRank number = least valuable
+ * per our own board) — real trade/waiver leverage, not a guess.
  */
 function positionalGaps(board) {
   const data = readTrends();
@@ -204,6 +211,7 @@ function positionalGaps(board) {
   for (const [teamName, players] of Object.entries(latestWeek.teams || {})) {
     const byPos = {};
     for (const p of players) {
+      if (!GAP_POSITIONS.includes(p.pos)) continue;
       const boardEntry = rankByName.get(p.name);
       if (!boardEntry) continue;
       (byPos[p.pos] = byPos[p.pos] || []).push(boardEntry.roachRank);

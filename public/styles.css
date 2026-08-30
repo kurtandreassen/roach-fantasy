@@ -139,6 +139,29 @@ tr.taken td.pname { text-decoration: line-through; }
 tr.chart-highlight td { background: rgba(245, 197, 24, 0.08); }
 #scouting-season-table tbody tr { cursor: pointer; }
 
+.trade-card {
+  background: var(--panel-2); border: 1px solid var(--border); border-radius: 8px;
+  padding: 14px 16px; margin-bottom: 12px;
+}
+.trade-card:last-child { margin-bottom: 0; }
+.trade-head { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; flex-wrap: wrap; }
+.trade-head .trade-team { font-weight: 600; font-size: 14px; }
+.trade-likelihood {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .03em;
+  padding: 3px 9px; border-radius: 20px;
+}
+.trade-likelihood.high { color: var(--win); background: rgba(62, 207, 142, 0.14); }
+.trade-likelihood.medium { color: var(--accent); background: rgba(245, 197, 24, 0.14); }
+.trade-swap { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 10px; }
+.trade-swap .trade-name { font-weight: 500; }
+.trade-swap .trade-rank { font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.trade-swap .trade-dir { font-size: 12px; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: .03em; }
+.trade-swap .trade-dir.give { color: var(--loss); }
+.trade-swap .trade-dir.get { color: var(--win); }
+.trade-reasoning { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 4px; }
+.trade-reasoning li { font-size: 12.5px; color: var(--muted); line-height: 1.5; padding-left: 14px; position: relative; }
+.trade-reasoning li::before { content: "-"; position: absolute; left: 0; color: var(--muted); }
+
 @media (max-width: 640px) {
   main { padding: 12px; }
   header { padding: 12px; }

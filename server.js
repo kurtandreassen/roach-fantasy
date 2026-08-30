@@ -18,6 +18,7 @@ const stateStore = require('./src/state/store');
 const trendStore = require('./src/state/trendStore');
 const scheduleStore = require('./src/state/scheduleStore');
 const scoutingReport = require('./src/analysis/scoutingReport');
+const tradeFinder = require('./src/analysis/tradeFinder');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -270,6 +271,7 @@ app.get('/api/scouting-report', (req, res) => {
     trendAlerts: scoutingReport.trendAlerts(matrix, { team: alertsTeam }),
     trendTeams: [...new Set(matrix.players.map((p) => p.team))].sort(),
     positionalGaps: board ? scoutingReport.positionalGaps(board) : [],
+    tradeIdeas: board ? tradeFinder.generateTradeIdeas(team, board) : [],
   });
 });
 
