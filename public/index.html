@@ -67,6 +67,11 @@
     <section class="panel">
       <h2>Roster &amp; Lineup <span class="updated-tag" id="roster-updated"></span></h2>
       <p class="empty" style="padding-top:0">No live CBS API exists. Ask Claude to read your open Roster tab and sync it — this table shows the current synced state until the next sync.</p>
+      <div id="bye-alerts" style="display:none; margin-bottom:14px;">
+        <h3 style="margin:0 0 8px; font-size:13px; font-family:var(--font-display,inherit); color:var(--loss);">Out, On Bye, or Inactive</h3>
+        <p class="empty" style="padding-top:0; font-size:12.5px;">Not ranked above — they cannot score for you this week. Still worth a claim if you can hold the spot.</p>
+        <div id="bye-alerts-list" class="stat-grid"></div>
+      </div>
       <table id="lineup-table">
         <thead><tr><th>Slot</th><th>Player</th><th>Pos</th><th class="num">Score</th></tr></thead>
         <tbody><tr><td colspan="4" class="empty">No roster synced yet.</td></tr></tbody>
@@ -84,7 +89,13 @@
       <h2>Waiver Targets <span class="updated-tag" id="waiver-updated"></span></h2>
       <p class="empty" style="padding-top:0">Suggested FAAB bid is calibrated against your league's own synced bid history when available, falling back to a position-tier estimate otherwise.</p>
       <table id="waiver-table">
-        <thead><tr><th>Add</th><th>Drop Candidate</th><th>Verdict</th><th class="num">Suggested Bid</th><th>Importance</th></tr></thead>
+        <thead><tr>
+          <th title="The free agent, board-ranked.">Add</th>
+          <th title="Your best player at this position — the bar the pickup has to clear. Not who you'd necessarily drop.">Drop Candidate</th>
+          <th title="Whether the pickup actually outranks your drop candidate, or is depth insurance instead.">Verdict</th>
+          <th class="num" title="Calibrated to your league's own bid history when synced, capped at 40% of remaining budget.">Suggested Bid</th>
+          <th title="Must Bid = fills a real need and trending. Worth a Bid = one or the other. Speculative = neither.">Importance</th>
+        </tr></thead>
         <tbody><tr><td colspan="5" class="empty">No waiver suggestions yet — sync a roster and free-agent list.</td></tr></tbody>
       </table>
       <button class="action" id="waiver-toggle" style="margin-top:12px;">Manual Update</button>
@@ -112,6 +123,24 @@
         <br><button class="action" id="bids-save" style="margin-top:10px;">Save Bid Results</button>
         <div id="bids-err"></div>
       </div>
+    </section>
+
+    <section class="panel">
+      <h2>What a Point Is Worth Here</h2>
+      <p class="empty" style="padding-top:0">The season-long projected gap between a startable player and replacement level (the same replacement rank the board's own VOR column uses), by position. Bigger edge = more worth fighting for on waivers or in a trade.</p>
+      <table id="pointvalue-table">
+        <thead><tr><th>Pos</th><th class="num">Startable Avg</th><th class="num">Replacement</th><th class="num">Edge</th></tr></thead>
+        <tbody><tr><td colspan="4" class="empty">Loading…</td></tr></tbody>
+      </table>
+    </section>
+
+    <section class="panel">
+      <h2>League FAB Tendencies <span class="updated-tag" id="fab-tendencies-updated"></span></h2>
+      <p class="empty" style="padding-top:0">What each team has actually spent on waivers, from synced bid history — closest thing to knowing an opponent's habits without a live league feed.</p>
+      <table id="fab-tendencies-table">
+        <thead><tr><th>Team</th><th class="num">Total Spent</th><th class="num">Bids Won</th><th class="num">Avg Bid</th><th class="num">Max Bid</th><th class="num">Remaining</th></tr></thead>
+        <tbody><tr><td colspan="6" class="empty">No bid history synced yet.</td></tr></tbody>
+      </table>
     </section>
 
     <section class="panel">

@@ -20,6 +20,7 @@ const scheduleStore = require('./src/state/scheduleStore');
 const bidStore = require('./src/state/bidStore');
 const scoutingReport = require('./src/analysis/scoutingReport');
 const tradeFinder = require('./src/analysis/tradeFinder');
+const coachGuidance = require('./src/analysis/coachGuidance');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -194,6 +195,32 @@ app.post('/api/state/standings', (req, res) => {
   }
   const state = stateStore.updateStandings(teams);
   res.json(state);
+});
+
+// --- Coach-tab guidance ----------------------------------------------------
+// Ported from espn-fantasy's Coach tab (same spirit, no weekly-recap
+// content): bye-week alerts on your synced roster, a "what a point is worth
+// here" positional-value primer, and league-wide FAB spending tendencies.
+// All computed from data already synced elsewhere — no new inputs needed.
+
+app.get('/api/coach-guidance', (req, res) => {
+  const board = loadBoardOrNull(req.query.year || '2026');
+  if (!board) return res.json({ byeAlerts: [], pointValue: {}, fabTendencies: [] });
+
+  const state = stateStore.readState();
+  const matrix = trendStore.buildPlayerMatrix();
+  const weekNums = matrix.weeks;
+  const upcomingWeek = weekNums.length ? weekNums[weekNums.length - 1] + 1 : null;
+
+  const bidHistory = bidStore.allBids();
+  const budgets = bidStore.readBids().budgets.teams || {};
+
+  res.json({
+    byeAlerts: coachGuidance.byeInactiveAlerts(state.roster.players, board, upcomingWeek),
+    upcomingWeek,
+    pointValue: coachGuidance.pointValueByPosition(board),
+    fabTendencies: coachGuidance.leagueFabTendencies(bidHistory, budgets),
+  });
 });
 
 // --- FAAB waiver bid history + budgets ------------------------------------

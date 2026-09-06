@@ -221,10 +221,55 @@ function renderStandings(teams) {
   setRows('standings-table', rows, 3);
 }
 
+function renderByeAlerts(byeAlerts) {
+  const box = el('bye-alerts');
+  if (!byeAlerts || byeAlerts.length === 0) { box.style.display = 'none'; return; }
+  box.style.display = '';
+  el('bye-alerts-list').innerHTML = byeAlerts.map((p) => `
+    <div class="stat">
+      <div class="label">${esc(p.pos)}</div>
+      <div class="value" style="color:var(--loss);">${esc(p.name)}</div>
+      <div class="sub">Bye week ${esc(p.bye)}</div>
+    </div>`).join('');
+}
+
+function renderPointValue(pointValue) {
+  const entries = Object.entries(pointValue || {});
+  if (!entries.length) { setRows('pointvalue-table', '', 4); return; }
+  entries.sort((a, b) => b[1].edge - a[1].edge);
+  const rows = entries.map(([pos, v]) => `
+    <tr>
+      <td><span class="pos-tag pos-${pos}">${posName[pos] || pos}</span></td>
+      <td class="num">${v.avgStartableProj}</td>
+      <td class="num">${v.replacementProj}</td>
+      <td class="num pos">+${v.edge}</td>
+    </tr>`).join('');
+  setRows('pointvalue-table', rows, 4);
+}
+
+function renderFabTendencies(rows) {
+  if (!rows || rows.length === 0) { setRows('fab-tendencies-table', '', 6); return; }
+  const html = rows.map((t) => `
+    <tr>
+      <td>${esc(t.team)}</td>
+      <td class="num">$${t.totalSpent}</td>
+      <td class="num">${t.bidCount}</td>
+      <td class="num">$${t.avgBid}</td>
+      <td class="num">$${t.maxBid}</td>
+      <td class="num">${t.remaining != null ? '$' + t.remaining : '—'}</td>
+    </tr>`).join('');
+  setRows('fab-tendencies-table', html, 6);
+}
+
 async function loadCoach() {
-  const [res, bidsRes] = await Promise.all([fetch('/api/state'), fetch('/api/bids')]);
+  const [res, bidsRes, guidanceRes] = await Promise.all([
+    fetch('/api/state'),
+    fetch('/api/bids'),
+    fetch('/api/coach-guidance'),
+  ]);
   const state = await res.json();
   const bidsState = await bidsRes.json();
+  const guidance = await guidanceRes.json();
   setUpdatedTag('roster-updated', state.roster.updatedAt);
   setUpdatedTag('waiver-updated', state.waivers.updatedAt);
   setUpdatedTag('standings-updated', state.standings.updatedAt);
@@ -232,6 +277,9 @@ async function loadCoach() {
   renderLineup(state.derived);
   renderWaivers(state.derived);
   renderStandings(state.standings.teams);
+  renderByeAlerts(guidance.byeAlerts);
+  renderPointValue(guidance.pointValue);
+  renderFabTendencies(guidance.fabTendencies);
   el('roster-input').value = state.roster.players.map((p) => `${p.name}, ${p.pos}, ${p.score}`).join('\n');
   el('fa-input').value = (state.waivers.freeAgents || []).map((f) => (typeof f === 'string' ? f : f.name)).join('\n');
   el('standings-input').value = (state.standings.teams || []).map((t) => `${t.team}, ${t.record}, ${t.pointsFor}`).join('\n');
