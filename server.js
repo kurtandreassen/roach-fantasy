@@ -69,6 +69,24 @@ app.get('/api/board', (req, res) => {
   }
 });
 
+// --- News flags API ------------------------------------------------------
+// Manually curated pre-draft news sweep (injuries/suspensions/depth-chart
+// shifts) since roach-fantasy has no live research pipeline. Keyed by name
+// so it can be joined onto board data client-side.
+
+app.get('/api/news-flags', (req, res) => {
+  const year = req.query.year || '2026';
+  const flagsPath = path.join(DATA_DIR, 'preseason', `${year}-news-flags.json`);
+  try {
+    if (fs.existsSync(flagsPath)) {
+      return res.json(JSON.parse(fs.readFileSync(flagsPath, 'utf8')));
+    }
+    return res.json({ asOf: null, flags: [] });
+  } catch (err) {
+    return res.status(500).json({ error: err.message });
+  }
+});
+
 // --- Draft history API --------------------------------------------------
 
 const TEAM_NAMES = {

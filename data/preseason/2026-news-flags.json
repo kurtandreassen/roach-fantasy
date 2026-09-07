@@ -1,0 +1,27 @@
+{
+  "asOf": "2026-09-06",
+  "flags": [
+    { "name": "Ashton Jeanty", "level": "warn", "tag": "Ankle", "note": "Low ankle sprain (8/23 practice), day-to-day, no Week 1 clearance yet. Coach optimistic but real downside risk." },
+    { "name": "Rashod Bateman", "level": "danger", "tag": "Suspension risk", "note": "Arrested in GA on family violence allegations; possible suspension pending." },
+    { "name": "Jayden Higgins", "level": "danger", "tag": "OUT (season)", "note": "Torn ACL, ruled out for the season. Nico Collins now Houston's clear WR1 with no real 1B." },
+    { "name": "Zach Charbonnet", "level": "danger", "tag": "Out Wks 1-4", "note": "On reserve/PUP, unavailable first 4 games. Rookie Jadarian Price positioned for early-down work in Seattle." },
+    { "name": "Micah Parsons", "level": "danger", "tag": "Out Wks 1-4", "note": "On IR, unavailable first 4 games." },
+    { "name": "Brian Branch", "level": "danger", "tag": "Out Wks 1-4", "note": "On IR, unavailable first 4 games." },
+    { "name": "Kerby Joseph", "level": "danger", "tag": "Out Wks 1-4", "note": "On IR, unavailable first 4 games." },
+    { "name": "Ikem Ekwonu", "level": "danger", "tag": "Out Wks 1-4", "note": "On IR, unavailable first 4 games." },
+    { "name": "Taylor Moton", "level": "danger", "tag": "Out Wks 1-4", "note": "On IR, unavailable first 4 games." },
+    { "name": "Tank Dell", "level": "warn", "tag": "IR (return)", "note": "On injured reserve with a return designation." },
+    { "name": "Malik Nabers", "level": "warn", "tag": "ACL recovery", "note": "Returning from ACL/meniscus; team says \"reasonable to assume\" ready Week 1, some risk remains." },
+    { "name": "Breece Hall", "level": "warn", "tag": "Groin", "note": "Groin strain, expected back Week 1 — monitor practice reports." },
+    { "name": "Emeka Egbuka", "level": "warn", "tag": "Toe", "note": "Lingering toe injury, Week 1 status depends on next week's practice." },
+    { "name": "George Kittle", "level": "warn", "tag": "Achilles recovery", "note": "7 months post-Achilles tear; expected to play opener but recovery is unusually fast — treat as thin TE1." },
+    { "name": "Patrick Mahomes", "level": "info", "tag": "Knee, trending up", "note": "Knee \"feels great,\" trending toward playing Week 1, not yet officially cleared." },
+    { "name": "Puka Nacua", "level": "info", "tag": "Suspension resolved", "note": "Suspension concern appears resolved; back at full practice." },
+    { "name": "TreVeyon Henderson", "level": "info", "tag": "Depth chart shift", "note": "Summer injury let Rhamondre Stevenson retake the lead RB job in New England." },
+    { "name": "Rhamondre Stevenson", "level": "info", "tag": "Depth chart shift", "note": "Retook lead RB job in New England after Henderson's summer injury." },
+    { "name": "Rico Dowdle", "level": "info", "tag": "Depth chart shift", "note": "Signed with Pittsburgh, but Jaylen Warren is listed ahead of him on the initial depth chart." },
+    { "name": "Jaylen Warren", "level": "info", "tag": "Depth chart shift", "note": "Listed ahead of new signee Rico Dowdle on Pittsburgh's initial depth chart." },
+    { "name": "Tyler Allgeier", "level": "info", "tag": "Depth chart shift", "note": "Landed in Arizona but sits behind rookie Jeremiyah Love; standalone value if Love sits Week 1." },
+    { "name": "Jeremiyah Love", "level": "warn", "tag": "50/50 Week 1", "note": "About \"50/50\" to play in the opener against the Chargers." }
+  ]
+}

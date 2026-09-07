@@ -211,6 +211,20 @@
 
   .empty { padding: 30px 8px; color: var(--muted); font-size: 13px; text-align: center; }
 
+  .flag-tag {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 1px 6px;
+    border-radius: 4px;
+    letter-spacing: 0.02em;
+    flex-shrink: 0;
+    cursor: help;
+  }
+  .flag-danger { background: var(--loss); color: #2a0d0b; }
+  .flag-warn { background: var(--accent); color: #171308; }
+  .flag-info { background: var(--muted-2); color: #14161c; }
+
   ::-webkit-scrollbar { width: 10px; }
   ::-webkit-scrollbar-track { background: var(--bg); }
   ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 5px; }
@@ -260,6 +274,18 @@
 
   let players = [];
   let maxVor = 1;
+  let newsFlags = {};
+
+  async function loadNewsFlags() {
+    try {
+      const res = await fetch('/api/news-flags', { cache: 'no-store' });
+      if (!res.ok) return;
+      const body = await res.json();
+      const map = {};
+      (body.flags || []).forEach((f) => { map[f.name] = f; });
+      newsFlags = map;
+    } catch (e) { /* non-fatal, board still usable without flags */ }
+  }
 
   let taken = new Set();
   try { taken = new Set(JSON.parse(localStorage.getItem('vor_war_room_taken') || '[]')); } catch (e) {}
@@ -309,7 +335,7 @@
     }
   }
 
-  document.getElementById('refreshBtn').addEventListener('click', loadBoard);
+  document.getElementById('refreshBtn').addEventListener('click', () => { loadNewsFlags(); loadBoard(); });
 
   function render() {
     const q = state.q.trim().toLowerCase();
@@ -334,6 +360,10 @@
       }
       const barPct = Math.max(2, Math.round((Math.abs(p.vor) / maxVor) * 100));
       const isTaken = taken.has(p.name);
+      const flag = newsFlags[p.name];
+      const flagHtml = flag
+        ? `<span class="flag-tag flag-${flag.level}" title="${esc(flag.note)}">${esc(flag.tag)}</span>`
+        : '';
       html += `
         <div class="row ${isTaken ? 'taken' : ''}" data-name="${esc(p.name)}">
           <span class="rank">${p.rank}</span>
@@ -341,6 +371,7 @@
             <span class="pos-tag pos-${p.pos}">${p.pos}</span>
             <span class="name">${esc(p.name)}</span>
             <span class="team">${esc(p.team)}</span>
+            ${flagHtml}
           </div>
           <span></span>
           <span class="vor-cell">
@@ -377,7 +408,7 @@
     render();
   });
 
-  loadBoard();
+  loadNewsFlags().then(loadBoard);
 })();
 </script>
 </body>

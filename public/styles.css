@@ -80,6 +80,14 @@ button.action:disabled { opacity: .45; cursor: not-allowed; }
 .pos-QB { background: #b39ddb; } .pos-RB { background: var(--win); } .pos-WR { background: var(--accent); }
 .pos-TE { background: #6db3e0; } .pos-K { background: #c9a4a0; } .pos-DST { background: var(--muted); }
 
+.flag-tag {
+  display: inline-block; font-size: 10px; font-weight: 700; padding: 1px 6px;
+  border-radius: 4px; letter-spacing: .02em; cursor: help;
+}
+.flag-danger { background: var(--loss); color: #2a0d0b; }
+.flag-warn { background: var(--accent); color: #171308; }
+.flag-info { background: var(--muted); color: #14161c; }
+
 .taken-btn {
   background: transparent; border: 1px solid var(--border); color: var(--muted);
   border-radius: 4px; padding: 3px 10px; cursor: pointer; font-size: 12px;

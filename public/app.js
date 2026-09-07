@@ -20,6 +20,17 @@ function toggle(panelId) { el(panelId).classList.toggle('open'); }
 /* ---------------------------------------------------------- draft board --- */
 
 let boardData = [];
+let newsFlags = {};
+
+async function loadNewsFlags() {
+  try {
+    const res = await fetch('/api/news-flags');
+    const body = await res.json();
+    const map = {};
+    (body.flags || []).forEach((f) => { map[f.name] = f; });
+    newsFlags = map;
+  } catch (e) { /* non-fatal */ }
+}
 const draftState = { q: '', pos: 'ALL', showTaken: false, sortKey: 'roachRank', sortDir: 1,
   taken: new Set(JSON.parse(localStorage.getItem('roach_taken') || '[]')) };
 
@@ -63,9 +74,13 @@ function renderDraftTable() {
     const projStr = p.proj == null ? '—' : p.proj.toFixed(1);
     const vorStr = p.vor == null ? '—' : (p.vor > 0 ? '+' : '') + p.vor.toFixed(1);
     const vorCls = p.vor == null ? '' : (p.vor > 0 ? 'pos' : (p.vor < 0 ? 'neg' : ''));
+    const flag = newsFlags[p.name];
+    const flagHtml = flag
+      ? ` <span class="flag-tag flag-${flag.level}" title="${esc(flag.note)}">${esc(flag.tag)}</span>`
+      : '';
     return `<tr class="${taken ? 'taken' : ''}" data-name="${esc(p.name)}">
       <td class="num">${p.roachRank}</td>
-      <td class="pname">${esc(p.name)}</td>
+      <td class="pname">${esc(p.name)}${flagHtml}</td>
       <td><span class="pos-tag pos-${p.pos}">${posName[p.pos] || p.pos}</span></td>
       <td class="hide-sm">${esc(p.team || '')}</td>
       <td class="num">${p.ecr ?? '—'}</td>
@@ -99,6 +114,7 @@ function updateSortArrows() {
 
 async function loadDraftBoard() {
   try {
+    await loadNewsFlags();
     const res = await fetch('/api/board');
     const body = await res.json();
     if (!res.ok) { setRows('draft-table', `<tr><td colspan="9" class="error">${esc(body.error)}</td></tr>`, 9); return; }
