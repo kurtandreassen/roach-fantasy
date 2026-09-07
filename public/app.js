@@ -54,8 +54,10 @@ function renderDraftTable() {
     return true;
   });
   rows.sort((a, b) => {
-    let av = a[draftState.sortKey]; let bv = b[draftState.sortKey];
-    if (av == null) av = 9999; if (bv == null) bv = 9999;
+    const av = a[draftState.sortKey]; const bv = b[draftState.sortKey];
+    if (av == null && bv == null) return 0;
+    if (av == null) return 1;
+    if (bv == null) return -1;
     if (typeof av === 'string') return av.localeCompare(bv) * draftState.sortDir;
     return (av - bv) * draftState.sortDir;
   });
