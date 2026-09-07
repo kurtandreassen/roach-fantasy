@@ -45,7 +45,34 @@ function gapClass(vg) {
   return '';
 }
 
+// Recomputes VOR against the CURRENT undrafted pool: replacement level for
+// each position is the Nth-best projection among players not yet taken
+// (N = that position's fixed replacement slot count), not the Nth-best
+// overall. Static roachRank/roachScore are untouched — only vor moves.
+function recomputeDynamicVor() {
+  const byPos = {};
+  boardData.forEach((p) => {
+    if (p.proj == null) return;
+    (byPos[p.pos] = byPos[p.pos] || []).push(p);
+  });
+  const replacementProj = {};
+  Object.keys(byPos).forEach((pos) => {
+    const undraftedProj = byPos[pos]
+      .filter((p) => !draftState.taken.has(p.name))
+      .map((p) => p.proj)
+      .sort((a, b) => b - a);
+    const repCount = byPos[pos][0].replacement || undraftedProj.length;
+    replacementProj[pos] = undraftedProj[Math.min(repCount - 1, undraftedProj.length - 1)] ?? 0;
+  });
+  boardData.forEach((p) => {
+    p.vor = p.proj != null && replacementProj[p.pos] != null
+      ? Math.round((p.proj - replacementProj[p.pos]) * 100) / 100
+      : p.staticVor;
+  });
+}
+
 function renderDraftTable() {
+  recomputeDynamicVor();
   const q = draftState.q.trim().toLowerCase();
   let rows = boardData.filter((p) => {
     if (!draftState.showTaken && draftState.taken.has(p.name)) return false;
@@ -121,6 +148,7 @@ async function loadDraftBoard() {
     const body = await res.json();
     if (!res.ok) { setRows('draft-table', `<tr><td colspan="9" class="error">${esc(body.error)}</td></tr>`, 9); return; }
     boardData = body.players;
+    boardData.forEach((p) => { p.staticVor = p.vor; });
     renderDraftTable();
   } catch (err) {
     setRows('draft-table', `<tr><td colspan="9" class="error">${esc(err.message)}</td></tr>`, 9);

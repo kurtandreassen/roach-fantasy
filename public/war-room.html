@@ -261,7 +261,7 @@
     <span>#</span>
     <span>Player</span>
     <span></span>
-    <span class="num">VOR</span>
+    <span class="num" title="Recomputes against the undrafted pool every time you mark someone Taken.">VOR·live</span>
     <span class="num">Proj</span>
     <span class="num">Bye</span>
   </div>
@@ -272,9 +272,54 @@
 (function () {
   const TOP_N = 200;
 
+  let rawPlayers = [];
   let players = [];
   let maxVor = 1;
   let newsFlags = {};
+
+  // Recomputes VOR against the CURRENT undrafted pool: replacement level for
+  // each position is the Nth-best projection among players NOT YET TAKEN at
+  // that position (N = that position's fixed replacement slot count), not
+  // the Nth-best overall. Mutates rawPlayers in place.
+  function recomputeDynamicVor() {
+    const byPos = {};
+    rawPlayers.forEach((p) => {
+      if (p.proj == null) return;
+      (byPos[p.pos] = byPos[p.pos] || []).push(p);
+    });
+    const replacementProj = {};
+    Object.keys(byPos).forEach((pos) => {
+      const undraftedProj = byPos[pos]
+        .filter((p) => !taken.has(p.name))
+        .map((p) => p.proj)
+        .sort((a, b) => b - a);
+      const repCount = byPos[pos][0].replacement || undraftedProj.length;
+      replacementProj[pos] = undraftedProj[Math.min(repCount - 1, undraftedProj.length - 1)] ?? 0;
+    });
+    rawPlayers.forEach((p) => {
+      p.vor = p.proj != null && replacementProj[p.pos] != null
+        ? Math.round((p.proj - replacementProj[p.pos]) * 100) / 100
+        : p.staticVor;
+    });
+  }
+
+  function rebuildDisplayList() {
+    const sorted = rawPlayers
+      .filter((p) => p.vor != null)
+      .sort((a, b) => b.vor - a.vor)
+      .slice(0, TOP_N);
+    players = sorted.map((p, i) => ({
+      rank: i + 1,
+      name: p.name,
+      pos: p.pos,
+      team: p.team,
+      vor: Math.round(p.vor * 10) / 10,
+      proj: Math.round(p.proj * 10) / 10,
+      tier: p.tier,
+      bye: p.bye,
+    }));
+    maxVor = Math.max(...players.map((p) => p.vor), 1);
+  }
 
   async function loadNewsFlags() {
     try {
@@ -312,21 +357,10 @@
       if (!res.ok) throw new Error('Board API returned ' + res.status);
       const body = await res.json();
       const board = Array.isArray(body) ? body : body.players;
-      const sorted = board
-        .filter((p) => p.vor != null)
-        .sort((a, b) => b.vor - a.vor)
-        .slice(0, TOP_N);
-      players = sorted.map((p, i) => ({
-        rank: i + 1,
-        name: p.name,
-        pos: p.pos,
-        team: p.team,
-        vor: Math.round(p.vor * 10) / 10,
-        proj: Math.round(p.proj * 10) / 10,
-        tier: p.tier,
-        bye: p.bye,
-      }));
-      maxVor = Math.max(...players.map((p) => p.vor), 1);
+      rawPlayers = board;
+      rawPlayers.forEach((p) => { p.staticVor = p.vor; });
+      recomputeDynamicVor();
+      rebuildDisplayList();
       const now = new Date();
       setStatus('', board.length + ' players · synced ' + now.toLocaleTimeString());
       render();
@@ -405,6 +439,8 @@
     const name = row.dataset.name;
     if (taken.has(name)) taken.delete(name); else taken.add(name);
     saveTaken();
+    recomputeDynamicVor();
+    rebuildDisplayList();
     render();
   });
 
