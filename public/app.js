@@ -252,7 +252,7 @@ function renderWaivers(derived) {
     <tr>
       <td>${esc(s.add.name)} <span class="pos-tag pos-${s.add.pos}">${posName[s.add.pos] || s.add.pos}</span> — rank ${s.add.roachRank}</td>
       <td>${s.dropCandidate ? esc(s.dropCandidate.name) + ' — rank ' + s.dropCandidate.roachRank : '—'}</td>
-      <td>${s.isUpgrade ? '<strong class="pos">Upgrade</strong>' : 'Not an upgrade'}</td>
+      <td>${s.isUpgrade ? '<span class="verdict steal">Upgrade</span>' : '<span class="verdict depth">Depth</span>'}</td>
       <td class="num">${bid ? `$${bid.suggestedBid}` : '—'}</td>
       <td>${bid ? `<span class="trade-likelihood ${bid.importance === 'must-bid' ? 'high' : bid.importance === 'worth-a-bid' ? 'medium' : ''}">${IMPORTANCE_LABEL[bid.importance]}</span>` : '—'}</td>
     </tr>

@@ -66,7 +66,7 @@
   <section class="view" id="view-coach">
     <section class="panel">
       <h2>Roster &amp; Lineup <span class="updated-tag" id="roster-updated"></span></h2>
-      <p class="empty" style="padding-top:0">No live CBS API exists. Ask Claude to read your open Roster tab and sync it — this table shows the current synced state until the next sync.</p>
+      <ul class="caveats"><li>No live CBS API exists. Ask Claude to read your open Roster tab and sync it — this table shows the current synced state until the next sync.</li></ul>
       <div id="bye-alerts" style="display:none; margin-bottom:14px;">
         <h3 style="margin:0 0 8px; font-size:13px; font-family:var(--font-display,inherit); color:var(--loss);">Out, On Bye, or Inactive</h3>
         <p class="empty" style="padding-top:0; font-size:12.5px;">Not ranked above — they cannot score for you this week. Still worth a claim if you can hold the spot.</p>
@@ -87,7 +87,7 @@
 
     <section class="panel">
       <h2>Waiver Targets <span class="updated-tag" id="waiver-updated"></span></h2>
-      <p class="empty" style="padding-top:0">Suggested FAAB bid is calibrated against your league's own synced bid history when available, falling back to a position-tier estimate otherwise.</p>
+      <ul class="caveats"><li>Suggested FAAB bid is calibrated against your league's own synced bid history when available, falling back to a position-tier estimate otherwise.</li></ul>
       <table id="waiver-table">
         <thead><tr>
           <th title="The free agent, board-ranked.">Add</th>
@@ -163,7 +163,7 @@
   <section class="view" id="view-trends">
     <section class="panel">
       <h2>Weekly Scoring Trends <span class="meta" id="trends-count" style="margin-left:8px;"></span></h2>
-      <p class="empty" style="padding-top:0">No live CBS API exists — ask Claude to log each week's scores after games finish (your roster, all 12 teams, and a slice of the waiver wire) and it appends here rather than overwriting. Nothing to show until Week 1 is played.</p>
+      <ul class="caveats"><li>No live CBS API exists — ask Claude to log each week's scores after games finish (your roster, all 12 teams, and a slice of the waiver wire) and it appends here rather than overwriting. Nothing to show until Week 1 is played.</li></ul>
       <div class="picker">
         <input type="text" id="trends-search" placeholder="Search player…">
       </div>

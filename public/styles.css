@@ -123,6 +123,55 @@ tr.taken td.pname { text-decoration: line-through; }
 .bar-fill.pos { background: var(--win); left: 50%; }
 .bar-fill.neg { background: var(--loss); right: 50%; }
 
+/* Ported from espn-fantasy's Coach tab so both leagues' tools read as the
+   same product: same pill/badge/caveat vocabulary, same color meanings. */
+.subject-note { font-size: 12px; color: var(--muted); font-weight: 400; margin-left: 8px; }
+.subject-note.other { color: var(--accent); }
+
+.caveats { margin: 0 0 14px; padding: 0; list-style: none; }
+.caveats li {
+  font-size: 12px; color: var(--muted); line-height: 1.5;
+  padding: 6px 10px; margin-bottom: 6px;
+  background: var(--panel-2); border-left: 3px solid var(--border); border-radius: 3px;
+}
+.caveats li.loud { border-left-color: var(--accent); color: #f0d98a; }
+
+.verdict { font-size: 11px; padding: 2px 8px; border-radius: 10px; text-transform: uppercase;
+  letter-spacing: .03em; white-space: nowrap; display: inline-block; }
+.verdict.steal { background: #1c3a2c; color: var(--win); }
+.verdict.solid { background: #1f3340; color: #6db3e0; }
+.verdict.depth { background: #2a2f3a; color: var(--muted); }
+.verdict.bust { background: #3a1f1f; color: var(--loss); }
+.verdict.unused { background: #332b1c; color: #c9a227; }
+.verdict.unrated { background: none; color: var(--muted); }
+
+.status-badge { font-size: 11px; padding: 2px 8px; border-radius: 10px; margin-left: 8px; text-transform: uppercase; }
+.status-badge.draft { background: #3a3520; color: var(--accent); }
+.status-badge.approved { background: #1c3a2c; color: var(--win); }
+.status-badge.failed { background: #3a1f1f; color: var(--loss); }
+
+/* Someone unplayable sitting in the lineup is the one thing here that costs
+   real points if missed, so it gets the loudest treatment. */
+.lineup-alert {
+  background: #3a1f1f; border-left: 3px solid var(--loss); color: #f0b6b3;
+  padding: 10px 12px; border-radius: 3px; margin-bottom: 12px; font-size: 13px; line-height: 1.5;
+}
+.lineup-alert strong { color: var(--loss); }
+
+.posture { font-size: 12px; padding: 2px 8px; border-radius: 10px; text-transform: uppercase; letter-spacing: .04em; }
+.posture.floor { background: #1c3a2c; color: var(--win); }
+.posture.ceiling { background: #3a2438; color: #e0a3d8; }
+.posture.balanced { background: #2a2f3a; color: var(--muted); }
+
+.sync-line {
+  display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+  color: var(--muted); font-size: 13px; padding: 2px 4px;
+}
+.sync-line .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--win); flex: none; }
+.sync-line.bad .dot { background: var(--loss); }
+.sync-line.bad { color: var(--loss); }
+.sync-line .sep { opacity: .4; }
+
 .swap-item {
   display: flex; align-items: center; gap: 10px;
   padding: 10px 4px; border-bottom: 1px solid var(--border);
