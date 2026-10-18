@@ -7,7 +7,8 @@
 const fs = require('fs');
 const path = require('path');
 
-const BIDS_PATH = path.join(__dirname, '..', '..', 'data', 'state', 'bids.json');
+const { STATE_DIR } = require('./stateDir');
+const BIDS_PATH = path.join(STATE_DIR, 'bids.json');
 
 const EMPTY = { budgets: { teams: {}, updatedAt: null }, weeks: {} };
 

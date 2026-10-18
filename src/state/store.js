@@ -21,7 +21,8 @@ const { adviseBid } = require('../analysis/waiverBidAdvisor');
 // The Coach dashboard is single-user — always advising for this team.
 const MY_TEAM = 'BuzzKill';
 
-const STATE_PATH = path.join(__dirname, '..', '..', 'data', 'state', 'coach-state.json');
+const { STATE_DIR } = require('./stateDir');
+const STATE_PATH = path.join(STATE_DIR, 'coach-state.json');
 
 const EMPTY_STATE = {
   roster: { players: [], updatedAt: null },

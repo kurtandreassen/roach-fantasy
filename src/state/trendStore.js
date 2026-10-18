@@ -11,7 +11,8 @@
 const fs = require('fs');
 const path = require('path');
 
-const TRENDS_PATH = path.join(__dirname, '..', '..', 'data', 'state', 'weekly-trends.json');
+const { STATE_DIR } = require('./stateDir');
+const TRENDS_PATH = path.join(STATE_DIR, 'weekly-trends.json');
 
 function readTrends() {
   try {

@@ -11,7 +11,8 @@
 const fs = require('fs');
 const path = require('path');
 
-const TXN_PATH = path.join(__dirname, '..', '..', 'data', 'state', 'transactions.json');
+const { STATE_DIR } = require('./stateDir');
+const TXN_PATH = path.join(STATE_DIR, 'transactions.json');
 
 const EMPTY = { rows: [] };
 

@@ -5,7 +5,8 @@
 const fs = require('fs');
 const path = require('path');
 
-const SCHEDULE_PATH = path.join(__dirname, '..', '..', 'data', 'state', 'schedule.json');
+const { STATE_DIR } = require('./stateDir');
+const SCHEDULE_PATH = path.join(STATE_DIR, 'schedule.json');
 
 function readSchedule() {
   try {
